@@ -1,0 +1,32 @@
+.header
+	display: grid
+	grid-template-areas: "headerUp" "headerDown"
+	grid-template-columns: 100%
+	grid-template-rows: 50px 100px
+	padding: 0rem 5rem
+
+	.headerUp
+		grid-area: headerUp
+		display: grid
+		grid-template-areas: "slogan menu-headerUp"
+		grid-template-columns: 80% 20%
+		grid-template-rows: 100%
+
+		.slogan
+			grid-area: slogan
+
+		.menu-headerUp
+			grid-area: menu-headerUp
+			display: grid
+			grid-template-areas: "menu-headerUp-items mini-car"
+			grid-template-columns: 50% 50%
+			grid-template-rows: 100%
+
+	.headerDown
+		grid-area: headerDown
+		display: grid
+		grid-template-areas: "icon-lobocueros menu-headerDown"
+		grid-template-columns: 30% 70%
+		grid-template-rows: 100%
+
+		
