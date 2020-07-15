@@ -2,31 +2,94 @@
 	display: grid
 	grid-template-areas: "headerUp" "headerDown"
 	grid-template-columns: 100%
-	grid-template-rows: 50px 100px
-	padding: 0rem 5rem
+	grid-template-rows: 30px 70px
+	position: fixed
+	width: 100%
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(255,255,255,1)
+	-moz-box-shadow: 0px 5px 5px 0px #923a3a
+	box-shadow: 0px 5px 5px 0px rgba(255,255,255,1)
 
 	.headerUp
 		grid-area: headerUp
 		display: grid
 		grid-template-areas: "slogan menu-headerUp"
-		grid-template-columns: 80% 20%
+		grid-template-columns: 90% 10%
 		grid-template-rows: 100%
+		background: $Black
+		color: $White
+		padding: 0rem 5rem
 
 		.slogan
 			grid-area: slogan
+			font-weight: 100
+			display: flex
+			justify-content: start
+			align-items: center
 
 		.menu-headerUp
 			grid-area: menu-headerUp
-			display: grid
-			grid-template-areas: "menu-headerUp-items mini-car"
-			grid-template-columns: 50% 50%
-			grid-template-rows: 100%
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			i
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				margin: 0rem 0.3rem
+
+				img
+					height: 25px
+			
+			.mini-cart-icon
+				margin: 0rem
 
 	.headerDown
 		grid-area: headerDown
-		display: grid
-		grid-template-areas: "icon-lobocueros menu-headerDown"
-		grid-template-columns: 30% 70%
-		grid-template-rows: 100%
+		background: $Lobocueros
+		border: 0.5px solid $White
+		display: flex
+		align-items: center
+		padding: 0rem 10rem
+
+		.nav
+			height: 100%
+			width: 100%
+			display: flex
+			align-items: center
+
+			ul
+				width: 100%
+				display: flex
+				justify-content: space-between
+				align-items: center
+				list-style: none
+				overflow: hidden
+
+				.home-icon
+					display: flex
+					justify-content: center
+					align-items: center
+
+				li
+					float: left
+					display: flex
+					justify-content: center
+					align-items: center
+
+					img
+						height: 5px
+					
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						color: $White
+						text-decoration: none
+						margin: 0rem 0.5rem
+					
+						img
+							height: 50px
 
 		

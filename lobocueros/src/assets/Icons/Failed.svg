@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <g id="Grupo_261" data-name="Grupo 261" transform="translate(-1720 -409)">
+    <circle id="Elipse_22" data-name="Elipse 22" cx="100" cy="100" r="100" transform="translate(1720 409)" fill="#be0000"/>
+    <path id="Unión_17" data-name="Unión 17" d="M18.712,98.385l-18.5-18.5a1,1,0,0,1,0-1.414L29.379,49.3.209,20.127a1,1,0,0,1,0-1.415l18.5-18.5a1,1,0,0,1,1.414,0L49.3,29.378,78.466.209a1,1,0,0,1,1.414,0l18.5,18.5a1,1,0,0,1,0,1.414L69.215,49.3l29.17,29.17a1,1,0,0,1,0,1.415l-18.5,18.5a1,1,0,0,1-1.414,0L49.3,69.215,20.127,98.385a1,1,0,0,1-1.415,0Z" transform="translate(1769.58 458.577)" fill="#fff"/>
+  </g>
+</svg>

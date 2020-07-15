@@ -2,38 +2,103 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pridi:wght@200;300;400;500;600;700&display=swap");
 body {
   margin: 0;
+  background: #F0F0F0;
+  font-family: "Montserrat";
 }
 
 .header {
   display: grid;
   grid-template-areas: "headerUp" "headerDown";
   grid-template-columns: 100%;
-  grid-template-rows: 50px 100px;
-  padding: 0rem 5rem;
+  grid-template-rows: 30px 70px;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 5px 0px white;
+  -moz-box-shadow: 0px 5px 5px 0px #923a3a;
+  box-shadow: 0px 5px 5px 0px white;
 }
 .header .headerUp {
   grid-area: headerUp;
   display: grid;
   grid-template-areas: "slogan menu-headerUp";
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 90% 10%;
   grid-template-rows: 100%;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 0rem 5rem;
 }
 .header .headerUp .slogan {
   grid-area: slogan;
+  font-weight: 100;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .header .headerUp .menu-headerUp {
   grid-area: menu-headerUp;
-  display: grid;
-  grid-template-areas: "menu-headerUp-items mini-car";
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .headerUp .menu-headerUp i {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0.3rem;
+}
+.header .headerUp .menu-headerUp i img {
+  height: 25px;
+}
+.header .headerUp .menu-headerUp .mini-cart-icon {
+  margin: 0rem;
 }
 .header .headerDown {
   grid-area: headerDown;
-  display: grid;
-  grid-template-areas: "icon-lobocueros menu-headerDown";
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 100%;
+  background: #420000;
+  border: 0.5px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0rem 10rem;
+}
+.header .headerDown .nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .headerDown .nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  overflow: hidden;
+}
+.header .headerDown .nav ul .home-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .headerDown .nav ul li {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .headerDown .nav ul li img {
+  height: 5px;
+}
+.header .headerDown .nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0rem 0.5rem;
+}
+.header .headerDown .nav ul li a img {
+  height: 50px;
 }
 
 /*# sourceMappingURL=Lobocueros.css.map */
