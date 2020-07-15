@@ -16,6 +16,8 @@ const rootReducer = (state = initialStore, action) => {
         ...state,
         estado: action.parametro
       };
+    default:
+      return state;
   }
 };
 

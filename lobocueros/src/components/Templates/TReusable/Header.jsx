@@ -20,13 +20,61 @@ const Header = () => {
           </div>
         </div>
         <div className="headerDown">
+          <div className="home-icon"><a href="/"><img src={Lobocueros} alt="home"></img></a></div>
           <nav className="nav">
-            <ul>
-              <li className="home-icon"><a href="#"><img src={Lobocueros} alt="home"></img></a></li>
-              <li><a href="#">Nuevo</a><img src={Arrow_White} alt="arrow"></img></li>
-              <li><a href="#">Mujer</a><img src={Arrow_White} alt="arrow"></img></li>
-              <li><a href="#">Hombre</a><img src={Arrow_White} alt="arrow"></img></li>
-              <li><a href="#">Tapabocas</a><img src={Arrow_White} alt="arrow"></img></li>
+            <ul className="main-menu">
+              <li className="item-menu"><a href="/">Nuevo</a></li>
+              <li className="item-menu"><a href="/">Mujer</a><img src={Arrow_White} alt="arrow"></img>
+                <div className="submenu-nav" id="Mujer">
+                  <ul>
+                    <li className="submenu-item">Bolsos
+                      <ul>
+                        <li>Ver Todo</li>
+                        <li>Bolsos</li>
+                        <li>Morrales</li>
+                        <li>Maletines</li>
+                        <li>Manos Libres</li>
+                      </ul>
+                    </li>
+                      
+                    <li className="submenu-item">Correas</li>
+                    <li className="submenu-item">Bileteras</li>
+                    <li className="submenu-item">Accesorios
+                      <ul>
+                        <li>Ver Todo</li>
+                        <li>Bolsos</li>
+                        <li>Morrales</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="item-menu"><a href="/">Hombre</a><img src={Arrow_White} alt="arrow"></img>
+                <div className="submenu-nav" id="hombre">
+                  <ul>
+                    <li className="submenu-item">Bolsos
+                      <ul>
+                        <li>Ver Todo</li>
+                        <li>Bolsos</li>
+                        <li>Morrales</li>
+                        <li>Maletines</li>
+                        <li>Manos Libres</li>
+                      </ul>
+                    </li>
+                      
+                    <li className="submenu-item">Correas</li>
+                    <li className="submenu-item">Bileteras</li>
+                    <li className="submenu-item">Accesorios
+                      <ul>
+                        <li>Ver Todo</li>
+                        <li>Bolsos</li>
+                        <li>Morrales</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="item-menu"><a href="/">Tapabocas</a></li>
             </ul>
           </nav>
         </div>
