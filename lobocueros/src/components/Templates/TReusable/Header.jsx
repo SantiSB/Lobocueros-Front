@@ -7,7 +7,7 @@ import Arrow_White from '../../../assets/Icons/Arrow_White.svg'
 
 const Header = () => {
     return(
-      <header className="header">
+      <header className="header-main">
         <div className="headerUp">
           <div className="slogan">
             <span>Marroquineros de Corazón</span>

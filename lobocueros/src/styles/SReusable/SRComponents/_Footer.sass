@@ -1,0 +1,58 @@
+.footer-main
+	@include size(100%, 100%)
+	@include display-grid("about-footer contacto-footer social-footer", 33% 34% 33%, 100%)
+	background: $Black
+	color: $White
+	padding: 0rem 5rem
+
+	ul
+		list-style: none
+
+		li
+			margin: .5rem 0rem
+
+		a
+			text-decoration: none
+			color: $White
+
+	.about-footer
+		grid-area: about-footer
+		@include display-grid("title-about-footer" "menu-about-footer", 100%, 30% 70%)
+
+		.title-about-footer
+			margin-bottom: 3rem
+			.lobocueros-title
+				font-family: "Pridi"
+				font-size: 15pt
+				font-weight: 500
+				margin-bottom: 0px
+			
+			.slogan
+				font-weight: 100
+				margin-top: 0px
+
+	.contacto-footer
+		grid-area: contacto-footer
+		@include display-grid("title-contacto-footer" "menu-contacto-footer", 100%, 30% 70%)
+
+		.title-contacto-footer
+			@include display-flex(auto, center)
+			font-weight: 500
+
+	.social-footer
+		grid-area: social-footer
+		@include display-grid("title-social-footer" "menu-social-footer", 100%, 30% 70%)
+
+		.title-social-footer
+			@include display-flex(auto, center)
+			font-weight: 500
+
+		.menu-social-footer
+			ul
+				li
+					float: left
+					margin: 0rem .5rem
+
+					a
+						img
+							width: 30px

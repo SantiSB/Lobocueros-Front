@@ -1,0 +1,23 @@
+.instagramSection-main
+	@include display-grid("instagram-bar" "instagram-photos-grid", 100%, 50px auto)
+
+	.instagram-bar
+		@include display-flex(center, center)
+		background: $Grey
+		color: $Lobocueros
+		font-family: "Pridi"
+		font-size: 30pt
+		font-weight: 400
+
+		span
+			margin: 0rem 1rem
+
+		img
+			height: 40px
+			
+
+	.instagram-photos-grid
+		@include display-grid("img1 img2 img3 img4 img5", repeat(5, 1fr), 100%)
+		img
+			width: 100%
+			margin: 0px

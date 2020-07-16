@@ -1,0 +1,19 @@
+.home
+	display: grid
+	grid-template-areas: "header-home" "main-home" "footer-home"
+	grid-template-columns: 100%
+	grid-template-rows: 100px auto auto
+
+	.header-home
+		grid-area: header-home
+
+	.main-home
+		grid-area: main-home
+
+@import SHomeComponents/_MainHome
+
+.home
+	.footer-home
+		grid-area: footer-home
+
+	

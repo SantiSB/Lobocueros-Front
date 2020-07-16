@@ -4,21 +4,22 @@ body {
   margin: 0;
   background: #F0F0F0;
   font-family: "Montserrat";
+  overflow-x: hidden;
 }
 
-.header {
+.header-main {
   display: grid;
   grid-template-areas: "headerUp" "headerDown";
   grid-template-columns: 100%;
   grid-template-rows: 30px 70px;
   width: 100%;
   height: auto;
+  -webkit-box-shadow: 0px 1px 5px 0px white;
+  -moz-box-shadow: 0px 1px 5px 0px white;
+  box-shadow: 0px 1px 5px 0px white;
   position: fixed;
-  -webkit-box-shadow: 0px 5px 5px 0px white;
-  -moz-box-shadow: 0px 5px 5px 0px #923a3a;
-  box-shadow: 0px 5px 5px 0px white;
 }
-.header .headerUp {
+.header-main .headerUp {
   grid-area: headerUp;
   display: grid;
   grid-template-areas: "slogan menu-headerUp";
@@ -28,20 +29,20 @@ body {
   color: #FFFFFF;
   padding: 0rem 5rem;
 }
-.header .headerUp .slogan {
+.header-main .headerUp .slogan {
   grid-area: slogan;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-weight: 100;
 }
-.header .headerUp .menu-headerUp {
+.header-main .headerUp .menu-headerUp {
   grid-area: menu-headerUp;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .headerUp .menu-headerUp i {
+.header-main .headerUp .menu-headerUp i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,14 +50,14 @@ body {
   height: 100%;
   margin: 0rem 0.3rem;
 }
-.header .headerUp .menu-headerUp i img {
+.header-main .headerUp .menu-headerUp i img {
   width: auto;
   height: 25px;
 }
-.header .headerUp .menu-headerUp .mini-cart-icon {
+.header-main .headerUp .menu-headerUp .mini-cart-icon {
   margin: 0rem;
 }
-.header .headerDown {
+.header-main .headerDown {
   grid-area: headerDown;
   display: grid;
   grid-template-areas: "home-icon nav";
@@ -66,55 +67,57 @@ body {
   border: 0.5px solid #FFFFFF;
   padding: 0rem 10rem;
 }
-.header .headerDown .home-icon {
+.header-main .headerDown .home-icon {
   grid-area: home-icon;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .headerDown .home-icon a {
+.header-main .headerDown .home-icon a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .headerDown .home-icon a img {
+.header-main .headerDown .home-icon a img {
   width: auto;
   height: 50px;
 }
-.header .headerDown .nav {
+.header-main .headerDown .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.header .headerDown .nav .main-menu {
+.header-main .headerDown .nav .main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 100%;
   list-style: none;
   overflow: hidden;
 }
-.header .headerDown .nav .main-menu .home-icon {
+.header-main .headerDown .nav .main-menu .home-icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .headerDown .nav .main-menu .item-menu {
+.header-main .headerDown .nav .main-menu .item-menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: 100%;
   float: left;
   margin: 0rem 2rem;
   font-weight: 600;
 }
-.header .headerDown .nav .main-menu .item-menu img {
+.header-main .headerDown .nav .main-menu .item-menu img {
   width: auto;
   height: 5px;
 }
-.header .headerDown .nav .main-menu .item-menu a {
+.header-main .headerDown .nav .main-menu .item-menu a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,45 +125,177 @@ body {
   text-decoration: none;
   margin: 0rem 0.5rem;
 }
-.header .headerDown .nav .main-menu .item-menu a img {
+.header-main .headerDown .nav .main-menu .item-menu a img {
   width: auto;
   height: 50px;
 }
-.header .headerDown .nav .main-menu .item-menu .submenu-nav {
-  display: none;
-  position: absolute;
+.header-main .headerDown .nav .main-menu .item-menu .submenu-nav {
   width: 100%;
   height: auto;
+  -webkit-box-shadow: 0px 1px 5px 0px white;
+  -moz-box-shadow: 0px 1px 5px 0px white;
+  box-shadow: 0px 1px 5px 0px white;
+  display: none;
+  position: absolute;
   background-color: black;
   top: 100px;
   left: 0px;
   border: 1px solid white;
-  -webkit-box-shadow: 0px 5px 5px 0px white;
-  -moz-box-shadow: 0px 5px 5px 0px #923a3a;
-  box-shadow: 0px 5px 5px 0px white;
   color: white;
   filter: alpha(opacity=60);
   opacity: 0.9;
 }
-.header .headerDown .nav .main-menu .item-menu .submenu-nav ul {
+.header-main .headerDown .nav .main-menu .item-menu .submenu-nav ul {
   list-style: none;
   overflow: hidden;
   padding: 1rem;
 }
-.header .headerDown .nav .main-menu .item-menu .submenu-nav ul .submenu-item {
+.header-main .headerDown .nav .main-menu .item-menu .submenu-nav ul .submenu-item {
   float: left;
   margin: 0rem 1rem;
   width: 200px;
   font-weight: 400;
 }
-.header .headerDown .nav .main-menu .item-menu .submenu-nav ul .submenu-item ul li {
+.header-main .headerDown .nav .main-menu .item-menu .submenu-nav ul .submenu-item ul li {
   margin: 0.3rem 0rem;
   font-weight: 200;
 }
-.header .headerDown .nav .main-menu .item-menu:hover > .submenu-nav {
+.header-main .headerDown .nav .main-menu .item-menu:hover > .submenu-nav {
   display: flex;
   justify-content: center;
   align-items: auto;
+}
+
+.footer-main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "about-footer contacto-footer social-footer";
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 100%;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 0rem 5rem;
+}
+.footer-main ul {
+  list-style: none;
+}
+.footer-main ul li {
+  margin: 0.5rem 0rem;
+}
+.footer-main ul a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer-main .about-footer {
+  grid-area: about-footer;
+  display: grid;
+  grid-template-areas: "title-about-footer" "menu-about-footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+}
+.footer-main .about-footer .title-about-footer {
+  margin-bottom: 3rem;
+}
+.footer-main .about-footer .title-about-footer .lobocueros-title {
+  font-family: "Pridi";
+  font-size: 15pt;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.footer-main .about-footer .title-about-footer .slogan {
+  font-weight: 100;
+  margin-top: 0px;
+}
+.footer-main .contacto-footer {
+  grid-area: contacto-footer;
+  display: grid;
+  grid-template-areas: "title-contacto-footer" "menu-contacto-footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+}
+.footer-main .contacto-footer .title-contacto-footer {
+  display: flex;
+  justify-content: auto;
+  align-items: center;
+  font-weight: 500;
+}
+.footer-main .social-footer {
+  grid-area: social-footer;
+  display: grid;
+  grid-template-areas: "title-social-footer" "menu-social-footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+}
+.footer-main .social-footer .title-social-footer {
+  display: flex;
+  justify-content: auto;
+  align-items: center;
+  font-weight: 500;
+}
+.footer-main .social-footer .menu-social-footer ul li {
+  float: left;
+  margin: 0rem 0.5rem;
+}
+.footer-main .social-footer .menu-social-footer ul li a img {
+  width: 30px;
+}
+
+.instagramSection-main {
+  display: grid;
+  grid-template-areas: "instagram-bar" "instagram-photos-grid";
+  grid-template-columns: 100%;
+  grid-template-rows: 50px auto;
+}
+.instagramSection-main .instagram-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E4E4E4;
+  color: #420000;
+  font-family: "Pridi";
+  font-size: 30pt;
+  font-weight: 400;
+}
+.instagramSection-main .instagram-bar span {
+  margin: 0rem 1rem;
+}
+.instagramSection-main .instagram-bar img {
+  height: 40px;
+}
+.instagramSection-main .instagram-photos-grid {
+  display: grid;
+  grid-template-areas: "img1 img2 img3 img4 img5";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100%;
+}
+.instagramSection-main .instagram-photos-grid img {
+  width: 100%;
+  margin: 0px;
+}
+
+.home {
+  display: grid;
+  grid-template-areas: "header-home" "main-home" "footer-home";
+  grid-template-columns: 100%;
+  grid-template-rows: 100px auto auto;
+}
+.home .header-home {
+  grid-area: header-home;
+}
+.home .main-home {
+  grid-area: main-home;
+}
+
+.mainHome-main {
+  display: grid;
+  grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram-home" "info-buy";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.home .footer-home {
+  grid-area: footer-home;
 }
 
 /*# sourceMappingURL=Lobocueros.css.map */
