@@ -18,6 +18,7 @@ body {
   -moz-box-shadow: 0px 1px 5px 0px white;
   box-shadow: 0px 1px 5px 0px white;
   position: fixed;
+  z-index: 1;
 }
 .header-main .headerUp {
   grid-area: headerUp;
@@ -251,6 +252,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-box-shadow: 0px 1px 5px 0px white;
+  -moz-box-shadow: 0px 1px 5px 0px white;
+  box-shadow: 0px 1px 5px 0px white;
+  z-index: 1;
   background: #E4E4E4;
   color: #420000;
   font-family: "Pridi";
@@ -292,6 +297,46 @@ body {
   grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram-home" "info-buy";
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto auto;
+}
+.mainHome-main .banner-home {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/Images/bg1.png");
+  background-size: cover;
+}
+.mainHome-main .banner-home button {
+  -webkit-box-shadow: 0px 0px 5px 0px white;
+  -moz-box-shadow: 0px 0px 5px 0px white;
+  box-shadow: 0px 0px 5px 0px white;
+  margin: 10rem;
+  top: 6.5rem;
+}
+.mainHome-main .promo-home {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: auto;
+  align-items: center;
+  background-image: url("../assets/Images/Tapabocas.png");
+  background-size: cover;
+}
+.mainHome-main .promo-home div {
+  width: 50%;
+  text-align: center;
+}
+.mainHome-main .promo-home div p {
+  margin: 0px;
+}
+.mainHome-main .promo-home div h2 {
+  margin: 0.5rem;
+}
+.mainHome-main .promo-home div button {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
 }
 
 .home .footer-home {
