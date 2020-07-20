@@ -63,7 +63,7 @@ const MainHome = () => {
 				</div>
 				
 			</div>
-			<div className="instagram-home">
+			<div className="instagram">
 				<InstagramSection></InstagramSection>
 			</div>
 			<div className="info-buy">

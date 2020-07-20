@@ -362,7 +362,7 @@ body {
 
 .mainHome-main {
   display: grid;
-  grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram-home" "info-buy";
+  grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram" "info-buy";
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto auto;
 }
@@ -421,6 +421,19 @@ body {
 
 .home .footer-home {
   grid-area: footer-home;
+}
+
+.mainProductos-main {
+  display: grid;
+  grid-template-areas: "breadcrumb" "products-filter" "products-grid" "instagram" "info-buy";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+
+.breadcrumb {
+  width: 100%;
+  height: auto;
+  padding: 1rem 5rem;
 }
 
 /*# sourceMappingURL=Lobocueros.css.map */
