@@ -1,4 +1,15 @@
 .mainProductos-main
 	@include display-grid("breadcrumb" "products-filter" "products-grid" "instagram" "info-buy", 100%, auto)
 
-@import SProductosComponents/_Breadcrumb
+	.products-filter
+		padding: 0rem 5rem
+
+	.products-grid
+		padding: 2rem 5rem
+
+		.grid-main
+			display: flex
+			justify-content: center
+		
+	
+@import SProductosComponents/_Filter
