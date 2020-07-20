@@ -3,6 +3,8 @@ import InstagramSection from '../TReusable/InstagramSection'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import ProductCard from '../../Organisms/OReusable/ProductCard';
+import Carousel from 'nuka-carousel';
+
 
 const useStyles = makeStyles((theme) => ({
 	btnBanner: {
@@ -27,8 +29,30 @@ const MainHome = () => {
 				<Button className={classes.btnBanner} variant="outlined">Mujer</Button>
 				<Button className={classes.btnBanner} variant="outlined">Hombre</Button>				
 			</div>
-			<div className="carousel-home">
-				<ProductCard></ProductCard>
+			<div className="carousel-section">
+				<Carousel className="carousel-section">
+					<div className="item-carousel">
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+					</div>
+					<div className="item-carousel">
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+					</div>
+					<div className="item-carousel">
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+						<ProductCard className="product-carousel"></ProductCard>
+					</div>
+				</Carousel>
 
 			</div>
 			<div className="promo-home">

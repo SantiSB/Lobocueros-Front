@@ -12,8 +12,14 @@
 			margin: 10rem
 			top: 6.5rem
 
-	.carousel-home
+	.carousel-section
+		@include size(90%, auto)
+		display: flex
+		justify-self: center
+		padding: 1rem 5rem 3rem 5rem
 
+		.item-carousel
+			@include display-flex(space-between, center)
 
 	.promo-home
 		@include size(100%, 300px)

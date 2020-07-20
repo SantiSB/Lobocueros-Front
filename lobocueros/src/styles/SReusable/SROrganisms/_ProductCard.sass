@@ -1,0 +1,41 @@
+.product-card
+	max-width: 250px
+	
+
+	.title-product-card
+		@include display-flex(center, center)
+		h2
+			font-family: "Pridi"
+			margin: 0px
+
+	.price-product-card
+		@include display-flex(center, center)
+		span
+			font-family: "Montserrat"
+			font-weight: 600
+			font-size: 10pt
+			margin: 0rem 0.3rem
+
+		.old-value
+			text-decoration: line-through
+			font-weight: 400
+			font-size: 8pt
+
+	.product-card-actions
+		width: 100%
+
+		.colors-product-card
+			@include display-flex(center, center)
+			margin-bottom: 1rem
+
+		.buy-produt-card
+			@include size(100%, auto)
+			@include display-flex(center, center)
+
+		.btn-buy
+			border-radius: 100px
+			background: $Orange
+			color: $White
+
+		&:hover
+			color: $Black
