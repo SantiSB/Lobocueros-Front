@@ -5,6 +5,7 @@ import Filter from '../../Organisms/OProductos/Filter';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProductCard from '../../Organisms/OReusable/ProductCard'
+import InfoBuySection from '../TReusable/InfoBuySection';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -98,7 +99,7 @@ const MainProductos = () => {
 				<InstagramSection></InstagramSection>
 			</div>
 			<div className="info-buy">
-				
+				<InfoBuySection></InfoBuySection>
 			</div>
 		</div>
     )

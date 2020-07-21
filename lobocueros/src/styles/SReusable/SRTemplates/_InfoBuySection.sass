@@ -1,0 +1,19 @@
+.info-buy-bar
+	@include display-flex(space-between, center)
+	@include size(auto, 50px)
+	@include shadow-white
+	z-index: 1
+	background: $Grey
+	color: $Black
+	font-size: 15pt
+	font-weight: 200
+	padding: 0rem 2rem
+
+	span
+		margin: 0rem .5rem
+
+	img
+		height: 30px
+
+	.item-info-buy-bar
+		@include display-flex(space-between, center)

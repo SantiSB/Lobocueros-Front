@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import ProductCard from '../../Organisms/OReusable/ProductCard';
 import Carousel from 'nuka-carousel';
+import InfoBuySection from '../TReusable/InfoBuySection';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -67,7 +68,7 @@ const MainHome = () => {
 				<InstagramSection></InstagramSection>
 			</div>
 			<div className="info-buy">
-				
+				<InfoBuySection></InfoBuySection>
 			</div>
 		</div>
     )
