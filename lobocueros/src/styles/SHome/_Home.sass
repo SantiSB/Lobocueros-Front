@@ -1,11 +1,10 @@
 .home
+	@include size(100%, auto)
 	display: grid
-	grid-template-areas: "header-home" "main-home" "footer-home"
-	grid-template-columns: 100%
-	grid-template-rows: 100px auto auto
+	@include display-grid("header" "main-home" "footer", 100%, 100px auto auto)
 
-	.header-home
-		grid-area: header-home
+	.header
+		grid-area: header
 
 	.main-home
 		grid-area: main-home
@@ -13,7 +12,7 @@
 @import SHomeComponents/_MainHome
 
 .home
-	.footer-home
-		grid-area: footer-home
+	.footer
+		grid-area: footer
 
 	

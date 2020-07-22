@@ -2,6 +2,7 @@
 	@include display-grid("banner-home" "carousel-home" "promo-home" "instagram" "info-buy", 100%, auto auto auto auto auto)
 
 	.banner-home
+		grid-area: banner-home
 		@include size(100%, 300px)
 		@include display-flex(center, center)
 		background-image: url('../assets/Images/bg1.png')
@@ -12,16 +13,16 @@
 			margin: 10rem
 			top: 6.5rem
 
-	.carousel-section
-		@include size(90%, auto)
-		display: flex
-		justify-self: center
-		padding: 1rem 5rem 3rem 5rem
+	.carousel-home
+		@include size(100%, auto)
+		padding: 0rem 5rem
+		grid-area: carousel-home
 
 		.item-carousel
 			@include display-flex(space-between, center)
 
 	.promo-home
+		grid-area: promo-home
 		@include size(100%, 300px)
 		@include display-flex(auto, center)
 		background-image: url('../assets/Images/Tapabocas.png')
@@ -41,9 +42,11 @@
 				@include shadow-black-btn
 
 	.instagram
+		grid-area: instagram
 		@include size(100%, auto)
 
 	.info-buy
+		grid-area: info-buy
 		@include size(100%, auto)
 			
 

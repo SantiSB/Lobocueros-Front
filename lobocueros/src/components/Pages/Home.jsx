@@ -6,15 +6,15 @@ import MainHome from "../Templates/THome/MainHome";
 const Home = () => {
   return (
     <div className="home">
-      <header className="header-home">
+      <div className="header">
         <Header></Header>
-      </header>
+      </div>
       <main className="main-home">
-        <MainHome></MainHome>
+        {/* <MainHome></MainHome> */}
       </main>
-      <footer className="footer-home">
-        <Footer></Footer>
-      </footer>
+      <div className="footer">
+        {/* <Footer></Footer> */}
+      </div>
     </div>
   );
 };

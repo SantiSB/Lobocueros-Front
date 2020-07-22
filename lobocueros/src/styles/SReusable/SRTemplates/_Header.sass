@@ -18,6 +18,7 @@
 			font-weight: 100
 
 		.menu-headerUp
+			
 			grid-area: menu-headerUp
 			@include display-flex(space-between, center)
 
@@ -49,13 +50,15 @@
 				img 
 					@include size(auto, 50px)
 
+		.burger-menu
+			display: none
+
 		.nav
-			@include display-flex(center, center)
-			@include size(100%, 100%)
+			@include display-flex(auto, center)
 
 			.main-menu
 				@include display-flex(center, center)
-				@include size(100%, 100%)
+				@include size(100%, auto)
 				list-style: none
 				overflow: hidden
 
@@ -113,5 +116,312 @@
 					
 					&:hover>.submenu-nav
 						@include display-flex(center, auto)
+
+
+@media (max-device-width: 375px)
+	.header-main
+
+		.headerUp
+			@include display-grid("slogan menu-headerUp", 50% 50%, 100%)
+			padding: 0rem 1rem
+
+			.slogan
+				font-size: 8pt
+
+			.menu-headerUp
+				@include display-flex(flex-end, center)
+		.headerDown
+			@include display-grid("home-icon burger-menu", 50% 50%, 100%)
+			padding: 0rem 1rem
+
+			.home-icon
+				@include display-flex(flex-start, center)
+				a
+					img 
+						@include size(auto, 30px)
+
+			.burger-menu
+				@include display-flex(flex-end, center)
+
+				.submenu-nav
+					@include size(100%, auto)
+					@include shadow-white
+					display: none
+					position: absolute
+					background-color: black
+					top: 100px
+					left: 0px
+					border: 1px solid white
+					color: white
+					filter: alpha(opacity=60) 
+					opacity: .9
+
+					ul
+						list-style: none
+						overflow: hidden
+						padding: 1rem
+
+						.submenu-item
+							float: left
+							margin: 0rem 1rem
+							width: 200px
+							font-weight: 400
+
+							ul
+								li
+									margin: .3rem 0rem
+									font-weight: 200 
+
+
+				&:hover>.submenu-nav
+					@include display-flex(center, auto)
+
+
+			.nav
+				display: none
+
+@media (min-device-width: 375px)
+	.header-main
+		.headerUp
+			// @include display-grid("slogan menu-headerUp", 50% 50%, 100%)
+			padding: 0rem 1rem
+
+			.slogan
+				font-size: 8pt
+
+			.menu-headerUp
+				@include display-flex(flex-end, center)
+		.headerDown
+			@include display-grid("home-icon burger-menu", 50% 50%, 100%)
+			padding: 0rem 1rem
+
+			.home-icon
+				@include display-flex(flex-start, center)
+				a
+					img 
+						@include size(auto, 30px)
+
+			.burger-menu
+				@include display-flex(flex-end, center)
+
+				.submenu-nav
+					@include size(100%, auto)
+					@include shadow-white
+					display: none
+					position: absolute
+					background-color: black
+					top: 100px
+					left: 0px
+					border: 1px solid white
+					color: white
+					filter: alpha(opacity=60) 
+					opacity: .9
+
+					ul
+						list-style: none
+						overflow: hidden
+						padding: 1rem
+
+						.submenu-item
+							float: left
+							margin: 0rem 1rem
+							width: 200px
+							font-weight: 400
+
+							ul
+								li
+									margin: .3rem 0rem
+									font-weight: 200 
+
+
+				&:hover>.submenu-nav
+					@include display-flex(center, auto)
+
+			.nav
+				display: none
+
+@media (min-device-width: 768px)
+	.header-main
+		.headerUp
+			@include display-grid("slogan menu-headerUp", 50% 50%, 100%)
+			padding: 0rem 5rem
+
+			.slogan
+				font-size: 8pt
+
+			.menu-headerUp
+				@include display-flex(flex-end, center)
+		.headerDown
+			@include display-grid("home-icon burger-menu", 50% 50%, 100%)
+			padding: 0rem 5rem
+
+			.home-icon
+				@include display-flex(flex-start, center)
+				a
+					img 
+						@include size(auto, 30px)
+
+			.burger-menu
+				@include display-flex(flex-end, center)
+
+				.submenu-nav
+					@include size(100%, auto)
+					@include shadow-white
+					display: none
+					position: absolute
+					background-color: black
+					top: 100px
+					left: 0px
+					border: 1px solid white
+					color: white
+					filter: alpha(opacity=60) 
+					opacity: .9
+
+					ul
+						list-style: none
+						overflow: hidden
+						padding: 1rem
+
+						.submenu-item
+							float: left
+							margin: 0rem 1rem
+							width: 200px
+							font-weight: 400
+
+							ul
+								li
+									margin: .3rem 0rem
+									font-weight: 200 
+
+
+				&:hover>.submenu-nav
+					@include display-flex(center, auto)
+
+
+			.nav
+				display: none
+
+@media (min-device-width: 992px)
+	.header-main
+		@include display-grid("headerUp" "headerDown", 100%, 30px 70px)
+		@include size(100%, auto)
+		@include shadow-white
+		position: fixed
+		z-index: 2
+
+		.headerUp
+			grid-area: headerUp
+			@include display-grid("slogan menu-headerUp", 90% 10%, 100%)
+			background: $Black
+			color: $White
+			padding: 0rem 5rem
+
+			.slogan
+				grid-area: slogan
+				@include display-flex(flex-start, center)
+				font-weight: 100
+
+			.menu-headerUp
+				
+				grid-area: menu-headerUp
+				@include display-flex(space-between, center)
+
+				i
+					@include display-flex(center, center)
+					@include size(auto, 100%)
+					margin: 0rem 0.3rem
+
+					img
+						@include size(auto, 25px)
+				
+				.mini-cart-icon
+					margin: 0rem
+
+		.headerDown
+			grid-area: headerDown
+			@include display-grid("home-icon nav", 10% 90%, 100%)
+			background: $Lobocueros
+			border: 0.5px solid $White
+			padding: 0rem 10rem
+
+			.home-icon
+				grid-area: home-icon
+				@include display-flex(center, center)
+
+				a
+					@include display-flex(center, center)
+
+					img 
+						@include size(auto, 50px)
+
+			.burger-menu
+				display: none
+
+			.nav
+				@include display-flex(auto, center)
+
+				.main-menu
+					@include display-flex(center, center)
+					@include size(100%, auto)
+					list-style: none
+					overflow: hidden
+
+					.home-icon
+						@include display-flex(center, center)
+						
+
+					.item-menu
+						@include display-flex(center, center)
+						@include size(auto, 100%)
+						float: left
+						margin: 0rem 2rem
+						font-weight: 600
+
+						img
+							@include size(auto, 5px)
+						
+						a
+							@include display-flex(center, center)
+							color: $White
+							text-decoration: none
+							margin: 0rem 0.5rem
+						
+							img
+								@include size(auto, 50px)
+
+						.submenu-nav
+							@include size(100%, auto)
+							@include shadow-white
+							display: none
+							position: absolute
+							background-color: black
+							top: 100px
+							left: 0px
+							border: 1px solid white
+							color: white
+							filter: alpha(opacity=60) 
+							opacity: .9
+
+							ul
+								list-style: none
+								overflow: hidden
+								padding: 1rem
+
+								.submenu-item
+									float: left
+									margin: 0rem 1rem
+									width: 200px
+									font-weight: 400
+
+									ul
+										li
+											margin: .3rem 0rem
+											font-weight: 200 
+						
+						&:hover>.submenu-nav
+							@include display-flex(center, auto)
+
+@media (max-device-width: 1200px) 
+
 
 		

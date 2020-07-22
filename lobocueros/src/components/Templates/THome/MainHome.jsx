@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
 		border: "1px solid #000000",
 		borderRadius: "100px"
 	},
+	carousel:{
+		padding: "1rem 5rem 3rem 5rem",
+		maxWidth: "90%"
+	}
 	
   }));
 
@@ -30,8 +34,8 @@ const MainHome = () => {
 				<Button className={classes.btnBanner} variant="outlined">Mujer</Button>
 				<Button className={classes.btnBanner} variant="outlined">Hombre</Button>				
 			</div>
-			<div className="carousel-section">
-				<Carousel className="carousel-section">
+			<div className="carousel-home">
+				<Carousel className={classes.carousel}>
 					<div className="item-carousel">
 						<ProductCard className="product-carousel"></ProductCard>
 						<ProductCard className="product-carousel"></ProductCard>

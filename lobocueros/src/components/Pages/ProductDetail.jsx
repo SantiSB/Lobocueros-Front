@@ -3,20 +3,20 @@ import Header from "../Templates/TReusable/Header";
 import Footer from "../Templates/TReusable/Footer";
 import MainDetailProductos from "../Templates/TDetailProductos/MainDetailProductos";
 
-const Home = () => {
+const ProductDetail = () => {
   return (
-    <div className="home">
-      <header className="header-home">
+    <div className="product-detail">
+      <header className="header-product-detail">
         <Header></Header>
       </header>
-      <main className="main-home">
+      <main className="main-detail-product">
         <MainDetailProductos></MainDetailProductos>
       </main>
-      <footer className="footer-home">
+      <footer className="footer-product-detail">
         <Footer></Footer>
       </footer>
     </div>
   );
 };
 
-export default Home
+export default ProductDetail

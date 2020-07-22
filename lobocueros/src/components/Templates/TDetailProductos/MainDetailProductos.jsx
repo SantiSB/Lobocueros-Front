@@ -10,7 +10,7 @@ const MainDetailProduct = () => {
     return(
 		<div className="detail-product-main">
 			<div className="breadcrumb">
-				<Breadcrumb></Breadcrumb>	
+				<Breadcrumb readcrumb={"productos"}></Breadcrumb>	
 			</div>
 
 			<div className="details-product">
