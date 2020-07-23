@@ -13,7 +13,8 @@ const Home = () => {
         {/* <MainHome></MainHome> */}
       </main>
       <div className="footer">
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
+
       </div>
     </div>
   );

@@ -83,7 +83,7 @@ const Header = () => {
         
           <div className="burger-menu">
             <BurgerMenu></BurgerMenu>
-                <div className="submenu-nav" id="Mujer">
+                <div className="submenu-nav">
                   <ul>
                     <li className="submenu-item">Bolsos
                       <ul>

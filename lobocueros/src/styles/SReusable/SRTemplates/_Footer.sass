@@ -1,5 +1,5 @@
 .footer-main
-	@include size(100%, 100%)
+	@include size(100%, auto)
 	@include display-grid("about-footer contacto-footer social-footer", 33% 34% 33%, 100%)
 	background: $Black
 	color: $White
@@ -39,6 +39,7 @@
 			@include display-flex(auto, center)
 			font-weight: 500
 
+
 	.social-footer
 		grid-area: social-footer
 		@include display-grid("title-social-footer" "menu-social-footer", 100%, 30% 70%)
@@ -56,3 +57,62 @@
 					a
 						img
 							width: 30px
+
+@media (max-device-width: 1200px)
+	.footer-main
+		padding: 0rem
+
+		.about-footer
+			padding: 1rem 2rem
+
+			.title-about-footer
+
+				.lobocueros-title
+					font-size: 12.5pt
+				
+				.slogan
+					display: none
+
+		.contacto-footer
+			padding: 1rem 2rem
+
+			.title-contacto-footer
+				@include display-flex(auto, center)
+				font-weight: 500
+
+		.social-footer
+			padding: 1rem 2rem
+
+			
+
+@media (max-device-width: 900px)
+	.footer-main
+		padding: 0rem
+
+		.about-footer
+			padding: 1rem 1rem
+			font-size: 8pt
+
+		.contacto-footer
+			padding: 1rem 1rem
+			font-size: 8pt
+
+			.title-contacto-footer
+				@include display-flex(auto, center)
+				font-weight: 500
+
+		.social-footer
+			padding: 1rem 0rem
+			font-size: 8pt
+
+			.menu-social-footer
+				ul
+					li
+						float: left
+						margin: 0rem .5rem
+
+						a
+							img
+								width: 20px 
+
+@media (max-device-width: 573px)
