@@ -20,7 +20,20 @@
 			
 
 	.instagram-photos-grid
-		@include display-grid("img1 img2 img3 img4 img5", repeat(5, 1fr), 100%)
+		@include display-grid("img1 img2 img3 img4 img5", repeat(5, 1fr), auto)
 		img
 			width: 100%
 			margin: 0px
+
+@media (max-device-width: 1200px)
+	.instagramSection-main
+
+		.instagram-bar
+			font-size: 20pt
+
+			img
+				height: 30px			
+
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)

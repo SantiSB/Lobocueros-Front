@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 		border: "1px solid #ffffff",
 		background: "#000000",
 		opacity: ".7",
-		borderRadius: "100px"
+		borderRadius: "100px",
 	},
 	btnPromo: {
 		border: "1px solid #000000",
@@ -34,7 +34,7 @@ const MainHome = () => {
 				<Button className={classes.btnBanner} variant="outlined">Mujer</Button>
 				<Button className={classes.btnBanner} variant="outlined">Hombre</Button>				
 			</div>
-			<div className="carousel-home">
+			{/* <div className="carousel-home">
 				<Carousel className={classes.carousel}>
 					<div className="item-carousel">
 						<ProductCard className="product-carousel"></ProductCard>
@@ -58,7 +58,6 @@ const MainHome = () => {
 						<ProductCard className="product-carousel"></ProductCard>
 					</div>
 				</Carousel>
-
 			</div>
 			<div className="promo-home">
 				<div>
@@ -66,11 +65,10 @@ const MainHome = () => {
 					<h2>Tapabocas Termosellado</h2>
 					<Button className={classes.btnPromo} variant="outlined">Comprar</Button>
 				</div>
-				
-			</div>
+			</div> */}
 			<div className="instagram">
 				<InstagramSection></InstagramSection>
-			</div>
+			</div> 
 			<div className="info-buy">
 				<InfoBuySection></InfoBuySection>
 			</div>

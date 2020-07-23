@@ -10,7 +10,7 @@ const Home = () => {
         <Header></Header>
       </div>
       <main className="main-home">
-        {/* <MainHome></MainHome> */}
+        <MainHome></MainHome>
       </main>
       <div className="footer">
         <Footer></Footer>

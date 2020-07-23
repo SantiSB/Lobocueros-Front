@@ -17,3 +17,33 @@
 	.item-info-buy-bar
 		@include display-flex(space-between, center)
 		margin: 0rem 1rem
+
+@media (max-device-width: 1200px)
+	.info-buy-bar
+		font-size: 11pt
+		font-weight: 200
+	
+
+@media (max-device-width: 900px)
+	.info-buy-bar
+		font-size: 8pt
+		font-weight: 200
+	
+@media (max-device-width: 573px)
+	.info-buy-bar
+		max-width: 100%
+		@include display-flex(center, center)
+		font-size: 5pt
+		span
+			text-align: center
+			margin: 0rem 0rem
+
+		img
+			display: none
+			height: 10px
+
+	.item-info-buy-bar
+		@include display-flex(center, center)
+		margin: 0rem 0rem
+
+
