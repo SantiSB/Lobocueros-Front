@@ -1,0 +1,78 @@
+
+.carousel-home
+	@include display-flex(center, center)
+	@include size(100%, auto)
+	grid-area: carousel-home
+
+	.item-carousel
+		@include display-flex(center, center)
+		div
+			margin: 0rem .5rem
+
+.carousel-home-movil
+	display: none
+	@include size(100%, auto)
+	grid-area: carousel-home-movil
+
+	.item-carousel
+		@include display-flex(center, center)
+		div
+			margin: 0rem .5rem
+
+.carousel-home-movil-small
+	display: none
+	@include size(100%, auto)
+	grid-area: carousel-home-movil-small
+
+	.item-carousel
+		@include display-flex(center, center)
+		div
+			margin: 0rem .5rem
+
+.carousel-home-movil-extra-small
+	display: none
+	@include size(100%, auto)
+	grid-area: carousel-home-movil-extra-small
+
+	.item-carousel
+		
+		@include display-flex(center, center)
+
+@media (max-device-width: 1500px)
+	.carousel-home
+		display: none
+
+	.carousel-home-movil
+		@include display-flex(center, center)
+
+	.carousel-home-movil-small
+		display: none
+
+	.carousel-home-movil-extra-small
+		display: none
+
+@media (max-device-width: 1000px)
+	.carousel-home
+		display: none
+
+	.carousel-home-movil
+		display: none
+
+	.carousel-home-movil-small
+		@include display-flex(center, center)
+
+	.carousel-home-movil-extra-small
+		display: none
+
+@media (max-device-width: 700px)
+	.carousel-home
+		display: none
+
+	.carousel-home-movil
+		display: none
+
+	.carousel-home-movil-small
+		display: none
+
+	.carousel-home-movil-extra-small
+		@include display-flex(center, center)

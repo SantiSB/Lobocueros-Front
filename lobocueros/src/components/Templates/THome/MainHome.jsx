@@ -2,10 +2,8 @@ import React from 'react';
 import InstagramSection from '../TReusable/InstagramSection'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import ProductCard from '../../Organisms/OReusable/ProductCard';
-import Carousel from 'nuka-carousel';
+import CarouselHome from '../../Organisms/OHome/CarouselHome'
 import InfoBuySection from '../TReusable/InfoBuySection';
-
 
 const useStyles = makeStyles((theme) => ({
 	btnBanner: {
@@ -34,38 +32,14 @@ const MainHome = () => {
 				<Button className={classes.btnBanner} variant="outlined">Mujer</Button>
 				<Button className={classes.btnBanner} variant="outlined">Hombre</Button>				
 			</div>
-			{/* <div className="carousel-home">
-				<Carousel className={classes.carousel}>
-					<div className="item-carousel">
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-					</div>
-					<div className="item-carousel">
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-					</div>
-					<div className="item-carousel">
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-						<ProductCard className="product-carousel"></ProductCard>
-					</div>
-				</Carousel>
-			</div>
+			<CarouselHome></CarouselHome>
 			<div className="promo-home">
 				<div>
 					<p>Distribuidor oficial de</p>
 					<h2>Tapabocas Termosellado</h2>
 					<Button className={classes.btnPromo} variant="outlined">Comprar</Button>
 				</div>
-			</div> */}
+			</div> 
 			<div className="instagram">
 				<InstagramSection></InstagramSection>
 			</div> 

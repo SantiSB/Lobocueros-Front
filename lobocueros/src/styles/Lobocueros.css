@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pridi:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   width: 100%;
   margin: 0;
@@ -639,17 +639,6 @@ body {
   margin: 10rem;
   top: 6.5rem;
 }
-.mainHome-main .carousel-home {
-  width: 100%;
-  height: auto;
-  padding: 0rem 5rem;
-  grid-area: carousel-home;
-}
-.mainHome-main .carousel-home .item-carousel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .mainHome-main .promo-home {
   grid-area: promo-home;
   width: 100%;
@@ -686,10 +675,38 @@ body {
   height: auto;
 }
 
-@media (max-device-width: 1200px) {
+@media (max-device-width: 1500px) {
   .mainHome-main {
     display: grid;
-    grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram" "info-buy";
+    grid-template-areas: "banner-home" "carousel-home-movil" "promo-home" "instagram" "info-buy";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+  }
+}
+@media (max-device-width: 1000px) {
+  .mainHome-main {
+    display: grid;
+    grid-template-areas: "banner-home" "carousel-home-movil-small" "promo-home" "instagram" "info-buy";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .mainHome-main .banner-home {
+    width: 100%;
+    height: 250px;
+  }
+  .mainHome-main .banner-home button {
+    margin: 0rem 10rem;
+    top: 4.5rem;
+  }
+  .mainHome-main .promo-home {
+    width: 100%;
+    height: 250px;
+  }
+}
+@media (max-device-width: 700px) {
+  .mainHome-main {
+    display: grid;
+    grid-template-areas: "banner-home" "carousel-home-movil-extra-small" "promo-home" "instagram" "info-buy";
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
   }
@@ -698,25 +715,128 @@ body {
     height: 200px;
   }
   .mainHome-main .banner-home button {
-    margin: 0rem 10rem;
+    margin: 0rem 3rem;
     top: 3.5rem;
   }
-}
-@media (max-device-width: 573px) {
-  .mainHome-main {
-    display: grid;
-    grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram" "info-buy";
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-  }
-  .mainHome-main .banner-home {
+  .mainHome-main .promo-home {
     width: 100%;
-    height: 100px;
-    background-size: cover;
+    height: 200px;
   }
-  .mainHome-main .banner-home button {
-    margin: 0rem 3rem;
-    top: 0rem;
+}
+.carousel-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  grid-area: carousel-home;
+}
+.carousel-home .item-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-home .item-carousel div {
+  margin: 0rem 0.5rem;
+}
+
+.carousel-home-movil {
+  display: none;
+  width: 100%;
+  height: auto;
+  grid-area: carousel-home-movil;
+}
+.carousel-home-movil .item-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-home-movil .item-carousel div {
+  margin: 0rem 0.5rem;
+}
+
+.carousel-home-movil-small {
+  display: none;
+  width: 100%;
+  height: auto;
+  grid-area: carousel-home-movil-small;
+}
+.carousel-home-movil-small .item-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-home-movil-small .item-carousel div {
+  margin: 0rem 0.5rem;
+}
+
+.carousel-home-movil-extra-small {
+  display: none;
+  width: 100%;
+  height: auto;
+  grid-area: carousel-home-movil-extra-small;
+}
+.carousel-home-movil-extra-small .item-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-device-width: 1500px) {
+  .carousel-home {
+    display: none;
+  }
+
+  .carousel-home-movil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-home-movil-small {
+    display: none;
+  }
+
+  .carousel-home-movil-extra-small {
+    display: none;
+  }
+}
+@media (max-device-width: 1000px) {
+  .carousel-home {
+    display: none;
+  }
+
+  .carousel-home-movil {
+    display: none;
+  }
+
+  .carousel-home-movil-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-home-movil-extra-small {
+    display: none;
+  }
+}
+@media (max-device-width: 700px) {
+  .carousel-home {
+    display: none;
+  }
+
+  .carousel-home-movil {
+    display: none;
+  }
+
+  .carousel-home-movil-small {
+    display: none;
+  }
+
+  .carousel-home-movil-extra-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .home .footer {
