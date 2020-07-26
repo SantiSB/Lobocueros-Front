@@ -1,0 +1,31 @@
+.banner-home
+	grid-area: banner-home
+	@include size(100%, 300px)
+	@include display-flex(center, center)
+	background-image: url('../assets/Images/bg1.png')
+	background-size: cover
+	
+	button
+		@include shadow-white-btn
+		margin: 10rem
+		top: 6.5rem
+
+@media (max-device-width: 1500px)
+
+@media (max-device-width: 1000px)
+	.banner-home
+		@include size(100%, 250px)
+		
+		button
+			margin: 0rem 10rem
+			top: 4.5rem
+
+@media (max-device-width: 700px)
+	.banner-home
+		@include size(100%, 200px)
+		
+		button
+			margin: 0rem 3rem
+			top: 3.5rem
+
+

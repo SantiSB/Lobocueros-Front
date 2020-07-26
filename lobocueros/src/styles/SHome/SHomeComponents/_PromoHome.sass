@@ -1,0 +1,31 @@
+.promo-home
+	grid-area: promo-home
+	@include size(100%, 300px)
+	@include display-flex(auto, center)
+	background-image: url('../assets/Images/Tapabocas.png')
+	background-size: cover
+
+	div
+		width: 50%
+		text-align: center
+
+		p
+			margin: 0px
+
+		h2 
+			margin: .5rem
+
+		button
+			@include shadow-black-btn
+
+@media (max-device-width: 1500px)
+
+@media (max-device-width: 1000px)
+	.promo-home
+		@include size(100%, 250px)
+
+@media (max-device-width: 700px)
+	.promo-home
+		@include size(100%, 200px)
+
+

@@ -16,6 +16,13 @@ body {
   margin: 0rem 0.3rem;
 }
 
+@media (max-device-width: 573px) {
+  .color-btn {
+    width: 15px;
+    height: 18px;
+    margin: 0rem 0.1rem;
+  }
+}
 .colors-bar {
   display: flex;
   justify-content: center;
@@ -24,64 +31,168 @@ body {
 }
 
 .breadcrumb {
-  width: 100%;
+  width: auto;
   height: auto;
   padding: 1rem 5rem;
 }
 
+@media (max-device-width: 573px) {
+  .breadcrumb {
+    padding: 1rem 1rem 0rem 1rem;
+  }
+}
 .product-card {
   max-width: 250px;
+  height: 360px;
 }
-.product-card .title-product-card {
+.product-card .card-action-area {
+  padding: 0px;
+}
+.product-card .card-action-area .card-content {
+  padding: 0px;
+}
+.product-card .card-action-area .card-content .image-product-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-card .title-product-card h2 {
+.product-card .card-action-area .card-content .image-product-card img {
+  width: 200px;
+}
+.product-card .card-action-area .card-content .title-product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-card .card-action-area .card-content .title-product-card h2 {
   font-family: "Pridi";
+  font-size: 12pt;
   margin: 0px;
 }
-.product-card .price-product-card {
+.product-card .card-action-area .card-content .price-product-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-card .price-product-card span {
+.product-card .card-action-area .card-content .price-product-card span {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 10pt;
   margin: 0rem 0.3rem;
 }
-.product-card .price-product-card .old-value {
+.product-card .card-action-area .card-content .price-product-card .old-value {
   text-decoration: line-through;
   font-weight: 400;
   font-size: 8pt;
 }
-.product-card .product-card-actions {
-  width: 100%;
+.product-card .card-actions {
+  padding: 0px;
 }
-.product-card .product-card-actions .colors-product-card {
+.product-card .card-actions .product-card-actions {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.product-card .card-actions .product-card-actions .colors-product-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
 }
-.product-card .product-card-actions .buy-produt-card {
-  width: 100%;
-  height: auto;
+.product-card .card-actions .product-card-actions .buy-produt-card {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
-.product-card .product-card-actions .btn-buy {
+.product-card .card-actions .product-card-actions .buy-produt-card .btn-buy {
   border-radius: 100px;
   background: #F97401;
   color: #FFFFFF;
+  width: 200px;
+  height: 40px;
+  font-size: 10pt;
 }
-.product-card .product-card-actions:hover {
+.product-card .card-actions .product-card-actions .buy-produt-card:hover {
   color: #000000;
 }
 
+@media (max-device-width: 573px) {
+  .product-card {
+    max-width: 150px;
+    height: 200px;
+  }
+  .product-card .card-action-area {
+    padding: 0px;
+  }
+  .product-card .card-action-area .card-content {
+    padding: 0px;
+  }
+  .product-card .card-action-area .card-content .image-product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-card .card-action-area .card-content .image-product-card img {
+    width: 100px;
+  }
+  .product-card .card-action-area .card-content .title-product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-card .card-action-area .card-content .title-product-card h2 {
+    font-family: "Pridi";
+    font-size: 8pt;
+    margin: 0px;
+  }
+  .product-card .card-action-area .card-content .price-product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-card .card-action-area .card-content .price-product-card span {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 6pt;
+    margin: 0rem 0.3rem;
+  }
+  .product-card .card-action-area .card-content .price-product-card .old-value {
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 5pt;
+  }
+  .product-card .card-actions {
+    padding: 0px;
+  }
+  .product-card .card-actions .product-card-actions {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .product-card .card-actions .product-card-actions .colors-product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem 0rem;
+  }
+  .product-card .card-actions .product-card-actions .buy-produt-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem;
+  }
+  .product-card .card-actions .product-card-actions .buy-produt-card .btn-buy {
+    border-radius: 100px;
+    background: #F97401;
+    color: #FFFFFF;
+    height: 20px;
+    font-size: 5pt;
+  }
+  .product-card .card-actions .product-card-actions .buy-produt-card:hover {
+    color: #000000;
+  }
+}
 .header-main {
   display: grid;
   grid-template-areas: "headerUp" "headerDown";
@@ -622,58 +733,6 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto auto;
 }
-.mainHome-main .banner-home {
-  grid-area: banner-home;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../assets/Images/bg1.png");
-  background-size: cover;
-}
-.mainHome-main .banner-home button {
-  -webkit-box-shadow: 0px 0px 5px 0px white;
-  -moz-box-shadow: 0px 0px 5px 0px white;
-  box-shadow: 0px 0px 5px 0px white;
-  margin: 10rem;
-  top: 6.5rem;
-}
-.mainHome-main .promo-home {
-  grid-area: promo-home;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: auto;
-  align-items: center;
-  background-image: url("../assets/Images/Tapabocas.png");
-  background-size: cover;
-}
-.mainHome-main .promo-home div {
-  width: 50%;
-  text-align: center;
-}
-.mainHome-main .promo-home div p {
-  margin: 0px;
-}
-.mainHome-main .promo-home div h2 {
-  margin: 0.5rem;
-}
-.mainHome-main .promo-home div button {
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
-}
-.mainHome-main .instagram {
-  grid-area: instagram;
-  width: 100%;
-  height: auto;
-}
-.mainHome-main .info-buy {
-  grid-area: info-buy;
-  width: 100%;
-  height: auto;
-}
 
 @media (max-device-width: 1500px) {
   .mainHome-main {
@@ -690,18 +749,6 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
   }
-  .mainHome-main .banner-home {
-    width: 100%;
-    height: 250px;
-  }
-  .mainHome-main .banner-home button {
-    margin: 0rem 10rem;
-    top: 4.5rem;
-  }
-  .mainHome-main .promo-home {
-    width: 100%;
-    height: 250px;
-  }
 }
 @media (max-device-width: 700px) {
   .mainHome-main {
@@ -710,17 +757,43 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
   }
-  .mainHome-main .banner-home {
+}
+.banner-home {
+  grid-area: banner-home;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/Images/bg1.png");
+  background-size: cover;
+}
+.banner-home button {
+  -webkit-box-shadow: 0px 0px 5px 0px white;
+  -moz-box-shadow: 0px 0px 5px 0px white;
+  box-shadow: 0px 0px 5px 0px white;
+  margin: 10rem;
+  top: 6.5rem;
+}
+
+@media (max-device-width: 1000px) {
+  .banner-home {
+    width: 100%;
+    height: 250px;
+  }
+  .banner-home button {
+    margin: 0rem 10rem;
+    top: 4.5rem;
+  }
+}
+@media (max-device-width: 700px) {
+  .banner-home {
     width: 100%;
     height: 200px;
   }
-  .mainHome-main .banner-home button {
+  .banner-home button {
     margin: 0rem 3rem;
     top: 3.5rem;
-  }
-  .mainHome-main .promo-home {
-    width: 100%;
-    height: 200px;
   }
 }
 .carousel-home {
@@ -777,6 +850,8 @@ body {
   grid-area: carousel-home-movil-extra-small;
 }
 .carousel-home-movil-extra-small .item-carousel {
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -839,6 +914,44 @@ body {
     align-items: center;
   }
 }
+.promo-home {
+  grid-area: promo-home;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: auto;
+  align-items: center;
+  background-image: url("../assets/Images/Tapabocas.png");
+  background-size: cover;
+}
+.promo-home div {
+  width: 50%;
+  text-align: center;
+}
+.promo-home div p {
+  margin: 0px;
+}
+.promo-home div h2 {
+  margin: 0.5rem;
+}
+.promo-home div button {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+}
+
+@media (max-device-width: 1000px) {
+  .promo-home {
+    width: 100%;
+    height: 250px;
+  }
+}
+@media (max-device-width: 700px) {
+  .promo-home {
+    width: 100%;
+    height: 200px;
+  }
+}
 .home .footer {
   grid-area: footer;
 }
@@ -860,13 +973,32 @@ body {
   justify-content: center;
 }
 
-.filter-products {
-  display: grid;
-  grid-template-areas: "select-filter search-filter";
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 100%;
+.filter-products .select-filter .form-control {
+  width: 120px;
+  margin: 0rem 0.2rem;
+}
+.filter-products .select-filter #search-form-control {
+  width: 100%;
 }
 
+@media (max-device-width: 573px) {
+  .mainProductos-main {
+    display: grid;
+    grid-template-areas: "breadcrumb" "products-filter" "products-grid" "instagram" "info-buy";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .mainProductos-main .products-filter {
+    padding: 0rem 1rem;
+  }
+  .mainProductos-main .products-grid {
+    padding: 0rem 1rem;
+  }
+  .mainProductos-main .products-grid .grid-main {
+    display: flex;
+    justify-content: center;
+  }
+}
 .product-detail {
   display: grid;
   grid-template-areas: "header-product-detail" "main-detail-product" "footer-product-detail";

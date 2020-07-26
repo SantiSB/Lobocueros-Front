@@ -13,3 +13,21 @@
 		
 	
 @import SProductosComponents/_Filter
+
+@media (max-device-width: 1200px)
+
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)
+	.mainProductos-main
+		@include display-grid("breadcrumb" "products-filter" "products-grid" "instagram" "info-buy", 100%, auto)
+
+		.products-filter
+			padding: 0rem 1rem
+
+		.products-grid
+			padding: 0rem 1rem
+
+			.grid-main
+				display: flex
+				justify-content: center
