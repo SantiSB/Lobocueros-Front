@@ -1,0 +1,50 @@
+.info-product-detail
+	width: 100%
+	text-align: center
+
+	.ref-product
+		font-weight: 200
+
+	.title-product
+		font-weight: 600
+		font-size: 15pt
+
+	.price-product
+		span
+			margin: .5rem
+			font-size: 12pt
+			font-weight: 300
+		
+		.old-value
+			text-decoration: line-through
+			font-size: 10pt
+			font-weight: 400
+
+	.description-product
+		@include display-flex(center,center)
+
+	.actions-product-detail
+		@include display-flex(center,center)
+
+	.buttons-product-detail
+		@include display-flex(center,center)
+		button
+			margin: .5rem
+
+		.btn-buy
+			color: $White
+			border: 1px solid $White
+			background: $Red
+			opacity: .7
+			border-radius: 100px
+			width: 200px
+			@include shadow-black-btn
+
+		.btn-add-to-cart
+			color: #ffffff
+			border: 1px solid $White
+			background: $Orange
+			opacity: .7
+			border-radius: 100px
+			width: 200px
+			@include shadow-black-btn

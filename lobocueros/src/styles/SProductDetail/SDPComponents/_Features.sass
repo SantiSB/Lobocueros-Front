@@ -1,0 +1,29 @@
+.features
+	@include display-grid("features-product measures-product", 50% 50%, 100%)
+	color: $Lobocueros
+	table, th, td
+		border-collapse: collapse
+		width: 300px
+
+		.item-table
+			font-size: 10pt
+			font-weight: 500
+
+		th
+			font-size: 12pt
+			font-weight: 600
+			height: 50px
+			text-align: start
+		
+		td
+			font-size: 10pt
+			font-weight: 400
+			height: 25px
+
+
+
+	.features-product
+		@include display-flex(center, auto)
+
+	.measures-product
+		@include display-flex(center, auto)

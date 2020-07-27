@@ -3,25 +3,28 @@
 	@include display-grid("breadcrumb" "details-product" "general-info" "instagram" "info-buy", 100%, auto)
 
 	.breadcrumb
-		@include size(100%, auto)
+		@include size(auto, auto)
 
 	.details-product
-		
+		@include size(auto, auto)
 		@include display-grid("carousel-images-detail info-product-detail", 50% 50%, 300px)
 		padding: 0rem 5rem
 
 		.carousel-images-detail
-			padding: 0rem 5rem
+			padding: 0rem 0rem
 
 @import _CarouselImages
 
 .detail-product-main
 	.details-product
 		.info-product-detail
-			@include size(100%, 100%)
+			@include size(auto, 100%)
 			padding: 0rem 5rem
 			@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
 
 	.general-info
-		padding: 0rem 5rem
+		padding: 1rem 5rem
 		@include display-flex(center, center)
+
+@import _GeneralInfoProduct
+

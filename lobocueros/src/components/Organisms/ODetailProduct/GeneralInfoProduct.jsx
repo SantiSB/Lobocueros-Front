@@ -6,6 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Features from '../../Molecules/MReusable/MDetailProduct/Features';
+import Recommendations from '../../Molecules/MReusable/MDetailProduct/Recommendations';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
 	backgroundColor: theme.palette.background.paper,
   },
+  tabs: {
+	  color: "#420000"
+  }
 }));
 
 const GeneralInfoProduct = () => {
@@ -61,25 +66,21 @@ const GeneralInfoProduct = () => {
 				<Tabs
 				value={value}
 				onChange={handleChange}
-				indicatorColor="primary"
-				textColor="primary"
+				className={classes.tabs}
+				indicatorColor="secondary"
 				variant="scrollable"
 				scrollButtons="auto"
 				aria-label="scrollable auto tabs example"
 				>
 				<Tab label="CARACTERISTICAS" {...a11yProps(0)} />
 				<Tab label="RECOMENDACIONES DE USO" {...a11yProps(1)} />
-				<Tab label="RESEÑAS" {...a11yProps(2)} />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>
-				CARACTERISTICAS
+				<Features></Features>
 			</TabPanel>
 			<TabPanel value={value} index={1}>
-				RECOMENDACIONES DE USO
-			</TabPanel>
-			<TabPanel value={value} index={2}>
-				RESEÑAS
+				<Recommendations></Recommendations>
 			</TabPanel>
 		</div>
 		

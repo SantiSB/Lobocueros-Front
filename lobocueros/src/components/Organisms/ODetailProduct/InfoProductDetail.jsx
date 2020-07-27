@@ -1,6 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
-
 
 const InfoProductDetail = () => {
     return(
@@ -23,9 +23,8 @@ const InfoProductDetail = () => {
 				
 			</div>
 			<div className="buttons-product-detail">
-				<button>Count</button>
-				<button>Count</button>
-				
+				<Button className="btn-buy" variant="outlined">COMPRAR</Button>
+				<Button className="btn-add-to-cart" variant="outlined">AGREGAR AL CARRITO</Button>
 			</div>
 		</div>
     )

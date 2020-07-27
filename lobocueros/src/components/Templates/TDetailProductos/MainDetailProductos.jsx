@@ -1,7 +1,7 @@
 import React from 'react';
 import InstagramSection from '../TReusable/InstagramSection'
 import InfoBuySection from '../TReusable/InfoBuySection'
-import Breadcrumb from '../../Organisms/OReusable/Breadcrumb';
+import BreadcrumbDetailProduct from '../../Organisms/ODetailProduct/BreadcrumbDetailProduct';
 import CarouselImages from '../../Organisms/ODetailProduct/CarouselImages';
 import InfoProductDetail from '../../Organisms/ODetailProduct/InfoProductDetail';
 import GeneralInfoProduct from '../../Organisms/ODetailProduct/GeneralInfoProduct';
@@ -10,7 +10,7 @@ const MainDetailProduct = () => {
     return(
 		<div className="detail-product-main">
 			<div className="breadcrumb">
-				<Breadcrumb readcrumb={"productos"}></Breadcrumb>	
+				<BreadcrumbDetailProduct breadcrumb={"Categoria"}></BreadcrumbDetailProduct>	
 			</div>
 
 			<div className="details-product">
