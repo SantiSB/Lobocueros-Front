@@ -1,30 +1,69 @@
 .detail-product-main
-	@include size(100%, 100%)
-	@include display-grid("breadcrumb" "details-product" "general-info" "instagram" "info-buy", 100%, auto)
+	@include size(100%, auto)
+	@include display-grid("breadcrumb" "details-product" "general-info" "instagram" "info-buy", 100%, auto auto auto auto auto)
 
 	.breadcrumb
 		@include size(auto, auto)
 
 	.details-product
 		@include size(auto, auto)
-		@include display-grid("carousel-images-detail info-product-detail", 50% 50%, 300px)
+		@include display-grid("carousel-images-detail info-product-detail", 50% 50%, auto)
 		padding: 0rem 5rem
 
 		.carousel-images-detail
+			@include size(auto, auto)
 			padding: 0rem 0rem
+			@include display-flex(center, center)
 
 @import _CarouselImages
 
 .detail-product-main
 	.details-product
 		.info-product-detail
-			@include size(auto, 100%)
+			@include size(auto, auto)
 			padding: 0rem 5rem
 			@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
 
 	.general-info
-		padding: 1rem 5rem
+		padding: 2rem 5rem
 		@include display-flex(center, center)
 
 @import _GeneralInfoProduct
+
+@media (max-device-width: 1200px)
+	.detail-product-main
+		.details-product
+			padding: 0rem 1rem
+			.info-product-detail
+				@include size(auto, 100%)
+				padding: 0rem 1rem
+				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
+
+	
+
+@media (max-device-width: 900px)
+	.detail-product-main
+		.details-product
+			padding: 0rem 1rem
+			.info-product-detail
+				@include size(auto, auto)
+				padding: 0rem 1rem
+				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
+
+
+@media (max-device-width: 573px)
+	.detail-product-main
+
+		.details-product
+			@include display-grid("carousel-images-detail" "info-product-detail", 100%, auto auto)
+			padding: 0rem 1rem
+
+			.carousel-images-detail
+				@include size(auto, auto)
+				padding: 0rem 0rem
+				@include display-flex(center, center)
+
+		.general-info
+			padding: 0rem 1rem
+			margin: 3rem 0rem
 

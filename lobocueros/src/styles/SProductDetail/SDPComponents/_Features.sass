@@ -7,11 +7,11 @@
 
 		.item-table
 			font-size: 10pt
-			font-weight: 500
+			font-weight: 600
 
 		th
 			font-size: 12pt
-			font-weight: 600
+			font-weight: 800
 			height: 50px
 			text-align: start
 		
@@ -27,3 +27,29 @@
 
 	.measures-product
 		@include display-flex(center, auto)
+
+@media (max-device-width: 1200px)
+	.features
+		@include display-grid("features-product" "measures-product", 100%, auto auto)
+		
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)
+	.features
+		table
+			width: 100%
+
+			.item-table
+				font-size: 8pt
+				font-weight: 600
+
+			th
+				font-size: 10pt
+				font-weight: 800
+				height: 50px
+				text-align: start
+			
+			td
+				font-size: 7pt
+				font-weight: 400
+				height: 25px

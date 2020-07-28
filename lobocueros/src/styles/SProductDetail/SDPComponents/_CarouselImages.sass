@@ -1,3 +1,18 @@
 .carousel-images-section
 	div
 		@include display-flex(center, center)
+
+@media (max-device-width: 1200px)
+
+@media (max-device-width: 900px)
+	.carousel-images-section
+		div
+			img
+				width: 200px
+
+@media (max-device-width: 573px)
+	.carousel-images-section
+		margin: 1rem 0rem
+		div
+			img
+				width: 180px
