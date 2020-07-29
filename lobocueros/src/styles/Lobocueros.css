@@ -1320,4 +1320,138 @@ body {
   grid-area: footer-product-detail;
 }
 
+.mainCart-main .cart {
+  display: grid;
+  grid-template-areas: "info-items-buy resume-buy";
+  grid-template-columns: 70% 30%;
+  grid-template-rows: auto;
+  padding: 0rem 10rem;
+}
+
+.container-counter {
+  background: #FFFFFF;
+  margin: 1rem;
+}
+.container-counter p {
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+.item-buy {
+  display: grid;
+  grid-template-areas: "checkbox-item-buy image-item-buy info-item-buy buttons-item-buy";
+  grid-template-columns: 10% 20% 50% 20%;
+  grid-template-rows: auto;
+  background: #FFFFFF;
+  margin: 1rem;
+}
+.item-buy .checkbox-item-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-buy .image-item-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-buy .image-item-buy img {
+  width: 180px;
+}
+.item-buy .info-item-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-buy .buttons-item-buy {
+  display: grid;
+  grid-template-areas: "trash-btn-container" "counter-btn-container";
+  grid-template-columns: auto;
+  grid-template-rows: 50% 50%;
+}
+.item-buy .buttons-item-buy .trash-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.item-buy .buttons-item-buy .counter-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-buy .buttons-item-buy button {
+  background: none;
+  border: none;
+}
+.item-buy .buttons-item-buy button img {
+  width: 20px;
+}
+.item-buy .buttons-item-buy span {
+  font-size: 25pt;
+  margin: 0rem 0.5rem;
+}
+
+.pay-container {
+  display: grid;
+  grid-template-areas: "methods-pay secure-pay";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  background: #FFFFFF;
+  margin: 1rem;
+  padding: 1rem;
+}
+.pay-container .methods-pay {
+  display: grid;
+  grid-template-areas: "pay-methods-title" "pay-methods-icons";
+  grid-template-columns: auto;
+  grid-template-rows: 30% 70%;
+  border-right: 2px solid #E4E4E4;
+}
+.pay-container .methods-pay img {
+  width: 30px;
+}
+.pay-container .methods-pay i {
+  margin: 0rem 0.5rem;
+}
+.pay-container .methods-pay .pay-methods-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15pt;
+  font-weight: 600;
+}
+.pay-container .methods-pay .pay-methods-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0.5rem;
+}
+.pay-container .secure-pay {
+  display: grid;
+  grid-template-areas: "secure-pay-title" "secure-pay-info";
+  grid-template-columns: auto;
+  grid-template-rows: 30% 70%;
+}
+.pay-container .secure-pay img {
+  width: 20px;
+}
+.pay-container .secure-pay i {
+  margin: 0rem 0.5rem;
+}
+.pay-container .secure-pay .secure-pay-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15pt;
+  font-weight: 600;
+}
+.pay-container .secure-pay .secure-pay-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+  text-align: center;
+  font-weight: 300;
+}
+
 /*# sourceMappingURL=Lobocueros.css.map */

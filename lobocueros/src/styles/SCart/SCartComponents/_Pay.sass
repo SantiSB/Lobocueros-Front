@@ -1,0 +1,44 @@
+.pay-container
+	@include display-grid("methods-pay secure-pay", 50% 50%, auto)
+	background: $White
+	margin: 1rem
+	padding: 1rem
+
+	.methods-pay
+		@include display-grid("pay-methods-title" "pay-methods-icons", auto, 30% 70%)
+		border-right: 2px solid $Grey
+
+		img
+			width: 30px
+
+		i
+			margin: 0rem .5rem
+
+		.pay-methods-title
+			@include display-flex(center, center)
+			font-size: 15pt
+			font-weight: 600
+
+		.pay-methods-icons
+			@include display-flex(center, center)
+			padding: 0rem .5rem
+
+	.secure-pay
+		@include display-grid("secure-pay-title" "secure-pay-info", auto, 30% 70%)
+
+		img
+			width: 20px
+
+		i
+			margin: 0rem .5rem
+
+		.secure-pay-title
+			@include display-flex(center, center)
+			font-size: 15pt
+			font-weight: 600
+
+		.secure-pay-info
+			@include display-flex(center, center)
+			padding: 0rem 2rem
+			text-align: center
+			font-weight: 300

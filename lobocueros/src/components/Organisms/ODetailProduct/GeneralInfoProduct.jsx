@@ -6,8 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Features from '../../Molecules/MReusable/MDetailProduct/Features';
-import Recommendations from '../../Molecules/MReusable/MDetailProduct/Recommendations';
+import Features from '../../Molecules/MDetailProduct/Features';
+import Recommendations from '../../Molecules/MDetailProduct/Recommendations';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

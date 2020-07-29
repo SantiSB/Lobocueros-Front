@@ -1,0 +1,34 @@
+.item-buy
+	@include display-grid("checkbox-item-buy image-item-buy info-item-buy buttons-item-buy", 10% 20% 50% 20%,  auto)
+	background: $White
+	margin: 1rem
+
+	.checkbox-item-buy
+		@include display-flex(center, center)
+
+	.image-item-buy
+		@include display-flex(center, center)
+		img
+			width: 180px
+
+	.info-item-buy
+		@include display-flex(center, center)
+
+	.buttons-item-buy
+		@include display-grid("trash-btn-container" "counter-btn-container", auto, 50% 50%)
+		
+		.trash-btn-container
+			@include display-flex(center, flex-end)
+
+		.counter-btn-container
+			@include display-flex(center, center)
+
+		button
+			background: none
+			border: none
+			img
+				width: 20px
+
+		span
+			font-size: 25pt
+			margin: 0rem .5rem
