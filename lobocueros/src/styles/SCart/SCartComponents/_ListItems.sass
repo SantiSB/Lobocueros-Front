@@ -32,3 +32,44 @@
 		span
 			font-size: 25pt
 			margin: 0rem .5rem
+
+@media (max-device-width: 1200px)
+		
+@media (max-device-width: 900px)
+	.item-buy
+
+		.image-item-buy
+			img
+				width: 100px
+
+		.info-item-buy
+			font-size: 10pt
+
+		.buttons-item-buy
+
+			button
+				img
+					width: 15px
+
+			span
+				font-size: 20pt
+
+@media (max-device-width: 573px)
+	.item-buy
+		@include display-grid("checkbox-item-buy image-item-buy info-item-buy buttons-item-buy", 10% 25% 40% 25%,  auto)
+		.image-item-buy
+			img
+				width: 80px
+
+		.info-item-buy
+			font-size: 7pt
+			padding: 0rem 1rem
+
+		.buttons-item-buy
+
+			button
+				img
+					width: 10px
+
+			span
+				font-size: 15pt

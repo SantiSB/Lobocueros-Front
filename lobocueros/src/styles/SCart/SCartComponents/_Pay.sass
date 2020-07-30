@@ -42,3 +42,47 @@
 			padding: 0rem 2rem
 			text-align: center
 			font-weight: 300
+
+@media (max-device-width: 1200px)
+		
+@media (max-device-width: 900px)
+	.pay-container
+		background: $White
+		margin: 1rem
+		padding: .5rem
+
+		.methods-pay
+			img
+				width: 20px
+
+			i
+				margin: 0rem .5rem
+
+			.pay-methods-title
+				font-size: 10pt
+
+		.secure-pay
+
+			img
+				width: 15px
+
+			.secure-pay-title
+				font-size: 10pt
+
+			.secure-pay-info
+				font-size: 8pt
+
+@media (max-device-width: 573px)
+	.pay-container
+		@include display-grid("methods-pay" "secure-pay", auto, auto auto)
+		background: $White
+		margin: 1rem
+		padding: 1rem
+
+		.methods-pay
+			@include display-grid("pay-methods-title" "pay-methods-icons", auto, 30% 70%)
+			border-bottom: 2px solid $Grey
+			border-right: none
+
+		.secure-pay
+			padding: 1rem 0rem 0rem 0rem

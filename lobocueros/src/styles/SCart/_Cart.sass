@@ -6,5 +6,22 @@
 @import SCartComponents/_CounterItems
 @import SCartComponents/_ListItems
 @import SCartComponents/_Pay
+@import SCartComponents/_ResumeBuy
+
+
+@media (max-device-width: 1200px)
+	.mainCart-main
+		.cart
+			padding: 0rem 0rem
+		
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)
+	.mainCart-main
+		.cart
+			@include display-grid("info-items-buy" "resume-buy", auto, auto)
+			padding: 0rem 0rem
+
+
 
 		

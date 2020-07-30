@@ -1,0 +1,33 @@
+.resume-buy-container
+	@include display-grid("info-resume" "button-resume", auto, 90% 10%)
+	background: $White
+	margin: 1.5rem 1rem
+	padding: 0rem 1rem 1rem 1rem
+
+	.info-resume
+		.title-info-resume
+			font-weight: 600
+			font-size: 15pt
+			text-align: center
+
+		div
+			p
+				@include display-flex(space-between, center)
+				font-weight: 300
+			
+			.total
+				font-weight: 500
+
+	.button-resume
+		@include display-flex(center, center)
+		button
+			@include shadow-black-btn
+			width: 80%
+			&:hover
+				color: $Black
+
+@media (max-device-width: 1200px)
+		
+@media (max-device-width: 900px)
+	
+@media (max-device-width: 573px)
