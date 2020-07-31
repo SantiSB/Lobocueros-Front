@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
-	btnBanner: {
+	btnBuy: {
 		color: "#ffffff",
 		border: "1px solid #ffffff",
 		background: "#DA2727",
@@ -27,7 +27,7 @@ const ResumeBuy = () => {
         
       </div>
       <div className="button-resume">
-        <Button className={classes.btnBanner} variant="outlined">COMPRAR</Button>
+        <Button className={classes.btnBuy} variant="outlined">COMPRAR</Button>
       </div>
     </div>
   );

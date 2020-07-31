@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Productos from "./Pages/Productos";
 import ProductDetail from "./Pages/ProductDetail";
 import Cart from "./Pages/Cart";
-
+import Resume from "./Pages/Resume";
 //Rutas del visor de sismos
 const Routes = () => (
   <Router>
@@ -13,6 +13,7 @@ const Routes = () => (
       <Route path="/productos" exact component={Productos} />
       <Route path="/productos/:id/" component={ProductDetail} />
       <Route path="/carrito" component={Cart} />
+      <Route path="/resumen" component={Resume} />
     </Switch>
   </Router>
 );
