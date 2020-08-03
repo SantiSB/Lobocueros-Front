@@ -30,6 +30,20 @@ body {
   margin: 0.5rem 0rem;
 }
 
+.item {
+  display: grid;
+  grid-template-areas: "image-item-order info-item-order";
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+  text-align: center;
+}
+.item img {
+  width: 150px;
+}
+.item p {
+  font-size: 10pt;
+}
+
 .breadcrumb {
   width: auto;
   height: auto;
@@ -193,6 +207,44 @@ body {
     color: #000000;
   }
 }
+.resume-buy-container {
+  display: grid;
+  grid-template-areas: "info-resume" "button-resume";
+  grid-template-columns: auto;
+  grid-template-rows: 90% 10%;
+  background: #FFFFFF;
+  margin: 1.5rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+}
+.resume-buy-container .info-resume .title-info-resume {
+  font-weight: 600;
+  font-size: 15pt;
+  text-align: center;
+}
+.resume-buy-container .info-resume div p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+}
+.resume-buy-container .info-resume div .total {
+  font-weight: 500;
+}
+.resume-buy-container .button-resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-buy-container .button-resume button {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  width: 80%;
+}
+.resume-buy-container .button-resume button:hover {
+  color: #000000;
+}
+
 .header-main {
   display: grid;
   grid-template-areas: "headerUp" "headerDown";
@@ -1536,44 +1588,6 @@ body {
     padding: 1rem 0rem 0rem 0rem;
   }
 }
-.resume-buy-container {
-  display: grid;
-  grid-template-areas: "info-resume" "button-resume";
-  grid-template-columns: auto;
-  grid-template-rows: 90% 10%;
-  background: #FFFFFF;
-  margin: 1.5rem 1rem;
-  padding: 0rem 1rem 1rem 1rem;
-}
-.resume-buy-container .info-resume .title-info-resume {
-  font-weight: 600;
-  font-size: 15pt;
-  text-align: center;
-}
-.resume-buy-container .info-resume div p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 300;
-}
-.resume-buy-container .info-resume div .total {
-  font-weight: 500;
-}
-.resume-buy-container .button-resume {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.resume-buy-container .button-resume button {
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
-  width: 80%;
-}
-.resume-buy-container .button-resume button:hover {
-  color: #000000;
-}
-
 @media (max-device-width: 1200px) {
   .mainCart-main .cart {
     padding: 0rem 0rem;
@@ -1594,6 +1608,139 @@ body {
   grid-template-columns: 70% 30%;
   grid-template-rows: auto;
   padding: 0rem 10rem;
+}
+.mainResume-main .title-steep {
+  font-size: 12pt;
+  font-weight: 200;
+}
+.mainResume-main .subtitle-steep {
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+.container-InfoShipping {
+  background: #FFFFFF;
+  margin: 1rem;
+  padding: 1rem;
+}
+.container-InfoShipping form div {
+  margin: 0.1rem;
+}
+
+.container-counter {
+  padding: 1rem;
+}
+
+.items-order {
+  background: #FFFFFF;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@media (max-device-width: 1200px) {
+  .items-order {
+    background: #FFFFFF;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .items-order .item {
+    display: grid;
+    grid-template-areas: "image-item-order info-item-order";
+    grid-template-columns: 35% 65%;
+    grid-template-rows: auto;
+    text-align: center;
+  }
+  .items-order .item img {
+    width: 120px;
+  }
+  .items-order .item p {
+    font-size: 8pt;
+  }
+}
+.login-register-container {
+  background: #FFFFFF;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.login-register-container p {
+  font-size: 12pt;
+  font-weight: 600;
+}
+.login-register-container .answer-register {
+  font-size: 10pt;
+  font-weight: 300;
+}
+.login-register-container button {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+}
+.login-register-container button:hover {
+  color: #000000;
+}
+
+@media (max-device-width: 1200px) {
+  .mainResume-main .resume {
+    padding: 0rem 1rem;
+  }
+}
+@media (max-device-width: 573px) {
+  .mainResume-main .resume {
+    display: grid;
+    grid-template-areas: "info-method-detail" "resume-login";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 0rem 1rem;
+  }
+  .mainResume-main .title-steep {
+    font-size: 12pt;
+    font-weight: 200;
+  }
+  .mainResume-main .subtitle-steep {
+    font-size: 15pt;
+    font-weight: 600;
+  }
+}
+.container-purchase-true {
+  margin: 1rem 10rem;
+  background: #FFFFFF;
+}
+.container-purchase-true .title-purchase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+.container-purchase-true .title-purchase img {
+  width: 100px;
+}
+.container-purchase-true .title-purchase p {
+  font-size: 20pt;
+  font-weight: 600;
+  margin: 1rem;
+}
+.container-purchase-true .list-products-purchase {
+  text-align: center;
+}
+.container-purchase-true .list-products-purchase p {
+  font-size: 15pt;
+  font-weight: 400;
+}
+.container-purchase-true .list-products-purchase div {
+  width: 800px;
+}
+.container-purchase-true .btn-purchase-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+.container-purchase-true .btn-purchase-container button {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
 }
 
 /*# sourceMappingURL=Lobocueros.css.map */

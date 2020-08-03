@@ -1,0 +1,24 @@
+.items-order
+	background: $White
+	margin: 1rem
+	padding: 1rem
+	
+
+@media (max-device-width: 1200px)
+	.items-order
+		background: $White
+		margin: 1rem
+		padding: 1rem
+
+		.item
+			@include display-grid("image-item-order info-item-order", 35% 65%, auto)
+			text-align: center
+			img
+				width: 120px
+
+			p
+				font-size: 8pt
+		
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)

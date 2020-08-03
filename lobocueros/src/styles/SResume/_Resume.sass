@@ -3,9 +3,37 @@
 		@include display-grid("info-method-detail resume-login", 70% 30%, auto)
 		padding: 0rem 10rem
 
+	.title-steep
+		font-size: 12pt
+		font-weight: 200
+
+	.subtitle-steep
+		font-size: 15pt
+		font-weight: 600
+
 @import SResumeComponents/_InfoShipping
 @import SResumeComponents/_PayMethodTable
 @import SResumeComponents/_DetailOrder
-
-@import SResumeComponents/_ResumeOrder
 @import SResumeComponents/_LoginRegister
+
+@media (max-device-width: 1200px)
+	.mainResume-main
+		.resume
+			padding: 0rem 1rem
+		
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)
+	.mainResume-main
+		.resume
+			@include display-grid("info-method-detail" "resume-login", auto, auto)
+			padding: 0rem 1rem
+
+		.title-steep
+			font-size: 12pt
+			font-weight: 200
+
+		.subtitle-steep
+			font-size: 15pt
+			font-weight: 600
+

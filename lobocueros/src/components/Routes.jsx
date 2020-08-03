@@ -5,6 +5,8 @@ import Productos from "./Pages/Productos";
 import ProductDetail from "./Pages/ProductDetail";
 import Cart from "./Pages/Cart";
 import Resume from "./Pages/Resume";
+import SuccessfulPurchase from "./Pages/SuccessfulPurchase";
+import FailedPurchase from "./Pages/FailedPurchase";
 //Rutas del visor de sismos
 const Routes = () => (
   <Router>
@@ -14,6 +16,8 @@ const Routes = () => (
       <Route path="/productos/:id/" component={ProductDetail} />
       <Route path="/carrito" component={Cart} />
       <Route path="/resumen" component={Resume} />
+      <Route path="/compraexitosa" component={SuccessfulPurchase} />
+      <Route path="/compraFALLIDA" component={FailedPurchase} />
     </Switch>
   </Router>
 );

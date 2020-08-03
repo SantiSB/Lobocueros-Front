@@ -1,28 +1,32 @@
 import React from "react";
-import Secure from "../../../assets/Icons/Secure.svg"
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+	btnBuy: {
+		color: "#ffffff",
+		border: "1px solid #ffffff",
+		background: "#DA2727",
+		opacity: ".7",
+		borderRadius: "100px",
+	},
+  }));
 
 const ResumeOrder = () => {
+  const classes = useStyles();
   return (
-    <div className="pay-container">
-      <div className="methods-pay">
-        <p className="pay-methods-title">MÉTODOS DE PAGO</p>
-        <div className="pay-methods-icons">
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
+    <div className="resume-buy-container">
+      <div className="info-resume">
+        <p className="title-info-resume">Resumen del pedido</p>
+        <div>
+          <p>Subtotal: <span>$300.000</span></p>
+          <p>Envio: <span>Gratis</span></p>
+          <p className="total">Total: <span>$300.000</span></p>
         </div>
+        
       </div>
-      <div className="secure-pay">
-        <div className="secure-pay-title">
-          <i><img src={Secure}></img></i>
-          <p>COMPRA 100% SEGURA</p>
-
-        </div>
-        <div className="secure-pay-info">
-          <p>Recibe un reembolso completo de tu dinero si el articulo no llega o es diferente al de la descripción</p>
-        </div>
+      <div className="button-resume">
+        <Button className={classes.btnBuy} variant="outlined">COMPRAR</Button>
       </div>
     </div>
   );

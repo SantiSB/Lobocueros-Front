@@ -9,39 +9,35 @@ import MenuItem from '@material-ui/core/MenuItem';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 120,
+    minWidth: 300,
   },
   selectEmpty: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(0),
   },
 }));
 
 const PayMethodTable = () => {
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
+  const [method, setMethod] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setMethod(event.target.value);
   };
   return (
     <div  className="container-counter">
-      <p>Paso 2 de 3</p>
-      <p>Método de pago</p>
-      <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+      <p className="title-steep">Paso 2 de 3</p>
+      <p className="subtitle-steep">Seleccionar Método de pago</p>
+      <FormControl variant="filled" className={classes.formControl}>
+        <InputLabel id="demo-simple-select-outlined-label">Metodo de Pago</InputLabel>
         <Select
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
-          value={age}
+          value={method}
           onChange={handleChange}
-          label="Age"
+          label="Metodo"
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={10}>Tarjeta de credito</MenuItem>
+          <MenuItem value={20}>PayU</MenuItem>
         </Select>
       </FormControl>
     </div>
