@@ -1,8 +1,22 @@
 .item
-		@include display-grid("image-item-order info-item-order", 30% 70%, auto)
+		@include display-grid("image-item-order info-item-order", auto auto, auto)
 		text-align: center
 		img
 			width: 150px
 
 		p
 				font-size: 10pt
+
+@media (max-device-width: 1200px)
+		
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)
+	.item
+		@include display-grid("image-item-order info-item-order", auto auto, auto)
+		text-align: center
+		img
+			width: 100px
+
+		p
+				font-size: 5pt

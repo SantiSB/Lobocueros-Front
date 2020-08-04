@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
 		background: "#4CBC31",
 		opacity: ".7",
     borderRadius: "100px",
-    width: "70%"
 	},
   }));
 
