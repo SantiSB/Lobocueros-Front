@@ -1,0 +1,25 @@
+div[role = presentation]
+	display: flex
+	justify-content: center
+	align-items: center
+
+.login-modal
+	position: absolute
+	width: auto
+	background: #420000
+	border: 2px solid #000
+	padding: 1rem
+
+	.logo-lobocueros-login-modal
+		@include display-flex(center, center)
+		img
+			width: 50px
+
+	.title-lobocueros-login-modal
+		@include display-flex(center, center)
+		p
+			font-family: "Pridi"
+			font-size: 25pt
+			font-weight: 400
+			margin: 0.3rem
+			color: $White

@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorBtn from '../../Atoms/ColorBtn';
+import ColorBtn from '../../Atoms/AReusable/ColorBtn';
 
 const ColorsBar = () => {
     return(
