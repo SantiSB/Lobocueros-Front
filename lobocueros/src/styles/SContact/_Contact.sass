@@ -1,4 +1,5 @@
 .contact-main-container
+	color: $Lobocueros
 	padding: 0rem 5rem
 	.form-map-contact
 		@include display-grid("form-contact map-contact", 50% 50%, 100%)
@@ -13,15 +14,26 @@
 	.form-map-contact
 		.map-contact
 			@include display-flex(center, center)
+			font-weight: 300
+
+			.direction-contact
+				@include display-flex(space-between, center)
 	
 	.network-contact
 		@include display-grid("icons-social-media-contact email-contact", 50% 50%, 100%)
 		padding: 1rem
+		margin: 1rem 0rem
+		font-size: 25pt
+		font-weight: 600
+		font-family: "Pridi"
 
 		.icons-social-media-contact
 			@include display-flex(center, center)
 			i
 				margin: 0rem .5rem
+
+				img
+					width: 50px
 
 		.email-contact
 			@include display-flex(center, center)
@@ -29,3 +41,49 @@
 	.phones-contact
 		@include display-flex(space-between, center)
 		padding: 1rem
+		font-weight: 300
+
+@media (max-device-width: 1200px)
+	.contact-main-container
+		.form-map-contact
+			font-size: 10pt
+
+		.phones-contact
+			font-size: 10pt
+		
+@media (max-device-width: 900px)
+	.contact-main-container
+		padding: 0rem 1rem
+		.form-map-contact
+			font-size: 8pt
+
+		.phones-contact
+			font-size: 8pt
+
+@media (max-device-width: 573px)
+	.contact-main-container
+		.form-map-contact
+			display: block
+
+			.map-contact
+				height: 100vh
+				margin: 1rem 0rem
+
+				
+
+		.network-contact
+			display: block
+			font-size: 18pt
+			margin: 0rem 0rem
+			padding: 0rem
+
+		.phones-contact
+			text-align: center
+			display: grid
+			grid-template-columns: 100%
+			grid-template-rows: repeat(4, 1fr)
+			padding: 1rem
+
+			span
+				margin: .2rem 0rem
+

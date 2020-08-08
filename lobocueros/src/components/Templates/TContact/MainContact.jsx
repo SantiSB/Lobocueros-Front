@@ -4,6 +4,9 @@ import Breadcrumb from '../../Organisms/OReusable/Breadcrumb';
 import InfoBuySection from '../TReusable/InfoBuySection';
 import InfoContact from '../../Organisms/OContact/InfoContact';
 import Instagram from '../../../assets/Icons/Instagram_Lobocueros.svg'
+import Facebook from '../../../assets/Icons/Facebook_Lobocueros.svg'
+import Whatsapp from '../../../assets/Icons/Whatsapp_Lobocueros.svg'
+import Google from '../../../assets/Icons/Google_Lobocueros.svg'
 import MapContact from '../../Molecules/MContact/MapContact';
 
 
@@ -21,15 +24,14 @@ const MainContact = () => {
 					</div>
 					<div className="map-contact">
 						<MapContact></MapContact>
-						
 					</div>
 				</div>
 				<div className="network-contact">
 					<div className="icons-social-media-contact">
+						<i><img src={Google}></img></i>
 						<i><img src={Instagram}></img></i>
-						<i><img src={Instagram}></img></i>
-						<i><img src={Instagram}></img></i>
-						<i><img src={Instagram}></img></i>
+						<i><img src={Whatsapp}></img></i>
+						<i><img src={Facebook}></img></i>
 					</div>
 					<div className="email-contact">
 						<p>lobocueros@gmail.com</p>

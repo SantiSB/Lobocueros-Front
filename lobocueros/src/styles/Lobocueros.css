@@ -1966,6 +1966,7 @@ div[role=presentation] {
   }
 }
 .contact-main-container {
+  color: #420000;
   padding: 0rem 5rem;
 }
 .contact-main-container .form-map-contact {
@@ -1989,6 +1990,12 @@ div[role=presentation] {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 300;
+}
+.contact-main-container .form-map-contact .map-contact .direction-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .contact-main-container .network-contact {
   display: grid;
@@ -1996,6 +2003,10 @@ div[role=presentation] {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   padding: 1rem;
+  margin: 1rem 0rem;
+  font-size: 25pt;
+  font-weight: 600;
+  font-family: "Pridi";
 }
 .contact-main-container .network-contact .icons-social-media-contact {
   display: flex;
@@ -2004,6 +2015,9 @@ div[role=presentation] {
 }
 .contact-main-container .network-contact .icons-social-media-contact i {
   margin: 0rem 0.5rem;
+}
+.contact-main-container .network-contact .icons-social-media-contact i img {
+  width: 50px;
 }
 .contact-main-container .network-contact .email-contact {
   display: flex;
@@ -2015,6 +2029,52 @@ div[role=presentation] {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  font-weight: 300;
+}
+
+@media (max-device-width: 1200px) {
+  .contact-main-container .form-map-contact {
+    font-size: 10pt;
+  }
+  .contact-main-container .phones-contact {
+    font-size: 10pt;
+  }
+}
+@media (max-device-width: 900px) {
+  .contact-main-container {
+    padding: 0rem 1rem;
+  }
+  .contact-main-container .form-map-contact {
+    font-size: 8pt;
+  }
+  .contact-main-container .phones-contact {
+    font-size: 8pt;
+  }
+}
+@media (max-device-width: 573px) {
+  .contact-main-container .form-map-contact {
+    display: block;
+  }
+  .contact-main-container .form-map-contact .map-contact {
+    height: 100vh;
+    margin: 1rem 0rem;
+  }
+  .contact-main-container .network-contact {
+    display: block;
+    font-size: 18pt;
+    margin: 0rem 0rem;
+    padding: 0rem;
+  }
+  .contact-main-container .phones-contact {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+  }
+  .contact-main-container .phones-contact span {
+    margin: 0.2rem 0rem;
+  }
 }
 
 /*# sourceMappingURL=Lobocueros.css.map */
