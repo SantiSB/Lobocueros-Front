@@ -1,0 +1,87 @@
+.container-mini-cart
+	position: fixed
+	width: 400px
+	height: auto
+	right: 0px
+	top: 30px
+	background: $White
+	color: $Black
+	border: 1px solid $Lobocueros
+	z-index: 1
+	padding: .5rem
+	display: none
+
+	hr
+		border-top: none
+		border-left: none
+		border-right: noner
+		border-bottom: 1px solid $Lobocueros
+
+	.close-mini-cart
+		@include display-flex(flex-end, center)
+
+	.list-products-mini-cart
+		.item-mini-cart
+			@include display-grid("image-item-buy info-item-buy buttons-item-buy", 30% 50% 20%,  auto)
+			background: $White
+
+			.image-item-buy
+				@include display-flex(center, center)
+				img
+					width: 100px
+
+			.info-item-buy
+				@include display-flex(center, center)
+				font-size: 8pt
+
+			.buttons-item-buy
+				@include display-flex(center, center)
+
+				.counter-btn-container
+					@include display-flex(center, center)
+					height: 100%
+
+				button
+					background: none
+					border: none
+					img
+						width: 10px
+
+				span
+					font-size: 10pt
+					margin: 0rem
+
+	.btn-buy-mini-cart
+		@include display-flex(center, center)
+		padding: .5rem
+
+@media (max-device-width: 1200px)
+		
+@media (max-device-width: 900px)
+
+@media (max-device-width: 573px)
+	.container-mini-cart
+		width: 90%
+
+
+		.list-products-mini-cart
+			.item-mini-cart
+				@include display-grid("image-item-buy info-item-buy buttons-item-buy", 20% 60% 20%,  auto)
+				background: $White
+
+				.image-item-buy
+					img
+						width: 60px
+
+				.info-item-buy
+					font-size: 7pt
+
+				.buttons-item-buy
+
+					button
+						img
+							width: 10px
+
+					span
+						font-size: 10pt
+

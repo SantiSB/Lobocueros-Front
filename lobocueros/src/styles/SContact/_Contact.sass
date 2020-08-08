@@ -1,0 +1,31 @@
+.contact-main-container
+	padding: 0rem 5rem
+	.form-map-contact
+		@include display-grid("form-contact map-contact", 50% 50%, 100%)
+		padding: 1rem
+
+		.form-contact
+			@include display-flex(center, center)
+
+@import SContactComponents/_InfoContact
+
+.contact-main-container
+	.form-map-contact
+		.map-contact
+			@include display-flex(center, center)
+	
+	.network-contact
+		@include display-grid("icons-social-media-contact email-contact", 50% 50%, 100%)
+		padding: 1rem
+
+		.icons-social-media-contact
+			@include display-flex(center, center)
+			i
+				margin: 0rem .5rem
+
+		.email-contact
+			@include display-flex(center, center)
+
+	.phones-contact
+		@include display-flex(space-between, center)
+		padding: 1rem

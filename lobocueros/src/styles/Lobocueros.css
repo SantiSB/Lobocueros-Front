@@ -324,6 +324,104 @@ div[role=presentation] {
   color: #000000;
 }
 
+.container-mini-cart {
+  position: fixed;
+  width: 400px;
+  height: auto;
+  right: 0px;
+  top: 30px;
+  background: #FFFFFF;
+  color: #000000;
+  border: 1px solid #420000;
+  z-index: 1;
+  padding: 0.5rem;
+  display: none;
+}
+.container-mini-cart hr {
+  border-top: none;
+  border-left: none;
+  border-right: noner;
+  border-bottom: 1px solid #420000;
+}
+.container-mini-cart .close-mini-cart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart {
+  display: grid;
+  grid-template-areas: "image-item-buy info-item-buy buttons-item-buy";
+  grid-template-columns: 30% 50% 20%;
+  grid-template-rows: auto;
+  background: #FFFFFF;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .image-item-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .image-item-buy img {
+  width: 100px;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .info-item-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8pt;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy .counter-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy button {
+  background: none;
+  border: none;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy button img {
+  width: 10px;
+}
+.container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy span {
+  font-size: 10pt;
+  margin: 0rem;
+}
+.container-mini-cart .btn-buy-mini-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+@media (max-device-width: 573px) {
+  .container-mini-cart {
+    width: 90%;
+  }
+  .container-mini-cart .list-products-mini-cart .item-mini-cart {
+    display: grid;
+    grid-template-areas: "image-item-buy info-item-buy buttons-item-buy";
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    background: #FFFFFF;
+  }
+  .container-mini-cart .list-products-mini-cart .item-mini-cart .image-item-buy img {
+    width: 60px;
+  }
+  .container-mini-cart .list-products-mini-cart .item-mini-cart .info-item-buy {
+    font-size: 7pt;
+  }
+  .container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy button img {
+    width: 10px;
+  }
+  .container-mini-cart .list-products-mini-cart .item-mini-cart .buttons-item-buy span {
+    font-size: 10pt;
+  }
+}
 .header-main {
   display: grid;
   grid-template-areas: "headerUp" "headerDown";
@@ -1856,6 +1954,67 @@ div[role=presentation] {
   .container-purchase-true .btn-purchase-container button:hover {
     color: #000000;
   }
+}
+.mainAbout-main .about-tabs {
+  margin: 1rem 0rem;
+  padding: 0rem 5rem;
+}
+
+@media (max-device-width: 573px) {
+  .mainAbout-main .about-tabs {
+    padding: 0rem 1rem;
+  }
+}
+.contact-main-container {
+  padding: 0rem 5rem;
+}
+.contact-main-container .form-map-contact {
+  display: grid;
+  grid-template-areas: "form-contact map-contact";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  padding: 1rem;
+}
+.contact-main-container .form-map-contact .form-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-InfoContact {
+  text-align: center;
+}
+
+.contact-main-container .form-map-contact .map-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-main-container .network-contact {
+  display: grid;
+  grid-template-areas: "icons-social-media-contact email-contact";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  padding: 1rem;
+}
+.contact-main-container .network-contact .icons-social-media-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-main-container .network-contact .icons-social-media-contact i {
+  margin: 0rem 0.5rem;
+}
+.contact-main-container .network-contact .email-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-main-container .phones-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=Lobocueros.css.map */

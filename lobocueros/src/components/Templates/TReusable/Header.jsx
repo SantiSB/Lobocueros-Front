@@ -1,10 +1,10 @@
 import React from 'react';
 import Search_White from '../../../assets/Icons/Search_White.svg'
-import MiniCar from '../../../assets/Icons/MiniCar.svg'
 import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import Arrow_White from '../../../assets/Icons/Arrow_White.svg'
 import BurgerMenu from '../../Molecules/MReusable/BurgerMenu'
 import LoginModal from '../../Organisms/OReusable/LoginModal';
+import MiniCart from '../../Organisms/OReusable/MiniCart';
 
 
 const Header = () => {
@@ -16,9 +16,9 @@ const Header = () => {
           </div>
           <div className="menu-headerUp">
               <i><img src={Search_White} alt="search"></img></i>
-              {/* <i><img src={User} alt="user"></img></i> */}
               <LoginModal></LoginModal>
-              <i className="mini-cart-icon"><img src={MiniCar} alt="mini-car"></img></i>
+              <MiniCart></MiniCart>
+              {/* <i className="mini-cart-icon"><img src={MiniCar} alt="mini-car"></img></i> */}
               <span>0</span>
           </div>
         </div>

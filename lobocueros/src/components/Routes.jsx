@@ -7,6 +7,9 @@ import Cart from "./Pages/Cart";
 import Resume from "./Pages/Resume";
 import SuccessfulPurchase from "./Pages/SuccessfulPurchase";
 import FailedPurchase from "./Pages/FailedPurchase";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+
 //Rutas del visor de sismos
 const Routes = () => (
   <Router>
@@ -17,7 +20,9 @@ const Routes = () => (
       <Route path="/carrito" component={Cart} />
       <Route path="/resumen" component={Resume} />
       <Route path="/compraexitosa" component={SuccessfulPurchase} />
-      <Route path="/compraFALLIDA" component={FailedPurchase} />
+      <Route path="/comprafallida" component={FailedPurchase} />
+      <Route path="/sobrenosotros" component={About} />
+      <Route path="/contacto" component={Contact} />
     </Switch>
   </Router>
 );

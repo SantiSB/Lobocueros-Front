@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	background: "#DA2727",
 	opacity: ".7",
 	borderRadius: "100px",
-},
+	},
 }));
 
 const FormLoginRegister = (props) => {
@@ -28,7 +28,7 @@ const FormLoginRegister = (props) => {
 				<br></br>
 				<TextField id="direction" label="Contraseña" variant="outlined" className={classes.input}/>
 				<br></br>
-	<Button className={classes.btnBuy} variant="outlined">{props.action}</Button>
+				<Button className={classes.btnBuy} variant="outlined">{props.action}</Button>
 			</form>
 			<div className="login-register-social">
 				<p>{props.action} CON:</p>
