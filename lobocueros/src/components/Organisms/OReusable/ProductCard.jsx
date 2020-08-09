@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Bolso from '../../../assets/Images/Bolso.fw.png'
+import Buttons from '../../Atoms/AReusable/Buttons';
 
 const ProductCard = () => {
     return(
@@ -30,9 +31,7 @@ const ProductCard = () => {
 						<ColorsBar></ColorsBar>
 					</div>
 					<div className="buy-produt-card">
-						<Button variant="contained" className="btn-buy">
-							Agregar al carrito
-						</Button>
+						<Buttons type="Add" text="Agregar al Carrito"></Buttons>
 					</div>
 				</div>
 			</CardActions>

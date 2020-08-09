@@ -8,7 +8,6 @@ import PromoHome from '../../Organisms/OHome/PromoHome';
 const MainHome = () => {
     return(
 		<div className="mainHome-main">
-
 			<div className="banner-home">
 				<BannerHome></BannerHome>				
 			</div>

@@ -1,19 +1,7 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-
-const useStyles = makeStyles((theme) => ({
-	btnBuy: {
-		color: "#ffffff",
-		border: "1px solid #ffffff",
-		background: "#DA2727",
-		opacity: ".7",
-		borderRadius: "100px",
-	},
-  }));
+import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeOrder = () => {
-  const classes = useStyles();
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
@@ -26,7 +14,7 @@ const ResumeOrder = () => {
         
       </div>
       <div className="button-resume">
-        <Button className={classes.btnBuy} variant="outlined">COMPRAR</Button>
+        <Buttons type="Buy" text="Pagar"></Buttons>
       </div>
     </div>
   );

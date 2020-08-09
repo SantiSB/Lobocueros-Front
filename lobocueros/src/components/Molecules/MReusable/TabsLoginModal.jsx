@@ -79,10 +79,10 @@ const TabsLoginModal = () => {
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>
-				<FormLoginRegister action={"REGISTRARSE"}></FormLoginRegister>
+				<FormLoginRegister action={"Registrarse"}></FormLoginRegister>
 			</TabPanel>
 			<TabPanel value={value} index={1}>
-				<FormLoginRegister action={"INICIAR SESIÓN"}></FormLoginRegister>
+				<FormLoginRegister action={"Iniciar Sesión"}></FormLoginRegister>
 			</TabPanel>
 		</div>
 		

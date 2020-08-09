@@ -1,23 +1,25 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import Google from '../../../assets/Icons/Google_White.svg'
 import Facebook from '../../../assets/Icons/Facebook_White.svg'
+import Buttons from './Buttons';
 
 const useStyles = makeStyles((theme) => ({
   input: {
 	width: '100%',
 	margin: "0.3rem 0rem"
   },
-  btnBuy: {
-	color: "#ffffff",
-	border: "1px solid #ffffff",
-	background: "#DA2727",
-	opacity: ".7",
-	borderRadius: "100px",
-	},
 }));
+
+const typeBtn = (type) => {
+	if(type === "Registrarse"){
+		return "Register"
+	}
+	else if(type === "Iniciar Sesión"){
+		return "Login"
+	}
+}
 
 const FormLoginRegister = (props) => {
 	const classes = useStyles();
@@ -28,7 +30,7 @@ const FormLoginRegister = (props) => {
 				<br></br>
 				<TextField id="direction" label="Contraseña" variant="outlined" className={classes.input}/>
 				<br></br>
-				<Button className={classes.btnBuy} variant="outlined">{props.action}</Button>
+				<Buttons type={typeBtn(props.action)} text={props.action}></Buttons>
 			</form>
 			<div className="login-register-social">
 				<p>{props.action} CON:</p>

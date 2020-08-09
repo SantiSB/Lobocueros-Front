@@ -53,6 +53,54 @@ body {
   margin: 0.5rem 1rem;
 }
 
+.btn-gender:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px white;
+  -moz-box-shadow: 0px 0px 5px 0px white;
+  box-shadow: 0px 0px 5px 0px white;
+}
+
+.btn-buy:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  color: #000000;
+}
+
+.btn-add:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  color: #000000;
+}
+
+.btn-login:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  color: #000000;
+}
+
+.btn-register:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  color: #000000;
+}
+
+.btn-send:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  color: #000000;
+}
+
+.btn-pay-again:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  -moz-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
+  color: #000000;
+}
+
 .colors-bar {
   display: flex;
   justify-content: center;
@@ -198,16 +246,10 @@ div[role=presentation] {
   align-items: center;
   margin: 1rem;
 }
-.product-card .card-actions .product-card-actions .buy-produt-card .btn-buy {
-  border-radius: 100px;
-  background: #F97401;
-  color: #FFFFFF;
+.product-card .card-actions .product-card-actions .buy-produt-card button {
   width: 200px;
   height: 40px;
-  font-size: 10pt;
-}
-.product-card .card-actions .product-card-actions .buy-produt-card:hover {
-  color: #000000;
+  font-size: 8pt;
 }
 
 @media (max-device-width: 573px) {
@@ -315,13 +357,7 @@ div[role=presentation] {
   align-items: center;
 }
 .resume-buy-container .button-resume button {
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
   width: 80%;
-}
-.resume-buy-container .button-resume button:hover {
-  color: #000000;
 }
 
 .container-mini-cart {
@@ -998,9 +1034,6 @@ div[role=presentation] {
   background-size: cover;
 }
 .banner-home button {
-  -webkit-box-shadow: 0px 0px 5px 0px white;
-  -moz-box-shadow: 0px 0px 5px 0px white;
-  box-shadow: 0px 0px 5px 0px white;
   margin: 10rem;
   top: 6.5rem;
 }
@@ -1162,11 +1195,6 @@ div[role=presentation] {
 }
 .promo-home div h2 {
   margin: 0.5rem;
-}
-.promo-home div button {
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
 }
 
 @media (max-device-width: 1000px) {
@@ -1480,31 +1508,12 @@ div[role=presentation] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0rem;
 }
 .info-product-detail .buttons-product-detail button {
-  margin: 0.5rem;
-}
-.info-product-detail .buttons-product-detail .btn-buy {
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  background: #DA2727;
-  opacity: 0.7;
-  border-radius: 100px;
+  margin: 1rem;
   width: 200px;
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
-}
-.info-product-detail .buttons-product-detail .btn-add-to-cart {
-  color: #ffffff;
-  border: 1px solid #FFFFFF;
-  background: #F97401;
-  opacity: 0.7;
-  border-radius: 100px;
-  width: 200px;
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
+  font-size: 10pt;
 }
 
 @media (max-device-width: 1200px) {
@@ -1848,14 +1857,6 @@ div[role=presentation] {
   font-size: 10pt;
   font-weight: 300;
 }
-.login-register-container button {
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-  -moz-box-shadow: 0px 0px 5px 0px black;
-  box-shadow: 0px 0px 5px 0px black;
-}
-.login-register-container button:hover {
-  color: #000000;
-}
 
 @media (max-device-width: 1200px) {
   .mainResume-main .resume {
@@ -1984,6 +1985,9 @@ div[role=presentation] {
 
 .container-InfoContact {
   text-align: center;
+}
+.container-InfoContact button {
+  width: 93%;
 }
 
 .contact-main-container .form-map-contact .map-contact {

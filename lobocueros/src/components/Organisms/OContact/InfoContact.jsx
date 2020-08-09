@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Buttons from "../../Atoms/AReusable/Buttons";
 
 const useStyles = makeStyles((theme) => ({
   direction:{
@@ -9,13 +10,6 @@ const useStyles = makeStyles((theme) => ({
   },
   field:{
     width: '46.5%'
-  },
-  btnBuy: {
-    color: "#ffffff",
-    border: "1px solid #ffffff",
-    background: "#00B6FF",
-    opacity: ".7",
-    width: "95%",
   },
 }));
 
@@ -33,7 +27,7 @@ const InfoContact = () => {
         <TextField id="outlined-basic" label="Teléfono" variant="outlined" className={classes.field}/>
         <br></br>
         <TextField id="direction" label="Mensaje" variant="outlined" className={classes.direction}/>
-        <Button className={classes.btnBuy} variant="outlined">ENVIAR</Button>
+        <Buttons type="Send" text="Enviar"></Buttons>
       </form>
     </div>
   );
