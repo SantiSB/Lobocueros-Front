@@ -27,11 +27,11 @@ const Footer = () => {
           </div>
           <div className="menu-contacto-footer">
             <ul>
-              <li>Calle 12B #3-15 SUR - Bogota</li>
-              <li>Calle 16 #5-70 Local 4 - Bogota</li>
+              <li><a href="/">Calle 12B #3-15 SUR - Bogota</a></li>
+              <li><a href="/">Calle 16 #5-70 Local 4 - Bogota</a></li>
             </ul>
             <ul>
-              <li><a href="/">313 871 1212</a></li>
+              <li><a href="/">313 871 1212</a></li> 
             </ul>
             <ul>
               <li><a href="/">lobocueros@gmail.com</a></li>

@@ -14,9 +14,13 @@
 
 		span
 			margin: 0rem 1rem
+			&:hover
+				cursor: pointer			
 
 		img
 			height: 40px
+			&:hover
+				cursor: pointer
 			
 
 	.instagram-photos-grid
@@ -24,6 +28,11 @@
 		img
 			width: 100%
 			margin: 0px
+			border: 5px solid $White
+			&:hover
+				filter: drop-shadow(5px 5px 20px $Lobocueros)
+		&:hover
+			cursor: pointer
 
 @media (max-device-width: 1200px)
 	.instagramSection-main

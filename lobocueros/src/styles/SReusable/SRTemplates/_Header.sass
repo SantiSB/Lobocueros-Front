@@ -58,7 +58,7 @@
 
 			.main-menu
 				@include display-flex(center, center)
-				@include size(100%, auto)
+				@include size(100%, 100%)
 				list-style: none
 				overflow: hidden
 
@@ -81,6 +81,8 @@
 						color: $White
 						text-decoration: none
 						margin: 0rem 0.5rem
+						&:hover
+							color: $GreyBG
 					
 						img
 							@include size(auto, 50px)
@@ -116,6 +118,7 @@
 					
 					&:hover>.submenu-nav
 						@include display-flex(center, auto)
+						
 
 		
 				
