@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { setVisibleMiniCart } from "../../../redux/actionsCreators";
 import MiniCar from '../../../assets/Icons/MiniCar.svg'
 import Close from '../../../assets/Icons/Failed.svg'
 import Bolso from '../../../assets/Images/Bolso.fw.png'
@@ -17,16 +19,18 @@ const useStyles = makeStyles((theme) => ({
 	},
   }));
 
-
-const MiniCart = () => {
-	const classes = useStyles();
+const toogleMiniCart = () =>{
 	
+}
+
+const MiniCart = (props) => { 
+	const classes = useStyles();
     return(
 		<>
-			<i className="mini-cart-icon"><img src={MiniCar} alt="mini-cart"></img></i>
-			<div id="miniCart" className="container-mini-cart">
+			<i className="mini-cart-icon" onClick={()=>props.setVisibleMiniCart(props.visibleMiniCart == false ? true : false)}><img src={MiniCar} alt="mini-cart"></img></i>
+			<div id="miniCart" className="container-mini-cart" style={props.visibleMiniCart == false ? {display: "none"} : {display: "block"}}>
 				<div className="close-mini-cart">
-					<i><img src={Close}></img></i>
+					<i onClick={()=>props.setVisibleMiniCart(props.visibleMiniCart == false ? true : false)}><img src={Close}></img></i>
 				</div>
 				<hr></hr>
 				<div className="list-products-mini-cart">
@@ -102,4 +106,13 @@ const MiniCart = () => {
 		</>
     )
 }
-export default MiniCart;
+
+const mapStateToProps = (state) => ({
+	visibleMiniCart: state.visibleMiniCart,
+});
+  
+const mapDispatchToProps = {
+	setVisibleMiniCart,
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(MiniCart);

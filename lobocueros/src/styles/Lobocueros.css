@@ -378,7 +378,6 @@ div[role=presentation] {
   border: 1px solid #420000;
   z-index: 1;
   padding: 0.5rem;
-  display: none;
 }
 .container-mini-cart hr {
   border-top: none;

@@ -1,20 +1,20 @@
 import { createStore } from "redux";
 
 import {
-  CONSTANTE,
+  VISIBLE_MINI_CART,
 } from "./actions";
 
 const initialStore = {
-  estado: [],
+  visibleMiniCart: false,
 };
 
 const rootReducer = (state = initialStore, action) => {
   
   switch (action.type) {
-    case CONSTANTE:
+    case VISIBLE_MINI_CART:
       return {
         ...state,
-        estado: action.parametro
+        visibleMiniCart: action.event
       };
     default:
       return state;

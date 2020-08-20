@@ -18,7 +18,6 @@ const Header = () => {
               <i><img src={Search_White} alt="search"></img></i>
               <LoginModal></LoginModal>
               <MiniCart></MiniCart>
-              {/* <i className="mini-cart-icon"><img src={MiniCar} alt="mini-car"></img></i> */}
               <span>0</span>
           </div>
         </div>

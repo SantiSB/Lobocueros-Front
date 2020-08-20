@@ -1,12 +1,12 @@
 import {
-	CONSTANTE,
-} from "./actions";
+	VISIBLE_MINI_CART,
+} from "./actions"; 
 
-const accion = (parametro) => ({
-	type: CONSTANTE,
-	parametro,
+const setVisibleMiniCart = (event) => ({
+	type: VISIBLE_MINI_CART,
+	event,
 });
 
 export {
-	accion,
+	setVisibleMiniCart,
 };
