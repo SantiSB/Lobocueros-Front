@@ -21,7 +21,8 @@ const InfoShipping = () => {
         <TextField id="outlined-basic" label="Nombre" variant="outlined" className={classes.field} />
         <TextField id="outlined-basic" label="Apellido" variant="outlined" className={classes.field}/>
         <br></br>
-        <TextField id="direction" label="Dirección" variant="outlined" className={classes.direction}/>
+        <TextField id="direction" label="Dirección" variant="outlined" className={classes.field}/>
+        <TextField id="direction" label="Cedula" variant="outlined" className={classes.field}/>
         <br></br>
         <TextField id="outlined-basic" label="E-Mail" variant="outlined" className={classes.field}/>
         <TextField id="outlined-basic" label="Teléfono" variant="outlined" className={classes.field}/>

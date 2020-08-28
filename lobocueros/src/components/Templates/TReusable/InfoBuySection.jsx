@@ -9,19 +9,19 @@ const InfoBuySection = () => {
         <div className="info-buy-bar">
 			<div className="item-info-buy-bar">
 				<img src={Secure}></img>
-				<span>COMPRA 100% SEGURA</span>
+				<span> <a href="" target="_blank">COMPRA 100% SEGURA</a></span>
 			</div>
 			<div className="item-info-buy-bar">
 				<img src={Box}></img>
-				<span>VENTAS POR MAYOR</span>
+				<span><a href="" target="_blank">VENTAS POR MAYOR</a></span>
 			</div>
 			<div className="item-info-buy-bar">
 				<img src={Envios}></img>
-				<span>ENVÍOS GRÁTIS</span>
+				<span><a href="" target="_blank">ENVÍOS GRÁTIS</a></span>
 			</div>
 			<div className="item-info-buy-bar">
 				<img src={Dolar}></img>
-				<span>DEVOLUCIONES SIN COSTO</span>
+				<span><a href="" target="_blank">DEVOLUCIONES SIN COSTO</a></span>
 			</div>
 		</div>
     )

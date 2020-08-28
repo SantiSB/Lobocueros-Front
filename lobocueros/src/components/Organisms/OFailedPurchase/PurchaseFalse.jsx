@@ -15,7 +15,7 @@ const PurchaseFalse = () => {
         <p>Usa otra tarjeta u otro medio de pago</p>
       </div>
       <div className="btn-purchase-container">
-        <Buttons type="PayAgain" text="Pagar con otro medio"></Buttons>
+        <a href="/resumen"><Buttons type="PayAgain" text="Pagar con otro medio"></Buttons></a>
       </div>
     </div>
   );

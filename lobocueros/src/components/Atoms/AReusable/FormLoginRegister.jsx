@@ -33,7 +33,7 @@ const FormLoginRegister = (props) => {
 				<Buttons type={typeBtn(props.action)} text={props.action}></Buttons>
 			</form>
 			<div className="login-register-social">
-				<p>{props.action} CON:</p>
+				<p>{props.action} con:</p>
 				<div className="social-options-login-register">
 					<img src={Google}></img>
 					<img src={Facebook}></img>

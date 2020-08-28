@@ -24,7 +24,7 @@ const InfoProductDetail = () => {
 				
 			</div>
 			<div className="buttons-product-detail">
-				<Buttons type="Buy" text="Comprar"></Buttons>
+				<a href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
 				<Buttons type="Add" text="Agregar al Carrito"></Buttons>
 			</div>
 		</div>

@@ -18,7 +18,8 @@ const InfoContact = () => {
   return (
     <div className="container-InfoContact">
       <form noValidate autoComplete="off">
-        <TextField id="direction" label="Asunto" variant="outlined" className={classes.direction}/>
+        <TextField id="direction" label="Asunto" variant="outlined" className={classes.field}/>
+        <TextField id="direction" label="Cedula" variant="outlined" className={classes.field}/>
         <br></br>
         <TextField id="outlined-basic" label="Nombre" variant="outlined" className={classes.field} />
         <TextField id="outlined-basic" label="Apellido" variant="outlined" className={classes.field}/>

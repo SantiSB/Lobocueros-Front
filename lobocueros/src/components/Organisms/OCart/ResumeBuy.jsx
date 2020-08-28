@@ -14,7 +14,7 @@ const ResumeBuy = () => {
         
       </div>
       <div className="button-resume">
-        <Buttons type="Buy" text="Comprar"></Buttons>
+        <a href="/resumen"><Buttons type="Buy" text="Comprar"></Buttons></a>
       </div>
     </div>
   );

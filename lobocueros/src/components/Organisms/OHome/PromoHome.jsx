@@ -7,7 +7,7 @@ const PromoHome = () => {
 			<div>
 				<p>Distribuidor oficial de</p>
 				<h2>Tapabocas Termosellado</h2>
-				<Buttons type="Buy" text="Comprar"></Buttons>
+				<a href="/productos" style={{textDecoration: "none"}}><Buttons type="Buy" text="Comprar"></Buttons></a>
 			</div>
     )
 }

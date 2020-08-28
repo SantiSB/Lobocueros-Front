@@ -18,7 +18,7 @@ const PurchaseTrue = () => {
         </div>
       </div>
       <div className="btn-purchase-container">
-        <Buttons type="PayAgain" text="Seguir Comprando"></Buttons>
+        <a href="/productos"><Buttons type="PayAgain" text="Seguir Comprando"></Buttons></a>
       </div>
     </div>
   );

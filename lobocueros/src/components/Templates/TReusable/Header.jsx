@@ -26,58 +26,58 @@ const Header = () => {
           
           <nav className="nav">
             <ul className="main-menu">
-              <li className="item-menu"><a href="/">Nuevo</a></li>
-              <li className="item-menu"><a href="/">Mujer</a><img src={Arrow_White} alt="arrow"></img>
+              <li className="item-menu"><a href="/productos">Nuevo</a></li>
+              <li className="item-menu"><a href="/productos">Mujer</a><img src={Arrow_White} alt="arrow"></img>
                 <div className="submenu-nav" id="Mujer">
                   <ul>
-                    <li className="submenu-item">Bolsos
+                    <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>
-                        <li>Ver Todo</li>
-                        <li>Bolsos</li>
-                        <li>Morrales</li>
-                        <li>Maletines</li>
-                        <li>Manos Libres</li>
+                        <li><a href="/productos">Ver Todo</a></li>
+                        <li><a href="/productos">Bolsos</a></li>
+                        <li><a href="/productos">Morrales</a></li>
+                        <li><a href="/productos">Maletines</a></li>
+                        <li><a href="/productos">Manos Libres</a></li>
                       </ul>
                     </li>
                       
-                    <li className="submenu-item">Correas</li>
-                    <li className="submenu-item">Bileteras</li>
-                    <li className="submenu-item">Accesorios
+                    <li className="submenu-item"><a href="/productos">Correas</a></li>
+                    <li className="submenu-item"><a href="/productos">Bileteras</a></li>
+                    <li className="submenu-item"><a href="/productos">Accesorios</a>
                       <ul>
-                        <li>Ver Todo</li>
-                        <li>Bolsos</li>
-                        <li>Morrales</li>
+                        <li><a href="/productos">Ver Todo</a></li>
+                        <li><a href="/productos">Bolsos</a></li>
+                        <li><a href="/productos">Morrales</a></li>
                       </ul>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li className="item-menu"><a href="/">Hombre</a><img src={Arrow_White} alt="arrow"></img>
+              <li className="item-menu"><a href="/productos">Hombre</a><img src={Arrow_White} alt="arrow"></img>
                 <div className="submenu-nav" id="hombre">
                   <ul>
-                    <li className="submenu-item">Bolsos
+                    <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>
-                        <li>Ver Todo</li>
-                        <li>Bolsos</li>
-                        <li>Morrales</li>
-                        <li>Maletines</li>
-                        <li>Manos Libres</li>
+                        <li><a href="/productos">Ver Todo</a></li>
+                        <li><a href="/productos">Bolsos</a></li>
+                        <li><a href="/productos">Morrales</a></li>
+                        <li><a href="/productos">Maletines</a></li>
+                        <li><a href="/productos">Manos Libres</a></li>
                       </ul>
                     </li>
                       
-                    <li className="submenu-item">Correas</li>
-                    <li className="submenu-item">Bileteras</li>
-                    <li className="submenu-item">Accesorios
+                    <li className="submenu-item"><a href="/productos">Correas</a></li>
+                    <li className="submenu-item"><a href="/productos">Bileteras</a></li>
+                    <li className="submenu-item"><a href="/productos">Accesorios</a>
                       <ul>
-                        <li>Ver Todo</li>
-                        <li>Bolsos</li>
-                        <li>Morrales</li>
+                        <li><a href="/productos">Ver Todo</a></li>
+                        <li><a href="/productos">Bolsos</a></li>
+                        <li><a href="/productos">Morrales</a></li>
                       </ul>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li className="item-menu"><a href="/">Tapabocas</a></li>
+              <li className="item-menu"><a href="/productos">Tapabocas</a></li>
             </ul>
           </nav>
         
@@ -85,23 +85,23 @@ const Header = () => {
             <BurgerMenu></BurgerMenu>
                 <div className="submenu-nav">
                   <ul>
-                    <li className="submenu-item">Bolsos
+                    <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>
-                        <li>Ver Todo</li>
-                        <li>Bolsos</li>
-                        <li>Morrales</li>
-                        <li>Maletines</li>
-                        <li>Manos Libres</li>
+                        <li><a href="/productos">Ver Todo</a></li>
+                        <li><a href="/productos">Bolsos</a></li>
+                        <li><a href="/productos">Morrales</a></li>
+                        <li><a href="/productos">Maletines</a></li>
+                        <li><a href="/productos">Manos Libres</a></li>
                       </ul>
                     </li>
                       
-                    <li className="submenu-item">Correas</li>
-                    <li className="submenu-item">Bileteras</li>
-                    <li className="submenu-item">Accesorios
+                    <li className="submenu-item"><a href="/productos">Correas</a></li>
+                    <li className="submenu-item"><a href="/productos">Bileteras</a></li>
+                    <li className="submenu-item"><a>Accesorios</a>
                       <ul>
-                        <li>Ver Todo</li>
-                        <li>Bolsos</li>
-                        <li>Morrales</li>
+                        <li><a href="/productos">Ver Todo</a></li>
+                        <li><a href="/productos">Bolsos</a></li>
+                        <li><a href="/productos">Morrales</a></li>
                       </ul>
                     </li>
                   </ul>

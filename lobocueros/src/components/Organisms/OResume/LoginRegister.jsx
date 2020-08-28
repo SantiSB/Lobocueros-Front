@@ -1,5 +1,6 @@
 import React from "react";
 import Buttons from "../../Atoms/AReusable/Buttons";
+import LoginModal from "../OReusable/LoginModal";
 
 const LoginRegister = () => {
   return (
@@ -7,7 +8,7 @@ const LoginRegister = () => {
         <p>Inicia sesión y saltate los pasos</p>
         <div>
           <Buttons type="Login" text="Iniciar Sesión"></Buttons>
-        </div>
+        </div> 
       <p className="answer-register">¿No estas registrado?</p>
         
         <p>Registrate y enterate de promociones y beneficios</p>

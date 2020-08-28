@@ -363,8 +363,11 @@ div[role=presentation] {
   justify-content: center;
   align-items: center;
 }
-.resume-buy-container .button-resume button {
+.resume-buy-container .button-resume a {
   width: 80%;
+}
+.resume-buy-container .button-resume a button {
+  width: 100%;
 }
 
 .container-mini-cart {
@@ -905,6 +908,10 @@ div[role=presentation] {
 .instagramSection-main .instagram-bar span:hover {
   cursor: pointer;
 }
+.instagramSection-main .instagram-bar a {
+  text-decoration: none;
+  color: #420000;
+}
 .instagramSection-main .instagram-bar img {
   height: 40px;
 }
@@ -964,7 +971,11 @@ div[role=presentation] {
   align-items: center;
   margin: 0rem 1rem;
 }
-.info-buy-bar .item-info-buy-bar:hover {
+.info-buy-bar .item-info-buy-bar a {
+  text-decoration: none;
+  color: #000000;
+}
+.info-buy-bar .item-info-buy-bar a:hover {
   cursor: pointer;
   color: #420000;
   font-weight: 400;

@@ -10,6 +10,7 @@ const ResumeOrder = () => {
           <p>Subtotal: <span>$300.000</span></p>
           <p>Envio: <span>Gratis</span></p>
           <p className="total">Total: <span>$300.000</span></p>
+          <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div>
         
       </div>
