@@ -22,12 +22,19 @@ const InfoProductDetail = () => {
 			</div>
 			<div className="actions-product-detail">
 				<ColorsBar></ColorsBar>
-				<Counter></Counter>
+				
 			</div>
 			<div className="buttons-product-detail">
-				<a href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
-				<Buttons type="Add" text="Agregar al Carrito"></Buttons>
+				<div className="counter">
+					<Counter></Counter>
+				</div>
+				
+				<div className="buy-buttons">
+					<a href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
+					<a href="/carrito"><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
+				</div>
 			</div>
+			
 		</div>
     )
 }

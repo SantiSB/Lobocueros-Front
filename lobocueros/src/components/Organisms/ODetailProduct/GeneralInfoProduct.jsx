@@ -46,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
-	backgroundColor: theme.palette.background.paper,
+	  backgroundColor: theme.palette.background.paper,
   },
   tabs: {
 	  color: "#420000"
-  }
+  },
 }));
 
 const GeneralInfoProduct = () => {
@@ -61,7 +61,7 @@ const GeneralInfoProduct = () => {
 		setValue(newValue);
 	};
     return(
-		<div className={classes.root}>
+		<div className="general-info-product">
 			<AppBar position="static" color="default">
 				<Tabs
 				value={value}

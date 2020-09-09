@@ -7,22 +7,31 @@
 
 	.details-product
 		@include size(auto, auto)
-		@include display-grid("carousel-images-detail info-product-detail", 50% 50%, auto)
+		@include display-grid("carousel-images-detail info-product", 50% 50%, auto)
 		padding: 0rem 5rem
 
 		.carousel-images-detail
 			@include size(auto, auto)
-			padding: 0rem 0rem
-			@include display-flex(center, center)
+			padding: 0rem 1rem
+			display: block
 
 @import _CarouselImages
 
 .detail-product-main
 	.details-product
-		.info-product-detail
-			@include size(auto, auto)
-			padding: 0rem 5rem
-			@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
+		.info-product
+			@include display-grid("info-product-detail" "general-info-product", auto, 50% 50%)
+			.info-product-detail
+				text-align: center
+				@include size(auto, 80%)
+				padding: 0rem 5rem
+				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
+
+			.general-info-product
+				padding: 0rem 1rem
+
+				.MuiBox-root 
+					padding: 2px
 
 	.general-info
 		padding: 2rem 5rem

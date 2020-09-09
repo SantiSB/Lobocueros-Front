@@ -5,6 +5,7 @@ import BreadcrumbDetailProduct from '../../Organisms/ODetailProduct/BreadcrumbDe
 import CarouselImages from '../../Organisms/ODetailProduct/CarouselImages';
 import InfoProductDetail from '../../Organisms/ODetailProduct/InfoProductDetail';
 import GeneralInfoProduct from '../../Organisms/ODetailProduct/GeneralInfoProduct';
+import MiniImages from '../../Organisms/ODetailProduct/MiniImages';
 
 const MainDetailProduct = () => {
     return(
@@ -16,14 +17,12 @@ const MainDetailProduct = () => {
 			<div className="details-product">
 				<div className="carousel-images-detail">
 					<CarouselImages></CarouselImages>
+					<MiniImages></MiniImages>
 				</div>
 				<div className="info-product">
 					<InfoProductDetail></InfoProductDetail>
+					<GeneralInfoProduct></GeneralInfoProduct>
 				</div>
-			</div>
-
-			<div className="general-info">
-				<GeneralInfoProduct></GeneralInfoProduct>
 			</div>
 			
 			<div className="instagram">

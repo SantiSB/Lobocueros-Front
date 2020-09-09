@@ -1339,7 +1339,7 @@ div[role=presentation] {
   width: auto;
   height: auto;
   display: grid;
-  grid-template-areas: "carousel-images-detail info-product-detail";
+  grid-template-areas: "carousel-images-detail info-product";
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   padding: 0rem 5rem;
@@ -1347,10 +1347,8 @@ div[role=presentation] {
 .detail-product-main .details-product .carousel-images-detail {
   width: auto;
   height: auto;
-  padding: 0rem 0rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0rem 1rem;
+  display: block;
 }
 
 .carousel-images-section div {
@@ -1372,14 +1370,27 @@ div[role=presentation] {
     width: 180px;
   }
 }
-.detail-product-main .details-product .info-product-detail {
+.detail-product-main .details-product .info-product {
+  display: grid;
+  grid-template-areas: "info-product-detail" "general-info-product";
+  grid-template-columns: auto;
+  grid-template-rows: 50% 50%;
+}
+.detail-product-main .details-product .info-product .info-product-detail {
+  text-align: center;
   width: auto;
-  height: auto;
+  height: 80%;
   padding: 0rem 5rem;
   display: grid;
   grid-template-areas: "ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail";
   grid-template-columns: 100%;
   grid-template-rows: 10% 10% 10% 40% 15% 15%;
+}
+.detail-product-main .details-product .info-product .general-info-product {
+  padding: 0rem 1rem;
+}
+.detail-product-main .details-product .info-product .general-info-product .MuiBox-root {
+  padding: 2px;
 }
 .detail-product-main .general-info {
   padding: 2rem 5rem;
@@ -1412,7 +1423,7 @@ div[role=presentation] {
 .features table td, .features th td, .features td td {
   font-size: 10pt;
   font-weight: 400;
-  height: 25px;
+  height: 15px;
 }
 .features .features-product {
   display: flex;
@@ -1527,92 +1538,127 @@ div[role=presentation] {
     width: 180px;
   }
 }
-.info-product-detail {
-  width: 100%;
-  text-align: center;
+.mini-images-grid {
+  margin: 2rem 0rem;
 }
-.info-product-detail .ref-product {
+.mini-images-grid img {
+  width: 100px;
+}
+
+.ref-product {
   font-weight: 200;
 }
-.info-product-detail .title-product {
+
+.title-product {
   font-weight: 600;
   font-size: 15pt;
 }
-.info-product-detail .price-product span {
+
+.price-product span {
   margin: 0.5rem;
   font-size: 12pt;
   font-weight: 300;
 }
-.info-product-detail .price-product .old-value {
+.price-product .old-value {
   text-decoration: line-through;
   font-size: 10pt;
   font-weight: 400;
 }
-.info-product-detail .description-product {
+
+.description-product {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.info-product-detail .actions-product-detail .colors-bar {
+
+.actions-product-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actions-product-detail .colors-bar {
   margin: 1rem;
 }
-.info-product-detail .actions-product-detail span {
+
+.buttons-product-detail {
+  display: grid;
+  grid-template-areas: "counter" "buy-buttons";
+  grid-template-columns: 100%;
+  grid-template-rows: 40px 40px;
+  margin-bottom: 1rem;
+}
+.buttons-product-detail .counter {
+  grid-area: counter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-product-detail .counter span {
   font-size: 20pt;
 }
-.info-product-detail .actions-product-detail button {
+.buttons-product-detail .counter button {
   background: none;
   border: none;
 }
-.info-product-detail .actions-product-detail button img {
+.buttons-product-detail .counter button img {
   width: 20px;
 }
-.info-product-detail .buttons-product-detail {
+.buttons-product-detail .buy-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.info-product-detail .buttons-product-detail button {
+.buttons-product-detail .buy-buttons a {
+  text-decoration: none;
+}
+.buttons-product-detail .buy-buttons a button {
   margin: 1rem;
   width: 200px;
   font-size: 10pt;
 }
 
 @media (max-device-width: 1200px) {
-  .info-product-detail .title-product {
+  .title-product {
     font-size: 12pt;
   }
-  .info-product-detail .price-product span {
+
+  .price-product span {
     font-size: 11pt;
   }
-  .info-product-detail .price-product .old-value {
+  .price-product .old-value {
     font-size: 9pt;
   }
-  .info-product-detail .description-product {
+
+  .description-product {
     font-size: 11pt;
   }
-  .info-product-detail .buttons-product-detail button {
+
+  .buttons-product-detail button {
     margin: 0.2rem;
     font-size: 8pt;
   }
 }
 @media (max-device-width: 900px) {
-  .info-product-detail .title-product {
+  .title-product {
     font-size: 10pt;
   }
-  .info-product-detail .price-product span {
+
+  .price-product span {
     font-size: 9pt;
   }
-  .info-product-detail .price-product .old-value {
+  .price-product .old-value {
     font-size: 7pt;
   }
-  .info-product-detail .description-product {
+
+  .description-product {
     font-size: 9pt;
   }
-  .info-product-detail .buttons-product-detail {
+
+  .buttons-product-detail {
     margin: 2rem 0rem;
     display: block;
   }
-  .info-product-detail .buttons-product-detail button {
+  .buttons-product-detail button {
     font-size: 8pt;
   }
 }

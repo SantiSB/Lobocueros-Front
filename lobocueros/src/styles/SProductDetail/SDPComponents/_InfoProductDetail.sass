@@ -1,31 +1,39 @@
-.info-product-detail
-	width: 100%
-	text-align: center
+.ref-product
+	font-weight: 200
 
-	.ref-product
-		font-weight: 200
+.title-product
+	font-weight: 600
+	font-size: 15pt
 
-	.title-product
-		font-weight: 600
-		font-size: 15pt
+.price-product
+	span
+		margin: .5rem
+		font-size: 12pt
+		font-weight: 300
+	
+	.old-value
+		text-decoration: line-through
+		font-size: 10pt
+		font-weight: 400
 
-	.price-product
-		span
-			margin: .5rem
-			font-size: 12pt
-			font-weight: 300
-		
-		.old-value
-			text-decoration: line-through
-			font-size: 10pt
-			font-weight: 400
+.description-product
+	@include display-flex(center,center)
 
-	.description-product
+.actions-product-detail
+	@include display-flex(center,center)
+	.colors-bar
+		margin: 1rem
+	
+	
+
+.buttons-product-detail
+	@include display-grid("counter" "buy-buttons", 100%, 40px 40px)
+	margin-bottom: 1rem
+
+	.counter
+		grid-area: counter
 		@include display-flex(center,center)
 
-	.actions-product-detail
-		.colors-bar
-			margin: 1rem
 		span
 			font-size: 20pt
 		button
@@ -35,54 +43,56 @@
 			img
 				width: 20px
 
-	.buttons-product-detail
+	.buy-buttons
 		@include display-flex(center,center)
-		button
-			margin: 1rem
-			width: 200px
-			font-size: 10pt
+		a
+			text-decoration: none
+		
+			button
+				margin: 1rem
+				width: 200px
+				font-size: 10pt
 
 @media (max-device-width: 1200px)
-	.info-product-detail
+	
+	.title-product
+		font-size: 12pt
 
-		.title-product
-			font-size: 12pt
-
-		.price-product
-			span
-				font-size: 11pt
-			
-			.old-value
-				font-size: 9pt
-
-		.description-product
+	.price-product
+		span
 			font-size: 11pt
+		
+		.old-value
+			font-size: 9pt
 
-		.buttons-product-detail
-			button
-				margin: .2rem
-				font-size: 8pt
+	.description-product
+		font-size: 11pt
+
+	.buttons-product-detail
+		button
+			margin: .2rem
+			font-size: 8pt
 
 
 @media (max-device-width: 900px)
-	.info-product-detail
-		.title-product
-			font-size: 10pt
 
-		.price-product
-			span
-				font-size: 9pt
-			
-			.old-value
-				font-size: 7pt
+	.title-product
+		font-size: 10pt
 
-		.description-product
+	.price-product
+		span
 			font-size: 9pt
+		
+		.old-value
+			font-size: 7pt
 
-		.buttons-product-detail
-			margin: 2rem 0rem
-			display: block
-			button
-				font-size: 8pt
+	.description-product
+		font-size: 9pt
+
+	.buttons-product-detail
+		margin: 2rem 0rem
+		display: block
+		button
+			font-size: 8pt
 
 @media (max-device-width: 573px)
