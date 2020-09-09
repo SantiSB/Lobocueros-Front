@@ -24,11 +24,19 @@
 		@include display-flex(center,center)
 
 	.actions-product-detail
-		@include display-flex(center,center)
+		.colors-bar
+			margin: 1rem
+		span
+			font-size: 20pt
+		button
+			background: none
+			border: none
+
+			img
+				width: 20px
 
 	.buttons-product-detail
 		@include display-flex(center,center)
-		margin: 1rem 0rem
 		button
 			margin: 1rem
 			width: 200px
@@ -72,6 +80,7 @@
 			font-size: 9pt
 
 		.buttons-product-detail
+			margin: 2rem 0rem
 			display: block
 			button
 				font-size: 8pt

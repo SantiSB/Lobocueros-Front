@@ -5,12 +5,12 @@ import Carousel from 'nuka-carousel';
 
 const CarouselImages = () => {
     return(
-		<Carousel className="carousel-images-section">
+		<Carousel className="carousel-images-section" showThumbs={false}>
 			<div>
 				<img src={Bolso}></img>
 			</div>
 			<div>
-				<img src={Bolso}></img>
+				<img src={Bolso}></img> 
 			</div>
 			<div>
 				<img src={Bolso}></img>

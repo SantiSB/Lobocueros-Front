@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { setVisibleSearchForm } from "../../../redux/actionsCreators";
 import Search_White from '../../../assets/Icons/Search_White.svg'
 import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import Arrow_White from '../../../assets/Icons/Arrow_White.svg'
@@ -7,7 +9,8 @@ import LoginModal from '../../Organisms/OReusable/LoginModal';
 import MiniCart from '../../Organisms/OReusable/MiniCart';
 
 
-const Header = () => {
+const Header = (props) => {
+  console.log("qwe", props.visibleSearchForm)
     return(
       <header className="header-main">
         <div className="headerUp">
@@ -15,7 +18,10 @@ const Header = () => {
             <span>Marroquineros de Corazón</span>
           </div>
           <div className="menu-headerUp">
-              <i><img src={Search_White} alt="search"></img></i>
+              <form className="search-form" style={props.visibleSearchForm == false ? {visibility: "hidden"} : {visibility: "visible"}}>
+                <input type="text"></input>
+              </form> 
+              <i onClick={()=>props.setVisibleSearchForm(props.visibleSearchForm == false ? true : false)}><img src={Search_White} alt="search"></img></i>
               <LoginModal></LoginModal>
               <MiniCart></MiniCart>
               <span>0</span>
@@ -81,9 +87,13 @@ const Header = () => {
             </ul>
           </nav>
         
+          <div className="title-lobocueros">
+            <p>LOBOCUEROS</p>
+          </div>
+
           <div className="burger-menu">
             <BurgerMenu></BurgerMenu>
-                <div className="submenu-nav">
+                <div className="submenu-nav" id="submenu-nav"> 
                   <ul>
                     <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>
@@ -111,4 +121,13 @@ const Header = () => {
       </header>
     )
 }
-export default Header;
+
+const mapStateToProps = (state) => ({
+	visibleSearchForm: state.visibleSearchForm,
+});
+  
+const mapDispatchToProps = {
+	setVisibleSearchForm,
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

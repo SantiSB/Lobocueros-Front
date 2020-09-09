@@ -8,9 +8,11 @@ const DetailOrder = () => {
       <div className="items-order">
         <p className="title-steep">Paso 3 de 3</p>
         <p className="subtitle-steep">Verificar detalles del pedido</p>
+        <p>Tiempo de entrega: 3 a 5 dias</p>
         <OrderListItem></OrderListItem>
         <OrderListItem></OrderListItem>
         <OrderListItem></OrderListItem>
+
       </div>
       
     </>

@@ -7,7 +7,7 @@
 
 	.headerUp
 		grid-area: headerUp
-		@include display-grid("slogan menu-headerUp", 90% 10%, 100%)
+		@include display-grid("slogan menu-headerUp", 78% 22%, 100%)
 		background: $Black
 		color: $White
 		padding: 0rem 5rem
@@ -18,9 +18,9 @@
 			font-weight: 100
 
 		.menu-headerUp
-			
 			grid-area: menu-headerUp
 			@include display-flex(space-between, center)
+			
 
 			i
 				@include display-flex(center, center)
@@ -50,7 +50,7 @@
 				img 
 					@include size(auto, 50px)
 
-		.burger-menu
+		.burger-menu, .title-lobocueros
 			display: none
 
 		.nav
@@ -82,7 +82,7 @@
 						text-decoration: none
 						margin: 0rem 0.5rem
 						&:hover
-							color: $GreyBG
+							color: $Black
 					
 						img
 							@include size(auto, 50px)
@@ -118,9 +118,10 @@
 					
 					&:hover>.submenu-nav
 						@include display-flex(center, auto)
-						
 
-		
+.active
+	@include display-flex(center, auto)
+						
 				
 @media (max-device-width: 1200px) 
 	.header-main
@@ -131,6 +132,9 @@
 						.submenu-nav
 							display: none
 							padding: 0rem 2rem
+						// &:hover>.submenu-nav
+						// 	display: none
+						// 	padding: 0rem 3rem
 
 @media (max-device-width: 900px)
 	.header-main
@@ -142,7 +146,7 @@
 				@include display-flex(flex-end, center)
 				
 		.headerDown
-			@include display-grid("home-icon burger-menu", 50% 50%, 100%)
+			@include display-grid("home-icon title-lobocueros burger-menu", 5% 90% 5%, 100%)
 			padding: 0rem 5rem
 
 			.home-icon
@@ -150,6 +154,13 @@
 				a
 					img 
 						@include size(auto, 30px)
+
+			.title-lobocueros
+				@include display-flex(center, center)
+				p
+					color: $White
+					font-family: "Pridi"
+					font-size: 20pt
 
 			.burger-menu
 				@include display-flex(flex-end, center)
@@ -187,9 +198,9 @@
 									li 
 										display: block
 
-				&:hover>.submenu-nav
-					@include display-flex(flex-start, auto)
-					padding: 0rem 3rem
+				// &:hover>.submenu-nav
+				// 	display: none
+				// 	padding: 0rem 3rem
 
 			.nav
 				display: none
@@ -209,9 +220,13 @@
 			.burger-menu
 
 				.submenu-nav
+					display: none
 					ul
 						.submenu-item
 							margin: 0rem 0rem
+				// &:hover>.submenu-nav
+				// 	display: none
+				// 	padding: 0rem 3rem
 							
 
 

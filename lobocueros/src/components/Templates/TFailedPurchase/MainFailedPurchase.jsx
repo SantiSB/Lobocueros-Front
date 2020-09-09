@@ -6,8 +6,8 @@ import PurchaseFalse from '../../Organisms/OFailedPurchase/PurchaseFalse';
 
 const MainFailedPurchase = () => {
     return(
-		<div className="mainFailedPurchase-main">
-			<div className="FailedPurchase">
+		<div className="mainSuccessfulPurchase-main">
+			<div className="SuccessfulPurchase">
 				<PurchaseFalse></PurchaseFalse>
 			</div>
 			<div className="instagram">

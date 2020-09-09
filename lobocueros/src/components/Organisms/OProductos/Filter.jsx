@@ -69,11 +69,9 @@ const Filter = (props) => {
 						<MenuItem value={10}>Bolsos pequeños</MenuItem>
 					</Select>
 				</FormControl>
-			{/* </div> */}
-			{/* <div className="search-filter"> */}
 				<FormControl className="form-control" id="search-form-control">
 					<TextField id="standard-basic" label="Buscar" />
-				</FormControl>
+				</FormControl> 
 			</div>
 		</div>
 		

@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
+import Counter from '../../Atoms/AReusable/Counter';
 
 const InfoProductDetail = () => {
     return(
@@ -21,7 +22,7 @@ const InfoProductDetail = () => {
 			</div>
 			<div className="actions-product-detail">
 				<ColorsBar></ColorsBar>
-				
+				<Counter></Counter>
 			</div>
 			<div className="buttons-product-detail">
 				<a href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>

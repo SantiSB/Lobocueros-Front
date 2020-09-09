@@ -19,10 +19,6 @@ const useStyles = makeStyles((theme) => ({
 	},
   }));
 
-const toogleMiniCart = () =>{
-	
-}
-
 const MiniCart = (props) => { 
 	const classes = useStyles();
     return(
