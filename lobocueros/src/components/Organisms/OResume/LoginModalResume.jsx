@@ -1,10 +1,10 @@
 import React from 'react';
 import Modal from '@material-ui/core/Modal';
-import User from '../../../assets/Icons/User.svg'
 import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import TabsLoginModal from '../../Molecules/MReusable/TabsLoginModal';
+import Buttons from '../../Atoms/AReusable/Buttons';
 
-export default function LoginModal(props) {
+export default function LoginModalResume() {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -31,7 +31,9 @@ export default function LoginModal(props) {
 
   return (
 	<>
-		<i onClick={handleOpen}><img src={User} alt="user"></img></i>
+    <div onClick={handleOpen}>
+      <Buttons type="Login" text="Iniciar Sesión" ></Buttons>
+    </div> 
 		<Modal
 			open={open}
 			onClose={handleClose}
