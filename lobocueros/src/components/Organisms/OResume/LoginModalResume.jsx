@@ -4,7 +4,7 @@ import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import TabsLoginModal from '../../Molecules/MReusable/TabsLoginModal';
 import Buttons from '../../Atoms/AReusable/Buttons';
 
-export default function LoginModalResume() {
+export default function LoginModalResume(props) {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -32,7 +32,7 @@ export default function LoginModalResume() {
   return (
 	<>
     <div onClick={handleOpen}>
-      <Buttons type="Login" text="Iniciar Sesión" ></Buttons>
+      <Buttons type={props.type} text={props.text} ></Buttons>
     </div> 
 		<Modal
 			open={open}

@@ -467,6 +467,10 @@ div[role=presentation] {
     font-size: 10pt;
   }
 }
+.menu-open {
+  display: none;
+}
+
 .header-main {
   width: 100%;
   height: auto;

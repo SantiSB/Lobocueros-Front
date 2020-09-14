@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { setVisibleSearchForm } from "../../../redux/actionsCreators";
+import { setVisibleSearchForm, setVisibleMenu } from "../../../redux/actionsCreators";
 import Search_White from '../../../assets/Icons/Search_White.svg'
 import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import Arrow_White from '../../../assets/Icons/Arrow_White.svg'
@@ -34,7 +34,7 @@ const Header = (props) => {
             <ul className="main-menu">
               <li className="item-menu"><a href="/productos">Nuevo</a></li>
               <li className="item-menu"><a href="/productos">Mujer</a><img src={Arrow_White} alt="arrow"></img>
-                <div className="submenu-nav" id="Mujer">
+                <div className="submenu-nav" id="Mujer" >
                   <ul>
                     <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>
@@ -93,7 +93,7 @@ const Header = (props) => {
 
           <div className="burger-menu">
             <BurgerMenu></BurgerMenu>
-                <div className="submenu-nav" id="submenu-nav"> 
+                <div className="submenu-nav" id="submenu-nav" style={props.visibleMenu == false ? {display: "none"} : {display: "flex"}}> 
                   <ul>
                     <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>
@@ -123,11 +123,13 @@ const Header = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-	visibleSearchForm: state.visibleSearchForm,
+  visibleSearchForm: state.visibleSearchForm,
+  visibleMenu: state.visibleMenu,
 });
   
 const mapDispatchToProps = {
-	setVisibleSearchForm,
+  setVisibleMenu,
+  setVisibleSearchForm,
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
