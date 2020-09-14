@@ -1,6 +1,6 @@
 .header-main
-	@include display-grid("headerUp" "headerDown", 100%, 30px 70px)
 	@include size(100%, auto)
+	@include display-grid("headerUp" "headerDown", 100%, 30px 70px)
 	@include shadow-white
 	position: fixed
 	z-index: 2
@@ -132,9 +132,6 @@
 						.submenu-nav
 							display: none
 							padding: 0rem 2rem
-						// &:hover>.submenu-nav
-						// 	display: none
-						// 	padding: 0rem 3rem
 
 @media (max-device-width: 900px)
 	.header-main
@@ -197,11 +194,6 @@
 								&:hover
 									li 
 										display: block
-
-				// &:hover>.submenu-nav
-				// 	display: none
-				// 	padding: 0rem 3rem
-
 			.nav
 				display: none
 
@@ -224,10 +216,6 @@
 					ul
 						.submenu-item
 							margin: 0rem 0rem
-				// &:hover>.submenu-nav
-				// 	display: none
-				// 	padding: 0rem 3rem
-							
 
 
 

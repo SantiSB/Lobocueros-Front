@@ -10,7 +10,7 @@ import MiniCart from '../../Organisms/OReusable/MiniCart';
 
 
 const Header = (props) => {
-  console.log("qwe", props.visibleSearchForm)
+  // console.log("qwe", props.visibleSearchForm)
     return(
       <header className="header-main">
         <div className="headerUp">

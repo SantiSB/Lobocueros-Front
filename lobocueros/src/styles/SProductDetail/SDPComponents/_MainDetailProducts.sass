@@ -6,7 +6,7 @@
 		@include size(auto, auto)
 
 	.details-product
-		@include size(auto, auto)
+		@include size(auto, 100%)
 		@include display-grid("carousel-images-detail info-product", 50% 50%, auto)
 		padding: 0rem 5rem
 
@@ -20,10 +20,11 @@
 .detail-product-main
 	.details-product
 		.info-product
-			@include display-grid("info-product-detail" "general-info-product", auto, 50% 50%)
+			margin: 0rem 0rem 1rem 0rem
+			@include display-grid("info-product-detail" "general-info-product", 100%, 50% 50%)
 			.info-product-detail
 				text-align: center
-				@include size(auto, 80%)
+				@include size(100%, 80%)
 				padding: 0rem 5rem
 				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
 
@@ -43,21 +44,28 @@
 	.detail-product-main
 		.details-product
 			padding: 0rem 1rem
-			.info-product-detail
-				@include size(auto, 100%)
-				padding: 0rem 1rem
-				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
+			.info-product
+				@include display-grid("info-product-detail" "general-info-product", 100%, 55% 45%)
+				.info-product-detail
+					@include size(auto, 100%)
+					padding: 0rem 1rem
+					@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% auto 15% auto)
 
 	
 
-@media (max-device-width: 900px)
+@media (max-device-width: 960px)
 	.detail-product-main
 		.details-product
+			@include size(auto, auto)
+			@include display-grid("carousel-images-detail" "info-product", 100%, auto auto)
+			
+			
+
 			padding: 0rem 1rem
 			.info-product-detail
 				@include size(auto, auto)
 				padding: 0rem 1rem
-				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 40% 15% 15%)
+				@include display-grid("ref-product" "title-product" "price-product" "description-product" "actions-product-detail" "buttons-product-detail", 100%, 10% 10% 10% 30% 15% 25%)
 
 
 @media (max-device-width: 573px)
@@ -66,11 +74,13 @@
 		.details-product
 			@include display-grid("carousel-images-detail" "info-product-detail", 100%, auto auto)
 			padding: 0rem 1rem
+			.info-product
+				@include display-grid("info-product-detail" "general-info-product", 100%, auto auto)
+				margin: 0rem 0rem 1rem 0rem
+				.general-info-product
+					margin-top: 2.5rem
 
-			.carousel-images-detail
-				@include size(auto, auto)
-				padding: 0rem 0rem
-				@include display-flex(center, center)
+			
 
 		.general-info
 			padding: 0rem 1rem

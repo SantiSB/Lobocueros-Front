@@ -6,40 +6,40 @@ const MiniImages = () => {
     return(
 		<div className="mini-images-grid">
 			<Grid container spacing={1}>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item xs={4} md={2} lg={2}>
 					<img src={Bolso}></img>
 				</Grid>
 			</Grid>

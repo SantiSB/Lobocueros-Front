@@ -1,6 +1,8 @@
 .features
+	@include size(100%, auto)
 	@include display-grid("features-product measures-product", 50% 50%, 100%)
 	color: $Lobocueros
+	padding: 0rem .5rem
 	table, th, td
 		border-collapse: collapse
 		width: 300px
@@ -23,16 +25,44 @@
 
 
 	.features-product
-		@include display-flex(center, auto)
+		@include display-flex(auto, auto)
+		
 
 	.measures-product
-		@include display-flex(center, auto)
+		@include display-flex(auto, auto)
+		@include size(auto, auto)
 
 @media (max-device-width: 1200px)
 	.features
-		@include display-grid("features-product" "measures-product", 100%, auto auto)
+		@include display-grid("features-product" "measures-product", 50% 50px, auto)
+
+		table, th, td
+
+			.item-table
+				font-size: 9pt
+
+			th
+				font-size: 11pt
+			
+			td
+				font-size: 9pt
+
+@media (max-device-width: 1100px)
+	.features
+		table, th, td
+
+			.item-table
+				font-size: 8pt
+
+			th
+				font-size: 10pt
+			
+			td
+				font-size: 8pt
 		
-@media (max-device-width: 900px)
+@media (max-device-width: 960px)
+	.features
+		@include display-grid("features-product" "measures-product", 50% 50%, auto)
 
 @media (max-device-width: 573px)
 	.features
