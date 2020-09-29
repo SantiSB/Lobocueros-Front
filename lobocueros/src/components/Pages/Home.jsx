@@ -4,6 +4,7 @@ import Footer from "../Templates/TReusable/Footer";
 import MainHome from "../Templates/THome/MainHome";
 
 const Home = () => {
+ 
   return (
     <div className="home">
       <div className="header">

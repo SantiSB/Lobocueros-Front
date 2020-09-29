@@ -1,7 +1,10 @@
 import {
 	VISIBLE_MINI_CART,
 	VISIBLE_SEARCH_FORM,
-	VISIBLE_MENU
+	VISIBLE_MENU,
+	ALL_DATA,
+	PRODUCTS_DATA,
+	
 } from "./actions"; 
 
 const setVisibleMiniCart = (event) => ({
@@ -19,8 +22,21 @@ const setVisibleMenu = (event) => ({
 	event,
 });
 
+const setAllData = (event) => ({
+	type: ALL_DATA,
+	event,
+});
+
+const setProductsData = (event) => ({
+	type: PRODUCTS_DATA,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
 	setVisibleMenu,
+	setAllData,
+	setProductsData,
+
 };

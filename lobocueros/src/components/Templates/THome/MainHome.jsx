@@ -6,6 +6,7 @@ import BannerHome from '../../Organisms/OHome/BannerHome';
 import PromoHome from '../../Organisms/OHome/PromoHome';
 
 const MainHome = () => {
+	
     return(
 		<div className="mainHome-main">
 			<div className="banner-home">

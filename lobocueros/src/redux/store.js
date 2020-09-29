@@ -3,13 +3,17 @@ import { createStore } from "redux";
 import {
   VISIBLE_MINI_CART,
   VISIBLE_SEARCH_FORM,
-  VISIBLE_MENU
+  VISIBLE_MENU,
+  ALL_DATA,
+  PRODUCTS_DATA
 } from "./actions";
 
 const initialStore = {
   visibleMiniCart: false,
   visibleSearchForm: false,
   visibleMenu: false,
+  allData: {},
+  productsData: []
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -29,6 +33,16 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         visibleMenu: action.event
+      };
+    case ALL_DATA:
+      return {
+        ...state,
+        allData: action.event
+      };
+    case PRODUCTS_DATA:
+      return {
+        ...state,
+        productsData: action.event
       };
     default:
       return state;

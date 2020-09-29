@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { connect} from "react-redux";
+import { setAllData, setProductsData } from "../redux/actionsCreators";
+import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import Productos from "./Pages/Productos";
@@ -10,21 +13,54 @@ import FailedPurchase from "./Pages/FailedPurchase";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
-//Rutas del visor de sismos
-const Routes = () => (
-  <Router>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/productos" exact component={Productos} />
-      <Route path="/productos/:id/" component={ProductDetail} />
-      <Route path="/carrito" component={Cart} />
-      <Route path="/resumen" component={Resume} />
-      <Route path="/compraexitosa" component={SuccessfulPurchase} />
-      <Route path="/comprafallida" component={FailedPurchase} />
-      <Route path="/sobrenosotros" component={About} />
-      <Route path="/contacto" component={Contact} />
-    </Switch>
-  </Router>
-);
+const Routes = (props) => {
+  useEffect(() => {
+    axios
+      .get(
+        'https://lobocuerosapi.com/'
+      )
+      .then((response) => {
+        props.setAllData(response.data)
+        
+      })
+      .catch((e) => {
+      });
+    axios
+      .get(
+        'https://lobocuerosapi.com/productos'
+      )
+      .then((response) => {
+        props.setProductsData(response.data.results)
+        
+      })
+      .catch((e) => {
+      });
+  }, [])
+  
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/productos" exact component={Productos} />
+        <Route path="/productos/:id/" component={ProductDetail} />
+        <Route path="/carrito" component={Cart} />
+        <Route path="/resumen" component={Resume} />
+        <Route path="/compraexitosa" component={SuccessfulPurchase} />
+        <Route path="/comprafallida" component={FailedPurchase} />
+        <Route path="/sobrenosotros" component={About} />
+        <Route path="/contacto" component={Contact} />
+      </Switch>
+    </Router>
+  )
+};
 
-export default Routes;
+const mapStateToProps = (state) => ({
+  allData: state.allData,
+  productsData: state.productsData,
+});
+const mapDispatchToProps = {
+  setAllData,
+  setProductsData,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Routes);
