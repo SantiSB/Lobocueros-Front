@@ -14,39 +14,52 @@
 				"top": "Con tapa",
 				"cover": "Con forro",
                 "orientation": "Horizontal",
-                "gender": "Masculino",
-				"measurements": {
-                    "width": 50,
-                    "high": 80,
-                    "depth": 30
-				},
+                "width": 50,
+                "high": 80,
+                "depth": 30,
 				"recomendations": "Lavar a mano, secar al sol",
-				"colors": [
+                "productoCaracteristicas": [
                     {
-                        "color": "Negro",
-                        "code": "#000000"
+                        "id": 1,
+                        "principal": true,
+                        "genero": {
+                            "id": 1,
+                            "nombre": "Masculino"
+                        },
+                        "imagen": "https://lobocueros.s3.amazonaws.com/productos/imagenes/verde.jpg",
+                        "color": {
+                            "id": 1,
+                            "nombre": "Amarrillo",
+                            "codigo": "#00000"
+                        }
                     },
                     {
-                        "color": "Blanco",
-                        "code": "#FFFFFF"
-                    }	
-				],
-				"mainPicture": 	{
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                    "imgColor": "Negro"
-                },
-				"secondaryPictures": [
+                        "id": 2,
+                        "principal": false,
+                        "genero": {
+                            "id": 2,
+                            "nombre": "Femenino"
+                        },
+                        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "color": {
+                            "id": 2,
+                            "nombre": "Verde",
+                            "codigo": "#00044"
+                        }
+                    },
                     {
-                        "negro": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ],
-                        "blanco": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ]
+                          "id": 3,
+                          "principal": false,
+                          "genero": {
+                              "id": 1,
+                              "nombre": "Masculino"
+                          },
+                          "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                          "color": {
+                              "id": 2,
+                              "nombre": "Verde",
+                              "codigo": "#00044"
+                          }
                     }
                 ]
             },
@@ -63,39 +76,38 @@
 				"top": "Sin tapa",
 				"cover": "Sin forro",
                 "orientation": "Vertical",
-                "gender": "Unisex",
-				"measurements": {
-                    "width": 20,
-                    "high": 70,
-                    "depth": 30
-				},
+                "width": 20,
+                "high": 70,
+                "depth": 30,
 				"recomendations": "Lavar a mano, secar al sol",
-				"colors": [
+				"productoCaracteristicas": [
                     {
-                        "color": "Negro",
-                        "code": "#000000"
+                        "id": 1,
+                        "principal": true,
+                        "imagen": "https://lobocueros.s3.amazonaws.com/productos/imagenes/verde.jpg",
+                        "genero": {
+                            "id": 3,
+                            "nombre": "Unisex"
+                        },
+                        "color": {
+                            "id": 3,
+                            "nombre": "Rojo",
+                            "codigo": "#00333"
+                        }
                     },
                     {
-                        "color": "Blanco",
-                        "code": "#FFFFFF"
-                    }	
-				],
-				"mainPicture": 	{
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                    "imgColor": "Negro"
-                },
-				"secondaryPictures": [
-                    {
-                        "negro": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ],
-                        "blanco": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ]
+                        "id": 2,
+                        "principal": false,
+                        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "genero": {
+                            "id": 2,
+                            "nombre": "Femenino"
+                        },
+                        "color": {
+                            "id": 3,
+                            "nombre": "Rojo",
+                            "codigo": "#00333"
+                        }
                     }
                 ]
 			}
