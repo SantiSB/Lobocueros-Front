@@ -12,10 +12,9 @@ const useStyles = makeStyles((theme) => ({
 	  margin: "1rem 0rem"
 	},
   }));
-
+ 
 const ProductsGrid = (props) => {
 	const classes = useStyles();
-	console.log("qwe", props.productsData)
 	const totalItems = props.productsData
 
 	const itemsGridProducts = totalItems.map(function(item, index){    

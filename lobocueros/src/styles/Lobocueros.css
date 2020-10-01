@@ -1383,7 +1383,7 @@ div[role=presentation] {
 }
 .detail-product-main .details-product .info-product .info-product-detail {
   text-align: center;
-  width: 100%;
+  width: auto;
   height: 80%;
   padding: 0rem 5rem;
   display: grid;

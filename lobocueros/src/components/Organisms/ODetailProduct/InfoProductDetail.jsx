@@ -4,25 +4,24 @@ import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
 import Counter from '../../Atoms/AReusable/Counter';
 
-const InfoProductDetail = () => {
+const InfoProductDetail = (props) => {
+	console.log("asd", props.productDetail)
     return(
 		<div className="info-product-detail">
 			<div className="ref-product">
-				Ref.1234
+				Ref.{props.productDetail.reference}
 			</div>
 			<div className="title-product">
-				MORRAL DE CUERO CON CORREA
+				{props.productDetail.title}
 			</div>
 			<div className="price-product">
-				<span className="old-value">$150.000</span><span>$100.000</span>
+				<span className="old-value">{props.productDetail.price + props.productDetail.price*0.25}</span><span>{props.productDetail.price}</span>
 			</div>
 			<div className="description-product">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae esse repudiandae ducimus ea ex recusandae quia sed maiores consectetur molestias quos, omnis beatae voluptate, natus facilis quis necessitatibus eveniet quaerat.
-				
+				{props.productDetail.description}
 			</div>
 			<div className="actions-product-detail">
-				<ColorsBar></ColorsBar>
-				
+				<ColorsBar colors={props.productDetail.colors != undefined ? props.productDetail.colors : [""]}></ColorsBar>
 			</div>
 			<div className="buttons-product-detail">
 				<div className="counter">

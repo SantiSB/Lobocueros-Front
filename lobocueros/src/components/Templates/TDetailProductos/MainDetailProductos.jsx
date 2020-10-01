@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect} from "react-redux";
+import { setAllData, setProductsData } from "../../../redux/actionsCreators";
 import InstagramSection from '../TReusable/InstagramSection'
 import InfoBuySection from '../TReusable/InfoBuySection'
 import BreadcrumbDetailProduct from '../../Organisms/ODetailProduct/BreadcrumbDetailProduct';
@@ -7,11 +9,23 @@ import InfoProductDetail from '../../Organisms/ODetailProduct/InfoProductDetail'
 import GeneralInfoProduct from '../../Organisms/ODetailProduct/GeneralInfoProduct';
 import MiniImages from '../../Organisms/ODetailProduct/MiniImages';
 
-const MainDetailProduct = () => {
+const MainDetailProduct = (props) => { 
+	const idRoute = window.location.pathname.substr(11)
+
+	function isId(product){
+		return product.id == idRoute
+	}
+
+	var productDetail = {}
+	if(props.productsData.find(isId) != undefined && props.productsData.find(isId) != null){
+		productDetail = props.productsData.find(isId)
+	}
+
+
     return(
 		<div className="detail-product-main">
 			<div className="breadcrumb">
-				<BreadcrumbDetailProduct breadcrumb={"Categoria"}></BreadcrumbDetailProduct>	
+				<BreadcrumbDetailProduct breadcrumb={productDetail.category}></BreadcrumbDetailProduct>	
 			</div>
 
 			<div className="details-product">
@@ -20,7 +34,7 @@ const MainDetailProduct = () => {
 					<MiniImages></MiniImages>
 				</div>
 				<div className="info-product">
-					<InfoProductDetail></InfoProductDetail>
+					<InfoProductDetail productDetail={productDetail}></InfoProductDetail>
 					<GeneralInfoProduct></GeneralInfoProduct>
 				</div>
 			</div>
@@ -34,4 +48,14 @@ const MainDetailProduct = () => {
 		</div>
     )
 }
-export default MainDetailProduct;
+
+const mapStateToProps = (state) => ({
+	allData: state.allData,
+	productsData: state.productsData,
+});
+const mapDispatchToProps = {
+	setAllData,
+	setProductsData,
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(MainDetailProduct);

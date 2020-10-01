@@ -15,11 +15,9 @@
 				"cover": "Con forro",
                 "orientation": "Horizontal",
                 "gender": "Masculino",
-				"measurements": {
-                    "width": 50,
-                    "high": 80,
-                    "depth": 30
-				},
+                "width": 50,
+                "high": 80,
+                "depth": 30,
 				"recomendations": "Lavar a mano, secar al sol",
 				"colors": [
                     {
@@ -31,44 +29,47 @@
                         "code": "#FFFFFF"
                     }	
 				],
-				"mainPicture": 	{
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                    "imgColor": "Negro"
-                },
-				"secondaryPictures": [
+				"pictures": [
                     {
-                        "negro": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ],
-                        "blanco": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ]
+                        "idPicture": 1,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": true
+                    },
+                    {
+                        "idPicture": 2,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": true
+                    },
+                    {
+                        "idPicture": 3,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Blanco",
+                        "codeColor": "#FFFFFF",
+                        "mainPicture": true
                     }
                 ]
             },
-			{
-				"id": 2,
-				"title": "Bolso Cartera Amaranto",
+            {
+				"id": 1,
+				"title": "Bolso Cartera Amapola",
 				"material": "Cuero",
-				"reference": "415",
+				"reference": "007",
 				"description": "Bolso tipo cartera con cierre de cremallera externo, con 4 bolsillos internos y 1 externo. División interna con bolsillo de cremallera. Manijas de 55 cm, incluye accesorio-fleco extraíble.",
-				"price": 120000,
-				"availability": "No Disponible",
-				"size": "Pequeño",
-				"closing": "Sin cierre",
-				"top": "Sin tapa",
-				"cover": "Sin forro",
-                "orientation": "Vertical",
-                "gender": "Unisex",
-				"measurements": {
-                    "width": 20,
-                    "high": 70,
-                    "depth": 30
-				},
+				"price": 150000,
+				"availability": "Disponible",
+				"size": "Grande",
+				"closing": "Con cierre",
+				"top": "Con tapa",
+				"cover": "Con forro",
+                "orientation": "Horizontal",
+                "gender": "Masculino",
+                "width": 50,
+                "high": 80,
+                "depth": 30,
 				"recomendations": "Lavar a mano, secar al sol",
 				"colors": [
                     {
@@ -80,24 +81,29 @@
                         "code": "#FFFFFF"
                     }	
 				],
-				"mainPicture": 	{
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                    "imgColor": "Negro"
-                },
-				"secondaryPictures": [
+				"pictures": [
                     {
-                        "negro": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ],
-                        "blanco": [
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png"
-                        ]
+                        "idPicture": 1,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": true
+                    },
+                    {
+                        "idPicture": 2,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": true
+                    },
+                    {
+                        "idPicture": 3,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Blanco",
+                        "codeColor": "#FFFFFF",
+                        "mainPicture": true
                     }
                 ]
-			}
+            }
 	    ]
 }

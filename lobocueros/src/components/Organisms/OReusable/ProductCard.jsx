@@ -8,26 +8,35 @@ import Bolso from '../../../assets/Images/Bolso.fw.png'
 import Buttons from '../../Atoms/AReusable/Buttons';
 
 const ProductCard = (props) => {
-	console.log("qwert", props.item)
-    return(
-		<Card className="product-card">
-			<CardActionArea className="card-action-area">
-				<CardContent className="card-content">
-					<div className="image-product-card">
-						<img src={Bolso}></img>
-					</div>
-					<div className="title-product-card">
-						<h2>{props.item.nombre}</h2>
-					</div>
-					<div className="price-product-card">
-						<span className="old-value">$150.000</span><span>$100.000</span>
-					</div>
+
+	const buildMainPicture = (pictures) => {
+		function isMain(picture){
+			return picture.mainPicture == true
+		}
+		return pictures.find(isMain).img
+	} 
+
+    return( 
+		<Card className="product-card" >
+			<CardActionArea className="card-action-area" >
+				<CardContent className="card-content" >
+					<a href={`/productos/${props.item.id}`}> 
+						<div className="image-product-card" >
+							<img src={buildMainPicture(props.item.pictures)}></img>
+						</div>
+						<div className="title-product-card">
+							<h2>{props.item.title}</h2>
+						</div>
+						<div className="price-product-card">
+							<span className="old-value">{props.productDetail.price + props.productDetail.price*0.25}</span><span>{props.item.price}</span>
+						</div>
+					</a>
 				</CardContent>
 			</CardActionArea>
 			<CardActions className="card-actions">
 				<div className="product-card-actions">
 					<div className="colors-product-card">
-						<ColorsBar></ColorsBar>
+						<ColorsBar colors={props.item.colors}></ColorsBar>
 					</div>
 					<div className="buy-produt-card">
 						<Buttons type="Add" text="Agregar al Carrito"></Buttons>
