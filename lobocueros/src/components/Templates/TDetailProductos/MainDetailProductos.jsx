@@ -35,9 +35,9 @@ const MainDetailProduct = (props) => {
 				</div>
 				<div className="info-product">
 					<InfoProductDetail productDetail={productDetail}></InfoProductDetail>
-					<GeneralInfoProduct></GeneralInfoProduct>
+					<GeneralInfoProduct productDetail={productDetail}></GeneralInfoProduct>
 				</div>
-			</div>
+			</div> 
 			
 			<div className="instagram">
 				<InstagramSection></InstagramSection>

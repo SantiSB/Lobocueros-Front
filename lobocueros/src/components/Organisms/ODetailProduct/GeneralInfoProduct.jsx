@@ -53,13 +53,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const GeneralInfoProduct = () => {
+const GeneralInfoProduct = (props) => {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
-	};
+  };
+  
     return(
 		<div className="general-info-product">
 			<AppBar position="static" color="default">
@@ -77,10 +78,10 @@ const GeneralInfoProduct = () => {
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>
-				<Features></Features>
+				<Features productDetail={props.productDetail}></Features>
 			</TabPanel>
 			<TabPanel value={value} index={1}>
-				<Recommendations></Recommendations>
+				<Recommendations productDetail={props.productDetail}></Recommendations>
 			</TabPanel>
 		</div>
 		

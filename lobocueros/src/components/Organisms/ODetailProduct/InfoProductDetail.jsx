@@ -6,7 +6,8 @@ import Counter from '../../Atoms/AReusable/Counter';
 
 const InfoProductDetail = (props) => {
 	console.log("asd", props.productDetail)
-    return(
+	
+    return( 
 		<div className="info-product-detail">
 			<div className="ref-product">
 				Ref.{props.productDetail.reference}

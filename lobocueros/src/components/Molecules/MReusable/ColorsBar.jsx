@@ -4,10 +4,11 @@ import ColorBtn from '../../Atoms/AReusable/ColorBtn';
 
 const ColorsBar = (props) => {
 	console.log("asdf",props)
+	const colors = props.colors != null ? props.colors : []
     return(
 		<div className="colors-bar">
 			{
-				props.colors.map(function(boton){
+				colors.map(function(boton){
 					return <ColorBtn color={boton.code}></ColorBtn>
 				})
 			}

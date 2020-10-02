@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 	  display: "flex",
 	  justifyContent: "center",
 	  margin: "1rem 0rem"
-	},
+	}, 
   }));
  
 const ProductsGrid = (props) => {
