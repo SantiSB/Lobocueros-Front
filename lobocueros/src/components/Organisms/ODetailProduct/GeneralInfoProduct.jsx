@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Features from '../../Molecules/MDetailProduct/Features';
 import Recommendations from '../../Molecules/MDetailProduct/Recommendations';
-
+ 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 

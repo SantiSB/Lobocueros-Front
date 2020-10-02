@@ -3,7 +3,6 @@ import React from 'react';
 import ColorBtn from '../../Atoms/AReusable/ColorBtn';
 
 const ColorsBar = (props) => {
-	console.log("asdf",props)
 	const colors = props.colors != null ? props.colors : []
     return(
 		<div className="colors-bar">

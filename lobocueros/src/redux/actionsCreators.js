@@ -4,6 +4,7 @@ import {
 	VISIBLE_MENU,
 	ALL_DATA,
 	PRODUCTS_DATA,
+	PRINCIPAL_IMAGE_DETAIL,
 	
 } from "./actions"; 
 
@@ -32,11 +33,16 @@ const setProductsData = (event) => ({
 	event,
 });
 
+const setPrincipalImageDetail = (event) => ({
+	type: PRINCIPAL_IMAGE_DETAIL,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
 	setVisibleMenu,
 	setAllData,
 	setProductsData,
-
+	setPrincipalImageDetail,
 };

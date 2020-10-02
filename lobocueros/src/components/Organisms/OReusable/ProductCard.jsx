@@ -8,7 +8,6 @@ import Bolso from '../../../assets/Images/Bolso.fw.png'
 import Buttons from '../../Atoms/AReusable/Buttons';
  
 const ProductCard = (props) => {
-	console.log("zxc", props)
 	const buildMainPicture = (pictures) => {
 		function isMain(picture){
 			return picture.mainPicture == true

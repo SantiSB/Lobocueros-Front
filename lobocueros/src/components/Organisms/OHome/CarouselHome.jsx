@@ -17,7 +17,7 @@ const CarouselHome = (props) => {
 	const classes = useStyles();
 
 	const totalItems = props.productsData
-	console.log("qwer", totalItems)
+	
     return(
 		<>
 			<div className="carousel-home">

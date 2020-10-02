@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Features = (props) => {
-	console.log("qwe", props)
     return(
 		<div className="features">
 			<div className="features-product">

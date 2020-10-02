@@ -5,7 +5,8 @@ import {
   VISIBLE_SEARCH_FORM,
   VISIBLE_MENU,
   ALL_DATA,
-  PRODUCTS_DATA
+  PRODUCTS_DATA,
+  PRINCIPAL_IMAGE_DETAIL,
 } from "./actions";
 
 const initialStore = {
@@ -13,7 +14,8 @@ const initialStore = {
   visibleSearchForm: false,
   visibleMenu: false,
   allData: {},
-  productsData: []
+  productsData: [],
+  principalImageDetail: ""
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -44,6 +46,12 @@ const rootReducer = (state = initialStore, action) => {
         ...state,
         productsData: action.event
       };
+    case PRINCIPAL_IMAGE_DETAIL:
+      return {
+        ...state,
+        principalImageDetail: action.event
+      };
+  
     default:
       return state;
   }

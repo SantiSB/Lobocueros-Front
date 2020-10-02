@@ -30,7 +30,6 @@ const Routes = (props) => {
         'https://my-json-server.typicode.com/SantiSB/JsonDB/results'
       )
       .then((response) => {
-        console.log("asdf", response.data)
         props.setProductsData(response.data)
         
       })

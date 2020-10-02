@@ -1375,6 +1375,7 @@ div[role=presentation] {
   }
 }
 .detail-product-main .details-product .info-product {
+  grid-gap: 1rem;
   margin: 0rem 0rem 1rem 0rem;
   display: grid;
   grid-template-areas: "info-product-detail" "general-info-product";
@@ -1744,6 +1745,13 @@ div[role=presentation] {
     font-size: 8pt;
   }
 }
+.principal-image {
+  text-align: center;
+}
+.principal-image img {
+  max-height: 270px;
+}
+
 .product-detail .footer-product-detail {
   grid-area: footer-product-detail;
 }
