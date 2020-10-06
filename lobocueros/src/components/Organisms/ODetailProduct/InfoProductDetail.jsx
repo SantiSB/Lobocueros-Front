@@ -1,10 +1,19 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
 import Counter from '../../Atoms/AReusable/Counter';
+import { connect} from "react-redux";
+import { setItemsInCart } from "../../../redux/actionsCreators";
 
 const InfoProductDetail = (props) => {
+	const buyEvents = () => {
+		var itemsAdd = []
+		itemsAdd.push(props.productDetail)
+		props.setItemsInCart(itemsAdd)
+	}
+	React.useEffect(()=>{
+		console.log("qwe", props.itemsInCart)
+	})
     return( 
 		<div className="info-product-detail">
 			<div className="ref-product">
@@ -28,12 +37,20 @@ const InfoProductDetail = (props) => {
 				</div>
 				
 				<div className="buy-buttons">
-					<a href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
-					<a href="/carrito"><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
+					<a onClick={()=>buyEvents()} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
+					<a ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
 				</div>
 			</div>
 			
 		</div>
     )
 }
-export default InfoProductDetail;
+
+const mapStateToProps = (state) => ({
+	itemsInCart: state.itemsInCart,
+});
+const mapDispatchToProps = {
+	setItemsInCart,
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(InfoProductDetail);

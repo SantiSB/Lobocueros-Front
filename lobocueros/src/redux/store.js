@@ -8,6 +8,8 @@ import {
   PRODUCTS_DATA,
   PRINCIPAL_IMAGE_DETAIL,
   MAIN_PICTURE_CARD,
+  SET_COUNTER, SET_COLOR,
+  SET_ITEMS_IN_CART
 } from "./actions";
 
 const initialStore = {
@@ -17,7 +19,10 @@ const initialStore = {
   allData: {},
   productsData: [],
   principalImageDetail: "",
-  mainPictureCard: ""
+  mainPictureCard: "",
+  counter: "",
+  colorSelected: "",
+  itemsInCart: []
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -58,7 +63,21 @@ const rootReducer = (state = initialStore, action) => {
         ...state,
         mainPictureCard: action.event
       };
-  
+    case SET_COUNTER:
+      return {
+        ...state,
+        counter: action.event
+      };
+    case SET_COLOR:
+      return {
+        ...state,
+        colorSelected: action.event
+      };
+    case SET_ITEMS_IN_CART:
+      return {
+        ...state,
+        itemsInCart: action.event
+      };
     default:
       return state;
   }

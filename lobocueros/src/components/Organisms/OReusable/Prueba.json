@@ -13,101 +13,95 @@
 				"closing": "Con cierre",
 				"top": "Con tapa",
 				"cover": "Con forro",
+				"category": "Bolsos",
+				"subcategory": "Bolsos pequeños",
                 "orientation": "Horizontal",
+                "gender": "Masculino",
                 "width": 50,
-                "high": 80,
+                "hight": 80,
                 "depth": 30,
 				"recomendations": "Lavar a mano, secar al sol",
-                "productoCaracteristicas": [
+				"pictures": [
                     {
-                        "id": 1,
-                        "principal": true,
-                        "genero": {
-                            "id": 1,
-                            "nombre": "Masculino"
-                        },
-                        "imagen": "https://lobocueros.s3.amazonaws.com/productos/imagenes/verde.jpg",
-                        "color": {
-                            "id": 1,
-                            "nombre": "Amarrillo",
-                            "codigo": "#00000"
-                        }
+                        "idPicture": 1,
+                        "img": "https://img2.freepng.es/20180413/waw/kisspng-handbag-computer-icons-vector-idea-5ad09f596f92d7.474295701523621721457.jpg",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": false
                     },
                     {
-                        "id": 2,
-                        "principal": false,
-                        "genero": {
-                            "id": 2,
-                            "nombre": "Femenino"
-                        },
-                        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                        "color": {
-                            "id": 2,
-                            "nombre": "Verde",
-                            "codigo": "#00044"
-                        }
+                        "idPicture": 2,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": true
                     },
                     {
-                          "id": 3,
-                          "principal": false,
-                          "genero": {
-                              "id": 1,
-                              "nombre": "Masculino"
-                          },
-                          "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                          "color": {
-                              "id": 2,
-                              "nombre": "Verde",
-                              "codigo": "#00044"
-                          }
-                    }
+                        "idPicture": 3,
+                        "img": "https://lh3.googleusercontent.com/proxy/zTDBhk6htsO2r5Q0xSAx6MbpN1eV9mcSMP7b_JGPSTm2Gr5oM7GlUyMlrcQFK48LWS1S1yIu0zpGvgKo5Ak4MJ9PoJ6ceatAhDBDGf8iuGrRgi84xGw",
+                        "colorPicture": "Blanco",
+                        "codeColor": "#FFFFFF",
+                        "mainPicture": false
+                    },
+					
+                    {
+                        "idPicture": 4,
+                        "img": "https://lh3.googleusercontent.com/proxy/u5W20uZM-Aa397KWtyyA4Eg_cR_Ys24PPL6QHMZkPJyAbJ4fe1QwAByKtBgynrxpgmVMXUjpsc-8BQofImY9FrtUt6nwW89zUfVslJnTZPizStMZkuk",
+                        "colorPicture": "Blanco",
+                        "codeColor": "#FFFFFF",
+                        "mainPicture": false
+                    },
+					
+                    {
+                        "idPicture": 5,
+                        "img": "https://lh3.googleusercontent.com/proxy/u5W20uZM-Aa397KWtyyA4Eg_cR_Ys24PPL6QHMZkPJyAbJ4fe1QwAByKtBgynrxpgmVMXUjpsc-8BQofImY9FrtUt6nwW89zUfVslJnTZPizStMZkuk",
+                        "colorPicture": "Vino",
+                        "codeColor": "#420000",
+                        "mainPicture": false
+                    }	
                 ]
             },
             {
-				"id": 1,
-				"title": "Bolso Cartera Amapola",
+				"id": 2,
+				"title": "Bolso Cartera Amaranto",
 				"material": "Cuero",
 				"reference": "007",
 				"description": "Bolso tipo cartera con cierre de cremallera externo, con 4 bolsillos internos y 1 externo. División interna con bolsillo de cremallera. Manijas de 55 cm, incluye accesorio-fleco extraíble.",
-				"price": 120000,
-				"availability": "No Disponible",
-				"size": "Pequeño",
-				"closing": "Sin cierre",
-				"top": "Sin tapa",
-				"cover": "Sin forro",
-                "orientation": "Vertical",
-                "width": 20,
-                "high": 70,
+				"price": 150000,
+				"availability": "Disponible",
+				"size": "Grande",
+				"closing": "Con cierre",
+				"top": "Con tapa",
+				"cover": "Con forro",
+				"category": "Bolsos",
+				"subcategory": "Bolsos pequeños",
+                "orientation": "Horizontal",
+                "gender": "Masculino",
+                "width": 50,
+                "hight": 80,
                 "depth": 30,
 				"recomendations": "Lavar a mano, secar al sol",
-				"productoCaracteristicas": [
+								"pictures": [
                     {
-                        "id": 1,
-                        "principal": true,
-                        "imagen": "https://lobocueros.s3.amazonaws.com/productos/imagenes/verde.jpg",
-                        "genero": {
-                            "id": 3,
-                            "nombre": "Unisex"
-                        },
-                        "color": {
-                            "id": 3,
-                            "nombre": "Rojo",
-                            "codigo": "#00333"
-                        }
+                        "idPicture": 1,
+                        "img": "https://img2.freepng.es/20180723/ajb/kisspng-tote-bag-satchel-handbag-guess-jimmy-choo-5b5656ac7c6197.4666976715323849405095.jpg",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": true
                     },
                     {
-                        "id": 2,
-                        "principal": false,
-                        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
-                        "genero": {
-                            "id": 2,
-                            "nombre": "Femenino"
-                        },
-                        "color": {
-                            "id": 3,
-                            "nombre": "Rojo",
-                            "codigo": "#00333"
-                        }
+                        "idPicture": 2,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Negro",
+                        "codeColor": "#000000",
+                        "mainPicture": false
+                    },
+                    {
+                        "idPicture": 3,
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/1200px-NYCS-bull-trans-F.svg.png",
+                        "colorPicture": "Blanco",
+                        "codeColor": "#FFFFFF",
+                        "mainPicture": false
                     }
                 ]
             }

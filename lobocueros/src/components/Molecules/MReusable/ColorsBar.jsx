@@ -32,7 +32,7 @@ const ColorsBar = (props) => {
 		<div className="colors-bar">
 			{
 				arrayPicturesUnique.map(function(boton){
-					return <ColorBtn picture={boton.img} color={boton.codeColor}></ColorBtn>
+					return <ColorBtn picture={boton.img} codeColor={boton.codeColor} color={boton.colorPicture}></ColorBtn>
 				})
 			}
 			{/* <ColorBtn color="#ffffff"></ColorBtn> */}

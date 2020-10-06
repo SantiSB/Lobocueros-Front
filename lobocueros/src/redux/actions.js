@@ -5,4 +5,6 @@ export const ALL_DATA = "ALL_DATA";
 export const PRODUCTS_DATA = "PRODUCTS_DATA";
 export const PRINCIPAL_IMAGE_DETAIL = "PRINCIPAL_IMAGE_DETAIL";
 export const MAIN_PICTURE_CARD = "MAIN_PICTURE_CARD";
-
+export const SET_COUNTER = "SET_COUNTER";
+export const SET_COLOR = "SET_COLOR";
+export const SET_ITEMS_IN_CART = "SET_ITEMS_IN_CART";

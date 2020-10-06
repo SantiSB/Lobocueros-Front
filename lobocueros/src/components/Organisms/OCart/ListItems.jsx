@@ -1,14 +1,26 @@
 import React from "react";
 import ItemCart from "../../Molecules/MCart/ItemCart";
+import { connect} from "react-redux";
+import { setItemsInCart } from "../../../redux/actionsCreators";
 
-const ListItems = () => {
+const ListItems = (props) => {
+  console.log("asdf", props.itemsInCart)
   return (
     <>
-      <ItemCart></ItemCart>
-      <ItemCart></ItemCart>
-      <ItemCart></ItemCart>
+      {
+        props.itemsInCart.map(function(item){
+          return <ItemCart></ItemCart>
+        })
+      }
     </>
   );
 };
 
-export default ListItems
+const mapStateToProps = (state) => ({
+	itemsInCart: state.itemsInCart,
+});
+const mapDispatchToProps = {
+	setItemsInCart,
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(ListItems);

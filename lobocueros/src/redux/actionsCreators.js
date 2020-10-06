@@ -6,6 +6,9 @@ import {
 	PRODUCTS_DATA,
 	PRINCIPAL_IMAGE_DETAIL,
 	MAIN_PICTURE_CARD,
+	SET_COUNTER,
+	SET_COLOR,
+	SET_ITEMS_IN_CART
 	
 } from "./actions"; 
 
@@ -44,6 +47,21 @@ const setMainPictureCard = (event) => ({
 	event,
 });
 
+const setCounter = (event) => ({
+	type: SET_COUNTER,
+	event,
+});
+
+const setColorSelected = (event) => ({
+	type: SET_COLOR,
+	event,
+});
+
+const setItemsInCart = (event) => ({
+	type: SET_ITEMS_IN_CART,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
@@ -52,4 +70,7 @@ export {
 	setProductsData,
 	setPrincipalImageDetail,
 	setMainPictureCard,
+	setCounter,
+	setColorSelected,
+	setItemsInCart
 };
