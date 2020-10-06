@@ -196,36 +196,41 @@ div[role=presentation] {
 .product-card .card-action-area .card-content {
   padding: 0px;
 }
-.product-card .card-action-area .card-content .image-product-card {
+.product-card .card-action-area .card-content a {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+}
+.product-card .card-action-area .card-content a .image-product-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-card .card-action-area .card-content .image-product-card img {
+.product-card .card-action-area .card-content a .image-product-card img {
   width: 200px;
 }
-.product-card .card-action-area .card-content .title-product-card {
+.product-card .card-action-area .card-content a .title-product-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-card .card-action-area .card-content .title-product-card h2 {
+.product-card .card-action-area .card-content a .title-product-card h2 {
   font-family: "Pridi";
-  font-size: 12pt;
+  font-size: 11pt;
   margin: 0px;
 }
-.product-card .card-action-area .card-content .price-product-card {
+.product-card .card-action-area .card-content a .price-product-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-card .card-action-area .card-content .price-product-card span {
+.product-card .card-action-area .card-content a .price-product-card span {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 10pt;
   margin: 0rem 0.3rem;
 }
-.product-card .card-action-area .card-content .price-product-card .old-value {
+.product-card .card-action-area .card-content a .price-product-card .old-value {
   text-decoration: line-through;
   font-weight: 400;
   font-size: 8pt;
@@ -235,6 +240,11 @@ div[role=presentation] {
 }
 .product-card .card-actions {
   padding: 0px;
+}
+.product-card .card-actions a {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
 }
 .product-card .card-actions .product-card-actions {
   width: 100%;
@@ -364,6 +374,7 @@ div[role=presentation] {
   align-items: center;
 }
 .resume-buy-container .button-resume a {
+  text-decoration: none;
   width: 80%;
 }
 .resume-buy-container .button-resume a button {
@@ -1091,7 +1102,10 @@ div[role=presentation] {
   background-image: url("../assets/Images/bg1.png");
   background-size: cover;
 }
-.banner-home button {
+.banner-home a {
+  text-decoration: none;
+}
+.banner-home a button {
   margin: 10rem;
   top: 6.5rem;
 }
@@ -1175,6 +1189,9 @@ div[role=presentation] {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.carousel-home-movil-extra-small .item-carousel a {
+  text-decoration: none;
 }
 
 @media (max-device-width: 1500px) {

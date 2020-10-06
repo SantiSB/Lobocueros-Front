@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
 	carousel:{
 		padding: "1rem 5rem 3rem 5rem",
 		maxWidth: "90%",
-	}
+	} 
 	
   })); 
 

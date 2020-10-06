@@ -5,6 +5,7 @@ import {
 	ALL_DATA,
 	PRODUCTS_DATA,
 	PRINCIPAL_IMAGE_DETAIL,
+	MAIN_PICTURE_CARD,
 	
 } from "./actions"; 
 
@@ -38,6 +39,11 @@ const setPrincipalImageDetail = (event) => ({
 	event,
 });
 
+const setMainPictureCard = (event) => ({
+	type: MAIN_PICTURE_CARD,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
@@ -45,4 +51,5 @@ export {
 	setAllData,
 	setProductsData,
 	setPrincipalImageDetail,
+	setMainPictureCard,
 };

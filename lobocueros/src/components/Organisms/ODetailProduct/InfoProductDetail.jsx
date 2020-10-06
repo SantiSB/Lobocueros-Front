@@ -16,11 +16,11 @@ const InfoProductDetail = (props) => {
 			<div className="price-product">
 				<span className="old-value">{props.productDetail.price + props.productDetail.price*0.25}</span><span>{props.productDetail.price}</span>
 			</div>
-			<div className="description-product">
+			<div className="description-product"> 
 				{props.productDetail.description}
 			</div>
-			<div className="actions-product-detail">
-				<ColorsBar colors={props.productDetail.colors != undefined ? props.productDetail.colors : [""]}></ColorsBar>
+			<div className="actions-product-detail"> 
+				<ColorsBar productDetail={props.productDetail}></ColorsBar>
 			</div>
 			<div className="buttons-product-detail">
 				<div className="counter">

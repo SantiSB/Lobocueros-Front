@@ -17,6 +17,7 @@ const ProductCard = (props) => {
 		}
 	} 
 	const itemProduct = props.item != null ? props.item : {}
+	
 
     return( 
 		<Card className="product-card" >
@@ -36,14 +37,16 @@ const ProductCard = (props) => {
 				</CardContent>
 			</CardActionArea>
 			<CardActions className="card-actions">
-				<div className="product-card-actions">
-					<div className="colors-product-card">
-						<ColorsBar colors={itemProduct.colors}></ColorsBar>
+				<a href={`/productos/${itemProduct.id}`}>
+					<div className="product-card-actions">
+						<div className="colors-product-card">
+							<ColorsBar productDetail={itemProduct}></ColorsBar>
+						</div>
+						<div className="buy-produt-card">
+							<Buttons type="Add" text="Agregar al Carrito"></Buttons>
+						</div>
 					</div>
-					<div className="buy-produt-card">
-						<Buttons type="Add" text="Agregar al Carrito"></Buttons>
-					</div>
-				</div>
+				</a>
 			</CardActions>
 		</Card>
     )

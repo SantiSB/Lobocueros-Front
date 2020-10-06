@@ -7,6 +7,7 @@ import {
   ALL_DATA,
   PRODUCTS_DATA,
   PRINCIPAL_IMAGE_DETAIL,
+  MAIN_PICTURE_CARD,
 } from "./actions";
 
 const initialStore = {
@@ -15,7 +16,8 @@ const initialStore = {
   visibleMenu: false,
   allData: {},
   productsData: [],
-  principalImageDetail: ""
+  principalImageDetail: "",
+  mainPictureCard: ""
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -50,6 +52,11 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         principalImageDetail: action.event
+      };
+    case MAIN_PICTURE_CARD:
+      return {
+        ...state,
+        mainPictureCard: action.event
       };
   
     default:

@@ -14,7 +14,7 @@ const PrincipalImage = (props) => {
 	if(props.principalImageDetail == ""){
 		if(mainPicture() != undefined){
 			props.setPrincipalImageDetail(mainPicture())
-		}
+		} 
 	}
 
     return( 

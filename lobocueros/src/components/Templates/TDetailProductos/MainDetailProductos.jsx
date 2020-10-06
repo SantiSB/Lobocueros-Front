@@ -28,7 +28,7 @@ const MainDetailProduct = (props) => {
 				<BreadcrumbDetailProduct breadcrumb={productDetail.category}></BreadcrumbDetailProduct>	
 			</div>
  
-			<div className="details-product">
+			<div className="details-product"> 
 				<div className="carousel-images-detail">
 					<PrincipalImage productDetail={productDetail}></PrincipalImage>
 					<MiniImages productDetail={productDetail}></MiniImages>
