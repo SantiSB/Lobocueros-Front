@@ -66,10 +66,24 @@ const Filter = (props) => {
 	const filterByGenderUnisex = (event) => {
 		return event.gender == "Unisex" || event.gender == "Masculino" || event.gender == "Femenino"
 	};
+
+	const filterByPrice = (event) => {
+		return event.price != null
+	}
+
+	const removeAccents = (string) =>
+		string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+		
+	const filterBySearch = (event) => {
+		return removeAccents(event.title.toLowerCase()).includes(removeAccents(search.toLowerCase()))
+	}
 	
 	const listEventsFilter = () => {
 		let newListEvents = props.productsData
-		const filterGender = () => {
+
+			if(search != ""){
+				newListEvents = newListEvents.filter(filterBySearch);
+			}
 			switch (gender) {
 				case 10:
 					newListEvents = newListEvents.filter(filterByGenderFemenino);
@@ -83,29 +97,28 @@ const Filter = (props) => {
 					newListEvents = newListEvents.filter(filterByGenderUnisex);
 					break;
 			}
-			return newListEvents
-		}
+	
 
-		const filterPrice = () => {
 			switch (price) { 
 				case 10:
-					newListEvents = filterGender().sort((a, b) =>
+					newListEvents = newListEvents.filter(filterByPrice);
+					newListEvents = newListEvents.sort((a, b) =>
 						("" + a.price).localeCompare(
 							b.price
 						)
 					);
 					break;
 				case 20:
-					newListEvents = filterGender().sort((a, b) =>
+					newListEvents = newListEvents.filter(filterByPrice);
+					newListEvents = newListEvents.sort((a, b) =>
 						("" + b.price).localeCompare(
 							a.price
 						)
 					);
 					break;            
-			}
-			return newListEvents
+
 		}
-		props.setListFilter(filterPrice());
+		props.setListFilter(newListEvents);
 	}
 	console.log("zxcv", props.listFilter)
     return(

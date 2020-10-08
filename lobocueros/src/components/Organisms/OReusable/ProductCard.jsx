@@ -17,8 +17,6 @@ const ProductCard = (props) => {
 		}
 	} 
 	const itemProduct = props.item != null ? props.item : {}
-	
-
     return( 
 		<Card className="product-card" >
 			<CardActionArea className="card-action-area" >
