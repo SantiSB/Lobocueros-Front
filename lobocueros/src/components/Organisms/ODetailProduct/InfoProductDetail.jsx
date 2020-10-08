@@ -12,7 +12,6 @@ const InfoProductDetail = (props) => {
 		props.setItemsInCart(itemsAdd)
 	}
 	React.useEffect(()=>{
-		console.log("qwe", props.itemsInCart)
 	})
     return( 
 		<div className="info-product-detail">

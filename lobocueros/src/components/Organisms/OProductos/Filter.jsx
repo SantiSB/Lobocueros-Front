@@ -149,7 +149,6 @@ const Filter = (props) => {
 		return removeAccents(event.title.toLowerCase()).includes(removeAccents(search.toLowerCase()))
 	}
 	
-	
 	const listEventsFilter = () => {
 		let newListEvents = props.productsData
 
@@ -280,11 +279,11 @@ const Filter = (props) => {
 					newListEvents = newListEvents.filter(filterBySubCategoryOtros);
 					break;
 			}
+
 		//ACTUALIZAR LISTA	
 		props.setListFilter(newListEvents);
 	}
-	console.log("zxcv", subCategory)
-
+	
 	const buildSubCategory = () => {
 		if(category == ""){
 			return null
@@ -343,21 +342,6 @@ const Filter = (props) => {
 							<MenuItem value={130}>Cosmetiqueras</MenuItem>
 							<MenuItem value={140}>Riñoneras</MenuItem>
 							<MenuItem value={150}>Otros</MenuItem>
-						</Select>
-					</FormControl>
-				)
-			}
-			else if(category == 40){
-				return(
-					<FormControl className="form-control">
-						<InputLabel id="subCategory">Subcategoria</InputLabel>
-						<Select
-						labelId="subCategory"
-						id="subCategory"
-						value={subCategory}
-						onChange={handleChangeSubCategory}
-						>
-							<MenuItem value={160}>Maletas de viaje</MenuItem>
 						</Select>
 					</FormControl>
 				)
@@ -426,8 +410,6 @@ const Filter = (props) => {
 				</FormControl> 
 			</div>
 		</div>
-		
-		
     )
 }
 

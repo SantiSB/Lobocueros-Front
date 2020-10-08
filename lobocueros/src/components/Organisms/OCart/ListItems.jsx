@@ -4,7 +4,6 @@ import { connect} from "react-redux";
 import { setItemsInCart } from "../../../redux/actionsCreators";
 
 const ListItems = (props) => {
-  console.log("asdf", props.itemsInCart)
   return (
     <>
       {

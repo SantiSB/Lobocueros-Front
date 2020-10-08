@@ -8,7 +8,6 @@ const Counter = (props) => {
     var [counter, setCounter] = useState(1);
     useEffect(() => {
         props.setCounter(counter)
-        console.log("qaz", counter)
       });
     return (
         <>

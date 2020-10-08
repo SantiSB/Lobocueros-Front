@@ -13,7 +13,6 @@ const Header = (props) => {
   
   let item = localStorage.getItem('filtro')
   React.useEffect(()=>{
-    console.log("qwer", item)
   })
 
   const clic = () => {
