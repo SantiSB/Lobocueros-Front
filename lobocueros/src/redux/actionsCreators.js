@@ -8,7 +8,8 @@ import {
 	MAIN_PICTURE_CARD,
 	SET_COUNTER,
 	SET_COLOR,
-	SET_ITEMS_IN_CART
+	SET_ITEMS_IN_CART,
+	SET_LIST_FILTER
 	
 } from "./actions"; 
 
@@ -62,6 +63,11 @@ const setItemsInCart = (event) => ({
 	event,
 });
 
+const setListFilter = (event) => ({
+	type: SET_LIST_FILTER,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
@@ -72,5 +78,6 @@ export {
 	setMainPictureCard,
 	setCounter,
 	setColorSelected,
-	setItemsInCart
+	setItemsInCart,
+	setListFilter
 };

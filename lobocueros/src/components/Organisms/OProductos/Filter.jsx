@@ -1,10 +1,14 @@
 import React from 'react';
+import { connect} from "react-redux";
+import { setAllData, setProductsData, setListFilter } from "../../../redux/actionsCreators";
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -24,33 +28,109 @@ const Filter = (props) => {
 	const classes = useStyles();
 
 	const [gender, setGender] = React.useState('');
+	const [category, setCategory] = React.useState('');
+	const [price, setPrice] = React.useState('');
+	const [search, setSearch] = React.useState('');
 
-	const handleChange = (event) => {
+	React.useEffect(() => {
+        listEventsFilter();
+    }, [props.productsData, gender, category, price, search]);
+
+	const handleChangeGender = (event) => {
 		setGender(event.target.value);
+	}
+
+	const handleChangeCategory = (event) => {
+		setCategory(event.target.value);
+	}
+
+	const handleChangePrice = (event) => {
+		setPrice(event.target.value);
 	};
 
+	const handleChangeSearch = (event) => {
+		setSearch(event.target.value);
+	};
+
+	
+	const filterByGenderMasculino = (event) => {
+		return event.gender == "Masculino"
+		
+	};
+
+	const filterByGenderFemenino = (event) => {
+		return event.gender == "Femenino"
+		
+	};
+
+	const filterByGenderUnisex = (event) => {
+		return event.gender == "Unisex" || event.gender == "Masculino" || event.gender == "Femenino"
+	};
+	
+	const listEventsFilter = () => {
+		let newListEvents = props.productsData
+		const filterGender = () => {
+			switch (gender) {
+				case 10:
+					newListEvents = newListEvents.filter(filterByGenderFemenino);
+					break;
+			
+				case 20:
+					newListEvents = newListEvents.filter(filterByGenderMasculino);
+					break; 
+	
+				case 30:
+					newListEvents = newListEvents.filter(filterByGenderUnisex);
+					break;
+			}
+			return newListEvents
+		}
+
+		const filterPrice = () => {
+			switch (price) { 
+				case 10:
+					newListEvents = filterGender().sort((a, b) =>
+						("" + a.price).localeCompare(
+							b.price
+						)
+					);
+					break;
+				case 20:
+					newListEvents = filterGender().sort((a, b) =>
+						("" + b.price).localeCompare(
+							a.price
+						)
+					);
+					break;            
+			}
+			return newListEvents
+		}
+		props.setListFilter(filterPrice());
+	}
+	console.log("zxcv", props.listFilter)
     return(
 		<div className="filter-products">
 			<div className="select-filter">
 				<FormControl className="form-control">
-					<InputLabel id="demo-simple-select-label">Genero</InputLabel>
+					<InputLabel id="gender">Genero</InputLabel>
 					<Select
-					labelId="demo-simple-select-label"
-					id="demo-simple-select"
-					value={gender}
-					onChange={handleChange}
+					labelId="gender"
+					id="gender"
+					value={gender} 
+					onChange={handleChangeGender}
 					>
 						<MenuItem value={10}>Mujer</MenuItem>
 						<MenuItem value={20}>Hombre</MenuItem>
+						<MenuItem value={30}>Unisex</MenuItem>
 					</Select>
 				</FormControl>
 				<FormControl className="form-control">
-					<InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+					<InputLabel id="category">Categoria</InputLabel>
 					<Select
-					labelId="demo-simple-select-label"
-					id="demo-simple-select"
-					value={gender}
-					onChange={handleChange}
+					labelId="category"
+					id="category"
+					value={category}
+					onChange={handleChangeCategory}
 					>
 						<MenuItem value={10}>Nuevo</MenuItem>
 						<MenuItem value={10}>Bolsos</MenuItem>
@@ -58,19 +138,29 @@ const Filter = (props) => {
 					</Select>
 				</FormControl>
 				<FormControl className="form-control">
-					<InputLabel id="demo-simple-select-label">Subcategoria</InputLabel>
+					<InputLabel id="price">Precio</InputLabel>
 					<Select
-					labelId="demo-simple-select-label"
-					id="demo-simple-select"
-					value={gender}
-					onChange={handleChange}
+					labelId="price"
+					id="price"
+					value={price}
+					onChange={handleChangePrice}
 					>
-						<MenuItem value={10}>Bolsos de mano</MenuItem>
-						<MenuItem value={10}>Bolsos pequeños</MenuItem>
+						<MenuItem value={10}>Menor a mayor precio</MenuItem>
+						<MenuItem value={20}>Mayor a menor precio</MenuItem>
 					</Select>
 				</FormControl>
 				<FormControl className="form-control" id="search-form-control">
-					<TextField id="standard-basic" label="Buscar" />
+					<InputLabel htmlFor="standard-adornment-password">Buscar por titulo</InputLabel>
+                    <Input
+						id="search"
+                        value={search}
+                        onChange={handleChangeSearch}
+                        endAdornment={
+                        <InputAdornment position="end">
+                            <SearchIcon />
+                        </InputAdornment>
+                        }
+                    />
 				</FormControl> 
 			</div>
 		</div>
@@ -78,4 +168,16 @@ const Filter = (props) => {
 		
     )
 }
-export default Filter;
+
+const mapStateToProps = (state) => ({
+	allData: state.allData,
+	productsData: state.productsData,
+	listFilter: state.listFilter
+});
+const mapDispatchToProps = {
+	setAllData,
+	setProductsData,
+	setListFilter
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
