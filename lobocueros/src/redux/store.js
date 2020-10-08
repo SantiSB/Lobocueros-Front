@@ -22,7 +22,7 @@ const initialStore = {
   mainPictureCard: "",
   counter: "",
   colorSelected: "",
-  itemsInCart: [],
+  itemsInCart: "",
   listFilter: []
 };
 

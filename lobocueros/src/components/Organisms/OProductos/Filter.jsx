@@ -27,63 +27,138 @@ const Filter = (props) => {
 
 	const classes = useStyles();
 
+	//Estados
 	const [gender, setGender] = React.useState('');
 	const [category, setCategory] = React.useState('');
-	const [price, setPrice] = React.useState('');
+	const [order, setOrder] = React.useState('');
 	const [search, setSearch] = React.useState('');
+	const [subCategory, setSubCategory] = React.useState('');
 
 	React.useEffect(() => {
         listEventsFilter();
-    }, [props.productsData, gender, category, price, search]);
+    }, [props.productsData, gender, category, order, search, subCategory]);
 
+	//OnChange
 	const handleChangeGender = (event) => {
 		setGender(event.target.value);
 	}
-
 	const handleChangeCategory = (event) => {
+		setSubCategory("")
 		setCategory(event.target.value);
 	}
-
-	const handleChangePrice = (event) => {
-		setPrice(event.target.value);
+	const handleChangeOrder = (event) => {
+		setOrder(event.target.value);
 	};
-
 	const handleChangeSearch = (event) => {
 		setSearch(event.target.value);
 	};
+	const handleChangeSubCategory = (event) => {
+		setSubCategory(event.target.value);
+	};
 
-	
+	//FilterBy GENDER
 	const filterByGenderMasculino = (event) => {
 		return event.gender == "Masculino"
 		
 	};
-
 	const filterByGenderFemenino = (event) => {
 		return event.gender == "Femenino"
 		
 	};
-
 	const filterByGenderUnisex = (event) => {
 		return event.gender == "Unisex" || event.gender == "Masculino" || event.gender == "Femenino"
 	};
 
+	//FilterByCategory
+	const filterByCategoryBolsos = (event) => {
+		return event.category == "Bolsos"
+	};
+	const filterByCategoryBilleteras = (event) => {
+		return event.category == "Billeteras"
+	};
+	const filterByCategoryAccesorios = (event) => {
+		return event.category == "Accesorios"
+	};
+	const filterByCategoryViaje = (event) => {
+		return event.category == "Viaje"
+	};
+	const filterByCategoryAll = (event) => {
+		return event.category == "Viaje" || event.category == "Bolsos" || event.category == "Accesorios" || event.category == "Billeteras"
+	};
+
+	//FilterBySubCategory
+	const filterBySubCategoryCarteras = (event) => {
+		return event.subcategory == "Carteras"
+	};
+	const filterBySubCategoryMochilas = (event) => {
+		return event.subcategory == "Mochilas"
+	};
+	const filterBySubCategoryManosLibres = (event) => {
+		return event.subcategory == "Manos libres"
+	};
+	const filterBySubCategoryManosLibresPelo = (event) => {
+		return event.subcategory == "Manos libres con pelo"
+	};
+	const filterBySubCategoryBolsosMola = (event) => {
+		return event.subcategory == "Bolos con mola"
+	};
+	const filterBySubCategoryBolsosPelo = (event) => {
+		return event.subcategory == "Bolsos con pelo"
+	};
+	const filterBySubCategoryMorrales = (event) => {
+		return event.subcategory == "Morrales"
+	};
+	const filterBySubCategoryCarrieles = (event) => {
+		return event.subcategory == "Carrieles"
+	};
+	const filterBySubCategoryPortadocumentos = (event) => {
+		return event.subcategory == "Portadocumentos"
+	};
+	const filterBySubCategoryPortafolios = (event) => {
+		return event.subcategory == "Portafolios"
+	};
+	const filterBySubCategoryBilleteras = (event) => {
+		return event.subcategory == "Billeteras"
+	};
+	const filterBySubCategoryPasaporteras = (event) => {
+		return event.subcategory == "Pasaporteras"
+	};
+	const filterBySubCategoryCosmetiqueras = (event) => {
+		return event.subcategory == "Cosmetiqueras"
+	};
+	const filterBySubCategoryRiñoneras = (event) => {
+		return event.subcategory == "Riñoneras"
+	};
+	const filterBySubCategoryOtros = (event) => {
+		return event.subcategory == "Otros"
+	};
+
+	//OrderBy
 	const filterByPrice = (event) => {
 		return event.price != null
 	}
 
+	const filterByUpdate = (event) => {
+		return event.updated != null
+	}
+
+	//FilterBy SEARCH
 	const removeAccents = (string) =>
-		string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-		
+		string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");		
 	const filterBySearch = (event) => {
 		return removeAccents(event.title.toLowerCase()).includes(removeAccents(search.toLowerCase()))
 	}
 	
+	
 	const listEventsFilter = () => {
 		let newListEvents = props.productsData
 
+			//SEARCH
 			if(search != ""){
 				newListEvents = newListEvents.filter(filterBySearch);
 			}
+
+			//GENDER
 			switch (gender) {
 				case 10:
 					newListEvents = newListEvents.filter(filterByGenderFemenino);
@@ -97,9 +172,9 @@ const Filter = (props) => {
 					newListEvents = newListEvents.filter(filterByGenderUnisex);
 					break;
 			}
-	
 
-			switch (price) { 
+			//ORDER
+			switch (order) { 
 				case 10:
 					newListEvents = newListEvents.filter(filterByPrice);
 					newListEvents = newListEvents.sort((a, b) =>
@@ -115,12 +190,180 @@ const Filter = (props) => {
 							a.price
 						)
 					);
+					break; 
+				case 30:
+					newListEvents = newListEvents.filter(filterByUpdate);
+					newListEvents = newListEvents.sort((a, b) =>
+						("" + b.updated).localeCompare(
+							a.updated
+						)
+					);
+					break; 
+				case 40:
+					newListEvents = newListEvents.filter(filterByUpdate);
+					newListEvents = newListEvents.sort((a, b) =>
+						("" + a.updated).localeCompare(
+							b.updated
+						)
+					);
+					break; 
+				case 50:
+					newListEvents = newListEvents
 					break;            
 
-		}
+			}
+
+			//CATEGORY
+			switch (category) { 
+				case 10:
+					newListEvents = newListEvents.filter(filterByCategoryBolsos);
+					break;
+				case 20:
+					newListEvents = newListEvents.filter(filterByCategoryBilleteras);
+					break;       
+				case 30:
+					newListEvents = newListEvents.filter(filterByCategoryAccesorios);
+					break;            
+				case 40:
+					newListEvents = newListEvents.filter(filterByCategoryViaje);
+					break; 
+				case 50:
+					newListEvents = newListEvents.filter(filterByCategoryAll);
+					break;
+			}
+
+			//SUBCATEGORY
+			switch (subCategory) { 
+				case 10:
+					newListEvents = newListEvents.filter(filterBySubCategoryCarteras);
+					break;
+				case 20:
+					newListEvents = newListEvents.filter(filterBySubCategoryMochilas);
+					break;       
+				case 30:
+					newListEvents = newListEvents.filter(filterBySubCategoryManosLibres);
+					break;            
+				case 40:
+					newListEvents = newListEvents.filter(filterBySubCategoryManosLibresPelo);
+					break; 
+				case 50:
+					newListEvents = newListEvents.filter(filterBySubCategoryMorrales);
+					break;
+				case 60:
+					newListEvents = newListEvents.filter(filterBySubCategoryCarrieles);
+					break;
+				case 70: 
+					newListEvents = newListEvents.filter(filterBySubCategoryBolsosMola);
+					break;
+				case 80:
+					newListEvents = newListEvents.filter(filterBySubCategoryBolsosPelo);
+					break;       
+				case 90:
+					newListEvents = newListEvents.filter(filterBySubCategoryPortafolios);
+					break;            
+				case 100:
+					newListEvents = newListEvents.filter(filterBySubCategoryBilleteras);
+					break; 
+				case 110:
+					newListEvents = newListEvents.filter(filterBySubCategoryPortadocumentos);
+					break;
+				case 120:
+					newListEvents = newListEvents.filter(filterBySubCategoryPasaporteras);
+					break;
+				case 130:
+					newListEvents = newListEvents.filter(filterBySubCategoryCosmetiqueras);
+					break;       
+				case 140:
+					newListEvents = newListEvents.filter(filterBySubCategoryRiñoneras);
+					break;            
+				case 150:
+					newListEvents = newListEvents.filter(filterBySubCategoryOtros);
+					break;
+			}
+		//ACTUALIZAR LISTA	
 		props.setListFilter(newListEvents);
 	}
-	console.log("zxcv", props.listFilter)
+	console.log("zxcv", subCategory)
+
+	const buildSubCategory = () => {
+		if(category == ""){
+			return null
+		}
+		else{
+			if(category == 10){			
+				return(
+					<FormControl className="form-control">
+						<InputLabel id="subCategory">Subcategoria</InputLabel>
+						<Select
+						labelId="subCategory"
+						id="subCategory"
+						value={subCategory}
+						onChange={handleChangeSubCategory}
+						>
+							<MenuItem value={10}>Carteras</MenuItem>
+							<MenuItem value={20}>Mochilas</MenuItem>
+							<MenuItem value={30}>Manos Libres</MenuItem>
+							<MenuItem value={40}>Manos libres con pelo</MenuItem>
+							<MenuItem value={50}>Morrales</MenuItem>
+							<MenuItem value={60}>Carrieles</MenuItem>
+							<MenuItem value={70}>Bolsos con mola</MenuItem>
+							<MenuItem value={80}>Bolsos con pelo</MenuItem>
+							<MenuItem value={90}>Portafolios</MenuItem>
+						</Select>
+					</FormControl>
+				)
+			}
+			else if(category == 20){
+				return(
+					<FormControl className="form-control">
+						<InputLabel id="subCategory">Subcategoria</InputLabel>
+						<Select
+						labelId="subCategory"
+						id="subCategory"
+						value={subCategory}
+						onChange={handleChangeSubCategory}
+						>
+							<MenuItem value={100}>Billetera</MenuItem>
+							<MenuItem value={110}>Portadocumentos</MenuItem>
+							<MenuItem value={120}>Pasaportera</MenuItem>
+						</Select>
+					</FormControl>
+				)
+			}
+			else if(category == 30){
+				return(
+					<FormControl className="form-control">
+						<InputLabel id="subCategory">Subcategoria</InputLabel>
+						<Select
+						labelId="subCategory"
+						id="subCategory"
+						value={subCategory}
+						onChange={handleChangeSubCategory}
+						>
+							<MenuItem value={130}>Cosmetiqueras</MenuItem>
+							<MenuItem value={140}>Riñoneras</MenuItem>
+							<MenuItem value={150}>Otros</MenuItem>
+						</Select>
+					</FormControl>
+				)
+			}
+			else if(category == 40){
+				return(
+					<FormControl className="form-control">
+						<InputLabel id="subCategory">Subcategoria</InputLabel>
+						<Select
+						labelId="subCategory"
+						id="subCategory"
+						value={subCategory}
+						onChange={handleChangeSubCategory}
+						>
+							<MenuItem value={160}>Maletas de viaje</MenuItem>
+						</Select>
+					</FormControl>
+				)
+			}
+		}
+	}
     return(
 		<div className="filter-products">
 			<div className="select-filter">
@@ -145,21 +388,27 @@ const Filter = (props) => {
 					value={category}
 					onChange={handleChangeCategory}
 					>
-						<MenuItem value={10}>Nuevo</MenuItem>
 						<MenuItem value={10}>Bolsos</MenuItem>
-						<MenuItem value={20}>Morrales</MenuItem>
+						<MenuItem value={20}>Billeteras</MenuItem>
+						<MenuItem value={30}>Accesorios</MenuItem>
+						<MenuItem value={40}>Viaje</MenuItem>
+						<MenuItem value={50}>Todas las categorias</MenuItem>
 					</Select>
 				</FormControl>
+				{buildSubCategory()}
 				<FormControl className="form-control">
-					<InputLabel id="price">Precio</InputLabel>
+					<InputLabel id="order">Ordenar</InputLabel>
 					<Select
-					labelId="price"
-					id="price"
-					value={price}
-					onChange={handleChangePrice}
+					labelId="order"
+					id="order"
+					value={order}
+					onChange={handleChangeOrder}
 					>
 						<MenuItem value={10}>Menor a mayor precio</MenuItem>
 						<MenuItem value={20}>Mayor a menor precio</MenuItem>
+						<MenuItem value={30}>Mas nuevo a mas antiguo</MenuItem>
+						<MenuItem value={40}>Mas antiguo a mas nuevo</MenuItem>
+						<MenuItem value={50}>Sin orden</MenuItem>
 					</Select>
 				</FormControl>
 				<FormControl className="form-control" id="search-form-control">

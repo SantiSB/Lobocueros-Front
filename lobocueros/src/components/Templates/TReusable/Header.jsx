@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { setVisibleSearchForm, setVisibleMenu } from "../../../redux/actionsCreators";
+import { setVisibleSearchForm, setVisibleMenu, setItemsInCart } from "../../../redux/actionsCreators";
 import Search_White from '../../../assets/Icons/Search_White.svg'
 import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import Arrow_White from '../../../assets/Icons/Arrow_White.svg'
@@ -10,6 +10,18 @@ import MiniCart from '../../Organisms/OReusable/MiniCart';
 
 
 const Header = (props) => {
+  
+  let item = localStorage.getItem('filtro')
+  React.useEffect(()=>{
+    console.log("qwer", item)
+  })
+
+  const clic = () => {
+    localStorage.setItem('filtro', "Mujer");
+  }
+  const clic2 = () => {
+    localStorage.setItem('filtro', "Hombre");
+  }
     return(
       <header className="header-main">
         <div className="headerUp">
@@ -32,7 +44,7 @@ const Header = (props) => {
           <nav className="nav">
             <ul className="main-menu">
               <li className="item-menu"><a href="/productos">Nuevo</a></li>
-              <li className="item-menu"><a href="/productos">Mujer</a><img src={Arrow_White} alt="arrow"></img>
+              <li className="item-menu"><a href="/productos" onClick={()=>clic()}>Mujer</a><img src={Arrow_White} alt="arrow"></img>
                 <div className="submenu-nav" id="Mujer" >
                   <ul>
                     <li className="submenu-item"><a href="/productos">Bolsos</a>
@@ -57,7 +69,7 @@ const Header = (props) => {
                   </ul>
                 </div>
               </li>
-              <li className="item-menu"><a href="/productos">Hombre</a><img src={Arrow_White} alt="arrow"></img>
+              <li className="item-menu"><a href="/productos" onClick={()=>clic2()}>Hombre</a><img src={Arrow_White} alt="arrow"></img>
                 <div className="submenu-nav" id="hombre">
                   <ul>
                     <li className="submenu-item"><a href="/productos">Bolsos</a>
@@ -124,11 +136,13 @@ const Header = (props) => {
 const mapStateToProps = (state) => ({
   visibleSearchForm: state.visibleSearchForm,
   visibleMenu: state.visibleMenu,
+  itemsInCart: state.itemsInCart
 });
   
 const mapDispatchToProps = {
   setVisibleMenu,
   setVisibleSearchForm,
+  setItemsInCart
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
