@@ -47,7 +47,7 @@ const Header = (props) => {
                   <ul>
                     <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Bolsos")}>Bolsos</a>
                       <ul>
-                        <li><a href="/productos" onClick={()=>filter("Mujer Bolsos todo")}>VER TODO</a></li>
+                        {/* <li><a href="/productos" onClick={()=>filter("Mujer Bolsos todo")}>VER TODO</a></li> */}
                         <li><a href="/productos" onClick={()=>filter("Mujer Bolsos carteras")}>Carteras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Mujer Bolsos mochilas")}>Mochilas</a></li>
                         <li><a href="/productos" onClick={()=>filter("Mujer Bolsos manos libres")}>Manos Libres</a></li>
@@ -61,7 +61,7 @@ const Header = (props) => {
                     </li>
                     <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Billeteras")}>Billeteras</a>
                       <ul>
-                        <li><a href="/productos" onClick={()=>filter("Mujer Billeteras todo")}>VER TODO</a></li>
+                        {/* <li><a href="/productos" onClick={()=>filter("Mujer Billeteras todo")}>VER TODO</a></li> */}
                         <li><a href="/productos" onClick={()=>filter("Mujer Billeteras billeteras")}>Billeteras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Mujer Billeteras portadocumentos")}>Portadocumentos</a></li>
                         <li><a href="/productos" onClick={()=>filter("Mujer Billeteras pasaporteras")}>Pasaporteras</a></li>
@@ -69,7 +69,7 @@ const Header = (props) => {
                     </li>
                     <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Accesorios")}>Accesorios</a>
                       <ul>
-                        <li><a href="/productos" onClick={()=>filter("Mujer Accesorios todo")}>VER TODO</a></li>
+                        {/* <li><a href="/productos" onClick={()=>filter("Mujer Accesorios todo")}>VER TODO</a></li> */}
                         <li><a href="/productos" onClick={()=>filter("Mujer Accesorios cosmetiqueras")}>Cosmetiqueras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Mujer Accesorios riñoneras")}>Riñoneras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Mujer Accesorios otros")}>Otros</a></li>
@@ -84,7 +84,7 @@ const Header = (props) => {
                   <ul>
                     <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Bolsos")}>Bolsos</a>
                       <ul>
-                        <li><a href="/productos" onClick={()=>filter("Hombre Bolsos todo")}>VER TODO</a></li>
+                        {/* <li><a href="/productos" onClick={()=>filter("Hombre Bolsos todo")}>VER TODO</a></li> */}
                         <li><a href="/productos" onClick={()=>filter("Hombre Bolsos carteras")}>Carteras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Hombre Bolsos mochilas")}>Mochilas</a></li>
                         <li><a href="/productos" onClick={()=>filter("Hombre Bolsos manos libres")}>Manos Libres</a></li>
@@ -98,7 +98,7 @@ const Header = (props) => {
                     </li>
                     <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Billeteras")}>Billeteras</a>
                       <ul>
-                        <li><a href="/productos" onClick={()=>filter("Hombre Billeteras todo")}>VER TODO</a></li>
+                        {/* <li><a href="/productos" onClick={()=>filter("Hombre Billeteras todo")}>VER TODO</a></li> */}
                         <li><a href="/productos" onClick={()=>filter("Hombre Billeteras billeteras")}>Billeteras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Hombre Billeteras portadocumentos")}>Portadocumentos</a></li>
                         <li><a href="/productos" onClick={()=>filter("Hombre Billeteras pasaporteras")}>Pasaporteras</a></li>

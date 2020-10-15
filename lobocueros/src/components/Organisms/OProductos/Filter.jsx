@@ -86,56 +86,243 @@ const Filter = (props) => {
 		
 	}
 
-	const filterMenuCategory = () =>{
-		if(localStorage.getItem('filtro') == "Mujer Bolsos" 
-			|| localStorage.getItem('filtro') == "Mujer Bolsos"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos todo"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos carteras"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos mochilas"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos manos libres"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos manos libres pelo"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos morrales"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos carrieles"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos bolsos mola"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos bolsos pelo"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos portafolios"
-		){
-			localStorage.setItem('filtro', "");
-			return 10
-		}
-		else if(localStorage.getItem('filtro') == "Mujer Billeteras" 
-			|| localStorage.getItem('filtro') == "Mujer Billeteras todo"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras billeteras"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras portadocumentos"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras pasaporteras"
-			
-		){
-			localStorage.setItem('filtro', "");
-			return 20
-		}
-		else if(localStorage.getItem('filtro') == "Mujer Accesorios" 
-			|| localStorage.getItem('filtro') == "Mujer Accesorios todo"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios cosmetiqueras"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios riñoneras"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios otros"
-		){
-			localStorage.setItem('filtro', "");
-			return 30
-		}
-		else{
-			return ""
-		}
-		
-	}
+
 
 	console.log("qaz", localStorage.getItem('filtro'))
 
 	//Estados
-	const [gender, setGender] = React.useState(filterMenuGender);
-	const [category, setCategory] = React.useState(filterMenuCategory);
+	const [gender, setGender] = React.useState("");
+	const [category, setCategory] = React.useState("");
 	const [order, setOrder] = React.useState('');
 	const [search, setSearch] = React.useState('');
-	const [subCategory, setSubCategory] = React.useState('');
+	const [subCategory, setSubCategory] = React.useState("");
+
+	React.useEffect(()=>{
+		if(localStorage.getItem('filtro') == "Mujer"){
+			setGender(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre"){
+			setGender(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Nuevo"){
+			setOrder(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos carteras"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos mochilas"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos manos libres"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos manos libres pelo"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos morrales"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos carrieles"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos bolsos mola"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos bolsos pelo"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Bolsos portafolios"){
+			setGender(10);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Billeteras"){
+			setGender(10);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Billeteras todo"){
+			setGender(10);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Billeteras billeteras"){
+			setGender(10);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Billeteras portadocumentos"){
+			setGender(10);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Billeteras pasaporteras"){
+			setGender(10);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Accesorios"){
+			setGender(10);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Accesorios todo"){
+			setGender(10);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Accesorios cosmetiqueras"){
+			setGender(10);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Accesorios riñoneras"){
+			setGender(10);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Accesorios otros"){
+			setGender(10);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Mujer Viaje"){
+			setGender(10);
+			setCategory(40);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos carteras"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos mochilas"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos manos libres"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos manos libres pelo"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos morrales"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos carrieles"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos bolsos mola"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos bolsos pelo"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Bolsos portafolios"){
+			setGender(20);
+			setCategory(10);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Billeteras"){
+			setGender(20);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Billeteras todo"){
+			setGender(20);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Billeteras billeteras"){
+			setGender(20);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Billeteras portadocumentos"){
+			setGender(20);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Billeteras pasaporteras"){
+			setGender(20);
+			setCategory(20);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Accesorios"){
+			setGender(20);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Accesorios todo"){
+			setGender(20);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Accesorios cosmetiqueras"){
+			setGender(20);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Accesorios riñoneras"){
+			setGender(20);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Accesorios otros"){
+			setGender(20);
+			setCategory(30);
+			localStorage.setItem('filtro', "");
+		}
+		else if(localStorage.getItem('filtro') == "Hombre Viaje"){
+			setGender(20);
+			setCategory(40);
+			localStorage.setItem('filtro', "");
+		}
+		
+		
+	},[])
 
 	React.useEffect(() => {
         listEventsFilter();
@@ -388,8 +575,9 @@ const Filter = (props) => {
 	}
 	
 	const buildSubCategory = () => {
+		console.log("zxcvb", category)
 		if(category == ""){
-			return null
+			return ""
 		}
 		else{
 			if(category == 10){			
@@ -452,7 +640,7 @@ const Filter = (props) => {
 		}
 	}
     return(
-		<div className="filter-products">
+		<div className="filter-products"> 
 			<div className="select-filter">
 				<FormControl className="form-control">
 					<InputLabel id="gender">Genero</InputLabel>
