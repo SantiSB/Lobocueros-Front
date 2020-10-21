@@ -3,11 +3,12 @@ import ItemCart from "../../Molecules/MCart/ItemCart";
 import { connect} from "react-redux";
 import { setItemsInCart } from "../../../redux/actionsCreators";
 
-const ListItems = (props) => {
+const ListItems = (props) => { 
+  console.log("qazx", JSON.parse(localStorage.getItem('carrito')))
   return (
     <>
       {
-        props.itemsInCart.map(function(item){
+        JSON.parse(localStorage.getItem('carrito')).map(function(item){
           return <ItemCart></ItemCart>
         })
       }

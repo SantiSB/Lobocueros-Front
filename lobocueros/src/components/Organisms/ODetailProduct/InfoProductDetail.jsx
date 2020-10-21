@@ -1,18 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
 import Counter from '../../Atoms/AReusable/Counter';
 import { connect} from "react-redux";
-import { setItemsInCart } from "../../../redux/actionsCreators";
+// import { setItemsInCart } from "../../../redux/actionsCreators";
 
 const InfoProductDetail = (props) => {
-	const buyEvents = () => {
-		var itemsAdd = []
-		itemsAdd.push(props.productDetail)
-		props.setItemsInCart(itemsAdd)
+	
+	var carritoActual = []
+	const buyEvents = (item) => {
+		carritoActual = JSON.parse(localStorage.getItem('carrito'))
+		carritoActual.push(item)
+		localStorage.setItem('carrito', JSON.stringify(carritoActual));
+		
 	}
+
 	React.useEffect(()=>{
-	})
+		localStorage.setItem('carrito', JSON.stringify(carritoActual));
+	},[carritoActual])
+	// console.log("qaz", localStorage.getItem('carrito'))
     return( 
 		<div className="info-product-detail">
 			<div className="ref-product">
@@ -36,12 +42,12 @@ const InfoProductDetail = (props) => {
 				</div>
 				
 				<div className="buy-buttons">
-					<a onClick={()=>buyEvents()} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
+					<a onClick={()=>buyEvents(props.productDetail)} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
 					<a ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
 				</div>
 			</div>
 			
-		</div>
+		</div> 
     )
 }
 
@@ -49,7 +55,7 @@ const mapStateToProps = (state) => ({
 	itemsInCart: state.itemsInCart,
 });
 const mapDispatchToProps = {
-	setItemsInCart,
+	// setItemsInCart,
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(InfoProductDetail);

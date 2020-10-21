@@ -36,6 +36,10 @@ const Routes = (props) => {
       .catch((e) => {
       });
   }, [])
+
+  // console.log("qazx", JSON.parse(localStorage.getItem('carrito')))
+  
+
   
   return (
     <Router>
