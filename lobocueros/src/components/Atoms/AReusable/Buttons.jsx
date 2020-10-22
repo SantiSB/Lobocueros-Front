@@ -81,7 +81,7 @@ const Buttons = (props) => {
     }
     else if(props.type === "Send"){
       return(
-        <Button className={`btn-send ${classes.btnSend}`} variant="outlined">{props.text}</Button>
+        <Button type="submit" className={`btn-send ${classes.btnSend}`} variant="outlined">{props.text} </Button>
       )
     }
     else if(props.type === "PayAgain"){

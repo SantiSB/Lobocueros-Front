@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Buttons from "../../Atoms/AReusable/Buttons";
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
   direction:{
@@ -15,22 +16,35 @@ const useStyles = makeStyles((theme) => ({
 
 const InfoContact = () => {
   const classes = useStyles();
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('2110', 'template_f3bwk5l', e.target, 'user_gJtoKirse4ethYFDESQFa')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  }
+
   return (
     <div className="container-InfoContact">
-      <form noValidate autoComplete="off">
-        <TextField id="direction" label="Asunto" variant="outlined" className={classes.field}/>
-        <TextField id="direction" label="Cedula" variant="outlined" className={classes.field}/>
+      <form noValidate autoComplete="off" onSubmit={sendEmail}>
+        <TextField id="asunto" label="Asunto" variant="outlined" className={classes.field} name="asunto"/>
+        <TextField id="cedule" label="Cedula" variant="outlined" className={classes.field} name="cedula"/>
         <br></br>
-        <TextField id="outlined-basic" label="Nombre" variant="outlined" className={classes.field} />
-        <TextField id="outlined-basic" label="Apellido" variant="outlined" className={classes.field}/>
+        <TextField id="nombre" label="Nombre" variant="outlined" className={classes.field}  name="nombre"/>
+        <TextField id="apellido" label="Apellido" variant="outlined" className={classes.field} name="apellido"/>
         <br></br>
-        <TextField id="outlined-basic" label="E-Mail" variant="outlined" className={classes.field}/>
-        <TextField id="outlined-basic" label="Teléfono" variant="outlined" className={classes.field}/>
+        <TextField id="email" label="E-Mail" variant="outlined" className={classes.field} name="email"/>
+        <TextField id="telefono" label="Teléfono" variant="outlined" className={classes.field} name="telefono"/>
         <br></br>
-        <TextField id="direction" label="Mensaje" variant="outlined" className={classes.direction}/>
+        <TextField id="mensaje" label="Mensaje" variant="outlined" className={classes.direction} name="mensaje"/>
         <Buttons type="Send" text="Enviar"></Buttons>
       </form>
-    </div>
+    </div> 
   );
 };
 

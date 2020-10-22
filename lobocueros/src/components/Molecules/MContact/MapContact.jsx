@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
  
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => <div style={{textAlign: "center", width:"50px"}}><LocationOnIcon></LocationOnIcon><p style={{fontWeight:"bold", margin:"0"}}>{text}</p></div>;
  
 class MapContact extends Component {
   static defaultProps = {
