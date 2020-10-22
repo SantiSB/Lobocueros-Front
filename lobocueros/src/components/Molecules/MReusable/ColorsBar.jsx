@@ -10,6 +10,9 @@ const ColorsBar = (props) => {
 	const pictureColor = picturesColor.map(function(e){
 		arrayPictures.push(e)
 	})
+	const changeColor = props.changeColor
+	
+	console.log("qwer", changeColor)
 
 	function removeDuplicates() {
 		var newArray = [];
@@ -31,11 +34,11 @@ const ColorsBar = (props) => {
     return(
 		<div className="colors-bar">
 			{
-				arrayPicturesUnique.map(function(boton){
-					return <ColorBtn picture={boton.img} codeColor={boton.codeColor} color={boton.colorPicture}></ColorBtn>
+				arrayPicturesUnique.map(function(boton){ 
+					return <ColorBtn picture={boton.img} codeColor={boton.codeColor} color={boton.colorPicture} changeColor={changeColor}></ColorBtn>
 				})
 			}
-			{/* <ColorBtn color="#ffffff"></ColorBtn> */}
+			
 		</div>
 		
     )

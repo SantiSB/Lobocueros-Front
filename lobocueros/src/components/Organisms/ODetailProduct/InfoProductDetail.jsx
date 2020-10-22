@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
 import Counter from '../../Atoms/AReusable/Counter';
@@ -6,19 +6,60 @@ import { connect} from "react-redux";
 // import { setItemsInCart } from "../../../redux/actionsCreators";
 
 const InfoProductDetail = (props) => {
+
+	const [colorSelected, setColorSelected] = useState("");
+	console.log("qas", colorSelected)
 	
-	var carritoActual = []
-	const buyEvents = (item) => {
-		carritoActual = JSON.parse(localStorage.getItem('carrito'))
-		carritoActual.push(item)
-		localStorage.setItem('carrito', JSON.stringify(carritoActual));
-		
+	const changeColorSelected = (color) =>{
+		setColorSelected(color)
 	}
 
-	React.useEffect(()=>{
-		localStorage.setItem('carrito', JSON.stringify(carritoActual));
-	},[carritoActual])
-	// console.log("qaz", localStorage.getItem('carrito'))
+	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
+	}
+	else{
+		var carritoActual = []
+	}
+
+	const buyEventsBuy = (item) => {
+		if(colorSelected == ""){
+			alert("Selecciona el color");
+		}
+		else{
+			function inCart(e){
+				return e.id == item.id;
+			}
+			if(carritoActual.find(inCart)){
+				return null
+			}
+			else{
+				carritoActual.push(item)
+				localStorage.setItem('carrito', JSON.stringify(carritoActual));
+			}
+		}
+	}
+
+	const buyEvents = (item) => {
+		if(colorSelected == ""){
+			alert("Selecciona el color");
+		}
+		else{
+			function inCart(e){
+				return e.id == item.id;
+			}
+			if(carritoActual.find(inCart)){
+				alert("El producto ya está en el carrito");
+			}
+			else{
+				carritoActual.push(item)
+				localStorage.setItem('carrito', JSON.stringify(carritoActual));
+			}
+		}
+	}
+
+
+	
+	
     return( 
 		<div className="info-product-detail">
 			<div className="ref-product">
@@ -32,9 +73,9 @@ const InfoProductDetail = (props) => {
 			</div>
 			<div className="description-product"> 
 				{props.productDetail.description}
-			</div>
+			</div> 
 			<div className="actions-product-detail"> 
-				<ColorsBar productDetail={props.productDetail}></ColorsBar>
+				<ColorsBar productDetail={props.productDetail} changeColor={changeColorSelected}></ColorsBar>
 			</div>
 			<div className="buttons-product-detail">
 				<div className="counter">
@@ -42,8 +83,8 @@ const InfoProductDetail = (props) => {
 				</div>
 				
 				<div className="buy-buttons">
-					<a onClick={()=>buyEvents(props.productDetail)} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
-					<a ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
+					<a onClick={()=>buyEventsBuy(props.productDetail)} href={colorSelected == "" ? "" : "/carrito"}><Buttons type="Buy" text="Comprar"></Buttons></a>
+					<a onClick={()=>buyEvents(props.productDetail)} ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
 				</div>
 			</div>
 			

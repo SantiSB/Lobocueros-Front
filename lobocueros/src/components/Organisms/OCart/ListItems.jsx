@@ -3,15 +3,25 @@ import ItemCart from "../../Molecules/MCart/ItemCart";
 import { connect} from "react-redux";
 import { setItemsInCart } from "../../../redux/actionsCreators";
 
-const ListItems = (props) => { 
-  console.log("qazx", JSON.parse(localStorage.getItem('carrito')))
+const ListItems = (props) => {  
+
+  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+  }
+  else{
+    var arrayItems = []
+  }
+  console.log("wsxc", arrayItems)
   return (
     <>
       {
-        JSON.parse(localStorage.getItem('carrito')).map(function(item){
+        arrayItems ? arrayItems.map(function(item){
           return <ItemCart></ItemCart>
-        })
+        }
+        ) 
+        : []
       }
+      
     </>
   );
 };

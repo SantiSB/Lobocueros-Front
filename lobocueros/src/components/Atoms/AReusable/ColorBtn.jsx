@@ -3,10 +3,12 @@ import { connect} from "react-redux";
 import { setAllData, setProductsData, setPrincipalImageDetail, setColorSelected} from "../../../redux/actionsCreators";
 
 const ColorBtn = (props) => {
+	console.log("qwe", props.changeColor)
 
 	const sets = (picture, color) => {
 		props.setColorSelected(color)
 		props.setPrincipalImageDetail(picture)
+		props.changeColor(props.codeColor)
 	}
 	
     return(

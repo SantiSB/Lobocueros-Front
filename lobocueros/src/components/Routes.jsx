@@ -37,7 +37,6 @@ const Routes = (props) => {
       });
   }, [])
 
-  // console.log("qazx", JSON.parse(localStorage.getItem('carrito')))
   
 
   
