@@ -1,12 +1,12 @@
 import React from 'react';
 import ColorBtn from './ColorBtn';
 
-const InfoItemBuy = () => {
+const InfoItemBuy = (props) => {
     return (
-        <div>
-            <p>MORRAL DE CUERO CON CORREA</p>
-            <p>Precio: <span>$100.000</span></p>
-            <p>Color: <span> <ColorBtn color="black"></ColorBtn> </span></p>
+        <div> 
+            <p>{props.item.title}</p>
+            <p>Precio: <span>${props.item.price}</span></p>
+            <p>Color: <span> <ColorBtn codeColor={props.item.colorSelected}></ColorBtn> </span></p>
         </div>
 
     )

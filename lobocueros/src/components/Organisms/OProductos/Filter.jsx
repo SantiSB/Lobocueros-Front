@@ -86,10 +86,6 @@ const Filter = (props) => {
 		
 	}
 
-
-
-	console.log("qaz", localStorage.getItem('filtro'))
-
 	//Estados
 	const [gender, setGender] = React.useState("");
 	const [category, setCategory] = React.useState("");
@@ -575,7 +571,7 @@ const Filter = (props) => {
 	}
 	
 	const buildSubCategory = () => {
-		console.log("zxcvb", category)
+		
 		if(category == ""){
 			return ""
 		}

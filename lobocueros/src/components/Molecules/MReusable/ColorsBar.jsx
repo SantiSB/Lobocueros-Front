@@ -11,8 +11,6 @@ const ColorsBar = (props) => {
 		arrayPictures.push(e)
 	})
 	const changeColor = props.changeColor
-	
-	console.log("qwer", changeColor)
 
 	function removeDuplicates() {
 		var newArray = [];

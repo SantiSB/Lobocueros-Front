@@ -11,12 +11,12 @@ const ListItems = (props) => {
   else{
     var arrayItems = []
   }
-  console.log("wsxc", arrayItems)
+  
   return (
     <>
       {
-        arrayItems ? arrayItems.map(function(item){
-          return <ItemCart></ItemCart>
+        arrayItems ? arrayItems.map(function(item, index){
+          return <ItemCart item={item} index={index}></ItemCart>
         }
         ) 
         : []

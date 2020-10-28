@@ -1,14 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
 import Counter from '../../Atoms/AReusable/Counter';
 import { connect} from "react-redux";
-// import { setItemsInCart } from "../../../redux/actionsCreators";
+import { setCounter } from "../../../redux/actionsCreators";
 
 const InfoProductDetail = (props) => {
 
 	const [colorSelected, setColorSelected] = useState("");
-	console.log("qas", colorSelected)
+	const [counter, setCounter] = useState(1);
+	
+	const countMore = (event) =>{
+		setCounter(counter+1)
+	}
+
+	const countLess = (event) =>{
+		if(counter > 1){
+			setCounter(counter-1)
+		}
+
+	}
+
 	
 	const changeColorSelected = (color) =>{
 		setColorSelected(color)
@@ -22,17 +34,21 @@ const InfoProductDetail = (props) => {
 	}
 
 	const buyEventsBuy = (item) => {
+		
 		if(colorSelected == ""){
 			alert("Selecciona el color");
 		}
 		else{
 			function inCart(e){
-				return e.id == item.id;
+				console.log("asx", item.colorSelected)
+				return e.id == item.id && e.colorSelected == colorSelected;
 			}
 			if(carritoActual.find(inCart)){
 				return null
 			}
 			else{
+				item['colorSelected']  = colorSelected;
+				item['udsItem'] = counter;
 				carritoActual.push(item)
 				localStorage.setItem('carrito', JSON.stringify(carritoActual));
 			}
@@ -45,20 +61,19 @@ const InfoProductDetail = (props) => {
 		}
 		else{
 			function inCart(e){
-				return e.id == item.id;
+				return e.id == item.id && e.colorSelected == colorSelected;
 			}
 			if(carritoActual.find(inCart)){
 				alert("El producto ya está en el carrito");
 			}
 			else{
+				item['colorSelected']  = colorSelected;
+				item['udsItem'] = counter;
 				carritoActual.push(item)
 				localStorage.setItem('carrito', JSON.stringify(carritoActual));
 			}
 		}
 	}
-
-
-	
 	
     return( 
 		<div className="info-product-detail">
@@ -73,13 +88,13 @@ const InfoProductDetail = (props) => {
 			</div>
 			<div className="description-product"> 
 				{props.productDetail.description}
-			</div> 
+			</div>  
 			<div className="actions-product-detail"> 
 				<ColorsBar productDetail={props.productDetail} changeColor={changeColorSelected}></ColorsBar>
 			</div>
 			<div className="buttons-product-detail">
 				<div className="counter">
-					<Counter></Counter>
+					<Counter countMore={countMore} countLess={countLess} count={counter}></Counter>
 				</div>
 				
 				<div className="buy-buttons">
@@ -93,10 +108,10 @@ const InfoProductDetail = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-	itemsInCart: state.itemsInCart,
+	counter: state.counter
 });
 const mapDispatchToProps = {
-	// setItemsInCart,
+	setCounter
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(InfoProductDetail);

@@ -18,8 +18,7 @@ const Header = (props) => {
   const filter = (param) => {
     localStorage.setItem('filtro', param);
   }
-  
-  console.log("qwe", itemFilter)
+
     return(
       <header className="header-main">
         <div className="headerUp">
