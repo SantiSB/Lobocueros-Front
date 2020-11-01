@@ -6,33 +6,39 @@ import BtnTrash from '../../Atoms/AReusable/BtnTrash';
 
 const ItemCart = (props) => { 
     
-    const [counter, setCounter] = useState(1);
-	
-	const countMore = (event) =>{
-		setCounter(counter+1)
-	}
-
-	const countLess = (event) =>{
-		if(counter > 1){
-			setCounter(counter-1)
-		}
-
-    }
-
     if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
 		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
-		var carritoActual = []
+		var carritoActual = [] 
+    } 
+
+    const [counter, setCounter] = useState(props.item.udsItem);
+    
+    var item = props.item
+    console.log("ñItem", item.totalPrice)
+	const countMore = (event) =>{
+        setCounter(counter+1)
+        item.udsItem = counter+1
+        item.totalPrice = item.totalPrice + item.price
+        carritoActual.splice(props.index, 1, item);
+        localStorage.setItem('carrito', JSON.stringify(carritoActual))   
+        window.location.reload()    
+	}
+
+	const countLess = (event) =>{
+		if(counter > 1){
+            setCounter(counter-1)
+            item.udsItem = counter-1
+            item.totalPrice = item.totalPrice >= item.price ? item.totalPrice - item.price : item.totalPrice
+            carritoActual.splice(props.index, 1, item);
+            localStorage.setItem('carrito', JSON.stringify(carritoActual))   
+            window.location.reload()  
+        }
+  
     }
-    
-    const deleteItem = (item, index) => {
-        carritoActual.splice(index, 1)
-        localStorage.setItem('carrito', JSON.stringify(carritoActual));
-    }
-    
-    
-    
+
+
     return (
         <div className="item-cart">            
             <div className="image-item-buy">
@@ -43,7 +49,7 @@ const ItemCart = (props) => {
             </div>
             <div className="buttons-item-buy">
                 <div className="trash-btn-container">
-                    <BtnTrash deleteItem={deleteItem} item={props.item} index={props.index}></BtnTrash>
+                    <BtnTrash item={props.item} index={props.index} ></BtnTrash>
                 </div>
                 <div className="counter-btn-container">
                     <Counter countMore={countMore} countLess={countLess} count={counter}></Counter>

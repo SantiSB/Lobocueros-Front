@@ -5,10 +5,6 @@ import { connect } from "react-redux";
 import { setCounter } from "../../../redux/actionsCreators";
 
 const Counter = (props) => {
-    // var [counter, setCounter] = useState(1);
-    // useEffect(() => {
-    //     props.setCounter(counter)
-    // });
     return (
         <>
             <button onClick={props.countLess}><i><img src={Menos}></img></i></button>

@@ -8,7 +8,7 @@ import ResumeOrder from '../../Organisms/OResume/ResumeOrder';
 import LoginRegister from '../../Organisms/OResume/LoginRegister';
 
 const MainResume = () => {
-    return(
+    return( 
 		<div className="mainResume-main">
 			<div className="resume">
 				<div className="info-method-detail">
@@ -20,7 +20,7 @@ const MainResume = () => {
 					</div>
 					<div className="detail-order">
 						<DetailOrder></DetailOrder>
-					</div>
+					</div> 
 				</div>
 
 				<div className="resume-login">

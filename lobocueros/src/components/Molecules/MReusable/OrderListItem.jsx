@@ -1,17 +1,16 @@
 import React from 'react';
-import Bolso from '../../../assets/Images/Bolso.fw.png'
 import Article from '../../Atoms/AReusable/Article';
 import InfoItemBuy from '../../Atoms/AReusable/InfoItemBuy';
 
-const OrderListItem = () => {
+const OrderListItem = (props) => {
     return(
       <div className="item">
         <div className="image-item-order">
-          <Article></Article>
+          <Article image={props.item.pictures[0]}></Article>
         </div>
         <div className="info-item-order">
-          <InfoItemBuy></InfoItemBuy>
-        </div>
+          <InfoItemBuy item={props.item}></InfoItemBuy>
+        </div> 
       </div>
 		
     )

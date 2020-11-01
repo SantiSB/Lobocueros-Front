@@ -20,7 +20,6 @@ const InfoProductDetail = (props) => {
 		}
 
 	}
-
 	
 	const changeColorSelected = (color) =>{
 		setColorSelected(color)
@@ -40,15 +39,15 @@ const InfoProductDetail = (props) => {
 		}
 		else{
 			function inCart(e){
-				console.log("asx", item.colorSelected)
 				return e.id == item.id && e.colorSelected == colorSelected;
 			}
 			if(carritoActual.find(inCart)){
-				return null
+				return null 
 			}
 			else{
 				item['colorSelected']  = colorSelected;
 				item['udsItem'] = counter;
+				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
 				localStorage.setItem('carrito', JSON.stringify(carritoActual));
 			}
@@ -68,7 +67,8 @@ const InfoProductDetail = (props) => {
 			}
 			else{
 				item['colorSelected']  = colorSelected;
-				item['udsItem'] = counter;
+				item['udsItem'] = counter; 
+				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
 				localStorage.setItem('carrito', JSON.stringify(carritoActual));
 			}
