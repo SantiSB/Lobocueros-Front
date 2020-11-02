@@ -23,6 +23,8 @@
 		.item-mini-cart
 			@include display-grid("image-item-buy info-item-buy buttons-item-buy", 30% 50% 20%,  auto)
 			background: $White
+			border-bottom: 1px solid $Lobocueros
+			margin-bottom: 1rem
 
 			.image-item-buy
 				@include display-flex(center, center)
@@ -34,7 +36,11 @@
 				font-size: 8pt
 
 			.buttons-item-buy
-				@include display-flex(center, center)
+				@include display-grid("trash-btn-container" "counter-btn-container", auto, 50% 50%)
+
+				.trash-btn-container
+					@include display-flex(center, center)
+					height: 100%
 
 				.counter-btn-container
 					@include display-flex(center, center)

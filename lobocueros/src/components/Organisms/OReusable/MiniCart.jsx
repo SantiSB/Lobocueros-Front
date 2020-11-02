@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { connect } from "react-redux";
 import { setVisibleMiniCart } from "../../../redux/actionsCreators";
 import MiniCar from '../../../assets/Icons/MiniCar.svg'
@@ -8,6 +8,8 @@ import Mas from '../../../assets/Icons/Mas.svg'
 import Menos from '../../../assets/Icons/Menos.svg'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Counter from '../../Atoms/AReusable/Counter'; 
+import ItemMiniCart from '../../Molecules/MMiniCart/ItemMiniCart';
 
 const useStyles = makeStyles((theme) => ({
 	btnBuy: {
@@ -16,10 +18,18 @@ const useStyles = makeStyles((theme) => ({
 		background: "#DA2727",
 		opacity: ".7",
 		borderRadius: "100px",
-	},
+	}, 
   }));
 
-const MiniCart = (props) => { 
+	const MiniCart = (props) => { 
+		if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+			var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+		}
+		else{
+			var arrayItems = []
+		}
+
+
 	const classes = useStyles();
     return(
 		<>
@@ -30,71 +40,16 @@ const MiniCart = (props) => {
 				</div>
 				<hr></hr>
 				<div className="list-products-mini-cart">
-					<div className="item-mini-cart">
-						<div className="image-item-buy">
-							<img src={Bolso}></img>
-						</div>
-						<div className="info-item-buy">
-							<div>
-								<p>MORRAL DE CUERO CON CORREA</p>
-								<p>Precio: <span>$100.000</span></p>
-								<p>Color: <span></span></p>
-								<p>Tiempo de entrega 3 a 5 Días</p>
-							</div>
-						</div>
-						<div className="buttons-item-buy">
-							<div className="counter-btn-container">
-								<button><i><img src={Menos}></img></i></button>
-								<span>1</span>
-								<button><i><img src={Mas}></img></i></button>
-							</div>
-						</div>
-					</div>
-
-					<div className="item-mini-cart">
-						<div className="image-item-buy">
-							<img src={Bolso}></img>
-						</div>
-						<div className="info-item-buy">
-							<div>
-								<p>MORRAL DE CUERO CON CORREA</p>
-								<p>Precio: <span>$100.000</span></p>
-								<p>Color: <span></span></p>
-								<p>Tiempo de entrega 3 a 5 Días</p>
-							</div>
-						</div>
-						<div className="buttons-item-buy">
-							<div className="counter-btn-container">
-								<button><i><img src={Menos}></img></i></button>
-								<span>1</span>
-								<button><i><img src={Mas}></img></i></button>
-							</div>
-						</div>
-					</div>
-
-					<div className="item-mini-cart">
-						<div className="image-item-buy">
-							<img src={Bolso}></img>
-						</div>
-						<div className="info-item-buy">
-							<div>
-								<p>MORRAL DE CUERO CON CORREA</p>
-								<p>Precio: <span>$100.000</span></p>
-								<p>Color: <span></span></p>
-								<p>Tiempo de entrega 3 a 5 Días</p>
-							</div>
-						</div>
-						<div className="buttons-item-buy">
-							<div className="counter-btn-container">
-								<button><i><img src={Menos}></img></i></button>
-								<span>1</span>
-								<button><i><img src={Mas}></img></i></button>
-							</div>
-						</div>
-					</div>
-					
+					{
+						arrayItems ? arrayItems.map(function(item, index){
+							return (
+								<ItemMiniCart item={item} index={index}></ItemMiniCart>
+							)
+						}) 
+						: []
+					}
 				</div>
-				<hr></hr>
+				
 				<div className="btn-buy-mini-cart">
 					<Button className={classes.btnBuy} variant="outlined">COMPRAR</Button>
 				</div>

@@ -35,7 +35,7 @@ const InfoProductDetail = (props) => {
 	const buyEventsBuy = (item) => {
 		
 		if(colorSelected == ""){
-			alert("Selecciona el color");
+			document.getElementById("select-color").style.display = "block"
 		}
 		else{
 			function inCart(e){
@@ -56,14 +56,14 @@ const InfoProductDetail = (props) => {
 
 	const buyEvents = (item) => {
 		if(colorSelected == ""){
-			alert("Selecciona el color");
+			document.getElementById("select-color").style.display = "block"
 		}
 		else{
 			function inCart(e){
 				return e.id == item.id && e.colorSelected == colorSelected;
 			}
 			if(carritoActual.find(inCart)){
-				alert("El producto ya está en el carrito");
+				document.getElementById("product-exist").style.display = "block"
 			}
 			else{
 				item['colorSelected']  = colorSelected;
@@ -71,11 +71,21 @@ const InfoProductDetail = (props) => {
 				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
 				localStorage.setItem('carrito', JSON.stringify(carritoActual));
+				window.location.reload()
 			}
 		}
 	}
+
+	const buildBtn = () =>{
+		if(colorSelected == ""){
+			return <a onClick={()=>buyEventsBuy(props.productDetail)}><Buttons type="Buy" text="Comprar"></Buttons></a> 			 
+		}
+		else{
+			return <a onClick={()=>buyEventsBuy(props.productDetail)} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
+		}
+	} 
 	
-    return( 
+    return(  
 		<div className="info-product-detail">
 			<div className="ref-product">
 				Ref.{props.productDetail.reference}
@@ -88,19 +98,21 @@ const InfoProductDetail = (props) => {
 			</div>
 			<div className="description-product"> 
 				{props.productDetail.description}
-			</div>  
+			</div>
+  
 			<div className="actions-product-detail"> 
+				<p id="select-color" className="select-color">Selecciona el color</p>				
 				<ColorsBar productDetail={props.productDetail} changeColor={changeColorSelected}></ColorsBar>
 			</div>
 			<div className="buttons-product-detail">
 				<div className="counter">
 					<Counter countMore={countMore} countLess={countLess} count={counter}></Counter>
 				</div>
-				
 				<div className="buy-buttons">
-					<a onClick={()=>buyEventsBuy(props.productDetail)} href={colorSelected == "" ? "" : "/carrito"}><Buttons type="Buy" text="Comprar"></Buttons></a>
+					{buildBtn()}
 					<a onClick={()=>buyEvents(props.productDetail)} ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
 				</div>
+				<p id="product-exist" className="product-exist">El producto ya está en el carrito</p>
 			</div>
 			
 		</div> 

@@ -9,7 +9,7 @@ const DetailOrder = () => {
   }
   else{
     var arrayItems = []
-  }
+  } 
 
   return (
     <>

@@ -23,12 +23,22 @@
 	@include display-flex(center,center)
 	.colors-bar
 		margin: 1rem
+	.select-color
+		color: $Lobocueros
+		font-weight: bold
+		display: none
 	
 	
 
 .buttons-product-detail
-	@include display-grid("counter" "buy-buttons", 100%, 40px 40px)
+	@include display-grid("counter" "buy-buttons" "product-exist", 100%, 40px 40px 15px)
 	margin-bottom: 1rem
+
+	.product-exist
+		grid-area: product-exist
+		color: $Lobocueros
+		font-weight: bold
+		display: none
 
 	.counter
 		grid-area: counter

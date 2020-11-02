@@ -19,6 +19,13 @@ const Header = (props) => {
     localStorage.setItem('filtro', param);
   }
 
+  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+  }
+  else{
+    var arrayItems = []
+  } 
+
     return(
       <header className="header-main">
         <div className="headerUp">
@@ -32,7 +39,7 @@ const Header = (props) => {
               <i onClick={()=>props.setVisibleSearchForm(props.visibleSearchForm == false ? true : false)}><img src={Search_White} alt="search"></img></i>
               <LoginModal></LoginModal>
               <MiniCart></MiniCart>
-              <span>0</span>
+              <span>{arrayItems.length}</span>
           </div>
         </div>
         <div className="headerDown">
