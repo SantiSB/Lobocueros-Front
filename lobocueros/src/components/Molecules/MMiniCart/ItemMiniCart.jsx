@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
-import Article from '../../Atoms/AReusable/Article';
-import InfoItemBuy from '../../Atoms/AReusable/InfoItemBuy';
 import Counter from '../../Atoms/AReusable/Counter'; 
 import BtnTrash from '../../Atoms/AReusable/BtnTrash';
 
 const ItemMiniCart = (props) => { 
     
-    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
 		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
@@ -42,7 +40,7 @@ const ItemMiniCart = (props) => {
     return (
         <div className="item-mini-cart">
             <div className="image-item-buy">
-                <img src={item.pictures[0].img}></img>
+                <img src={item.pictures[0].img} alt="img"></img>
             </div>
             <div className="info-item-buy">
                 <div>

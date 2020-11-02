@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import { setVisibleMiniCart } from "../../../redux/actionsCreators";
 import MiniCar from '../../../assets/Icons/MiniCar.svg'
 import Close from '../../../assets/Icons/Failed.svg'
-import Bolso from '../../../assets/Images/Bolso.fw.png'
-import Mas from '../../../assets/Icons/Mas.svg'
-import Menos from '../../../assets/Icons/Menos.svg'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Counter from '../../Atoms/AReusable/Counter'; 
 import ItemMiniCart from '../../Molecules/MMiniCart/ItemMiniCart';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 	const MiniCart = (props) => { 
-		if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+		if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
 			var arrayItems = JSON.parse(localStorage.getItem('carrito'))
 		}
 		else{
@@ -33,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
 	const classes = useStyles();
     return(
 		<>
-			<i className="mini-cart-icon" onClick={()=>props.setVisibleMiniCart(props.visibleMiniCart == false ? true : false)}><img src={MiniCar} alt="mini-cart"></img></i>
-			<div id="miniCart" className="container-mini-cart" style={props.visibleMiniCart == false ? {display: "none"} : {display: "block"}}>
+			<i className="mini-cart-icon" onClick={()=>props.setVisibleMiniCart(props.visibleMiniCart === false ? true : false)}><img src={MiniCar} alt="mini-cart"></img></i>
+			<div id="miniCart" className="container-mini-cart" style={props.visibleMiniCart === false ? {display: "none"} : {display: "block"}}>
 				<div className="close-mini-cart">
-					<i onClick={()=>props.setVisibleMiniCart(props.visibleMiniCart == false ? true : false)}><img src={Close}></img></i>
+					<i onClick={()=>props.setVisibleMiniCart(props.visibleMiniCart === false ? true : false)}><img alt="close" src={Close}></img></i>
 				</div>
 				<hr></hr>
 				<div className="list-products-mini-cart">

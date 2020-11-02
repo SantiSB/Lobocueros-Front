@@ -1,10 +1,9 @@
 import React from "react";
-import Bolso from '../../../assets/Images/Bolso.fw.png'
 import OrderListItem from "../../Molecules/MReusable/OrderListItem";
 
 const DetailOrder = () => {
 
-  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
     var arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
   else{

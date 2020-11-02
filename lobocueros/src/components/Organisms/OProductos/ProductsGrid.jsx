@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
  
 const ProductsGrid = (props) => {
 	const classes = useStyles();
-	const totalItems = props.productsData
 	const totalItemsFilter = props.listFilter
 
 	const itemsGridProducts = totalItemsFilter.map(function(item, index){    

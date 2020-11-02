@@ -9,7 +9,7 @@ class BurgerMenu extends Component {
         open:false
     }
     handleClick(props) {
-        props.setVisibleMenu(props.visibleMenu == false ? true : false)
+        props.setVisibleMenu(props.visibleMenu === false ? true : false)
 
         this.setState({
             open: !this.state.open

@@ -4,15 +4,14 @@ import CardActionArea from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
-import Bolso from '../../../assets/Images/Bolso.fw.png'
 import Buttons from '../../Atoms/AReusable/Buttons';
  
 const ProductCard = (props) => {
 	const buildMainPicture = (pictures) => {
 		function isMain(picture){
-			return picture.mainPicture == true
+			return picture.mainPicture === true
 		}
-		if(pictures != null){
+		if(pictures !== null){
 			return pictures.find(isMain).img
 		}
 	} 
@@ -23,7 +22,7 @@ const ProductCard = (props) => {
 				<CardContent className="card-content" >
 					<a href={`/productos/${itemProduct.id}`}> 
 						<div className="image-product-card" >
-							<img src={buildMainPicture(itemProduct.pictures)}></img>
+							<img src={buildMainPicture(itemProduct.pictures)} alt="main-img"></img>
 						</div>
 						<div className="title-product-card">
 							<h2>{itemProduct.title}</h2>

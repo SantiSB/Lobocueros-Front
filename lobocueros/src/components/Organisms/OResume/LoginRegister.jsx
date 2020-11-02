@@ -1,6 +1,4 @@
 import React from "react";
-import Buttons from "../../Atoms/AReusable/Buttons";
-import LoginModal from "../OReusable/LoginModal";
 import LoginModalResume from "./LoginModalResume";
 
 const LoginRegister = () => {

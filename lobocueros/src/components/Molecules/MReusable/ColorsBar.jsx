@@ -1,9 +1,7 @@
-import { colors } from '@material-ui/core';
 import React from 'react';
 import ColorBtn from '../../Atoms/AReusable/ColorBtn';
 
 const ColorsBar = (props) => {
-	const colors = props.colors != null ? props.colors : []
 	const productDetail = props.productDetail != null ? props.productDetail : {}
 	const picturesColor = productDetail.pictures != null ? productDetail.pictures : []
 	var arrayPictures = []

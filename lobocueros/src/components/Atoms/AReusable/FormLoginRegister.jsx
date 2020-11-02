@@ -35,8 +35,8 @@ const FormLoginRegister = (props) => {
 			<div className="login-register-social">
 				<p>{props.action} con:</p>
 				<div className="social-options-login-register">
-					<img src={Google}></img>
-					<img src={Facebook}></img>
+					<img alt="Google" src={Google}></img>
+					<img alt="Facebook" src={Facebook}></img>
 				</div>
 			</div>
 		</>

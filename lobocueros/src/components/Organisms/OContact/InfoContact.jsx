@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import Buttons from "../../Atoms/AReusable/Buttons";
 import emailjs from 'emailjs-com';
 import Alert from '@material-ui/lab/Alert';
@@ -23,7 +22,7 @@ const InfoContact = () => {
     texto = texto.toLowerCase();
     var i = 0
     for(i=0; i<texto.length; i++){
-       if (letras.indexOf(texto.charAt(i),0)!=-1){
+       if (letras.indexOf(texto.charAt(i),0)!==-1){
           return true;
        }
     }
@@ -34,7 +33,7 @@ const InfoContact = () => {
   function tiene_numeros(texto){
     var i = 0
     for(i=0; i<texto.length; i++){
-        if (numeros.indexOf(texto.charAt(i),0)!=-1){
+        if (numeros.indexOf(texto.charAt(i),0)!==-1){
           return 1;
         }
     }
@@ -49,34 +48,34 @@ const InfoContact = () => {
 
   function sendEmail(e) {
     if (
-      document.getElementById("asunto").value == "" ||
-      document.getElementById("cedula").value == "" ||
-      document.getElementById("nombre").value == "" ||
-      document.getElementById("apellido").value == "" ||
-      document.getElementById("email").value == "" ||
-      document.getElementById("telefono").value == "" ||
-      document.getElementById("mensaje").value == "" 
+      document.getElementById("asunto").value === "" ||
+      document.getElementById("cedula").value === "" ||
+      document.getElementById("nombre").value === "" ||
+      document.getElementById("apellido").value === "" ||
+      document.getElementById("email").value === "" ||
+      document.getElementById("telefono").value === "" ||
+      document.getElementById("mensaje").value === "" 
       ) {
       e.preventDefault();
       document.getElementById("alert").style.display = "flex"
     }
-    else if(tiene_letras(document.getElementById("cedula").value) == true){
+    else if(tiene_letras(document.getElementById("cedula").value) === true){
       e.preventDefault();
       document.getElementById("alertCedula").style.display = "flex"
     }
-    else if(tiene_letras(document.getElementById("telefono").value) == true){
+    else if(tiene_letras(document.getElementById("telefono").value) === true){
       e.preventDefault();
       document.getElementById("alertTelefono").style.display = "flex"
     }
-    else if(tiene_numeros(document.getElementById("nombre").value) == true){
+    else if(tiene_numeros(document.getElementById("nombre").value) === true){
       e.preventDefault();
       document.getElementById("alertNombre").style.display = "flex"
     }
-    else if(tiene_numeros(document.getElementById("apellido").value) == true){
+    else if(tiene_numeros(document.getElementById("apellido").value) === true){
       e.preventDefault();
       document.getElementById("alertApellido").style.display = "flex"
     }
-    else if(validar_email(document.getElementById("email").value) == false){
+    else if(validar_email(document.getElementById("email").value) === false){
       e.preventDefault();
       document.getElementById("alertEmail").style.display = "flex"
     }

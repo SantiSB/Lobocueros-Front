@@ -7,7 +7,7 @@ const PurchaseTrue = () => {
   return (
     <div className="container-purchase-true">
       <div className="title-purchase">
-        <i><img src={Accepted}></img></i>
+        <i><img alt="acepted" src={Accepted}></img></i>
         <p>Compra Exitosa</p>
       </div>
       <div className="list-products-purchase">

@@ -28,10 +28,10 @@ const MainContact = () => {
 				</div>
 				<div className="network-contact">
 					<div className="icons-social-media-contact">
-						<a target="_blank" href="https://www.google.com/maps/place/Lobocueros/@4.5882023,-74.0926449,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f999e629b6dd3:0x6bfa81868f4e7c85!8m2!3d4.5882023!4d-74.0904562"><i><img src={Google}></img></i></a>
-						<a target="_blank" href="https://www.instagram.com/lobocueros/"><i><img src={Instagram}></img></i></a>
-						<a target="_blank" href="https://wa.me/573113582648"><i><img src={Whatsapp}></img></i></a>
-						<a target="_blank" href="https://www.facebook.com/lobocuerosas"><i><img src={Facebook}></img></i></a>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Lobocueros/@4.5882023,-74.0926449,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f999e629b6dd3:0x6bfa81868f4e7c85!8m2!3d4.5882023!4d-74.0904562"><i><img alt="link-google" src={Google}></img></i></a>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/lobocueros/"><i><img alt="link-instagram" src={Instagram}></img></i></a>
+						<a target="_blank" rel="noopener noreferrer" href="https://wa.me/573113582648"><i><img alt="link-wa" src={Whatsapp}></img></i></a>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/lobocuerosas"><i><img alt="link-facebook" src={Facebook}></img></i></a>
 					</div>
 					<div className="email-contact">
 						<p>lobocueros@gmail.com</p>

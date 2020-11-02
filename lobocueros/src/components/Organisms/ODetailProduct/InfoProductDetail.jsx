@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
 import Counter from '../../Atoms/AReusable/Counter';
@@ -25,7 +25,7 @@ const InfoProductDetail = (props) => {
 		setColorSelected(color)
 	}
 
-	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
 		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
@@ -34,12 +34,12 @@ const InfoProductDetail = (props) => {
 
 	const buyEventsBuy = (item) => {
 		
-		if(colorSelected == ""){
+		if(colorSelected === ""){
 			document.getElementById("select-color").style.display = "block"
 		}
 		else{
 			function inCart(e){
-				return e.id == item.id && e.colorSelected == colorSelected;
+				return e.id === item.id && e.colorSelected === colorSelected;
 			}
 			if(carritoActual.find(inCart)){
 				return null 
@@ -55,12 +55,12 @@ const InfoProductDetail = (props) => {
 	}
 
 	const buyEvents = (item) => {
-		if(colorSelected == ""){
+		if(colorSelected === ""){
 			document.getElementById("select-color").style.display = "block"
 		}
 		else{
 			function inCart(e){
-				return e.id == item.id && e.colorSelected == colorSelected;
+				return e.id === item.id && e.colorSelected === colorSelected;
 			}
 			if(carritoActual.find(inCart)){
 				document.getElementById("product-exist").style.display = "block"
@@ -77,7 +77,7 @@ const InfoProductDetail = (props) => {
 	}
 
 	const buildBtn = () =>{
-		if(colorSelected == ""){
+		if(colorSelected === ""){
 			return <a onClick={()=>buyEventsBuy(props.productDetail)}><Buttons type="Buy" text="Comprar"></Buttons></a> 			 
 		}
 		else{

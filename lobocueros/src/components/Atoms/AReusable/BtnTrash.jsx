@@ -5,7 +5,7 @@ import Trash from '../../../assets/Icons/Trash.svg'
 const BtnTrash = (props) => {
     
 
-    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
 		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
@@ -19,6 +19,6 @@ const BtnTrash = (props) => {
     }
 
 
-    return <button onClick={()=>deleteItem(props.index)} ><i><img src={Trash}></img></i></button>
+    return <button onClick={()=>deleteItem(props.index)} ><i><img alt="trash" src={Trash}></img></i></button>
 }
 export default BtnTrash;

@@ -7,16 +7,16 @@ const Pay = () => {
       <div className="methods-pay">
         <p className="pay-methods-title">MÉTODOS DE PAGO</p>
         <div className="pay-methods-icons">
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
-          <i><img src={Secure}></img></i>
+          <i><img alt="secure" src={Secure}></img></i>
+          <i><img alt="secure" src={Secure}></img></i>
+          <i><img alt="secure" src={Secure}></img></i>
+          <i><img alt="secure" src={Secure}></img></i>
+          <i><img alt="secure" src={Secure}></img></i>
         </div>
       </div>
       <div className="secure-pay">
         <div className="secure-pay-title">
-          <i><img src={Secure}></img></i>
+          <i><img alt="secure" src={Secure}></img></i>
           <p>COMPRA 100% SEGURA</p>
 
         </div>

@@ -18,7 +18,7 @@ export default function LoginModal(props) {
   const body = (
     <div  className="login-modal">
       <div className="logo-lobocueros-login-modal">
-        <img src={Lobocueros}></img>
+        <img src={Lobocueros} alt="lobocueros"></img>
       </div>
       <div className="title-lobocueros-login-modal">
         <p>Lobocueros</p>

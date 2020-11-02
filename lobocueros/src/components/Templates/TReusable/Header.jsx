@@ -11,7 +11,6 @@ import MiniCart from '../../Organisms/OReusable/MiniCart';
 
 const Header = (props) => {
    
-  let itemFilter = localStorage.getItem('filtro')
   React.useEffect(()=>{
   })
 
@@ -19,7 +18,7 @@ const Header = (props) => {
     localStorage.setItem('filtro', param);
   }
 
-  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
     var arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
   else{
@@ -33,10 +32,10 @@ const Header = (props) => {
             <span>Marroquineros de Corazón</span>
           </div>
           <div className="menu-headerUp">
-              <form className="search-form" style={props.visibleSearchForm == false ? {visibility: "hidden"} : {visibility: "visible"}}>
+              <form className="search-form" style={props.visibleSearchForm === false ? {visibility: "hidden"} : {visibility: "visible"}}>
                 <input type="text"></input>
               </form> 
-              <i onClick={()=>props.setVisibleSearchForm(props.visibleSearchForm == false ? true : false)}><img src={Search_White} alt="search"></img></i>
+              <i onClick={()=>props.setVisibleSearchForm(props.visibleSearchForm === false ? true : false)}><img src={Search_White} alt="search"></img></i>
               <LoginModal></LoginModal>
               <MiniCart></MiniCart>
               <span>{arrayItems.length}</span>
@@ -132,7 +131,7 @@ const Header = (props) => {
 
           <div className="burger-menu">
             <BurgerMenu></BurgerMenu>
-                <div className="submenu-nav" id="submenu-nav" style={props.visibleMenu == false ? {display: "none"} : {display: "flex"}}> 
+                <div className="submenu-nav" id="submenu-nav" style={props.visibleMenu === false ? {display: "none"} : {display: "flex"}}> 
                   <ul>
                     <li className="submenu-item"><a href="/productos">Bolsos</a>
                       <ul>

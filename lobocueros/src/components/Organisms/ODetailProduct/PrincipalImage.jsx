@@ -5,14 +5,14 @@ import { setAllData, setProductsData, setPrincipalImageDetail } from "../../../r
 const PrincipalImage = (props) => {
 	const mainPicture = () => {
 			function isMain(picture){
-				return picture.mainPicture == true
+				return picture.mainPicture === true
 			}
-			if(props.productDetail.pictures != null){
+			if(props.productDetail.pictures !== null){
 				return props.productDetail.pictures.find(isMain).img
 			}
 	}
-	if(props.principalImageDetail == ""){
-		if(mainPicture() != undefined){
+	if(props.principalImageDetail === ""){
+		if(mainPicture() !== undefined){
 			props.setPrincipalImageDetail(mainPicture())
 		} 
 	}
@@ -20,7 +20,7 @@ const PrincipalImage = (props) => {
     return( 
 		
 		<div className="principal-image">
-			<img src={props.principalImageDetail}></img>
+			<img alt="main-img" src={props.principalImageDetail}></img>
 		</div>
     )
 }

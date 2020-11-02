@@ -6,7 +6,7 @@ import BtnTrash from '../../Atoms/AReusable/BtnTrash';
 
 const ItemCart = (props) => { 
     
-    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) != [] && JSON.parse(localStorage.getItem('carrito')) != undefined){
+    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
 		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{

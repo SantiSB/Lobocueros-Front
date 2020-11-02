@@ -6,7 +6,7 @@ const PurchaseFalse = () => {
   return (
     <div className="container-purchase-true">
       <div className="title-purchase">
-        <i><img src={Failed}></img></i>
+        <i><img src={Failed} alt="failed"></img></i>
         <p>Compra Fallida</p>
       </div>
       <div className="list-products-purchase">

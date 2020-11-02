@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setListFilter } from "../../../redux/actionsCreators";
-import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -10,72 +9,59 @@ import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 
-const useStyles = makeStyles((theme) => ({
-
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    },
-  },
-}));
-
 const Filter = (props) => {
 
 	const filterMenuGender = () =>{
-		if(localStorage.getItem('filtro') == "Mujer" 
-			|| localStorage.getItem('filtro') == "Mujer Bolsos"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios"
-			|| localStorage.getItem('filtro') == "Mujer Viaje"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos todo"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos carteras"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos mochilas"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos manos libres"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos manos libres pelo"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos morrales"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos carrieles"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos bolsos mola"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos bolsos pelo"
-			|| localStorage.getItem('filtro') == "Mujer Bolsos portafolios"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras todo"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras billeteras"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras portadocumentos"
-			|| localStorage.getItem('filtro') == "Mujer Billeteras pasaporteras"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios todo"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios cosmetiqueras"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios riñoneras"
-			|| localStorage.getItem('filtro') == "Mujer Accesorios otros"
+		if(localStorage.getItem('filtro') === "Mujer" 
+			|| localStorage.getItem('filtro') === "Mujer Bolsos"
+			|| localStorage.getItem('filtro') === "Mujer Billeteras"
+			|| localStorage.getItem('filtro') === "Mujer Accesorios"
+			|| localStorage.getItem('filtro') === "Mujer Viaje"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos todo"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos carteras"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos mochilas"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos manos libres"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos manos libres pelo"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos morrales"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos carrieles"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos bolsos mola"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos bolsos pelo"
+			|| localStorage.getItem('filtro') === "Mujer Bolsos portafolios"
+			|| localStorage.getItem('filtro') === "Mujer Billeteras todo"
+			|| localStorage.getItem('filtro') === "Mujer Billeteras billeteras"
+			|| localStorage.getItem('filtro') === "Mujer Billeteras portadocumentos"
+			|| localStorage.getItem('filtro') === "Mujer Billeteras pasaporteras"
+			|| localStorage.getItem('filtro') === "Mujer Accesorios todo"
+			|| localStorage.getItem('filtro') === "Mujer Accesorios cosmetiqueras"
+			|| localStorage.getItem('filtro') === "Mujer Accesorios riñoneras"
+			|| localStorage.getItem('filtro') === "Mujer Accesorios otros"
 		){
 			localStorage.setItem('filtro', "");
 			return 10
 		}
-		else if(localStorage.getItem('filtro') == "Hombre"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos"
-			|| localStorage.getItem('filtro') == "Hombre Billeteras"
-			|| localStorage.getItem('filtro') == "Hombre Accesorios"
-			|| localStorage.getItem('filtro') == "Hombre Viaje"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos todo"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos carteras"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos mochilas"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos manos libres"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos manos libres pelo"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos morrales"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos carrieles"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos bolsos mola"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos bolsos pelo"
-			|| localStorage.getItem('filtro') == "Hombre Bolsos portafolios"
-			|| localStorage.getItem('filtro') == "Hombre Billeteras todo"
-			|| localStorage.getItem('filtro') == "Hombre Billeteras billeteras"
-			|| localStorage.getItem('filtro') == "Hombre Billeteras portadocumentos"
-			|| localStorage.getItem('filtro') == "Hombre Billeteras pasaporteras"
-			|| localStorage.getItem('filtro') == "Hombre Accesorios todo"
-			|| localStorage.getItem('filtro') == "Hombre Accesorios cosmetiqueras"
-			|| localStorage.getItem('filtro') == "Hombre Accesorios riñoneras"
-			|| localStorage.getItem('filtro') == "Hombre Accesorios otros"
+		else if(localStorage.getItem('filtro') === "Hombre"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos"
+			|| localStorage.getItem('filtro') === "Hombre Billeteras"
+			|| localStorage.getItem('filtro') === "Hombre Accesorios"
+			|| localStorage.getItem('filtro') === "Hombre Viaje"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos todo"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos carteras"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos mochilas"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos manos libres"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos manos libres pelo"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos morrales"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos carrieles"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos bolsos mola"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos bolsos pelo"
+			|| localStorage.getItem('filtro') === "Hombre Bolsos portafolios"
+			|| localStorage.getItem('filtro') === "Hombre Billeteras todo"
+			|| localStorage.getItem('filtro') === "Hombre Billeteras billeteras"
+			|| localStorage.getItem('filtro') === "Hombre Billeteras portadocumentos"
+			|| localStorage.getItem('filtro') === "Hombre Billeteras pasaporteras"
+			|| localStorage.getItem('filtro') === "Hombre Accesorios todo"
+			|| localStorage.getItem('filtro') === "Hombre Accesorios cosmetiqueras"
+			|| localStorage.getItem('filtro') === "Hombre Accesorios riñoneras"
+			|| localStorage.getItem('filtro') === "Hombre Accesorios otros"
 		){
 			localStorage.setItem('filtro', "");
 			return 20
@@ -94,224 +80,224 @@ const Filter = (props) => {
 	const [subCategory, setSubCategory] = React.useState("");
 
 	React.useEffect(()=>{
-		if(localStorage.getItem('filtro') == "Mujer"){
+		if(localStorage.getItem('filtro') === "Mujer"){
 			setGender(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre"){
+		else if(localStorage.getItem('filtro') === "Hombre"){
 			setGender(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Nuevo"){
+		else if(localStorage.getItem('filtro') === "Nuevo"){
 			setOrder(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos carteras"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos carteras"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos mochilas"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos mochilas"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos manos libres"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos manos libres"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos manos libres pelo"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos manos libres pelo"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos morrales"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos morrales"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos carrieles"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos carrieles"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos bolsos mola"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos bolsos mola"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos bolsos pelo"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos bolsos pelo"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Bolsos portafolios"){
+		else if(localStorage.getItem('filtro') === "Mujer Bolsos portafolios"){
 			setGender(10);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Billeteras"){
+		else if(localStorage.getItem('filtro') === "Mujer Billeteras"){
 			setGender(10);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Billeteras todo"){
+		else if(localStorage.getItem('filtro') === "Mujer Billeteras todo"){
 			setGender(10);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Billeteras billeteras"){
+		else if(localStorage.getItem('filtro') === "Mujer Billeteras billeteras"){
 			setGender(10);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Billeteras portadocumentos"){
+		else if(localStorage.getItem('filtro') === "Mujer Billeteras portadocumentos"){
 			setGender(10);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Billeteras pasaporteras"){
+		else if(localStorage.getItem('filtro') === "Mujer Billeteras pasaporteras"){
 			setGender(10);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Accesorios"){
+		else if(localStorage.getItem('filtro') === "Mujer Accesorios"){
 			setGender(10);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Accesorios todo"){
+		else if(localStorage.getItem('filtro') === "Mujer Accesorios todo"){
 			setGender(10);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Accesorios cosmetiqueras"){
+		else if(localStorage.getItem('filtro') === "Mujer Accesorios cosmetiqueras"){
 			setGender(10);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Accesorios riñoneras"){
+		else if(localStorage.getItem('filtro') === "Mujer Accesorios riñoneras"){
 			setGender(10);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Accesorios otros"){
+		else if(localStorage.getItem('filtro') === "Mujer Accesorios otros"){
 			setGender(10);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Mujer Viaje"){
+		else if(localStorage.getItem('filtro') === "Mujer Viaje"){
 			setGender(10);
 			setCategory(40);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos carteras"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos carteras"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos mochilas"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos mochilas"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos manos libres"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos manos libres"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos manos libres pelo"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos manos libres pelo"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos morrales"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos morrales"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos carrieles"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos carrieles"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos bolsos mola"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos bolsos mola"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos bolsos pelo"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos bolsos pelo"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Bolsos portafolios"){
+		else if(localStorage.getItem('filtro') === "Hombre Bolsos portafolios"){
 			setGender(20);
 			setCategory(10);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Billeteras"){
+		else if(localStorage.getItem('filtro') === "Hombre Billeteras"){
 			setGender(20);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Billeteras todo"){
+		else if(localStorage.getItem('filtro') === "Hombre Billeteras todo"){
 			setGender(20);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Billeteras billeteras"){
+		else if(localStorage.getItem('filtro') === "Hombre Billeteras billeteras"){
 			setGender(20);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Billeteras portadocumentos"){
+		else if(localStorage.getItem('filtro') === "Hombre Billeteras portadocumentos"){
 			setGender(20);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Billeteras pasaporteras"){
+		else if(localStorage.getItem('filtro') === "Hombre Billeteras pasaporteras"){
 			setGender(20);
 			setCategory(20);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Accesorios"){
+		else if(localStorage.getItem('filtro') === "Hombre Accesorios"){
 			setGender(20);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Accesorios todo"){
+		else if(localStorage.getItem('filtro') === "Hombre Accesorios todo"){
 			setGender(20);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Accesorios cosmetiqueras"){
+		else if(localStorage.getItem('filtro') === "Hombre Accesorios cosmetiqueras"){
 			setGender(20);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Accesorios riñoneras"){
+		else if(localStorage.getItem('filtro') === "Hombre Accesorios riñoneras"){
 			setGender(20);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Accesorios otros"){
+		else if(localStorage.getItem('filtro') === "Hombre Accesorios otros"){
 			setGender(20);
 			setCategory(30);
 			localStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') == "Hombre Viaje"){
+		else if(localStorage.getItem('filtro') === "Hombre Viaje"){
 			setGender(20);
 			setCategory(40);
 			localStorage.setItem('filtro', "");
@@ -321,7 +307,7 @@ const Filter = (props) => {
 	},[])
 
 	React.useEffect(() => {
-        listEventsFilter();
+    	listEventsFilter();
     }, [props.productsData, gender, category, order, search, subCategory]);
 
 	//OnChange
@@ -344,88 +330,88 @@ const Filter = (props) => {
 
 	//FilterBy GENDER
 	const filterByGenderMasculino = (event) => {
-		return event.gender == "Masculino"
+		return event.gender === "Masculino"
 		
 	};
 	const filterByGenderFemenino = (event) => {
-		return event.gender == "Femenino"
+		return event.gender === "Femenino"
 		
 	};
 	const filterByGenderUnisex = (event) => {
-		return event.gender == "Unisex" || event.gender == "Masculino" || event.gender == "Femenino"
+		return event.gender === "Unisex" || event.gender === "Masculino" || event.gender === "Femenino"
 	};
 
 	//FilterByCategory
 	const filterByCategoryBolsos = (event) => {
-		return event.category == "Bolsos"
+		return event.category === "Bolsos"
 	};
 	const filterByCategoryBilleteras = (event) => {
-		return event.category == "Billeteras"
+		return event.category === "Billeteras"
 	};
 	const filterByCategoryAccesorios = (event) => {
-		return event.category == "Accesorios"
+		return event.category === "Accesorios"
 	};
 	const filterByCategoryViaje = (event) => {
-		return event.category == "Viaje"
+		return event.category === "Viaje"
 	};
 	const filterByCategoryAll = (event) => {
-		return event.category == "Viaje" || event.category == "Bolsos" || event.category == "Accesorios" || event.category == "Billeteras"
+		return event.category === "Viaje" || event.category === "Bolsos" || event.category === "Accesorios" || event.category === "Billeteras"
 	};
 
 	//FilterBySubCategory
 	const filterBySubCategoryCarteras = (event) => {
-		return event.subcategory == "Carteras"
+		return event.subcategory === "Carteras"
 	};
 	const filterBySubCategoryMochilas = (event) => {
-		return event.subcategory == "Mochilas"
+		return event.subcategory === "Mochilas"
 	};
 	const filterBySubCategoryManosLibres = (event) => {
-		return event.subcategory == "Manos libres"
+		return event.subcategory === "Manos libres"
 	};
 	const filterBySubCategoryManosLibresPelo = (event) => {
-		return event.subcategory == "Manos libres con pelo"
+		return event.subcategory === "Manos libres con pelo"
 	};
 	const filterBySubCategoryBolsosMola = (event) => {
-		return event.subcategory == "Bolos con mola"
+		return event.subcategory === "Bolos con mola"
 	};
 	const filterBySubCategoryBolsosPelo = (event) => {
-		return event.subcategory == "Bolsos con pelo"
+		return event.subcategory === "Bolsos con pelo"
 	};
 	const filterBySubCategoryMorrales = (event) => {
-		return event.subcategory == "Morrales"
+		return event.subcategory === "Morrales"
 	};
 	const filterBySubCategoryCarrieles = (event) => {
-		return event.subcategory == "Carrieles"
+		return event.subcategory === "Carrieles"
 	};
 	const filterBySubCategoryPortadocumentos = (event) => {
-		return event.subcategory == "Portadocumentos"
+		return event.subcategory === "Portadocumentos"
 	};
 	const filterBySubCategoryPortafolios = (event) => {
-		return event.subcategory == "Portafolios"
+		return event.subcategory === "Portafolios"
 	};
 	const filterBySubCategoryBilleteras = (event) => {
-		return event.subcategory == "Billeteras"
+		return event.subcategory === "Billeteras"
 	};
 	const filterBySubCategoryPasaporteras = (event) => {
-		return event.subcategory == "Pasaporteras"
+		return event.subcategory === "Pasaporteras"
 	};
 	const filterBySubCategoryCosmetiqueras = (event) => {
-		return event.subcategory == "Cosmetiqueras"
+		return event.subcategory === "Cosmetiqueras"
 	};
 	const filterBySubCategoryRiñoneras = (event) => {
-		return event.subcategory == "Riñoneras"
+		return event.subcategory === "Riñoneras"
 	};
 	const filterBySubCategoryOtros = (event) => {
-		return event.subcategory == "Otros"
+		return event.subcategory === "Otros"
 	};
 
 	//OrderBy
 	const filterByPrice = (event) => {
-		return event.price != null
+		return event.price !== null
 	}
 
 	const filterByUpdate = (event) => {
-		return event.updated != null
+		return event.updated !== null
 	}
 
 	//FilterBy SEARCH
@@ -439,7 +425,7 @@ const Filter = (props) => {
 		let newListEvents = props.productsData
 
 			//SEARCH
-			if(search != ""){
+			if(search !== ""){
 				newListEvents = newListEvents.filter(filterBySearch);
 			}
 
@@ -455,6 +441,8 @@ const Filter = (props) => {
 	
 				case 30:
 					newListEvents = newListEvents.filter(filterByGenderUnisex);
+					break;
+				default:
 					break;
 			}
 
@@ -493,8 +481,9 @@ const Filter = (props) => {
 					);
 					break; 
 				case 50:
-					newListEvents = newListEvents
-					break;            
+					break;     
+				default:
+					break;       
 
 			}
 
@@ -514,6 +503,8 @@ const Filter = (props) => {
 					break; 
 				case 50:
 					newListEvents = newListEvents.filter(filterByCategoryAll);
+					break;
+				default:
 					break;
 			}
 
@@ -564,6 +555,8 @@ const Filter = (props) => {
 				case 150:
 					newListEvents = newListEvents.filter(filterBySubCategoryOtros);
 					break;
+				default:
+					break;
 			}
 
 		//ACTUALIZAR LISTA	
@@ -572,11 +565,11 @@ const Filter = (props) => {
 	
 	const buildSubCategory = () => {
 		
-		if(category == ""){
+		if(category === ""){
 			return ""
 		}
 		else{
-			if(category == 10){			
+			if(category === 10){			
 				return(
 					<FormControl className="form-control">
 						<InputLabel id="subCategory">Subcategoria</InputLabel>
@@ -599,7 +592,7 @@ const Filter = (props) => {
 					</FormControl>
 				)
 			}
-			else if(category == 20){
+			else if(category === 20){
 				return(
 					<FormControl className="form-control">
 						<InputLabel id="subCategory">Subcategoria</InputLabel>
@@ -616,7 +609,7 @@ const Filter = (props) => {
 					</FormControl>
 				)
 			}
-			else if(category == 30){
+			else if(category === 30){
 				return(
 					<FormControl className="form-control">
 						<InputLabel id="subCategory">Subcategoria</InputLabel>

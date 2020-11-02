@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import Alert from '@material-ui/lab/Alert';
 import Buttons from "../../Atoms/AReusable/Buttons";
 
@@ -21,7 +21,7 @@ const InfoShipping = () => {
     texto = texto.toLowerCase();
     var i = 0
     for(i=0; i<texto.length; i++){
-       if (letras.indexOf(texto.charAt(i),0)!=-1){
+       if (letras.indexOf(texto.charAt(i),0)!==-1){
           return true;
        }
     }
@@ -32,7 +32,7 @@ const InfoShipping = () => {
   function tiene_numeros(texto){
     var i = 0
     for(i=0; i<texto.length; i++){
-        if (numeros.indexOf(texto.charAt(i),0)!=-1){
+        if (numeros.indexOf(texto.charAt(i),0)!==-1){
           return 1;
         }
     }
@@ -47,33 +47,33 @@ const InfoShipping = () => {
 
   function sendEmail(e) {
     if (
-      document.getElementById("ccedula").value == "" ||
-      document.getElementById("cnombre").value == "" ||
-      document.getElementById("capellido").value == "" ||
-      document.getElementById("cemail").value == "" ||
-      document.getElementById("ctelefono").value == "" ||
-      document.getElementById("cdireccion").value == "" 
+      document.getElementById("ccedula").value === "" ||
+      document.getElementById("cnombre").value === "" ||
+      document.getElementById("capellido").value === "" ||
+      document.getElementById("cemail").value === "" ||
+      document.getElementById("ctelefono").value === "" ||
+      document.getElementById("cdireccion").value === "" 
       ) {
       e.preventDefault();
       document.getElementById("calert").style.display = "flex"
     }
-    else if(tiene_letras(document.getElementById("ccedula").value) == true){
+    else if(tiene_letras(document.getElementById("ccedula").value) === true){
       e.preventDefault();
       document.getElementById("calertCedula").style.display = "flex"
     }
-    else if(tiene_letras(document.getElementById("ctelefono").value) == true){
+    else if(tiene_letras(document.getElementById("ctelefono").value) === true){
       e.preventDefault();
       document.getElementById("calertTelefono").style.display = "flex"
     }
-    else if(tiene_numeros(document.getElementById("cnombre").value) == true){
+    else if(tiene_numeros(document.getElementById("cnombre").value) === true){
       e.preventDefault();
       document.getElementById("calertNombre").style.display = "flex"
     }
-    else if(tiene_numeros(document.getElementById("capellido").value) == true){
+    else if(tiene_numeros(document.getElementById("capellido").value) === true){
       e.preventDefault();
       document.getElementById("calertApellido").style.display = "flex"
     }
-    else if(validar_email(document.getElementById("cemail").value) == false){
+    else if(validar_email(document.getElementById("cemail").value) === false){
       e.preventDefault();
       document.getElementById("calertEmail").style.display = "flex"
     }
