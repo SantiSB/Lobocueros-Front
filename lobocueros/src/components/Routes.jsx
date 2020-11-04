@@ -18,6 +18,7 @@ const Routes = (props) => {
     axios
       .get(
         'https://lobocuerosapi.com/'
+        
       )
       .then((response) => {
         props.setAllData(response.data)

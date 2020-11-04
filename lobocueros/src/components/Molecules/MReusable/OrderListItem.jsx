@@ -6,7 +6,7 @@ const OrderListItem = (props) => {
     return(
       <div className="item">
         <div className="image-item-order">
-          <Article image={props.item.pictures[0]}></Article>
+          <Article image={props.item != null ? props.item.pictures[0] : ""}></Article>
         </div>
         <div className="info-item-order">
           <InfoItemBuy item={props.item}></InfoItemBuy>

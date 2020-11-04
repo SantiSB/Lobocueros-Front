@@ -9,8 +9,8 @@ import {
 	SET_COUNTER,
 	SET_COLOR,
 	SET_ITEMS_IN_CART,
-	SET_LIST_FILTER
-	
+	SET_LIST_FILTER,
+	CHANGE_EMAIL
 } from "./actions"; 
 
 const setVisibleMiniCart = (event) => ({
@@ -68,6 +68,11 @@ const setListFilter = (event) => ({
 	event,
 });
 
+const changeEmail = (event) => ({
+	type: CHANGE_EMAIL,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
@@ -79,5 +84,6 @@ export {
 	setCounter,
 	setColorSelected,
 	setItemsInCart,
-	setListFilter
+	setListFilter,
+	changeEmail
 };

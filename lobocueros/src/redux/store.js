@@ -9,7 +9,10 @@ import {
   PRINCIPAL_IMAGE_DETAIL,
   MAIN_PICTURE_CARD,
   SET_COUNTER, SET_COLOR,
-  SET_ITEMS_IN_CART, SET_LIST_FILTER
+  SET_ITEMS_IN_CART, 
+  SET_LIST_FILTER,
+  CHANGE_EMAIL
+
 } from "./actions";
 
 const initialStore = {
@@ -23,7 +26,8 @@ const initialStore = {
   counter: "",
   colorSelected: "",
   itemsInCart: "",
-  listFilter: []
+  listFilter: [],
+  valueEmail: ""
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -83,6 +87,11 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         listFilter: action.event
+      };
+    case CHANGE_EMAIL:
+      return {
+        ...state,
+        valueEmail: action.event
       };
     default:
       return state;

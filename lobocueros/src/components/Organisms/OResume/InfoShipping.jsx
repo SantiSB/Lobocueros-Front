@@ -1,9 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
+import { setVisibleMiniCart, changeEmail } from "../../../redux/actionsCreators";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 // import emailjs from 'emailjs-com';
 import Alert from '@material-ui/lab/Alert';
-import Buttons from "../../Atoms/AReusable/Buttons";
+import Buttons from "../../Atoms/AReusable/Buttons"; 
 
 const useStyles = makeStyles((theme) => ({
   direction:{
@@ -14,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const InfoShipping = () => {
+const InfoShipping = (props) => {
 
   var letras="abcdefghyjklmnñopqrstuvwxyz";
   function tiene_letras(texto){
@@ -90,6 +92,7 @@ const InfoShipping = () => {
 
 
   }
+  console.log("qwe", props.valueEmail)
 
   const classes = useStyles();
   return (
@@ -109,12 +112,21 @@ const InfoShipping = () => {
         <TextField id="cdireccion" label="Dirección" variant="outlined" className={classes.field}/>
         <TextField id="ccedula" label="Cedula" variant="outlined" className={classes.field}/>
         <br></br>
-        <TextField id="cemail" label="E-Mail" variant="outlined" className={classes.field}/>
+        <TextField id="cemail" label="E-Mail" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)}/>
         <TextField id="ctelefono" label="Teléfono" variant="outlined" className={classes.field}/>
-        <Buttons type="Send" text="Confirmar"></Buttons>
+        <Buttons type="Send" text="Confirmar"></Buttons> 
       </form>
     </div>
   );
 };
-
-export default InfoShipping
+const mapStateToProps = (state) => ({
+  visibleMiniCart: state.visibleMiniCart,
+  valueEmail: state.valueEmail
+});
+  
+const mapDispatchToProps = {
+  setVisibleMiniCart,
+  changeEmail
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(InfoShipping);
