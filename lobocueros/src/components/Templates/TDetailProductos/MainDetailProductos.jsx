@@ -13,7 +13,7 @@ const MainDetailProduct = (props) => {
 	const idRoute = window.location.pathname.substr(11)
 
 	function isId(product){
-		return product.id === idRoute
+		return product.id == idRoute
 	}
 
 	var productDetail = {}

@@ -7,12 +7,12 @@ const PrincipalImage = (props) => {
 			function isMain(picture){
 				return picture.mainPicture === true
 			}
-			if(props.productDetail.pictures !== null){
+			if(props.productDetail.pictures != null){
 				return props.productDetail.pictures.find(isMain).img
 			}
 	}
 	if(props.principalImageDetail === ""){
-		if(mainPicture() !== undefined){
+		if(mainPicture() != undefined){
 			props.setPrincipalImageDetail(mainPicture())
 		} 
 	}

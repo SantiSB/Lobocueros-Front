@@ -26,7 +26,7 @@ const InfoContact = () => {
           return true;
        }
     }
-    return false;
+    return false; 
   }
 
   var numeros="0123456789";
