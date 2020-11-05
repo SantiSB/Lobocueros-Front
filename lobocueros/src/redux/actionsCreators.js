@@ -10,7 +10,12 @@ import {
 	SET_COLOR,
 	SET_ITEMS_IN_CART,
 	SET_LIST_FILTER,
-	CHANGE_EMAIL
+	CHANGE_EMAIL,
+	CHANGE_FULL_NAME,
+	CHANGE_SHIPPING_ADDRESS,
+	CHANGE_SHIPPING_CITY,
+	CHANGE_TELEPHONE,
+	SEND_BUY
 } from "./actions"; 
 
 const setVisibleMiniCart = (event) => ({
@@ -73,6 +78,31 @@ const changeEmail = (event) => ({
 	event,
 });
 
+const changeFullName = (event) => ({
+	type: CHANGE_FULL_NAME,
+	event,
+});
+
+const changeShippingAddress = (event) => ({
+	type: CHANGE_SHIPPING_ADDRESS,
+	event,
+});
+
+const changeShippingCity = (event) => ({
+	type: CHANGE_SHIPPING_CITY,
+	event,
+});
+
+const changeTelephone = (event) => ({
+	type: CHANGE_TELEPHONE,
+	event,
+});
+
+const sendBuy = (event) => ({
+	type: SEND_BUY,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
@@ -85,5 +115,10 @@ export {
 	setColorSelected,
 	setItemsInCart,
 	setListFilter,
-	changeEmail
+	changeEmail,
+	changeFullName,
+	changeShippingAddress,
+	changeShippingCity,
+	changeTelephone,
+	sendBuy,
 };

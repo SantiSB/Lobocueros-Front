@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setVisibleMiniCart, changeEmail } from "../../../redux/actionsCreators";
+import { setVisibleMiniCart} from "../../../redux/actionsCreators";
+import Button from '@material-ui/core/Button';
 import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeOrder = (props) => { 
@@ -20,10 +21,11 @@ const ResumeOrder = (props) => {
   let total = valores.reduce((a, b) => a + b, 0);
 
   var md5 = require('md5');
-  var signature = md5(`fD53F5TDb3c1sSDWHC1c7VdABt~900142~COMPRAPRUEBA~${total}~COP`)
-  
-  console.log("qwe", document.getElementById("cemail") != null ? document.getElementById("cemail").value : "jj" );
+  // “ApiKey~merchantId~referenceCode~amount~currency”
+  var signature = md5(`4Vj8eK4rloUd272L48hsrarnUA~508029~test1~${total}~COP`)
 
+  console.log("qaz", props.sendBuy)
+  
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
@@ -34,38 +36,48 @@ const ResumeOrder = (props) => {
           <p className="total">Total: <span>${total}</span></p>
           <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div> 
-        <form method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu">
-          <input name="merchantId"    type="hidden"  value="900142"></input>
-          <input name="accountId"     type="hidden"  value="906774"></input>
-          <input name="description"   type="hidden"  value="906774" ></input>
-          <input name="referenceCode" type="hidden"  value="COMPRAPRUEBA" ></input>
-          <input name="amount"        type="hidden"  value={total}   ></input>
+        <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+          <input name="merchantId"    type="hidden"  value="508029"   ></input>
+          <input name="accountId"     type="hidden"  value="512321" ></input>
+          <input name="description"   type="hidden"  value="TestPAYU"  ></input>
+          <input name="referenceCode" type="hidden"  value="test1" ></input>
+
           <input name="tax"           type="hidden"  value="0"  ></input>
           <input name="taxReturnBase" type="hidden"  value="0" ></input>
           <input name="currency"      type="hidden"  value="COP" ></input>
-          <input name="signature"     type="hidden"  value={signature}  ></input>
-          <input name="test"          type="hidden"  value="1" ></input>
-          <input name="buyerEmail"    type="hidden"  value={props.valueEmail}></input>
-          <input name="responseUrl"    type="hidden"  value="http://www.test.com/response" ></input>
-          <input name="confirmationUrl" type="hidden"  value="http://www.test.com/confirmation" ></input> 
-          <input name="Submit"        type="submit"  value="Enviar" ></input>
-        </form>
-      </div>
 
-      <div className="button-resume">
-        <Buttons type="Buy" text="Pagar"></Buttons>
+          <input name="test"          type="hidden"  value="1" ></input>
+
+          <input name="signature"     type="hidden"  value={signature}  ></input>
+          <input name="buyerEmail"    type="hidden"  value={props.valueEmail} ></input>
+          <input name="amount"        type="hidden"  value={total}   ></input>
+          <input name="buyerFullName"    type="hidden"  value={props.valueFullName} ></input>
+          <input name="shippingAddress"    type="hidden"  value={props.shippingAddress} ></input>
+          <input name="shippingCity"    type="hidden"  value={props.shippingCity} ></input>
+          <input name="shippingCountry"    type="hidden"  value="CO" ></input>
+          <input name="telephone"    type="hidden"  value={props.telephone} ></input>
+          <input name="responseUrl"    type="hidden"  value="http://localhost:3000/compraexitosa" ></input>
+          <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" ></input>
+          {
+            props.sendBuy == true ? <Button name="Submit" type="submit" value="Enviar" variant="contained" color="secondary" >PAGAR</Button> : <Button variant="contained" disabled >PAGAR</Button>
+          }
+        </form>
       </div>
     </div>
   );
 };
 const mapStateToProps = (state) => ({
   visibleMiniCart: state.visibleMiniCart,
-  valueEmail: state.valueEmail
+  valueEmail: state.valueEmail,
+  valueFullName: state.valueFullName,
+  shippingAddress: state.valueShippingAddress,
+  shippingCity: state.valueShippingCity,
+  telephone: state.valueTelephone,
+  sendBuy: state.sendBuy
 });
   
 const mapDispatchToProps = {
   setVisibleMiniCart,
-  changeEmail
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(ResumeOrder);

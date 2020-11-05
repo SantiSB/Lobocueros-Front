@@ -19,7 +19,7 @@ const DetailOrder = () => {
         {
         arrayItems ? arrayItems.map(function(item, index){
           return <OrderListItem item={item} index={index}></OrderListItem>
-        }
+        } 
         ) 
         : []
         }

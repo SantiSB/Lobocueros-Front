@@ -11,7 +11,12 @@ import {
   SET_COUNTER, SET_COLOR,
   SET_ITEMS_IN_CART, 
   SET_LIST_FILTER,
-  CHANGE_EMAIL
+  CHANGE_EMAIL,
+  CHANGE_FULL_NAME,
+  CHANGE_SHIPPING_ADDRESS,
+  CHANGE_SHIPPING_CITY,
+  CHANGE_TELEPHONE,
+  SEND_BUY
 
 } from "./actions";
 
@@ -27,7 +32,12 @@ const initialStore = {
   colorSelected: "",
   itemsInCart: "",
   listFilter: [],
-  valueEmail: ""
+  valueEmail: "",
+  valueFullName: "",
+  valueShippingAddress: "",
+  valueShippingCity: "",
+  valueTelephone: "",
+  sendBuy: "false"
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -92,6 +102,31 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         valueEmail: action.event
+      };
+    case CHANGE_FULL_NAME:
+      return {
+        ...state,
+        valueFullName: action.event
+      };
+    case CHANGE_SHIPPING_ADDRESS:
+      return {
+        ...state,
+        valueShippingAddress: action.event
+      };
+    case CHANGE_SHIPPING_CITY:
+      return {
+        ...state,
+        valueShippingCity: action.event
+      };
+    case CHANGE_TELEPHONE:
+      return {
+        ...state,
+        valueTelephone: action.event
+      };
+    case SEND_BUY:
+      return {
+        ...state,
+        sendBuy: action.event
       };
     default:
       return state;

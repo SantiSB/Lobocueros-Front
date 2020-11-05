@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
+import { sendBuy } from "../../../redux/actionsCreators";
 import Buttons from "../../Atoms/AReusable/Buttons";
 
-const ResumeBuy = () => {
+const ResumeBuy = (props) => {
 
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
     var arrayItems = JSON.parse(localStorage.getItem('carrito'))
@@ -29,10 +31,19 @@ const ResumeBuy = () => {
         
       </div>
       <div className="button-resume">
-        <a href="/resumen"><Buttons type="Buy" text="Comprar"></Buttons></a>
+        <a href="/resumen" ><Buttons type="Buy" text="Comprar"></Buttons></a>
       </div>
     </div>
   );
 };
 
-export default ResumeBuy
+
+const mapStateToProps = (state) => ({
+  sendBuy: state.sendBuy
+});
+  
+const mapDispatchToProps = {
+  sendBuy
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(ResumeBuy);
