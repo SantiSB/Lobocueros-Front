@@ -32,11 +32,11 @@ const Header = (props) => {
             <span>Marroquineros de Corazón</span>
           </div>
           <div className="menu-headerUp">
-              <form className="search-form" style={props.visibleSearchForm === false ? {visibility: "hidden"} : {visibility: "visible"}}>
+              {/* <form className="search-form" style={props.visibleSearchForm === false ? {visibility: "hidden"} : {visibility: "visible"}}>
                 <input type="text"></input>
               </form> 
               <i onClick={()=>props.setVisibleSearchForm(props.visibleSearchForm === false ? true : false)}><img src={Search_White} alt="search"></img></i>
-              <LoginModal></LoginModal>
+              <LoginModal></LoginModal> */}
               <MiniCart></MiniCart>
               <span>{arrayItems.length}</span>
           </div>

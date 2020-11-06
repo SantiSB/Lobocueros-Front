@@ -2,6 +2,7 @@ import React from "react";
 import Accepted from '../../../assets/Icons/Accepted.svg'
 import OrderListItem from "../../Molecules/MReusable/OrderListItem";
 import Buttons from "../../Atoms/AReusable/Buttons";
+import axios from 'axios';
 
 const PurchaseTrue = () => {
 
@@ -13,7 +14,18 @@ const PurchaseTrue = () => {
     var arrayItems = []
   }  
 
+  var valores = []
+  const getValores = arrayItems.map(function(item) {
+    valores.push(item.totalPrice)
+  })
+
+  let total = valores.reduce((a, b) => a + b, 0);
+
   console.log("qaz", localStorage.getItem('nombre'))
+  console.log("qaz", localStorage.getItem('ciudad'))
+  console.log("qaz", localStorage.getItem('cedula'))
+  console.log("qaz", localStorage.getItem('direccion'))
+  console.log("qaz", localStorage.getItem('telefono'))
 
   var arrayPurchaseProducts = []
   arrayItems.map(function(product){
@@ -32,69 +44,77 @@ const PurchaseTrue = () => {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
-//   {
-//     "transactionState":1,
-//     "description":"asd",
-//     "referenceCode":"COMPRA1",
-//     "amount":20000,
-//     "tax":0,
-//     "taxReturnBase": 0,
-//     "currency": "COP",
-//     "signature": "aqw899ASD32387ajwfrtd668",
-//     "buyerEmail": "test@test.com",
-//     "buyerFullName": "test test",
-//     "shippingAddress": "Crr22",
-//     "shippingCity": "Pasto",
-//     "shippingCountry": "CO",
-//     "telephone": "3100029774",
-//     "paymentMethod": "MASTER CARD",
-//     "paymentMethodType": "CREDIT CARD",
-//     "purchaseProducts":[
-//         {
-//             "product":1,
-//             "quantity":5,
-//             "amount":5000
-//         },
-//         {
-//             "product":2,
-//             "quantity":2,
-//             "amount":5000
-//         }
-//     ]
-// }
+  var VtransactionState = getParameterByName('transactionState');
+  var Vdescription = getParameterByName('description');
+  var VreferenceCode = getParameterByName('referenceCode');
+  var VTX_TAX = getParameterByName('TX_TAX');
+  var VTX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE = getParameterByName('TX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE');
+  var Vcurrency = getParameterByName('currency');
+  var Vamount = total;
+  var Vsignature = getParameterByName('signature');
+  var VbuyerEmail = getParameterByName('buyerEmail');
+  var VbuyerFullName = localStorage.getItem('nombre');
+  var VshippingAddress = localStorage.getItem('direccion')
+  var VshippingCity = localStorage.getItem('ciudad')
+  var VshippingCountry = "CO";
+  var Vtelephone = getParameterByName('telephone');
+  var VlapPaymentMethod = getParameterByName('lapPaymentMethod');
+  var VlapPaymentMethodType = getParameterByName('lapPaymentMethodType');
 
-  var transactionState = getParameterByName('transactionState');
-  var description = getParameterByName('description');
-  var referenceCode = getParameterByName('referenceCode');
-  var TX_TAX = getParameterByName('TX_TAX');
-  var TX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE = getParameterByName('TX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE');
-  var currency = getParameterByName('currency');
-  var signature = getParameterByName('signature');
-  var buyerEmail = getParameterByName('buyerEmail');
-  var telephone = getParameterByName('telephone');
-  var lapPaymentMethod = getParameterByName('lapPaymentMethod');
-  var lapPaymentMethodType = getParameterByName('lapPaymentMethodType');
+  var purchase = {
+    "transactionState": VtransactionState,
+    "description": Vdescription,
+    "referenceCode": VreferenceCode,
+    "tax": VTX_TAX,
+    "taxReturnBase": VTX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE,
+    "currency": Vcurrency,
+    "amount": Vamount,
+    "signature": Vsignature,
+    "buyerEmail": VbuyerEmail,
+    "buyerFullName": VbuyerFullName,
+    "shippingAddress": VshippingAddress,
+    "shippingCity": VshippingCity,
+    "shippingCountry": VshippingCountry,
+    "telephone": Vtelephone,
+    "paymentMethod": VlapPaymentMethod,
+    "paymentMethodType" : VlapPaymentMethodType,
+    "purchaseProducts": arrayPurchaseProducts
+  };
 
-  console.log("qwert", 
-    transactionState, 
-    description, 
-    referenceCode, 
-    //amount, 
-    TX_TAX, 
-    TX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE, 
-    currency, 
-    signature, 
-    buyerEmail, 
-    //buyerFullName, 
-    //shippingAddress, 
-    // shippingCity, 
-    // shippingCountry, 
-    telephone, 
-    lapPaymentMethod,
-    lapPaymentMethodType,
-    arrayPurchaseProducts
-    )
+  axios.post('https://lobocuerosapi.com/purchases/', {
+      "transactionState": VtransactionState,
+      "description": Vdescription,
+      "referenceCode": VreferenceCode,
+      "tax": VTX_TAX,
+      "taxReturnBase": VTX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE,
+      "currency": Vcurrency,
+      "amount": Vamount,
+      "signature": Vsignature,
+      "buyerEmail": VbuyerEmail,
+      "buyerFullName": VbuyerFullName,
+      "shippingAddress": VshippingAddress,
+      "shippingCity": VshippingCity,
+      "shippingCountry": VshippingCountry,
+      "telephone": Vtelephone,
+      "paymentMethod": VlapPaymentMethod,
+      "paymentMethodType" : VlapPaymentMethodType,
+      "purchaseProducts": arrayPurchaseProducts
     
+  })
+    .then(function(res) {
+      if(res.status==201) {
+        // mensaje.innerHTML = 'Se han enviado los datos' + res.data.id;
+        console.log("qwe", res)
+      }
+    })
+    .catch(function(err) {
+      console.log("qwe", err);
+    })
+    .then(function() {
+      // loading.style.display = 'none';
+    });
+
+
   return (
     <div className="container-purchase-true">
       <div className="title-purchase">
@@ -103,9 +123,13 @@ const PurchaseTrue = () => {
       </div>
       <div className="list-products-purchase">
         <div>
-          <OrderListItem></OrderListItem>
-          <OrderListItem></OrderListItem>
-          <OrderListItem></OrderListItem>
+        {
+          arrayItems ? arrayItems.map(function(item, index){
+            return <OrderListItem item={item} index={index}></OrderListItem>
+          } 
+          ) 
+          : []
+        }
         </div>
       </div>
       <div className="btn-purchase-container">

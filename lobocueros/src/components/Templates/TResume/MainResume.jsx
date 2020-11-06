@@ -15,9 +15,9 @@ const MainResume = () => {
 					<div className="info-shipping">
 						<InfoShipping></InfoShipping>
 					</div>
-					<div className="pay-method-table">
+					{/* <div className="pay-method-table">
 						<PayMethodTable></PayMethodTable>
-					</div>
+					</div> */}
 					<div className="detail-order">
 						<DetailOrder></DetailOrder>
 					</div> 

@@ -163,7 +163,7 @@ const InfoShipping = (props) => {
   const classes = useStyles();
   return (
     <div  className="container-InfoShipping" >
-      <p className="title-steep">Paso 1 de 3</p>
+      <p className="title-steep">Paso 1 de 2</p>
       <p className="subtitle-steep">Diligenciar información de envío</p>
       <Alert id="calert" severity="error" style={{display: "none"}}>POR FAVOR LLENA TODOS LOS CAMPOS</Alert>
       <Alert id="calertCedula" severity="error" style={{display: "none"}}>LA CEDULA SOLO PUEDE TENER NUMEROS</Alert>
@@ -180,7 +180,7 @@ const InfoShipping = (props) => {
         <br></br>
         <TextField id="cemail" label="E-Mail" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)} />
         <TextField id="ctelefono" label="Teléfono" variant="outlined" className={classes.field} onChange={(e)=>props.changeTelephone(e.target.value)}/>
-        <Button variant="contained" color="primary" onClick={sendEmail}>Confirmar datos</Button>
+        <Button variant="contained" color="primary" onClick={sendEmail} style={{margin: "1rem 0.5rem"}}>Confirmar datos</Button>
       </form>
     </div>
   );

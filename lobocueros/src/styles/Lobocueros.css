@@ -524,7 +524,7 @@ div[role=presentation] {
 .header-main .headerUp .menu-headerUp {
   grid-area: menu-headerUp;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 .header-main .headerUp .menu-headerUp i {
@@ -540,7 +540,7 @@ div[role=presentation] {
   height: 25px;
 }
 .header-main .headerUp .menu-headerUp .mini-cart-icon {
-  margin: 0rem;
+  margin: 0.5rem;
 }
 .header-main .headerDown {
   grid-area: headerDown;
@@ -1812,8 +1812,8 @@ div[role=presentation] {
 
 .pay-container {
   display: grid;
-  grid-template-areas: "methods-pay secure-pay";
-  grid-template-columns: 50% 50%;
+  grid-template-areas: "methods-pay";
+  grid-template-columns: 100%;
   grid-template-rows: auto;
   background: #FFFFFF;
   margin: 1rem;

@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 				</div>
 				
 				<div className="btn-buy-mini-cart">
-					<Button className={classes.btnBuy} variant="outlined">COMPRAR</Button>
+					<a href="/carrito"><Button className={classes.btnBuy} variant="outlined">COMPRAR</Button></a>
 				</div>
 			</div>
 		</>
