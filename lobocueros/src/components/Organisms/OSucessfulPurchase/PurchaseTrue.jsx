@@ -1,4 +1,5 @@
 import React from "react";
+import Failed from '../../../assets/Icons/Failed.svg'
 import Accepted from '../../../assets/Icons/Accepted.svg'
 import OrderListItem from "../../Molecules/MReusable/OrderListItem";
 import Buttons from "../../Atoms/AReusable/Buttons";
@@ -112,14 +113,22 @@ const PurchaseTrue = () => {
     })
     .then(function() {
       // loading.style.display = 'none';
-    });
+    }); 
 
+    
 
   return (
     <div className="container-purchase-true">
       <div className="title-purchase">
-        <i><img alt="acepted" src={Accepted}></img></i>
-        <p>Compra Exitosa</p>
+        {VtransactionState === "4" 
+          ? <i><img alt="acepted" src={Accepted}></img></i>
+          : <i><img alt="FAILDED" src={Failed}></img></i>
+        }
+        {VtransactionState === "4" 
+          ? <p>Compra Exitosa</p>
+          : <p>Compra Fallida</p>
+        }
+        
       </div>
       <div className="list-products-purchase">
         <div>
@@ -133,7 +142,10 @@ const PurchaseTrue = () => {
         </div>
       </div>
       <div className="btn-purchase-container">
-        <a href="/productos"><Buttons type="PayAgain" text="Seguir Comprando"></Buttons></a>
+      {VtransactionState === "4" 
+          ? <a href="/productos" onClick={()=>localStorage.clear()}><Buttons type="PayAgain" text="Seguir Comprando"></Buttons></a>
+          : <a href="/carrito" ><Buttons type="PayAgain" text="Volver a Intentar"></Buttons></a>
+        }
       </div>
     </div>
   );
