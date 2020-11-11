@@ -66,8 +66,11 @@ const PurchaseTrue = () => {
   console.log("qwer", apiKey);
 
   var VtransactionState = getParameterByName('transactionState');
-  var Vdescription = getParameterByName('description');
+  var VtransactionId = getParameterByName('transactionId');
+  var VreferencePool = getParameterByName('reference_pol');
   var VreferenceCode = getParameterByName('referenceCode');
+  var Vcus = getParameterByName('cus');
+  var Vdescription = getParameterByName('description');
   var VTX_TAX = getParameterByName('TX_TAX');
   var VTX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE = getParameterByName('TX_TAX_ADMINISTRATIVE_FEE_RETURN_BASE');
   var Vcurrency = getParameterByName('currency');
@@ -77,7 +80,7 @@ const PurchaseTrue = () => {
   var VbuyerFullName = localStorage.getItem('nombre');
   var VshippingAddress = localStorage.getItem('direccion')
   var VshippingCity = localStorage.getItem('ciudad')
-  var VpseBanck = getParameterByName('pseBank');
+  var VpseBank = getParameterByName('pseBank');
   var VshippingCountry = "CO";
   var Vtelephone = getParameterByName('telephone');
   var VmerchantId = getParameterByName('merchantId');
@@ -88,8 +91,6 @@ const PurchaseTrue = () => {
   var VTX_VALUE =  value.toFixed(1);
   var firma_cadena = `${apiKey}~${VmerchantId}~${VreferenceCode}~${VTX_VALUE}~${Vcurrency}~${VtransactionState}`;
   var VfirmaCreada = md5(firma_cadena);
-
-  console.log("juanita", Vfirma, VfirmaCreada)
 
   var purchase = {
     "transactionState": VtransactionState,
@@ -141,7 +142,6 @@ const PurchaseTrue = () => {
       console.log("qwe", err);
     })
     .then(function() {
-      // loading.style.display = 'none';
     }); 
 
     
@@ -191,24 +191,37 @@ const PurchaseTrue = () => {
       </div>
       {
         Vfirma == VfirmaCreada 
-        ? <div>
-            <h2>Resumen de la Transacción</h2>
-            <p>Estado de la transaccion</p>
-            <p>ID de la transaccion</p>
-            <p>Referencia de la venta</p>
-            <p>Referencia de la transaccion</p>
+        ? <div className="resume-purchase">
+            <h1>Resumen de la Transacción</h1>
+            <hr></hr>
+            <br></br>
+
+            <h3>Estado de la transaccion</h3>
+            <p>{VtransactionState}</p>
+            <h3>ID de la transaccion</h3>
+            <p>{VtransactionId}</p>
+            <h3>Referencia de la venta</h3>
+            <p>{VreferencePool}</p>
+            <h3>Referencia de la transaccion</h3>
+            <p>{VreferenceCode}</p>
             {
-              VpseBanck != null 
+              VpseBank != null && VpseBank != ""
               ? <div>
-                  <p>cus</p>
-                  <p>Banco</p>
+                  <h3>cus</h3>
+                  <p>{Vcus}</p>
+                  <h3>Banco</h3>
+                  <p>{VpseBank}</p>
                 </div>
               : ""
             }
-            <p>Valor total</p>
-            <p>Moneda</p>
-            <p>Descripción</p>
-            <p>Entidad</p>
+            <h3>Valor total</h3>
+            <p>{value}</p>
+            <h3>Moneda</h3>
+            <p>{Vcurrency}</p>
+            <h3>Descripción</h3>
+            <p>{Vdescription}</p>
+            <h3>Entidad</h3>
+            <p>{VlapPaymentMethod}</p>
             
           </div>
         : <h1>Error validando firma digital.</h1>
