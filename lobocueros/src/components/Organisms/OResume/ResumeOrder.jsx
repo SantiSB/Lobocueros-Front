@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios"
 import { connect } from "react-redux";
 import { setVisibleMiniCart} from "../../../redux/actionsCreators";
 import Button from '@material-ui/core/Button';
@@ -20,12 +21,40 @@ const ResumeOrder = (props) => {
 
   let total = valores.reduce((a, b) => a + b, 0);
 
+  const [apiKey, setApiKey] = useState("")
+  const [merchantId, setMerchantId] = useState("")
+
+  axios
+    .get(
+      'https://lobocuerosapi.com/companyInformation/?limit=10'
+      
+    )
+    .then((response) => {
+      function esApiKey(element) { 
+        return element.name == 'apikey-test';
+      }
+      function esMerchantId(element) { 
+        return element.name == 'merchantId-test';
+      }
+      setApiKey(response.data.results.find(esApiKey).value)
+      setMerchantId(response.data.results.find(esMerchantId).value)
+      // apiKey = response.data.results.find(esApiKey).value
+    })
+    .catch((e) => {
+    });
+
+
+  console.log("qwer", apiKey);
+  console.log("qwer", merchantId);
+  
+  function getRandomArbitrary() {
+    return "LOBO"+(Math.random() * (99999999999999999999 - 1) + 1).toFixed(0);
+  }
+
   var md5 = require('md5');
   // “ApiKey~merchantId~referenceCode~amount~currency”
-  var signature = md5(`4Vj8eK4rloUd272L48hsrarnUA~508029~test1~${total}~COP`)
+  var signature = md5(`${apiKey}~${merchantId}~${getRandomArbitrary()}~${total}~COP`)
 
-  console.log("qaz", props.sendBuy)
-  
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
