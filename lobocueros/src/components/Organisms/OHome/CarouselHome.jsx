@@ -18,6 +18,7 @@ const CarouselHome = (props) => {
 
 	const totalItems = props.productsData
 	
+	
     return(
 		<>
 			<div className="carousel-home">

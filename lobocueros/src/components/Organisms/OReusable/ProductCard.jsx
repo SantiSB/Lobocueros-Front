@@ -7,12 +7,12 @@ import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
  
 const ProductCard = (props) => {
-	const buildMainPicture = (pictures) => {
-		function isMain(picture){
-			return picture.mainPicture === true
+	const buildMainPicture = (images) => {
+		function isMain(image){
+			return image.mainPicture === true
 		}
-		if(pictures != null){
-			return pictures.find(isMain).img
+		if(images != null){
+			return images.find(isMain).image
 		}
 	} 
 	const itemProduct = props.item != null ? props.item : {}
@@ -22,7 +22,7 @@ const ProductCard = (props) => {
 				<CardContent className="card-content" >
 					<a href={`/productos/${itemProduct.id}`}> 
 						<div className="image-product-card" >
-							<img src={buildMainPicture(itemProduct.pictures)} alt="main-img"></img>
+							<img src={buildMainPicture(itemProduct.images)} alt="main-img"></img>
 						</div>
 						<div className="title-product-card">
 							<h2>{itemProduct.title}</h2>

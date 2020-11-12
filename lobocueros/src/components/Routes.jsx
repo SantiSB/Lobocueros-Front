@@ -28,10 +28,11 @@ const Routes = (props) => {
       });
     axios
       .get(
-        'https://my-json-server.typicode.com/SantiSB/JsonDB/results'
+        'https://lobocuerosapi.com/products/'
       )
       .then((response) => {
-        props.setProductsData(response.data)
+        console.log("response", response.data.results)
+        props.setProductsData(response.data.results)
         
       })
       .catch((e) => {
