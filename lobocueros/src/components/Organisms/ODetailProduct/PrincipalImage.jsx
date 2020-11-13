@@ -3,13 +3,17 @@ import { connect} from "react-redux";
 import { setAllData, setProductsData, setPrincipalImageDetail } from "../../../redux/actionsCreators";
 
 const PrincipalImage = (props) => {
+	console.log("qwe", props.productDetail)
+
 	const mainPicture = () => {
-			function isMain(picture){
-				return picture.mainPicture === true
-			}
-			if(props.productDetail.pictures != null){
-				return props.productDetail.pictures.find(isMain).img
-			}
+		
+
+		function isMain(image){
+			return image.mainPicture === true
+		}
+		if(props.productDetail.images != null){
+			return props.productDetail.images.find(isMain).image
+		}
 	}
 	if(props.principalImageDetail === ""){
 		if(mainPicture() != undefined){
@@ -17,8 +21,7 @@ const PrincipalImage = (props) => {
 		} 
 	}
 
-    return( 
-		
+    return( 	
 		<div className="principal-image">
 			<img alt="main-img" src={props.principalImageDetail}></img>
 		</div>

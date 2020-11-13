@@ -40,7 +40,7 @@ const ItemMiniCart = (props) => {
     return (
         <div className="item-mini-cart">
             <div className="image-item-buy">
-                <img src={item.pictures[0].img} alt="img"></img>
+                <img src={item.images[0].image} alt="img"></img>
             </div>
             <div className="info-item-buy">
                 <div>

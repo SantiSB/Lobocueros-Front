@@ -5,23 +5,23 @@ import { setAllData, setProductsData, setPrincipalImageDetail } from "../../../r
 
 const MiniImages = (props) => {
 	var arrayImg = []
-	const productItemGrid = (pictures) => {
-		if(pictures != null){
-			pictures.map(function(picture){
-				arrayImg.push(picture.img)
+	const productItemGrid = (images) => {
+		if(images != null){
+			images.map(function(image){
+				arrayImg.push(image.image)
 			})
 		}
 		
-		return	arrayImg.map(function(picture){
+		return	arrayImg.map(function(image){
 					return  <Grid item xs={4} md={2} lg={2}>
-								<img alt="pricipal-img" src={picture} onClick={()=>props.setPrincipalImageDetail(picture)}></img>
+								<img alt="pricipal-img" src={image} onClick={()=>props.setPrincipalImageDetail(image)}></img>
 							</Grid>
 				})  
 	}
 	return(
 		<div className="mini-images-grid">
 			<Grid container spacing={1}>
-				{productItemGrid(props.productDetail.pictures)}
+				{productItemGrid(props.productDetail.images)}
 			</Grid>
 		</div>
 		

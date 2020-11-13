@@ -21,11 +21,10 @@ const MainDetailProduct = (props) => {
 		productDetail = props.productsData.find(isId)
 	}
 
-
     return(
 		<div className="detail-product-main">
 			<div className="breadcrumb">
-				<BreadcrumbDetailProduct breadcrumb={productDetail.category}></BreadcrumbDetailProduct>	
+				<BreadcrumbDetailProduct breadcrumb={productDetail.categoryType != null ? productDetail.categoryType.category.name : ""}></BreadcrumbDetailProduct>	
 			</div>
  
 			<div className="details-product"> 

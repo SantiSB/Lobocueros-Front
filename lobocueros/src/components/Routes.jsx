@@ -17,30 +17,17 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-        'https://lobocuerosapi.com/'
-        
+        props.pageActual == 0
+          ? `https://lobocuerosapi.com/products/?limit=1`
+          : `https://lobocuerosapi.com/products/?limit=1&offset=${(props.pageActual-1)*1}`
       )
       .then((response) => {
         props.setAllData(response.data)
-        
-      })
-      .catch((e) => {
-      });
-    axios
-      .get(
-        'https://lobocuerosapi.com/products/'
-      )
-      .then((response) => {
-        console.log("response", response.data.results)
         props.setProductsData(response.data.results)
-        
       })
       .catch((e) => {
       });
-  }, [])
-
-  
-
+  }, [props.pageActual])
   
   return (
     <Router>
@@ -62,6 +49,7 @@ const Routes = (props) => {
 const mapStateToProps = (state) => ({
   allData: state.allData,
   productsData: state.productsData,
+  pageActual: state.pageActual
 });
 const mapDispatchToProps = {
   setAllData,

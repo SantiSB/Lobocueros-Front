@@ -16,7 +16,8 @@ import {
   CHANGE_SHIPPING_ADDRESS,
   CHANGE_SHIPPING_CITY,
   CHANGE_TELEPHONE,
-  SEND_BUY
+  SEND_BUY,
+  SET_PAGE_ACTUAL
 
 } from "./actions";
 
@@ -37,7 +38,8 @@ const initialStore = {
   valueShippingAddress: "",
   valueShippingCity: "",
   valueTelephone: "",
-  sendBuy: "false"
+  sendBuy: "false",
+  pageActual: "0"
 };
 
 const rootReducer = (state = initialStore, action) => {
@@ -127,6 +129,11 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         sendBuy: action.event
+      };
+    case SET_PAGE_ACTUAL:
+      return {
+        ...state,
+        pageActual: action.event
       };
     default:
       return state;

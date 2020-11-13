@@ -330,79 +330,79 @@ const Filter = (props) => {
 
 	//FilterBy GENDER
 	const filterByGenderMasculino = (event) => {
-		return event.gender === "Masculino"
+		return event.gender.name === "Masculino"
 		
 	};
 	const filterByGenderFemenino = (event) => {
-		return event.gender === "Femenino"
+		return event.gender.name === "Femenino"
 		
 	};
 	const filterByGenderUnisex = (event) => {
-		return event.gender === "Unisex" || event.gender === "Masculino" || event.gender === "Femenino"
+		return event.gender.name === "Unisex" || event.gender.name === "Masculino" || event.gender.name === "Femenino"
 	};
 
 	//FilterByCategory
 	const filterByCategoryBolsos = (event) => {
-		return event.category === "Bolsos"
+		return event.categoryType.category.name === "Bolsos"
 	};
 	const filterByCategoryBilleteras = (event) => {
-		return event.category === "Billeteras"
+		return event.categoryType.category.name === "Billeteras"
 	};
 	const filterByCategoryAccesorios = (event) => {
-		return event.category === "Accesorios"
+		return event.categoryType.category.name === "Accesorios"
 	};
 	const filterByCategoryViaje = (event) => {
-		return event.category === "Viaje"
+		return event.categoryType.category.name === "Viaje"
 	};
 	const filterByCategoryAll = (event) => {
-		return event.category === "Viaje" || event.category === "Bolsos" || event.category === "Accesorios" || event.category === "Billeteras"
+		return event.categoryType.category.name === "Viaje" || event.categoryType.category.name === "Bolsos" || event.categoryType.category.name === "Accesorios" || event.categoryType.category.name === "Billeteras"
 	};
 
 	//FilterBySubCategory
 	const filterBySubCategoryCarteras = (event) => {
-		return event.subcategory === "Carteras"
+		return event.categoryType.name === "Carteras"
 	};
 	const filterBySubCategoryMochilas = (event) => {
-		return event.subcategory === "Mochilas"
+		return event.categoryType.name === "Mochilas"
 	};
 	const filterBySubCategoryManosLibres = (event) => {
-		return event.subcategory === "Manos libres"
+		return event.categoryType.name === "Manos libres"
 	};
 	const filterBySubCategoryManosLibresPelo = (event) => {
-		return event.subcategory === "Manos libres con pelo"
+		return event.categoryType.name === "Manos libres con pelo"
 	};
 	const filterBySubCategoryBolsosMola = (event) => {
-		return event.subcategory === "Bolos con mola"
+		return event.categoryType.name === "Bolos con mola"
 	};
 	const filterBySubCategoryBolsosPelo = (event) => {
-		return event.subcategory === "Bolsos con pelo"
+		return event.categoryType.name === "Bolsos con pelo"
 	};
 	const filterBySubCategoryMorrales = (event) => {
-		return event.subcategory === "Morrales"
+		return event.categoryType.name === "Morrales"
 	};
 	const filterBySubCategoryCarrieles = (event) => {
-		return event.subcategory === "Carrieles"
+		return event.categoryType.name === "Carrieles"
 	};
 	const filterBySubCategoryPortadocumentos = (event) => {
-		return event.subcategory === "Portadocumentos"
+		return event.categoryType.name === "Portadocumentos"
 	};
 	const filterBySubCategoryPortafolios = (event) => {
-		return event.subcategory === "Portafolios"
+		return event.categoryType.name === "Portafolios"
 	};
 	const filterBySubCategoryBilleteras = (event) => {
-		return event.subcategory === "Billeteras"
+		return event.categoryType.name === "Billeteras"
 	};
 	const filterBySubCategoryPasaporteras = (event) => {
-		return event.subcategory === "Pasaporteras"
+		return event.categoryType.name === "Pasaporteras"
 	};
 	const filterBySubCategoryCosmetiqueras = (event) => {
-		return event.subcategory === "Cosmetiqueras"
+		return event.categoryType.name === "Cosmetiqueras"
 	};
 	const filterBySubCategoryRiñoneras = (event) => {
-		return event.subcategory === "Riñoneras"
+		return event.categoryType.name === "Riñoneras"
 	};
 	const filterBySubCategoryOtros = (event) => {
-		return event.subcategory === "Otros"
+		return event.categoryType.name === "Otros"
 	};
 
 	//OrderBy
@@ -411,7 +411,7 @@ const Filter = (props) => {
 	}
 
 	const filterByUpdate = (event) => {
-		return event.updated !== null
+		return event.modified !== null
 	}
 
 	//FilterBy SEARCH
@@ -467,16 +467,16 @@ const Filter = (props) => {
 				case 30:
 					newListEvents = newListEvents.filter(filterByUpdate);
 					newListEvents = newListEvents.sort((a, b) =>
-						("" + b.updated).localeCompare(
-							a.updated
+						("" + b.modified).localeCompare(
+							a.modified
 						)
 					);
 					break; 
 				case 40:
 					newListEvents = newListEvents.filter(filterByUpdate);
 					newListEvents = newListEvents.sort((a, b) =>
-						("" + a.updated).localeCompare(
-							b.updated
+						("" + a.modified).localeCompare(
+							b.modified
 						)
 					);
 					break; 

@@ -15,7 +15,8 @@ import {
 	CHANGE_SHIPPING_ADDRESS,
 	CHANGE_SHIPPING_CITY,
 	CHANGE_TELEPHONE,
-	SEND_BUY
+	SEND_BUY,
+	SET_PAGE_ACTUAL
 } from "./actions"; 
 
 const setVisibleMiniCart = (event) => ({
@@ -103,6 +104,11 @@ const sendBuy = (event) => ({
 	event,
 });
 
+const setPageActual = (event) => ({
+	type: SET_PAGE_ACTUAL,
+	event,
+});
+
 export {
 	setVisibleMiniCart,
 	setVisibleSearchForm,
@@ -121,4 +127,5 @@ export {
 	changeShippingCity,
 	changeTelephone,
 	sendBuy,
+	setPageActual
 };
