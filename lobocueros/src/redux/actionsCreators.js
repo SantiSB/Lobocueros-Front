@@ -4,6 +4,7 @@ import {
 	VISIBLE_MENU,
 	ALL_DATA,
 	PRODUCTS_DATA,
+	PRODUCTS_DATA_HOME,
 	PRINCIPAL_IMAGE_DETAIL,
 	MAIN_PICTURE_CARD,
 	SET_COUNTER,
@@ -41,6 +42,11 @@ const setAllData = (event) => ({
 
 const setProductsData = (event) => ({
 	type: PRODUCTS_DATA,
+	event,
+});
+
+const setProductsDataHome = (event) => ({
+	type: PRODUCTS_DATA_HOME,
 	event,
 });
 
@@ -115,6 +121,7 @@ export {
 	setVisibleMenu,
 	setAllData,
 	setProductsData,
+	setProductsDataHome,
 	setPrincipalImageDetail,
 	setMainPictureCard,
 	setCounter,

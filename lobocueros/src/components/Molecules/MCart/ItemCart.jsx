@@ -38,11 +38,11 @@ const ItemCart = (props) => {
   
     }
 
-
+    console.log("imgee", props.item.pictures ? props.item.pictures[0] : "")
     return (
         <div className="item-cart">            
             <div className="image-item-buy">
-                <Article image={props.item.pictures[0]}></Article> 
+                <Article image={props.item.pictures ? props.item.pictures[0] : ""}></Article> 
             </div>
             <div className="info-item-buy">
                 <InfoItemBuy item={props.item}></InfoItemBuy> 

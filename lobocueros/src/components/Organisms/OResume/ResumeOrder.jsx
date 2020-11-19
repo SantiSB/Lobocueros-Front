@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios"
 import { connect } from "react-redux";
 import { setVisibleMiniCart} from "../../../redux/actionsCreators";
@@ -43,9 +43,6 @@ const ResumeOrder = (props) => {
     .catch((e) => {
     });
 
-
-  console.log("qwer", apiKey);
-  console.log("qwer", merchantId);
   
   function getRandomArbitrary() {
     return "LOBO"+(Math.random() * (99999999999999999999 - 1) + 1).toFixed(0);
@@ -54,6 +51,32 @@ const ResumeOrder = (props) => {
   var md5 = require('md5');
   // “ApiKey~merchantId~referenceCode~amount~currency”
   var signature = md5(`${apiKey}~${merchantId}~${getRandomArbitrary()}~${total}~COP`)
+
+
+  var priceTotal = 0
+  
+  const [pricee, setPricee] = useState(0)
+  function validacion(){
+    JSON.parse(localStorage.getItem('carrito')).forEach(item => {
+      axios
+      .get(
+        `https://lobocuerosapi.com/products/${item.id}`
+      )
+      .then((response) => {        
+        priceTotal += (response.data.price * item.udsItem)
+        setPricee(priceTotal)
+        // arrayPrice.push(response.data.price)
+      })
+      .catch((e) => {
+      });
+    })
+  }
+  // console.log("juanete", pricee, total)
+
+  if(pricee == total){
+    document.getElementById("form").submit()
+  }
+
 
   return (
     <div className="resume-buy-container">
@@ -65,7 +88,7 @@ const ResumeOrder = (props) => {
           <p className="total">Total: <span>${total}</span></p>
           <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div> 
-        <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+        <form method="post" id="form" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
           <input name="merchantId"    type="hidden"  value="508029"   ></input>
           <input name="accountId"     type="hidden"  value="512321" ></input>
           <input name="description"   type="hidden"  value="TestPAYU"  ></input>
@@ -88,7 +111,7 @@ const ResumeOrder = (props) => {
           <input name="responseUrl"    type="hidden"  value="http://localhost:3000/compraexitosa" ></input>
           <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" ></input>
           {
-            props.sendBuy == true ? <Button name="Submit" type="submit" value="Enviar" variant="contained" color="secondary" >PAGAR</Button> : <Button variant="contained" disabled >PAGAR</Button>
+            props.sendBuy == true ? <Button name="Submit" onClick={validacion} value="Enviar" variant="contained" color="secondary" >PAGAR</Button> : <Button variant="contained" disabled >PAGAR</Button>
           }
         </form>
       </div>

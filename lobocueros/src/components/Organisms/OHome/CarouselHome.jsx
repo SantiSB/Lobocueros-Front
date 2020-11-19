@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 const CarouselHome = (props) => {
 	const classes = useStyles();
 
-	const totalItems = props.productsData
+	const totalItems = props.productsDataHome
 	
 	
     return(
@@ -103,6 +103,7 @@ const CarouselHome = (props) => {
 
 const mapStateToProps = (state) => ({
 	allData: state.allData,
+	productsDataHome: state.productsDataHome,
 	productsData: state.productsData,
 });
 const mapDispatchToProps = {

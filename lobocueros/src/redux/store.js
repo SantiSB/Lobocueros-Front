@@ -6,6 +6,7 @@ import {
   VISIBLE_MENU,
   ALL_DATA,
   PRODUCTS_DATA,
+  PRODUCTS_DATA_HOME,
   PRINCIPAL_IMAGE_DETAIL,
   MAIN_PICTURE_CARD,
   SET_COUNTER, SET_COLOR,
@@ -27,6 +28,7 @@ const initialStore = {
   visibleMenu: false,
   allData: {},
   productsData: [],
+  productsDataHome: [],
   principalImageDetail: "",
   mainPictureCard: "",
   counter: "",
@@ -69,6 +71,11 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         productsData: action.event
+      };
+    case PRODUCTS_DATA_HOME:
+      return {
+        ...state,
+        productsDataHome: action.event
       };
     case PRINCIPAL_IMAGE_DETAIL:
       return {

@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { connect} from "react-redux";
-import { setAllData, setProductsData } from "../redux/actionsCreators";
+import { setAllData, setProductsData, setProductsDataHome } from "../redux/actionsCreators";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -18,7 +18,7 @@ const Routes = (props) => {
     axios
       .get(
         props.pageActual == 0
-          ? `https://lobocuerosapi.com/products/?limit=1`
+          ? `https://lobocuerosapi.com/products/?limit=10`
           : `https://lobocuerosapi.com/products/?limit=1&offset=${(props.pageActual-1)*1}`
       )
       .then((response) => {
@@ -28,6 +28,18 @@ const Routes = (props) => {
       .catch((e) => {
       });
   }, [props.pageActual])
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://lobocuerosapi.com/products/`
+      )
+      .then((response) => {
+        props.setProductsDataHome(response.data.results)
+      })
+      .catch((e) => {
+      });
+  })
   
   return (
     <Router>
@@ -54,6 +66,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   setAllData,
   setProductsData,
+  setProductsDataHome,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Routes);
