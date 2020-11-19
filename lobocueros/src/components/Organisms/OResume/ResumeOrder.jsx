@@ -26,8 +26,7 @@ const ResumeOrder = (props) => {
 
   axios
     .get(
-      'https://lobocuerosapi.com/companyInformation/?limit=10'
-      
+      'https://lobocuerosapi.com/companyInformation/?limit=10'      
     )
     .then((response) => {
       function esApiKey(element) { 
@@ -38,25 +37,26 @@ const ResumeOrder = (props) => {
       }
       setApiKey(response.data.results.find(esApiKey).value)
       setMerchantId(response.data.results.find(esMerchantId).value)
-      // apiKey = response.data.results.find(esApiKey).value
     })
     .catch((e) => {
     });
 
   
-  function getRandomArbitrary() {
-    return "LOBO"+(Math.random() * (99999999999999999999 - 1) + 1).toFixed(0);
+  function getRandomArbitrary(){
+    return "LOBO"+(Math.random() * (9999999 - 1) + 1).toFixed(0);
   }
 
   var md5 = require('md5');
   // “ApiKey~merchantId~referenceCode~amount~currency”
   var signature = md5(`${apiKey}~${merchantId}~${getRandomArbitrary()}~${total}~COP`)
 
-
   var priceTotal = 0
   
   const [pricee, setPricee] = useState(0)
+  const [click, setClick] = useState(false)
+
   function validacion(){
+    setClick(true)
     JSON.parse(localStorage.getItem('carrito')).forEach(item => {
       axios
       .get(
@@ -65,18 +65,17 @@ const ResumeOrder = (props) => {
       .then((response) => {        
         priceTotal += (response.data.price * item.udsItem)
         setPricee(priceTotal)
-        // arrayPrice.push(response.data.price)
       })
       .catch((e) => {
       });
     })
   }
-  // console.log("juanete", pricee, total)
-
-  if(pricee == total){
-    document.getElementById("form").submit()
+  
+  if(pricee === total){
+    if(click === true){
+      document.getElementById("form").submit()
+    }
   }
-
 
   return (
     <div className="resume-buy-container">
