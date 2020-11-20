@@ -20,9 +20,14 @@ const PrincipalImage = (props) => {
 	console.log("props", props.productDetail)
     return( 	
 		<>
-			<div className="principal-image">
-				<img alt="main-img" src={props.principalImageDetail}></img>
-			</div> 
+			{
+				props.principalImageDetail 
+				? 	<div className="principal-image">
+						<img alt="main-img" src={props.principalImageDetail}></img>
+					</div>
+				:	""
+			}
+			 
 		</>
 
     )

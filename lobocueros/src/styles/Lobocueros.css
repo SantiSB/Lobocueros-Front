@@ -1150,7 +1150,7 @@ div[role=presentation] {
   height: auto;
   grid-area: carousel-home;
 }
-.carousel-home li, .carousel-home button {
+.carousel-home li, .carousel-home button, .carousel-home .makeStyles-carousel-9 {
   outline: none;
 }
 .carousel-home .item-carousel {
@@ -1168,7 +1168,7 @@ div[role=presentation] {
   height: auto;
   grid-area: carousel-home-movil;
 }
-.carousel-home-movil li, .carousel-home-movil button {
+.carousel-home-movil li, .carousel-home-movil button, .carousel-home-movil .makeStyles-carousel-9 {
   outline: none;
 }
 .carousel-home-movil .item-carousel {

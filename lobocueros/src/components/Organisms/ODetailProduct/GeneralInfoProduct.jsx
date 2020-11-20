@@ -60,32 +60,37 @@ const GeneralInfoProduct = (props) => {
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
   };
-  
+    console.log("props", props.productDetail)
     return(
       <>
-			<div className="general-info-product">
-          <AppBar position="static" color="default">
-            <Tabs
-            value={value}
-            onChange={handleChange}
-            className={classes.tabs}
-            indicatorColor="secondary"
-            variant="scrollable"
-            scrollButtons="auto"
-            aria-label="scrollable auto tabs example"
-            >
-            <Tab label="CARACTERISTICAS" {...a11yProps(0)} />
-            <Tab label="RECOMENDACIONES DE USO" {...a11yProps(1)} />
-            </Tabs>
-          </AppBar>
-          <TabPanel value={value} index={0}>
-            <Features productDetail={props.productDetail}></Features>
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <Recommendations productDetail={props.productDetail}></Recommendations>
-          </TabPanel>
-        </div>
-		</>
+        {
+          props.productDetail.id
+            ? <div className="general-info-product">
+                <AppBar position="static" color="default">
+                  <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  className={classes.tabs}
+                  indicatorColor="secondary"
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  aria-label="scrollable auto tabs example"
+                  >
+                  <Tab label="CARACTERISTICAS" {...a11yProps(0)} />
+                  <Tab label="RECOMENDACIONES DE USO" {...a11yProps(1)} />
+                  </Tabs>
+                </AppBar>
+                <TabPanel value={value} index={0}>
+                  <Features productDetail={props.productDetail}></Features>
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                  <Recommendations productDetail={props.productDetail}></Recommendations>
+                </TabPanel>
+              </div>
+          
+            :	""
+			  }
+    </>
 		
 		
     )
