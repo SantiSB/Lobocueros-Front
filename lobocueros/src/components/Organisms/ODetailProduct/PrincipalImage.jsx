@@ -17,18 +17,12 @@ const PrincipalImage = (props) => {
 		} 
 	}
 
+	console.log("props", props.productDetail)
     return( 	
 		<>
-			{
-				props.principalImageDetail 
-					? 	<div className="principal-image">
-							<img alt="main-img" src={props.principalImageDetail}></img>
-						</div> 
-					: <div style={{fontSize: "13pt", color: "#420000"}}>
-						<h3>El producto que buscas no existe</h3>
-						<a href="/productos" style={{color: "#420000"}}>Ver Productos</a>
-						</div>
-			}
+			<div className="principal-image">
+				<img alt="main-img" src={props.principalImageDetail}></img>
+			</div> 
 		</>
 
     )

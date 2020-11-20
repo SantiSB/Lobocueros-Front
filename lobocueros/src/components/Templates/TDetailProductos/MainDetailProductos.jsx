@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect} from "react-redux";
-import { setAllData, setProductsData } from "../../../redux/actionsCreators";
+import { setAllData, setProductsData, setProductsDataHome } from "../../../redux/actionsCreators";
 import InstagramSection from '../TReusable/InstagramSection'
 import InfoBuySection from '../TReusable/InfoBuySection'
 import BreadcrumbDetailProduct from '../../Organisms/ODetailProduct/BreadcrumbDetailProduct';
@@ -14,13 +14,13 @@ const MainDetailProduct = (props) => {
 
 	function isId(product){
 		return product.id == idRoute
-	}
+	} 
 
 	var productDetail = {}
-	if(props.productsData.find(isId) !== undefined && props.productsData.find(isId) !== null){
-		productDetail = props.productsData.find(isId)
+	if(props.productsDataHome.find(isId) != undefined && props.productsDataHome.find(isId) != null){
+		productDetail = props.productsDataHome.find(isId)
 	}
-
+	console.log("props2", props.productsDataHome)
     return(
 		<div className="detail-product-main">
 			<div className="breadcrumb">
@@ -51,10 +51,12 @@ const MainDetailProduct = (props) => {
 const mapStateToProps = (state) => ({
 	allData: state.allData,
 	productsData: state.productsData,
+	productsDataHome: state.productsDataHome,
 });
 const mapDispatchToProps = {
 	setAllData,
 	setProductsData,
+	setProductsDataHome
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(MainDetailProduct);

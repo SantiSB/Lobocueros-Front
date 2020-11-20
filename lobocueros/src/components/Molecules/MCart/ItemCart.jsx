@@ -12,11 +12,11 @@ const ItemCart = (props) => {
 	else{
 		var carritoActual = [] 
     } 
-
-    const [counter, setCounter] = useState(props.item.udsItem);
-    
     var item = props.item
-    console.log("ñItem", item.totalPrice)
+
+    const [counter, setCounter] = useState(item.udsItem);
+    
+    
 	const countMore = (event) =>{
         setCounter(counter+1)
         item.udsItem = counter+1
@@ -37,18 +37,18 @@ const ItemCart = (props) => {
         }
   
     }
-
+    console.log("props4", item.images[0].image)
     return (
         <div className="item-cart">            
             <div className="image-item-buy">
-                <Article image={props.item.pictures ? props.item.pictures[0] : ""}></Article> 
+                <Article image={item.images[0].image}></Article> 
             </div>
             <div className="info-item-buy">
-                <InfoItemBuy item={props.item}></InfoItemBuy> 
+                <InfoItemBuy item={item}></InfoItemBuy> 
             </div>
             <div className="buttons-item-buy">
                 <div className="trash-btn-container">
-                    <BtnTrash item={props.item} index={props.index} ></BtnTrash>
+                    <BtnTrash item={item} index={props.index} ></BtnTrash>
                 </div>
                 <div className="counter-btn-container">
                     <Counter countMore={countMore} countLess={countLess} count={counter}></Counter>

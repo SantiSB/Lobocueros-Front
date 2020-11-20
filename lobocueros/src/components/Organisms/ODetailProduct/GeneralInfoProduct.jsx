@@ -63,8 +63,7 @@ const GeneralInfoProduct = (props) => {
   
     return(
       <>
-			{	props.productDetail.reference ?
-				<div className="general-info-product">
+			<div className="general-info-product">
           <AppBar position="static" color="default">
             <Tabs
             value={value}
@@ -86,8 +85,6 @@ const GeneralInfoProduct = (props) => {
             <Recommendations productDetail={props.productDetail}></Recommendations>
           </TabPanel>
         </div>
-				: ""	
-			}
 		</>
 		
 		

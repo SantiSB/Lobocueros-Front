@@ -17,6 +17,7 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
+        // `https://lobocuerosapi.com/products/`
         props.pageActual == 0
           ? `https://lobocuerosapi.com/products/?limit=1`
           : `https://lobocuerosapi.com/products/?limit=1&offset=${(props.pageActual-1)*1}`
@@ -32,7 +33,7 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://lobocuerosapi.com/products/?limit=25`
+        `https://lobocuerosapi.com/products/`
       )
       .then((response) => {
         props.setProductsDataHome(response.data.results)

@@ -88,8 +88,7 @@ const InfoProductDetail = (props) => {
 	
     return(  
 		<>
-			{	props.productDetail.reference ?
-				<div className="info-product-detail">
+			<div className="info-product-detail">
 					<div className="ref-product">
 						Ref.{props.productDetail.reference}
 					</div>
@@ -118,9 +117,7 @@ const InfoProductDetail = (props) => {
 						<p id="product-exist" className="product-exist">El producto ya está en el carrito</p>
 					</div>
 					
-				</div> 
-				: ""	
-			}
+				</div>
 		</>
     )
 }
