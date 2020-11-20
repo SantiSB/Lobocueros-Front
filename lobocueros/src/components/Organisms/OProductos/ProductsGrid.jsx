@@ -20,17 +20,16 @@ const useStyles = makeStyles((theme) => ({
   }));
  
 const ProductsGrid = (props) => {
-	console.log("juanita", props.allData.next)
+	
 	const classes = useStyles();
 	const totalItemsFilter = props.listFilter
 
-	const [page, setPage] = React.useState(0);
+	const [page, setPage] = React.useState(1);
 	const handleChange = (event, value) => {
 		setPage(value);
 		props.setPageActual(value)
 	};
 
-	console.log("page", page, props.pageActual)
 
 	const itemsGridProducts = totalItemsFilter.map(function(item, index){    
 		return <Grid item xs={12} sm={6} md={3} className={classes.root} >

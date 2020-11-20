@@ -29,7 +29,7 @@ const MainDetailProduct = (props) => {
  
 			<div className="details-product"> 
 				<div className="carousel-images-detail">
-					<PrincipalImage productDetail={productDetail}></PrincipalImage>
+					<PrincipalImage productDetail={productDetail}></PrincipalImage> 
 					<MiniImages productDetail={productDetail}></MiniImages>
 				</div>
 				<div className="info-product">

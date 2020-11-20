@@ -23,6 +23,7 @@ const ResumeOrder = (props) => {
 
   const [apiKey, setApiKey] = useState("")
   const [merchantId, setMerchantId] = useState("")
+  const [random, setRandom] = useState("")
 
   axios
     .get(
@@ -30,10 +31,10 @@ const ResumeOrder = (props) => {
     )
     .then((response) => {
       function esApiKey(element) { 
-        return element.name == 'apikey-test';
+        return element.name == 'apikey-production';
       }
       function esMerchantId(element) { 
-        return element.name == 'merchantId-test';
+        return element.name == 'merchantId-production';
       }
       setApiKey(response.data.results.find(esApiKey).value)
       setMerchantId(response.data.results.find(esMerchantId).value)
@@ -41,14 +42,9 @@ const ResumeOrder = (props) => {
     .catch((e) => {
     });
 
-  
-  function getRandomArbitrary(){
-    return "LOBO"+(Math.random() * (9999999 - 1) + 1).toFixed(0);
-  }
-
   var md5 = require('md5');
   // “ApiKey~merchantId~referenceCode~amount~currency”
-  var signature = md5(`${apiKey}~${merchantId}~${getRandomArbitrary()}~${total}~COP`)
+  var signature = md5(`${apiKey}~${merchantId}~${random}~${total}~COP`)
 
   var priceTotal = 0
   
@@ -56,6 +52,7 @@ const ResumeOrder = (props) => {
   const [click, setClick] = useState(false)
 
   function validacion(){
+    setRandom("LOBO"+(Math.random() * (999999999999999 - 1) + 1).toFixed(0))
     setClick(true)
     JSON.parse(localStorage.getItem('carrito')).forEach(item => {
       axios
@@ -87,17 +84,17 @@ const ResumeOrder = (props) => {
           <p className="total">Total: <span>${total}</span></p>
           <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div> 
-        <form method="post" id="form" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+        <form method="post" id="form" action="https://checkout.payulatam.com/ppp-web-gateway-payu/">
           <input name="merchantId"    type="hidden"  value="508029"   ></input>
           <input name="accountId"     type="hidden"  value="512321" ></input>
           <input name="description"   type="hidden"  value="TestPAYU"  ></input>
-          <input name="referenceCode" type="hidden"  value="test1" ></input>
+          <input name="referenceCode" type="hidden"  value={random} ></input>
 
           <input name="tax"           type="hidden"  value="0"  ></input>
           <input name="taxReturnBase" type="hidden"  value="0" ></input>
           <input name="currency"      type="hidden"  value="COP" ></input>
 
-          <input name="test"          type="hidden"  value="1" ></input>
+          <input name="test"          type="hidden"  value="0" ></input>
 
           <input name="signature"     type="hidden"  value={signature}  ></input>
           <input name="buyerEmail"    type="hidden"  value={props.valueEmail} ></input>
@@ -107,7 +104,7 @@ const ResumeOrder = (props) => {
           <input name="shippingCity"    type="hidden"  value={props.shippingCity} ></input>
           <input name="shippingCountry"    type="hidden"  value="CO" ></input>
           <input name="telephone"    type="hidden"  value={props.telephone} ></input>
-          <input name="responseUrl"    type="hidden"  value="http://localhost:3000/compraexitosa" ></input>
+          <input name="responseUrl"    type="hidden"  value="http://localhost:3000/resultado-compra" ></input>
           <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" ></input>
           {
             props.sendBuy == true ? <Button name="Submit" onClick={validacion} value="Enviar" variant="contained" color="secondary" >PAGAR</Button> : <Button variant="contained" disabled >PAGAR</Button>

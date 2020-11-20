@@ -85,37 +85,43 @@ const InfoProductDetail = (props) => {
 		}
 	} 
 	
+	
     return(  
-		<div className="info-product-detail">
-			<div className="ref-product">
-				Ref.{props.productDetail.reference}
-			</div>
-			<div className="title-product">
-				{props.productDetail.title}
-			</div>
-			<div className="price-product">
-				<span className="old-value">{props.productDetail.price + props.productDetail.price*0.25}</span><span>{props.productDetail.price}</span>
-			</div>
-			<div className="description-product"> 
-				{props.productDetail.description}
-			</div>
-  
-			<div className="actions-product-detail"> 
-				<p id="select-color" className="select-color">Selecciona el color</p>				
-				<ColorsBar productDetail={props.productDetail} changeColor={changeColorSelected}></ColorsBar>
-			</div>
-			<div className="buttons-product-detail">
-				<div className="counter">
-					<Counter countMore={countMore} countLess={countLess} count={counter}></Counter>
-				</div>
-				<div className="buy-buttons">
-					{buildBtn()}
-					<a onClick={()=>buyEvents(props.productDetail)} ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
-				</div>
-				<p id="product-exist" className="product-exist">El producto ya está en el carrito</p>
-			</div>
-			
-		</div> 
+		<>
+			{	props.productDetail.reference ?
+				<div className="info-product-detail">
+					<div className="ref-product">
+						Ref.{props.productDetail.reference}
+					</div>
+					<div className="title-product">
+						{props.productDetail.title}
+					</div>
+					<div className="price-product">
+						<span className="old-value">{props.productDetail.price + props.productDetail.price*0.25}</span><span>{props.productDetail.price}</span>
+					</div>
+					<div className="description-product"> 
+						{props.productDetail.description}
+					</div>
+		
+					<div className="actions-product-detail"> 
+						<p id="select-color" className="select-color">Selecciona el color</p>				
+						<ColorsBar productDetail={props.productDetail} changeColor={changeColorSelected}></ColorsBar>
+					</div>
+					<div className="buttons-product-detail">
+						<div className="counter">
+							<Counter countMore={countMore} countLess={countLess} count={counter}></Counter>
+						</div>
+						<div className="buy-buttons">
+							{buildBtn()}
+							<a onClick={()=>buyEvents(props.productDetail)} ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
+						</div>
+						<p id="product-exist" className="product-exist">El producto ya está en el carrito</p>
+					</div>
+					
+				</div> 
+				: ""	
+			}
+		</>
     )
 }
 

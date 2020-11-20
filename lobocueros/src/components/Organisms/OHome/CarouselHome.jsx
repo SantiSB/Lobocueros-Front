@@ -101,7 +101,7 @@ const CarouselHome = (props) => {
     )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({ 
 	allData: state.allData,
 	productsDataHome: state.productsDataHome,
 	productsData: state.productsData,

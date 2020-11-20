@@ -18,7 +18,7 @@ const Routes = (props) => {
     axios
       .get(
         props.pageActual == 0
-          ? `https://lobocuerosapi.com/products/?limit=10`
+          ? `https://lobocuerosapi.com/products/?limit=1`
           : `https://lobocuerosapi.com/products/?limit=1&offset=${(props.pageActual-1)*1}`
       )
       .then((response) => {
@@ -32,7 +32,7 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://lobocuerosapi.com/products/`
+        `https://lobocuerosapi.com/products/?limit=25`
       )
       .then((response) => {
         props.setProductsDataHome(response.data.results)
@@ -49,8 +49,8 @@ const Routes = (props) => {
         <Route path="/productos/:id/" component={ProductDetail} />
         <Route path="/carrito" component={Cart} />
         <Route path="/resumen" component={Resume} />
-        <Route path="/compraexitosa" component={SuccessfulPurchase} />
-        <Route path="/comprafallida" component={FailedPurchase} />
+        <Route path="/resultado-compra" component={SuccessfulPurchase} />
+        {/* <Route path="/comprafallida" component={FailedPurchase} /> */}
         <Route path="/sobrenosotros" component={About} />
         <Route path="/contacto" component={Contact} />
       </Switch>

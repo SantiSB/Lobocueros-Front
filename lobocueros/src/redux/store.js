@@ -41,7 +41,7 @@ const initialStore = {
   valueShippingCity: "",
   valueTelephone: "",
   sendBuy: "false",
-  pageActual: "0"
+  pageActual: "1"
 };
 
 const rootReducer = (state = initialStore, action) => {
