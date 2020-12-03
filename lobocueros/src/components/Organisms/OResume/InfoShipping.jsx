@@ -172,14 +172,14 @@ const InfoShipping = (props) => {
       <Alert id="calertCiudad" severity="error" style={{display: "none"}}>LA CIUDAD SOLO PUEDE TENER LETRAS</Alert>
       <Alert id="calertEmail" severity="error" style={{display: "none"}}>EL EMAIL ES INCORECTO</Alert>
       <form noValidate autoComplete="off">
-        <TextField value="a" id="cnombre" label="Nombre Completo" variant="outlined" className={classes.field} onChange={(e)=>props.changeFullName(e.target.value)} />
-        <TextField value="a" id="cciudad" label="Ciudad" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingCity(e.target.value)}/>
+        <TextField id="cnombre" label="Nombre Completo" variant="outlined" className={classes.field} onChange={(e)=>props.changeFullName(e.target.value)} />
+        <TextField id="cciudad" label="Ciudad" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingCity(e.target.value)}/>
         <br></br>
-        <TextField value="a" id="cdireccion" label="Dirección" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingAddress(e.target.value)}/>
-        <TextField value="1" id="ccedula" label="Cedula" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)}/>
+        <TextField id="cdireccion" label="Dirección" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingAddress(e.target.value)}/>
+        <TextField id="ccedula" label="Cedula" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)}/>
         <br></br>
-        <TextField value="a@g.com" id="cemail" label="E-Mail" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)} />
-        <TextField value="1" id="ctelefono" label="Teléfono" variant="outlined" className={classes.field} onChange={(e)=>props.changeTelephone(e.target.value)}/>
+        <TextField id="cemail" label="E-Mail" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)} />
+        <TextField id="ctelefono" label="Teléfono" variant="outlined" className={classes.field} onChange={(e)=>props.changeTelephone(e.target.value)}/>
         <Button variant="contained" color="primary" onClick={sendEmail} style={{margin: "1rem 0.5rem"}}>Confirmar datos</Button>
       </form>
     </div>

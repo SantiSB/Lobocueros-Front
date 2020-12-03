@@ -84,7 +84,11 @@ const InfoProductDetail = (props) => {
 			return <a onClick={()=>buyEventsBuy(props.productDetail)} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
 		}
 	} 
-	
+	const formatter = new Intl.NumberFormat('es-CO', {
+		style: 'currency',
+		currency: 'COP',
+		minimumFractionDigits: 0
+	})
 	
     return(  
 		<>
@@ -98,7 +102,7 @@ const InfoProductDetail = (props) => {
 							{props.productDetail.title}
 						</div>
 						<div className="price-product">
-							<span className="old-value">{props.productDetail.price + props.productDetail.price*0.25}</span><span>{props.productDetail.price}</span>
+							<span className="old-value">{formatter.format(props.productDetail.price + props.productDetail.price * 0.25)}</span><span>{formatter.format(props.productDetail.price)}</span>
 						</div>
 						<div className="description-product"> 
 							{props.productDetail.description}

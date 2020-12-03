@@ -80,7 +80,7 @@ const InfoContact = () => {
       document.getElementById("alertEmail").style.display = "flex"
     }
     else{
-      emailjs.sendForm('PRUEBA01', 'template_f3bwk5l', e.target, 'user_gJtoKirse4ethYFDESQFa')
+      emailjs.sendForm('LOBO2020', 'template_lobo2020', e.target, 'user_YMPSNHEVKIj9rsmTSKzYB')
       .then((result) => {
         console.log(result.text);
         

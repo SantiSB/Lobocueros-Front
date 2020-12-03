@@ -18,7 +18,7 @@ class MapContact extends Component {
       // Important! Always set the container height explicitly
       <div style={{ height: '100%', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyCKhKld_7uwKoIyvMuREsjlscvQrXDiAbw" }}
+          bootstrapURLKeys={{ key: "AIzaSyBBKxFzrRo-dgmGwtFpURfVlJzwwwGlPFk" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >

@@ -80,14 +80,20 @@ const ResumeOrder = (props) => {
     }
   }
 
+  const formatter = new Intl.NumberFormat('es-CO', {
+		style: 'currency',
+		currency: 'COP',
+		minimumFractionDigits: 0
+  })
+
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
         <p className="title-info-resume">Resumen del pedido</p>
         <div>
-          <p>Subtotal: <span>${total}</span></p>
+          <p>Subtotal: <span>{formatter.format(total)}</span></p>
           <p>Envio: <span>Gratis</span></p>
-          <p className="total">Total: <span>${total}</span></p>
+          <p className="total">Total: <span>{formatter.format(total)}</span></p>
           <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div> 
         <form method="post" id="form" action="https://checkout.payulatam.com/ppp-web-gateway-payu/">

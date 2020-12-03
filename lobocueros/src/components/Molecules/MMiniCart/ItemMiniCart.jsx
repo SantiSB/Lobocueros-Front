@@ -36,6 +36,12 @@ const ItemMiniCart = (props) => {
   
     }
 
+    const formatter = new Intl.NumberFormat('es-CO', {
+		style: 'currency',
+		currency: 'COP',
+		minimumFractionDigits: 0
+	})
+
 
     return (
         <div className="item-mini-cart">
@@ -45,7 +51,7 @@ const ItemMiniCart = (props) => {
             <div className="info-item-buy">
                 <div>
                     <p>{item.title}</p>
-                    <p>Precio: <span>${item.price}</span></p>
+                    <p>Precio: <span>{formatter.format(item.price)}</span></p>
                     <p>Color: <span>{item.colorSelected}</span></p>
                     <p>Tiempo de entrega 3 a 5 Días</p>
                 </div>

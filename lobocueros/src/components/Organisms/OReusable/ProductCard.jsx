@@ -20,6 +20,12 @@ const ProductCard = (props) => {
 		}
 	} 
 	const itemProduct = props.item != null ? props.item : {}
+
+	const formatter = new Intl.NumberFormat('es-CO', {
+		style: 'currency',
+		currency: 'COP',
+		minimumFractionDigits: 0
+	})
     return( 
 		<>
 			{
@@ -35,7 +41,7 @@ const ProductCard = (props) => {
 													<h2>{itemProduct.title}</h2>
 												</div>
 												<div className="price-product-card">
-													<span className="old-value">{itemProduct.price ? itemProduct.price + itemProduct.price*0.25 : ""}</span><span>{itemProduct.price}</span>
+													<span className="old-value">{itemProduct.price ?formatter.format(itemProduct.price + itemProduct.price * 0.25) : ""}</span><span>{formatter.format(itemProduct.price)}</span>
 												</div>
 											</a>
 										: ""

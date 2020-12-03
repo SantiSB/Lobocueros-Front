@@ -27,9 +27,9 @@ const MainResume = () => {
 					<div className="resume-order">
 						<ResumeOrder></ResumeOrder>
 					</div>
-					<div className="login-register">
+					{/* <div className="login-register">
 						<LoginRegister></LoginRegister>
-					</div>
+					</div> */}
 				</div>
 			</div>
 
