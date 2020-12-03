@@ -29,8 +29,8 @@ class MapContact extends Component {
           />
         </GoogleMapReact>
         <div className="direction-contact">
-          <span><b>Fábrica</b>Carrera 12B #3-15 SUR</span>
-          <span><b>Local:</b> Calle 15 # 5-70 lc 4 y 5D</span>
+          <span><b>Fábrica: </b>Carrera 12B #3-15 SUR</span>
+          <span><b>Local: </b> Calle 15 # 5-70 lc 4 y 5D</span>
         </div>
       </div>
     );
