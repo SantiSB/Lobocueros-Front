@@ -43,12 +43,8 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Maxime provident officia necessitatibus dicta animi? Ex placeat non, porro possimus rem distinctio, 
-            quidem iure neque unde dolorem ipsum officia optio dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Veritatis labore repudiandae assumenda eligendi, nesciunt architecto incidunt sed quaerat ducimus veniam porro quod? 
-            Esse laborum accusamus ipsa. Ut dolor earum asperiores.
+            Ofrecer al mercado y a nuestros clientes productos diseñados y elaborados 
+            con los más altos niveles de calidad con el fin de satisfacer sus necesidades del día a día. 
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -63,12 +59,9 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-		  	    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Maxime provident officia necessitatibus dicta animi? Ex placeat non, porro possimus rem distinctio, 
-            quidem iure neque unde dolorem ipsum officia optio dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Veritatis labore repudiandae assumenda eligendi, nesciunt architecto incidunt sed quaerat ducimus veniam porro quod? 
-            Esse laborum accusamus ipsa. Ut dolor earum asperiores.
+            En el año 2024 queremos posicionarnos y ser reconocidos en el mercado nacional 
+            como una de las empresas que ofrece los mejores productos en cuero cumpliendo con las necesidades 
+            de nuestros clientes y que nuestra marca sea sinónimo de calidad y perseverancia.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -82,12 +75,13 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-		  	    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Maxime provident officia necessitatibus dicta animi? Ex placeat non, porro possimus rem distinctio, 
-            quidem iure neque unde dolorem ipsum officia optio dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Veritatis labore repudiandae assumenda eligendi, nesciunt architecto incidunt sed quaerat ducimus veniam porro quod? 
-            Esse laborum accusamus ipsa. Ut dolor earum asperiores.
+            <ul>
+              <li>Responsabilidad</li>
+              <li>Compromiso</li>
+              <li>Pasión por el trabajo</li>
+              <li>Respeto</li>
+              <li>Honestidad</li>
+            </ul>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -97,16 +91,18 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.heading}>NUESTRA HISTORIA</Typography>
+          <Typography className={classes.heading}>¿QUIENES SOMOS?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-		  	    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Maxime provident officia necessitatibus dicta animi? Ex placeat non, porro possimus rem distinctio, 
-            quidem iure neque unde dolorem ipsum officia optio dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Veritatis labore repudiandae assumenda eligendi, nesciunt architecto incidunt sed quaerat ducimus veniam porro quod? 
-            Esse laborum accusamus ipsa. Ut dolor earum asperiores.
+            Lobocueros S.A.S es una empresa nacional fundada en el departamento de Nariño 
+            por nuestro gerente general Lorenzo Bolaños Muñoz en el año 1994 , 
+            Somos un equipo de trabajo especializado en la fabricación y comercialización de artículos en cuero 
+            tanto a nivel nacional como internacional con más de 20 años de experiencia en el mercado de marroquinería, 
+            establecidos y ubicados actualmente en la ciudad de Bogotá.
+            Brindamos lo mejor de nosotros para satisfacer a nuestros clientes con nuestros productos, 
+            somos amantes al cuero, materia prima esencial del nuestra actividad económica y productiva 
+            que representa la fortaleza, estilo, trabajo y naturalidad de nuestra empresa.
           </Typography>
         </AccordionDetails>
       </Accordion>

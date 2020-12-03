@@ -3,12 +3,16 @@ import React from 'react';
 const Recommendations = () => {
     return(
 		<div className="recommendations">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-			Quas aspernatur fugit quod quae doloribus aliquid illum, 
-			aliquam quo iste maxime nostrum amet nulla provident mollitia ea quidem eaque, saepe fuga.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-			Delectus possimus voluptatum veritatis voluptatem tenetur nisi laboriosam sequi! 
-			In, minima repellat est, omnis sapiente odit deserunt veritatis perferendis commodi soluta natus.
+			<ul>
+				<li>No lavar</li>
+				<li>No planchar</li>
+				<li>No secar en maquina</li>
+				<li>No usar blanqueador</li>
+				<li>Limpiar con un paño húmedo para retirar suciedades</li>
+				<li>Dejar secar en sombra a temperatura ambiente de forma natural</li>
+				<li>Utilizar hidratantes especiales para cuero (crema de manos sin loción)</li>
+				<li>Almacenarlos en espacios ventilados</li>
+			</ul>
 		</div>
 		
     )

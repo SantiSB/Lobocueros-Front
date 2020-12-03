@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeOrder = (props) => { 
+  console.log("juanita", props)
 
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
     var arrayItems = JSON.parse(localStorage.getItem('carrito'))
@@ -23,11 +24,12 @@ const ResumeOrder = (props) => {
 
   const [apiKey, setApiKey] = useState("")
   const [merchantId, setMerchantId] = useState("")
+  const [accountId, setAccountId] = useState("")
   const [random, setRandom] = useState("")
 
   axios
     .get(
-      'https://lobocuerosapi.com/companyInformation/?limit=10'      
+      'https://lobocuerosapi.com/companyInformation/'      
     )
     .then((response) => {
       function esApiKey(element) { 
@@ -36,8 +38,12 @@ const ResumeOrder = (props) => {
       function esMerchantId(element) { 
         return element.name == 'merchantId-production';
       }
+      function esAccountId(element) { 
+        return element.name == 'accountId-production';
+      }
       setApiKey(response.data.results.find(esApiKey).value)
       setMerchantId(response.data.results.find(esMerchantId).value)
+      setAccountId(response.data.results.find(esAccountId).value)
     })
     .catch((e) => {
     });
@@ -85,9 +91,9 @@ const ResumeOrder = (props) => {
           <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div> 
         <form method="post" id="form" action="https://checkout.payulatam.com/ppp-web-gateway-payu/">
-          <input name="merchantId"    type="hidden"  value="508029"   ></input>
-          <input name="accountId"     type="hidden"  value="512321" ></input>
-          <input name="description"   type="hidden"  value="TestPAYU"  ></input>
+          <input name="merchantId"    type="hidden"  value={merchantId}   ></input>
+          <input name="accountId"     type="hidden"  value={accountId} ></input>
+          <input name="description"   type="hidden"  value="Compra Lobocueros"  ></input>
           <input name="referenceCode" type="hidden"  value={random} ></input>
 
           <input name="tax"           type="hidden"  value="0"  ></input>

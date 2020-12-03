@@ -34,14 +34,14 @@ const MainContact = () => {
 						<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/lobocuerosas"><i><img alt="link-facebook" src={Facebook}></img></i></a>
 					</div>
 					<div className="email-contact">
-						<p>lobocueros@gmail.com</p>
+						<p>atencionaclientelb@gmail.com</p>
 					</div>
 				</div>
 				<div className="phones-contact">
-					<span>Administración: 321 399 8542</span>
-					<span>Tiendas: (031) 341 7657</span>
-					<span>Gerencia: 313 871 1212</span>
-					<span>Atención al cliente: (031) 735 6696</span>
+					<span>Ventas: (+57)313 871 1212 - (+57)317 755 5029</span>
+					<span>Administración: (+57)321 399 8542</span>
+					<span>Gerencia Comercial: (+57)313 871 1212</span>
+					<span>Atención al cliente: (031)7 356 696</span>
 				</div>
 				
 			</div>

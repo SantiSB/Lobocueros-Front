@@ -72,6 +72,7 @@ const TabsAbout = () => {
 				<Tab label="QUIENES SOMOS" {...a11yProps(0)} />
 				<Tab label="NUESTRAS POLITICAS" {...a11yProps(1)} />
         <Tab label="TERMINOS Y CONDICIONES" {...a11yProps(2)} />
+        <Tab label="PEDIDOS Y DEVOLUCIONES" {...a11yProps(3)} />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>
@@ -126,7 +127,45 @@ const TabsAbout = () => {
         Veritatis labore repudiandae assumenda eligendi, nesciunt architecto incidunt sed quaerat ducimus veniam porro quod? 
         Esse laborum accusamus ipsa. Ut dolor earum asperiores.
 			</TabPanel>
-		</div>
+      <TabPanel value={value} index={3}>
+        <b>PEDIDOS</b>
+        <br></br>
+        <br></br>
+        Telefono / WhatsApp : (+57)313 871 1212
+        <br></br>
+        <br></br>
+        Para realizar un pedido al por mayor (6+ Uds), comunicarse con ventas (+57)313 871 1212 (Precio Especial) 
+        <br></br>
+        Para realizar un pedido desde el exterior de Colombia, comunicarse con ventas (+57)313 871 1212.
+        <br></br>
+        La entrega de los productos después de la verificación del pago es de 3 a 8 días hábiles.
+
+        <br></br>
+        <br></br>
+        <b>DEVOLUCIONES</b>
+        <br></br>
+        <br></br>
+        Para el proceso de devolución el cliente tiene 5 días hábiles después de entregado su pedido para tomar 
+        la decisión de devolución, después de pasado este tiempo las devoluciones quedan invalidadas. 
+        <br></br>
+        El proceso de devolución toma un tiempo aproximado de entre 8 a 10 días hábiles a partir del envió de un 
+        email con el asunto de: DEVOLUCIÓN DE PRODUCTO al correo atencionaclientelb@gmail.com adjuntando la factura 
+        de la compra y detallando en el cuerpo del email, la referencia del producto, el color, además deL medio de 
+        pago para la devolución.
+        <br></br>
+        Devolución de dinero: Entre 2 y 3 días hábiles luego del reingreso del producto devuelto a alguno de nuestros 
+        centros. La agilidad en el proceso dependerá de la claridad y veracidad de los datos de la cuenta bancaria que 
+        nos suministre para realizar la transacción y los tiempos de respuesta de la entidad financiera. Las devoluciones 
+        de dinero no se realizan en tiendas físicas.
+        <br></br>
+        Cambio de producto:  Sujeto a disponibilidad de inventario en la referencia, talla y color de tu elección. 
+        Plazo: entre 3 y 5 días hábiles después de recibir el producto en nuestro Centro de Distribución. En tiendas físicas: inmediato  
+        <br></br>
+        Un asesor de nuestra empresa se pondrá en contacto con la persona que requiere la devolución y 
+        realizará el proceso de programación de recogida del producto, el producto debe estar sellado y 
+        debe encontrarse en excelente estado como fue entregado.
+      </TabPanel>
+    </div>
 		
     )
 }

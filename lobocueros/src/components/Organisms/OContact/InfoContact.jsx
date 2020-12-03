@@ -80,10 +80,12 @@ const InfoContact = () => {
       document.getElementById("alertEmail").style.display = "flex"
     }
     else{
-      emailjs.sendForm('2110', 'template_f3bwk5l', e.target, 'user_gJtoKirse4ethYFDESQFa')
+      emailjs.sendForm('PRUEBA01', 'template_f3bwk5l', e.target, 'user_gJtoKirse4ethYFDESQFa')
       .then((result) => {
+        console.log(result.text);
         
       }, (error) => {
+        console.log(error.text);
         
       });
       e.target.reset()
