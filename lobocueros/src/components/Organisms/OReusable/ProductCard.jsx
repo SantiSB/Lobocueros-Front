@@ -5,27 +5,34 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
-import Lobocueros from '../../../assets/Icons/Lobocueros_Vino.svg'
+import Lobocueros from '../../../assets/Icons/Grupo 25.svg'
  
-const ProductCard = (props) => {
+const ProductCard = (props) => { 
+	
 	const buildMainPicture = (images) => {
+		if(images.length > 0){
+
+		
 		function isMain(image){
-			return image.mainPicture === true
+			return image.mainPicture == true
 		}
-		if(images != null){
+		if(images){
 			return images.find(isMain).image
 		}
 		else{
 			return Lobocueros
 		}
+		}
+		else {return Lobocueros}
 	} 
-	const itemProduct = props.item != null ? props.item : {}
+	const itemProduct = props.item  ? props.item : {} 
 
 	const formatter = new Intl.NumberFormat('es-CO', {
 		style: 'currency',
 		currency: 'COP',
 		minimumFractionDigits: 0
 	})
+
     return( 
 		<>
 			{

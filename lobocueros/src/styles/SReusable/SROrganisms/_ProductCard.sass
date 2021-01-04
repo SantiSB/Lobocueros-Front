@@ -14,14 +14,18 @@
 
 				.image-product-card
 					@include display-flex(center, center)
+					// width: 200px
+					height: 200px
 					img
 						width: 200px
 				
 				.title-product-card
+					height: 35px
 					@include display-flex(center, center)
 					h2
+						text-align: center
 						font-family: "Pridi"
-						font-size: 11pt
+						font-size: 10pt
 						margin: 0px
 						
 
@@ -42,12 +46,14 @@
 
 	.card-actions
 		padding: 0px
+		height: 120px
 		a
 			text-decoration: none
 			color: $Black
 			width: 100%
 
 		.product-card-actions
+			height: 100%
 			width: 100%
 			padding: 0px
 			margin: 0px
@@ -55,14 +61,16 @@
 			.colors-product-card
 				@include display-flex(center, center)
 				margin: 1rem 0rem
+				height: 25px
 
 			.buy-produt-card
+				height: 100%
 				@include display-flex(center, center)
 				margin: 1rem
 
 				button
 					width: 200px
-					height: 40px
+					height: 30px
 					font-size: 8pt
 
 				

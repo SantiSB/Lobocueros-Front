@@ -22,6 +22,7 @@ const Routes = (props) => {
           : `https://lobocuerosapi.com/products/?limit=1&offset=${(props.pageActual-1)*1}`
       )
       .then((response) => {
+        console.log("qaz1", response)
         props.setAllData(response.data)
         props.setProductsData(response.data.results)
       })
@@ -32,7 +33,7 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://lobocuerosapi.com/products/`
+        `https://lobocuerosapi.com/products/?limit=15`
       )
       .then((response) => {
         props.setProductsDataHome(response.data.results)

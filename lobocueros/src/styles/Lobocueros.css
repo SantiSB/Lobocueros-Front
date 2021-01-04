@@ -205,18 +205,21 @@ div[role=presentation] {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 200px;
 }
 .product-card .card-action-area .card-content a .image-product-card img {
   width: 200px;
 }
 .product-card .card-action-area .card-content a .title-product-card {
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .product-card .card-action-area .card-content a .title-product-card h2 {
+  text-align: center;
   font-family: "Pridi";
-  font-size: 11pt;
+  font-size: 10pt;
   margin: 0px;
 }
 .product-card .card-action-area .card-content a .price-product-card {
@@ -240,6 +243,7 @@ div[role=presentation] {
 }
 .product-card .card-actions {
   padding: 0px;
+  height: 120px;
 }
 .product-card .card-actions a {
   text-decoration: none;
@@ -247,6 +251,7 @@ div[role=presentation] {
   width: 100%;
 }
 .product-card .card-actions .product-card-actions {
+  height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -256,8 +261,10 @@ div[role=presentation] {
   justify-content: center;
   align-items: center;
   margin: 1rem 0rem;
+  height: 25px;
 }
 .product-card .card-actions .product-card-actions .buy-produt-card {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,7 +272,7 @@ div[role=presentation] {
 }
 .product-card .card-actions .product-card-actions .buy-produt-card button {
   width: 200px;
-  height: 40px;
+  height: 30px;
   font-size: 8pt;
 }
 
