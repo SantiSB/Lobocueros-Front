@@ -18,13 +18,25 @@ const Routes = (props) => {
     axios
       .get(
         props.pageActual == 0
-          ? `https://lobocuerosapi.com/products/?limit=1`
-          : `https://lobocuerosapi.com/products/?limit=1&offset=${(props.pageActual-1)*1}`
+          ? `https://lobocuerosapi.com/products/?limit=0`
+          : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
       )
       .then((response) => {
         console.log("qaz1", response)
         props.setAllData(response.data)
         props.setProductsData(response.data.results)
+      })
+      .catch((e) => {
+      });
+  }, [props.pageActual])
+
+  useEffect(() => {
+    axios
+      .get(
+          `https://lobocuerosapi.com/products/`
+      )
+      .then((response) => {
+        props.setAllData(response.data.results)
       })
       .catch((e) => {
       });

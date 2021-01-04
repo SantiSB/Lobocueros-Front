@@ -30,6 +30,13 @@ const ProductsGrid = (props) => {
 		props.setPageActual(value)
 	};
 
+	console.log("wsx", props.listFilter.length)
+	
+	const count = () =>{
+		var items = props.allData.length
+		var pages = Math.ceil(items / 20)
+		return pages
+	}
 
 	const itemsGridProducts = totalItemsFilter.map(function(item, index){    
 		return <Grid item xs={12} sm={6} md={3} className={classes.root} >
@@ -43,7 +50,7 @@ const ProductsGrid = (props) => {
 				{itemsGridProducts}
 			</Grid>
 			<div className={classes.root}>
-				<Pagination count={15} page={page} onChange={handleChange}/>
+				<Pagination count={count()} page={page} onChange={handleChange}/>
 		  	</div>
 			  
 			</>

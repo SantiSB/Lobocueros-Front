@@ -967,17 +967,20 @@ div[role=presentation] {
 }
 .instagramSection-main .instagram-photos-grid {
   display: grid;
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr";
+  grid-template-rows: 100%;
   grid-template-areas: "img1 img2 img3 img4 img5";
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
+  grid-gap: 10px;
+  padding: 30px;
 }
 .instagramSection-main .instagram-photos-grid img {
-  width: 100%;
-  margin: 0px;
-  border: 5px solid #FFFFFF;
+  width: 98%;
+  height: 98%;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 .instagramSection-main .instagram-photos-grid img:hover {
-  filter: drop-shadow(5px 5px 20px #420000);
+  border: 3px solid black;
 }
 .instagramSection-main .instagram-photos-grid:hover {
   cursor: pointer;
