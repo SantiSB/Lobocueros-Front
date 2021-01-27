@@ -160,8 +160,8 @@ const ResumeOrder = (props) => {
           <input name="shippingCity"    type="hidden"  value={props.shippingCity} ></input>
           <input name="shippingCountry"    type="hidden"  value="CO" ></input>
           <input name="telephone"    type="hidden"  value={props.telephone} ></input>
-          <input name="extra1"    type="hidden"  value="" ></input>
-          <input name="extra2"    type="hidden"  value="" ></input>
+          <input name="extra1"    type="hidden"  value={textExtra1} ></input>
+          <input name="extra2"    type="hidden"  value={textExtra2} ></input>
           <input name="responseUrl"    type="hidden"  value="http://localhost:3000/resultado-compra" ></input>
           <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" ></input>
           {
