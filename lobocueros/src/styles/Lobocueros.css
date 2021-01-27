@@ -411,6 +411,23 @@ div[role=presentation] {
   justify-content: flex-end;
   align-items: center;
 }
+.container-mini-cart .list-products-mini-cart {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+  max-height: 70vh;
+  min-height: 100px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.container-mini-cart .list-products-mini-cart::-webkit-scrollbar {
+  width: 10px;
+}
+.container-mini-cart .list-products-mini-cart::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+.container-mini-cart .list-products-mini-cart::-webkit-scrollbar-thumb {
+  background: #420000;
+}
 .container-mini-cart .list-products-mini-cart .item-mini-cart {
   display: grid;
   grid-template-areas: "image-item-buy info-item-buy buttons-item-buy";

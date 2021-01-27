@@ -1,16 +1,27 @@
 import React from 'react';
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setPrincipalImageDetail } from "../../../redux/actionsCreators";
+import Lobocueros from '../../../assets/Icons/Grupo 25.svg'
 
 const PrincipalImage = (props) => {
+	console.log("qaz", props.productDetail)
 	const mainPicture = () => {
-		function isMain(image){
-			return image.mainPicture === true
+		if(props.productDetail.images > 0){
+			function isMain(image){
+				return image.mainPicture == true
 		}
-		if(props.productDetail.images != null){
+		
+		if(props.productDetail.images){
 			return props.productDetail.images.find(isMain).image
 		}
+		else{
+			return Lobocueros
+		}
+		}
+		else {return Lobocueros}
 	}
+	console.log("qaz1", mainPicture())
+
 	if(props.principalImageDetail === ""){
 		if(mainPicture() != undefined){
 			props.setPrincipalImageDetail(mainPicture())
