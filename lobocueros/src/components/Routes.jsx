@@ -22,7 +22,6 @@ const Routes = (props) => {
           : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
       )
       .then((response) => {
-        console.log("qaz1", response)
         props.setAllData(response.data)
         props.setProductsData(response.data.results)
       })

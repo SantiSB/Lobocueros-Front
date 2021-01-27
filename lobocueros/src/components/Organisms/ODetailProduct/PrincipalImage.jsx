@@ -17,7 +17,6 @@ const PrincipalImage = (props) => {
 		} 
 	}
 
-	console.log("props", props.productDetail)
     return( 	
 		<>
 			{

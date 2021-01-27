@@ -6,12 +6,11 @@ import Button from '@material-ui/core/Button';
 import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeOrder = (props) => { 
-  console.log("juanita", props)
 
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
     var arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
-  else{
+  else{ 
     var arrayItems = []
   } 
 
@@ -86,6 +85,35 @@ const ResumeOrder = (props) => {
 		minimumFractionDigits: 0
   })
 
+  console.log("qwe", JSON.parse(localStorage.getItem('carrito')))
+
+  // "[{'p':'100', 'v':'100000', 'c':'10'}, {'p':'15', 'v':'10000', 'c':'9'}]" toca hacer esto
+  var extra1 = []
+  var extra2 = []
+
+  JSON.parse(localStorage.getItem('carrito')).map(function(item){
+    var itemData = {
+      'id': item.id,
+      'price': item.price,
+      'udsItem': item.udsItem
+    } 
+    if(extra1.length < 7){
+      extra1.push(itemData)
+    }
+    else{
+      extra2.push(itemData)
+    }
+  })
+
+  var textExtra1 = JSON.stringify(extra1)
+  var textExtra2 = JSON.stringify(extra2)
+
+  console.log("qwe1", extra1)
+  console.log("qwe11", textExtra1)
+  console.log("qwe2", extra2)
+  console.log("qwe22", textExtra2)
+
+
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
@@ -96,6 +124,22 @@ const ResumeOrder = (props) => {
           <p className="total">Total: <span>{formatter.format(total)}</span></p>
           <p style={{fontSize: "8pt"}}>Impuestos incluidos</p>
         </div> 
+        {/* <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+          <input name="merchantId"    type="hidden"  value="508029"  ></input>
+          <input name="accountId"     type="hidden"  value="512321"></input>
+          <input name="description"   type="hidden"  value="Test PAYU" ></input>
+          <input name="referenceCode" type="hidden"  value="TestPayU"></input>
+          <input name="amount"        type="hidden"  value="20000"  ></input>
+          <input name="tax"           type="hidden"  value="3193" ></input>
+          <input name="taxReturnBase" type="hidden"  value="16806"></input>
+          <input name="currency"      type="hidden"  value="COP"></input>
+          <input name="signature"     type="hidden"  value="7ee7cf808ce6a39b17481c54f2c57acc" ></input>
+          <input name="test"          type="hidden"  value="1"></input>
+          <input name="buyerEmail"    type="hidden"  value="test@test.com"></input>
+          <input name="responseUrl"    type="hidden"  value="http://localhost:3000/resultado-compra"></input>
+          <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation"></input>
+          <input name="Submit"        type="submit"  value="Enviar"></input>
+        </form> */}
         <form method="post" id="form" action="https://checkout.payulatam.com/ppp-web-gateway-payu/">
           <input name="merchantId"    type="hidden"  value={merchantId}   ></input>
           <input name="accountId"     type="hidden"  value={accountId} ></input>
@@ -116,6 +160,8 @@ const ResumeOrder = (props) => {
           <input name="shippingCity"    type="hidden"  value={props.shippingCity} ></input>
           <input name="shippingCountry"    type="hidden"  value="CO" ></input>
           <input name="telephone"    type="hidden"  value={props.telephone} ></input>
+          <input name="extra1"    type="hidden"  value="" ></input>
+          <input name="extra2"    type="hidden"  value="" ></input>
           <input name="responseUrl"    type="hidden"  value="http://localhost:3000/resultado-compra" ></input>
           <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" ></input>
           {

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 const InfoContact = () => {
   const classes = useStyles();
-
+ 
   var letras="abcdefghyjklmnñopqrstuvwxyz";
   function tiene_letras(texto){
     texto = texto.toLowerCase();
@@ -113,7 +113,7 @@ const InfoContact = () => {
         <TextField id="telefono" label="Teléfono" variant="outlined" className={classes.field} name="telefono"/>
         <br></br>
         <TextField id="mensaje" label="Mensaje" variant="outlined" className={classes.direction} name="mensaje"/>
-        <Buttons type="Send" text="Enviar"></Buttons>
+        <Buttons type="Send" text="Enviar"></Buttons> 
       </form>
     </div> 
   );

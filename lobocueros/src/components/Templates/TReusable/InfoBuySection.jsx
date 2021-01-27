@@ -7,7 +7,7 @@ import Dolar from '../../../assets/Icons/Dolar.svg'
 const InfoBuySection = () => {
     return(
         <div className="info-buy-bar">
-			<div className="item-info-buy-bar">
+			{/* <div className="item-info-buy-bar">
 				<img alt="secure" src={Secure}></img>
 				<span> <a href="/sobrenosotros" target="_blank">COMPRA 100% SEGURA</a></span>
 			</div>
@@ -22,7 +22,8 @@ const InfoBuySection = () => {
 			<div className="item-info-buy-bar">
 				<img alt="dolar" src={Dolar}></img>
 				<span><a href="/sobrenosotros" target="_blank">DEVOLUCIONES SIN COSTO</a></span>
-			</div>
+			</div> */}
+			Siguenos en redes sociales y enterate de promociones
 		</div>
     )
 }

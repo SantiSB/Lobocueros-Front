@@ -30,7 +30,6 @@ const ProductsGrid = (props) => {
 		props.setPageActual(value)
 	};
 
-	console.log("wsx", props.listFilter.length)
 	
 	const count = () =>{
 		var items = props.allData.length

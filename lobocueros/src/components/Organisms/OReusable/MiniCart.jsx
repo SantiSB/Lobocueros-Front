@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 					{
 						arrayItems ? arrayItems.map(function(item, index){
 							return (
-								<ItemMiniCart item={item} index={index}></ItemMiniCart>
+								<ItemMiniCart item={item} index={index}></ItemMiniCart> 
 							)
 						}) 
 						: []

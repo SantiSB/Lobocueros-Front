@@ -4,6 +4,7 @@ import Accepted from '../../../assets/Icons/Accepted.svg'
 import OrderListItem from "../../Molecules/MReusable/OrderListItem";
 import Buttons from "../../Atoms/AReusable/Buttons";
 import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 const PurchaseTrue = () => {
 
@@ -63,7 +64,6 @@ const PurchaseTrue = () => {
     });
 
 
-  console.log("qwer", apiKey);
 
   var VtransactionState = getParameterByName('transactionState');
   var VtransactionId = getParameterByName('transactionId');
@@ -131,20 +131,18 @@ const PurchaseTrue = () => {
       "paymentMethodType" : VlapPaymentMethodType,
       "purchaseProducts": arrayPurchaseProducts
     
-  })
-    .then(function(res) {
+  }).then(function(res) {
       if(res.status==201) {
         // mensaje.innerHTML = 'Se han enviado los datos' + res.data.id;
-        console.log("qwe", res)
       }
     })
     .catch(function(err) {
-      console.log("qwe", err);
     })
     .then(function() {
     }); 
-
-    
+  
+  
+  
   return (
     <div className="container-purchase-true">
       <div className="title-purchase">
@@ -189,6 +187,7 @@ const PurchaseTrue = () => {
       }
       
       </div>
+      
       {
         Vfirma == VfirmaCreada 
         ? <div className="resume-purchase">

@@ -60,7 +60,6 @@ const GeneralInfoProduct = (props) => {
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
   };
-    console.log("props", props.productDetail)
     return(
       <>
         {

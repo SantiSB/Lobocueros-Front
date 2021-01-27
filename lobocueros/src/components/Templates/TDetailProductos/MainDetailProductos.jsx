@@ -20,7 +20,6 @@ const MainDetailProduct = (props) => {
 	if(props.productsDataHome.find(isId) != undefined && props.productsDataHome.find(isId) != null){
 		productDetail = props.productsDataHome.find(isId)
 	}
-	console.log("props2", props.productsDataHome)
     return(
 		<div className="detail-product-main">
 			<div className="breadcrumb">

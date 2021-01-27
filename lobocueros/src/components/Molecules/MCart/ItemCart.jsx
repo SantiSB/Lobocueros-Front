@@ -37,7 +37,6 @@ const ItemCart = (props) => {
         }
   
     }
-    console.log("props4", item.images[0].image)
     return (
         <div className="item-cart">            
             <div className="image-item-buy">

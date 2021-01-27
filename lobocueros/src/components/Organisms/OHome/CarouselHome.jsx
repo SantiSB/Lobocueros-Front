@@ -18,7 +18,6 @@ const CarouselHome = (props) => {
 
 	const totalItems = props.productsDataHome
 	
-	console.log("qaz3", totalItems)
     return(
 		<>
 			<div className="carousel-home">
