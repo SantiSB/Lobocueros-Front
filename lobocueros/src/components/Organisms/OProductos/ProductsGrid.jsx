@@ -42,7 +42,7 @@ const ProductsGrid = (props) => {
 					<ProductCard item={item}></ProductCard>
 				</Grid>
 	})
-
+ 
     return(
 			<>
 			<Grid container spacing={0} className={classes.root}>

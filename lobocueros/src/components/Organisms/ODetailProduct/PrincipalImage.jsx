@@ -1,28 +1,47 @@
 import React from 'react';
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setPrincipalImageDetail } from "../../../redux/actionsCreators";
+import Lobocueros from '../../../assets/Icons/Grupo 25.svg' 
 
 const PrincipalImage = (props) => {
-	const mainPicture = () => {
+	// const mainPicture = () => {
+	// 	function isMain(image){
+	// 		return image.mainPicture === true
+	// 	}
+	// 	if(props.productDetail.images != null){
+	// 		return props.productDetail.images.find(isMain).image
+	// 	}
+	// }
+	// if(props.principalImageDetail === ""){
+	// 	if(mainPicture() != undefined){
+	// 		props.setPrincipalImageDetail(mainPicture())
+	// 	} 
+	// }
+
+	const buildMainPicture = (images) => {
+		if(images.length > 0){
+
+		
 		function isMain(image){
-			return image.mainPicture === true
+			return image.mainPicture == true
 		}
-		if(props.productDetail.images != null){
-			return props.productDetail.images.find(isMain).image
+		if(images){
+			return images.find(isMain).image
 		}
-	}
-	if(props.principalImageDetail === ""){
-		if(mainPicture() != undefined){
-			props.setPrincipalImageDetail(mainPicture())
-		} 
+		else{
+			return Lobocueros
+		}
+		}
+		else {return Lobocueros}
 	}
 
+	console.log("zxc", props.principalImageDetail)
     return( 	
 		<>
 			{
-				props.principalImageDetail 
+				props.productDetail.images
 				? 	<div className="principal-image">
-						<img alt="main-img" src={props.principalImageDetail}></img>
+						<img alt="main-img" src={buildMainPicture(props.productDetail.images)}></img>
 					</div>
 				:	""
 			}

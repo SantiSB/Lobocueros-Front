@@ -5,7 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import ColorsBar from '../../Molecules/MReusable/ColorsBar';
 import Buttons from '../../Atoms/AReusable/Buttons';
-import Lobocueros from '../../../assets/Icons/Grupo 25.svg'
+import Lobocueros from '../../../assets/Icons/Grupo 25.svg' 
  
 const ProductCard = (props) => { 
 	
@@ -31,7 +31,7 @@ const ProductCard = (props) => {
 		style: 'currency',
 		currency: 'COP',
 		minimumFractionDigits: 0
-	})
+	}) 
 
     return( 
 		<>
