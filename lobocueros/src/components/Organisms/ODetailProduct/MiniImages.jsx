@@ -12,8 +12,8 @@ const MiniImages = (props) => {
 			})
 		}
 		
-		return	arrayImg.map(function(image){
-					return  <Grid item xs={4} md={2} lg={2}>
+		return	arrayImg.map(function(image, index){
+					return  <Grid item xs={4} md={2} lg={2} key={index}>
 								<img alt="pricipal-img" src={image} onClick={()=>props.setPrincipalImageDetail(image)}></img>
 							</Grid>
 				})  

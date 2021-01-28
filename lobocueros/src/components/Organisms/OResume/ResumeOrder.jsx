@@ -87,31 +87,55 @@ const ResumeOrder = (props) => {
 
   console.log("qwe", JSON.parse(localStorage.getItem('carrito')))
 
-  // "[{'p':'100', 'v':'100000', 'c':'10'}, {'p':'15', 'v':'10000', 'c':'9'}]" toca hacer esto
-  var extra1 = []
-  var extra2 = []
+  var extra1 = ""
+  var extra2 = ""
+  var car = JSON.parse(localStorage.getItem('carrito'))
+  var count = 0
 
   JSON.parse(localStorage.getItem('carrito')).map(function(item){
     var itemData = {
-      'id': item.id,
-      'price': item.price,
-      'udsItem': item.udsItem
-    } 
-    if(extra1.length < 7){
-      extra1.push(itemData)
+      'p': item.id,
+      'v': item.price,
+      'c': item.udsItem
     }
-    else{
-      extra2.push(itemData)
+    count = count+1
+  
+    if(count <= 6){
+      if(count == car.length){
+        extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+
+      }
+      else{
+        extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}" + ","
+      }
     }
+    else if(count == 7){
+      extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+    }
+    else if(count > 7 && count <= 13){
+      if(count == car.length){
+        extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+
+      }
+      else{
+        extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}" + ","
+
+      }
+    }
+    else if(count > 7 && count == 14){
+      extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+    }
+
+    
   })
 
-  var textExtra1 = JSON.stringify(extra1)
-  var textExtra2 = JSON.stringify(extra2)
+  var textExtra1 = "[" + extra1 +"]"
+  var textExtra2 = "[" + extra2 +"]"
 
-  console.log("qwe1", extra1)
-  console.log("qwe11", textExtra1)
-  console.log("qwe2", extra2)
-  console.log("qwe22", textExtra2)
+  
+
+  console.log("qwe1", textExtra1)
+  console.log("qwe2", textExtra2)
 
 
   return (

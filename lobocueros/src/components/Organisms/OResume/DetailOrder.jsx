@@ -18,7 +18,7 @@ const DetailOrder = () => {
         <p>Tiempo de entrega: 3 a 5 dias</p>
         {
         arrayItems ? arrayItems.map(function(item, index){
-          return <OrderListItem item={item} index={index}></OrderListItem>
+          return <OrderListItem item={item} index={index} key={index}></OrderListItem>
         } 
         ) 
         : []

@@ -16,7 +16,7 @@ const ListItems = (props) => {
     <>
       {
         arrayItems ? arrayItems.map(function(item, index){
-          return <ItemCart item={item} index={index}></ItemCart>
+          return <ItemCart item={item} index={index} key={index}></ItemCart>
         }
         ) 
         : []
