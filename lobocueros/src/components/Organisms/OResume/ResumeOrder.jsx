@@ -93,37 +93,39 @@ const ResumeOrder = (props) => {
   var count = 0
 
   JSON.parse(localStorage.getItem('carrito')).map(function(item){
+    console.log("qaz111", item)
     var itemData = {
       'p': item.id,
       'v': item.price,
-      'c': item.udsItem
+      'c': item.udsItem,
+      'q': item.colorSelected
     }
     count = count+1
   
-    if(count <= 6){
+    if(count <= 4){
       if(count == car.length){
-        extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+        extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "," + "\'q\'" + ":" + "\'" + `${itemData.q}` + "\'" + "}"
 
       }
       else{
-        extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}" + ","
+        extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "," + "\'q\'" + ":" + "\'" + `${itemData.q}` + "\'" + "}" + ","
       }
     }
-    else if(count == 7){
-      extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+    else if(count == 5){
+      extra1 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "," + "\'q\'" + ":" + "\'" + `${itemData.q}` + "\'" + "}"
     }
-    else if(count > 7 && count <= 13){
+    else if(count > 5 && count <= 9){
       if(count == car.length){
-        extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+        extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "," + "\'q\'" + ":" + "\'" + `${itemData.q}` + "\'" + "}"
 
       }
       else{
-        extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}" + ","
+        extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}" + "," + "\'q\'" + ":" + "\'" + `${itemData.q}` + "\'" + ","
 
       }
     }
-    else if(count > 7 && count == 14){
-      extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "}"
+    else if(count > 7 && count == 10){
+      extra2 += "{" + "\'p\'" + ":" + "\'" + `${itemData.p}` + "\'" + "," + "\'v\'" + ":" + "\'" + `${itemData.v}` + "\'" + "," + "\'c\'" + ":" + "\'" + `${itemData.c}` + "\'" + "," + "\'q\'" + ":" + "\'" + `${itemData.q}` + "\'" + "}"
     }
 
     

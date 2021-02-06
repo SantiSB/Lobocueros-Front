@@ -66,7 +66,7 @@ const InfoProductDetail = (props) => {
 			if(carritoActual.find(inCart)){
 				document.getElementById("product-exist").style.display = "block"
 			}
-			else if(JSON.parse(localStorage.getItem('carrito')).length === 14){
+			else if(JSON.parse(localStorage.getItem('carrito')).length >= 10){
 				document.getElementById("max-products").style.display = "block"
 			}
 			else{
@@ -125,7 +125,7 @@ const InfoProductDetail = (props) => {
 								<a onClick={()=>buyEvents(props.productDetail)} ><Buttons type="Add" text="Agregar al Carrito"></Buttons></a>
 							</div>
 							<p id="product-exist" className="product-exist">El producto ya está en el carrito</p>
-							<p id="max-products" className="product-exist">Puedes comprar maximo 14 productos por cada transacción</p>
+							<p id="max-products" className="product-exist">Puedes comprar maximo 10 productos por cada transacción</p>
 						</div>
 						
 					</div>
