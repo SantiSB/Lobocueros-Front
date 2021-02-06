@@ -22,7 +22,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -80,6 +80,7 @@ const GeneralInfoProduct = (props) => {
                   </Tabs>
                 </AppBar>
                 <TabPanel value={value} index={0}>
+                  
                   <Features productDetail={props.productDetail}></Features>
                 </TabPanel>
                 <TabPanel value={value} index={1}>

@@ -1,10 +1,10 @@
 import React from 'react';
 import Instagram_Lobocueros from '../../../assets/Icons/Instagram_Lobocueros.svg'
-import ig1 from '../../../assets/Images/ig1.png'
-import ig2 from '../../../assets/Images/ig2.png'
-import ig3 from '../../../assets/Images/ig3.png'
-import ig4 from '../../../assets/Images/ig4.png'
-import ig5 from '../../../assets/Images/ig5.png'
+import ig1 from '../../../assets/Images/ig1.jpg'
+import ig2 from '../../../assets/Images/ig2.jpg'
+import ig3 from '../../../assets/Images/ig3.jpg'
+import ig4 from '../../../assets/Images/ig4.jpg'
+import ig5 from '../../../assets/Images/ig5.jpg'
 
 const InstagramSection = () => {
     return(
