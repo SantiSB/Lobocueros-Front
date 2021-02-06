@@ -39,13 +39,12 @@ export default function ControlledAccordions() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography className={classes.heading}>MISIÓN</Typography>
+          MISIÓN
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
             Ofrecer al mercado y a nuestros clientes productos diseñados y elaborados 
             con los más altos niveles de calidad con el fin de satisfacer sus necesidades del día a día. 
-          </Typography>
+          
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -54,15 +53,15 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>VISIÓN</Typography>
+          VISIÓN
           
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          
             En el año 2024 queremos posicionarnos y ser reconocidos en el mercado nacional 
             como una de las empresas que ofrece los mejores productos en cuero cumpliendo con las necesidades 
             de nuestros clientes y que nuestra marca sea sinónimo de calidad y perseverancia.
-          </Typography>
+          
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
@@ -71,10 +70,10 @@ export default function ControlledAccordions() {
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography className={classes.heading}>VALORES</Typography>
+          VALORES
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          
             <ul>
               <li>Responsabilidad</li>
               <li>Compromiso</li>
@@ -82,7 +81,7 @@ export default function ControlledAccordions() {
               <li>Respeto</li>
               <li>Honestidad</li>
             </ul>
-          </Typography>
+        
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
@@ -91,10 +90,10 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.heading}>¿QUIENES SOMOS?</Typography>
+          ¿QUIENES SOMOS?
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          
             Lobocueros S.A.S es una empresa nacional fundada en el departamento de Nariño 
             por nuestro gerente general Lorenzo Bolaños Muñoz en el año 1994 , 
             Somos un equipo de trabajo especializado en la fabricación y comercialización de artículos en cuero 
@@ -103,7 +102,7 @@ export default function ControlledAccordions() {
             Brindamos lo mejor de nosotros para satisfacer a nuestros clientes con nuestros productos, 
             somos amantes al cuero, materia prima esencial del nuestra actividad económica y productiva 
             que representa la fortaleza, estilo, trabajo y naturalidad de nuestra empresa.
-          </Typography>
+          
         </AccordionDetails>
       </Accordion>
     </div>
