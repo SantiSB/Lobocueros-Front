@@ -4,16 +4,15 @@ import Accepted from '../../../assets/Icons/Accepted.svg'
 import OrderListItem from "../../Molecules/MReusable/OrderListItem";
 import Buttons from "../../Atoms/AReusable/Buttons";
 import axios from 'axios';
-import emailjs from 'emailjs-com';
 
 const PurchaseTrue = () => {
 
-
+  var arrayItems = [] 
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+    arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
   else{
-    var arrayItems = []
+    arrayItems = []
   }  
 
   var valores = []

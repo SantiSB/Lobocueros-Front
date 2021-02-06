@@ -2,11 +2,13 @@ import React from "react";
 
 const CounterItems = () => {
 
+  var arrayItems = []
+
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+    arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
   else{
-    var arrayItems = []
+    arrayItems = []
   }
 
   return (

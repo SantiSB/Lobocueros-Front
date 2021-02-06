@@ -2,10 +2,10 @@ import React from 'react';
 import InstagramSection from '../TReusable/InstagramSection'
 import InfoBuySection from '../TReusable/InfoBuySection';
 import InfoShipping from '../../Organisms/OResume/InfoShipping';
-import PayMethodTable from '../../Organisms/OResume/PayMethodTable';
+// import PayMethodTable from '../../Organisms/OResume/PayMethodTable';
 import DetailOrder from '../../Organisms/OResume/DetailOrder';
 import ResumeOrder from '../../Organisms/OResume/ResumeOrder';
-import LoginRegister from '../../Organisms/OResume/LoginRegister';
+// import LoginRegister from '../../Organisms/OResume/LoginRegister';
 
 const MainResume = () => {
     return( 

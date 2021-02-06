@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { setVisibleSearchForm, setVisibleMenu, setItemsInCart } from "../../../redux/actionsCreators";
-import Search_White from '../../../assets/Icons/Search_White.svg'
+// import Search_White from '../../../assets/Icons/Search_White.svg'
 import Lobocueros from '../../../assets/Icons/Lobocueros.svg'
 import Arrow_White from '../../../assets/Icons/Arrow_White.svg'
 import BurgerMenu from '../../Molecules/MReusable/BurgerMenu'
-import LoginModal from '../../Organisms/OReusable/LoginModal';
+// import LoginModal from '../../Organisms/OReusable/LoginModal';
 import MiniCart from '../../Organisms/OReusable/MiniCart';
 
 
@@ -17,12 +17,13 @@ const Header = (props) => {
   const filter = (param) => {
     localStorage.setItem('filtro', param);
   }
+  var arrayItems = []
 
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+     arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
   else{
-    var arrayItems = []
+     arrayItems = []
   } 
 
     return(
