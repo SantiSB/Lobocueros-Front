@@ -134,25 +134,83 @@ const Header = (props) => {
             <BurgerMenu></BurgerMenu>
                 <div className="submenu-nav" id="submenu-nav" style={props.visibleMenu === false ? {display: "none"} : {display: "flex"}}> 
                   <ul>
-                    <li className="submenu-item"><a href="/productos">Bolsos</a>
-                      <ul>
-                        <li><a href="/productos">Ver Todo</a></li>
-                        <li><a href="/productos">Bolsos</a></li>
-                        <li><a href="/productos">Morrales</a></li>
-                        <li><a href="/productos">Maletines</a></li>
-                        <li><a href="/productos">Manos Libres</a></li>
-                      </ul>
+                    <li className="item-menu"><a href="/productos" onClick={()=>filter("Nuevo")}>Nuevo</a></li>
+                    
+                    <li className="item-menu"><a href="/productos" onClick={()=>filter("Mujer")}>Mujer</a><img src={Arrow_White} alt="arrow"></img>
+                      <div className="submenu-nav" id="Mujer" >
+                        <ul>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Bolsos")}>Bolsos</a>
+                            <ul>
+                              {/* <li><a href="/productos" onClick={()=>filter("Mujer Bolsos todo")}>VER TODO</a></li> */}
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos carteras")}>Carteras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos mochilas")}>Mochilas</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos manos libres")}>Manos Libres</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos manos libres pelo")}>Manos Libres con Pelo</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos morrales")}>Morrales</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos carrieles")}>Carrieles</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos bolsos mola")}>Bolsos con Mola</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos bolsos pelo")}>Bolsos con Pelo</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Bolsos portafolios")}>Portafolios</a></li>
+                            </ul>
+                          </li>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Billeteras")}>Billeteras</a>
+                            <ul>
+                              {/* <li><a href="/productos" onClick={()=>filter("Mujer Billeteras todo")}>VER TODO</a></li> */}
+                              <li><a href="/productos" onClick={()=>filter("Mujer Billeteras billeteras")}>Billeteras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Billeteras portadocumentos")}>Portadocumentos</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Billeteras pasaporteras")}>Pasaporteras</a></li>
+                            </ul>
+                          </li>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Accesorios")}>Accesorios</a>
+                            <ul>
+                              {/* <li><a href="/productos" onClick={()=>filter("Mujer Accesorios todo")}>VER TODO</a></li> */}
+                              <li><a href="/productos" onClick={()=>filter("Mujer Accesorios cosmetiqueras")}>Cosmetiqueras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Accesorios riñoneras")}>Riñoneras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Mujer Accesorios otros")}>Otros</a></li>
+                            </ul>
+                          </li>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Mujer Viaje")}>Viaje</a></li>
+                        </ul>
+                      </div>
                     </li>
-                      
-                    <li className="submenu-item"><a href="/productos">Correas</a></li>
-                    <li className="submenu-item"><a href="/productos">Bileteras</a></li>
-                    <li className="submenu-item"><a>Accesorios</a>
-                      <ul>
-                        <li><a href="/productos">Ver Todo</a></li>
-                        <li><a href="/productos">Bolsos</a></li>
-                        <li><a href="/productos">Morrales</a></li>
-                      </ul>
+                    <li className="item-menu"><a href="/productos" onClick={()=>filter("Hombre")}>Hombre</a><img src={Arrow_White} alt="arrow"></img>
+                      <div className="submenu-nav" id="hombre">
+                        <ul>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Bolsos")}>Bolsos</a>
+                            <ul>
+                              {/* <li><a href="/productos" onClick={()=>filter("Hombre Bolsos todo")}>VER TODO</a></li> */}
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos carteras")}>Carteras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos mochilas")}>Mochilas</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos manos libres")}>Manos Libres</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos manos libres pelo")}>Manos Libres con Pelo</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos morrales")}>Morrales</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos carrieles")}>Carrieles</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos bolsos mola")}>Bolsos con Mola</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos bolsos pelo")}>Bolsos con Pelo</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Bolsos portafolios")}>Portafolios</a></li>
+                            </ul>
+                          </li>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Billeteras")}>Billeteras</a>
+                            <ul>
+                              {/* <li><a href="/productos" onClick={()=>filter("Hombre Billeteras todo")}>VER TODO</a></li> */}
+                              <li><a href="/productos" onClick={()=>filter("Hombre Billeteras billeteras")}>Billeteras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Billeteras portadocumentos")}>Portadocumentos</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Billeteras pasaporteras")}>Pasaporteras</a></li>
+                            </ul>
+                          </li>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Accesorios")}>Accesorios</a>
+                            <ul>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Accesorios todo")}>VER TODO</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Accesorios cosmetiqueras")}>Cosmetiqueras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Accesorios riñoneras")}>Riñoneras</a></li>
+                              <li><a href="/productos" onClick={()=>filter("Hombre Accesorios otros")}>Otros</a></li>
+                            </ul>
+                          </li>
+                          <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Viaje")}>Viaje</a></li>
+                        </ul>
+                      </div>
                     </li>
+                    <li className="item-menu"><a href="/productos">Ver Todo</a></li>
                   </ul>
                 </div>
           </div>

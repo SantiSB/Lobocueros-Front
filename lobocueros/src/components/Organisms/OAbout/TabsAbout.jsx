@@ -155,7 +155,8 @@ const TabsAbout = () => {
         </p>
 			</TabPanel>
       <TabPanel value={value} index={2}>
-        <h2>BIENVENIDO AL SITIO WWW.LOBOCUEROS.COM.CO</h2>
+        
+        <h3>BIENVENIDO AL SITIO WWW.LOBOCUEROS.COM.CO</h3>
         <p>
           Recomendamos leer nuestros términos y condiciones al acceder a nuestro sitio web para tener una mejor experiencia. 
           Si no estás de acuerdo con ellos será mejor que te abstengas de realizar cualquier compra en la plataforma. 

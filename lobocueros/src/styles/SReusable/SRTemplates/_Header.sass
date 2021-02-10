@@ -1,7 +1,10 @@
 .menu-open
 	display: none
 
+
+
 .header-main
+	margin: 0
 	@include size(100%, auto)
 	@include display-grid("headerUp" "headerDown", 100%, 30px 70px)
 	@include shadow-white
@@ -41,6 +44,11 @@
 		border: 0.5px solid $White
 		padding: 0rem 10rem
 
+		a:-webkit-any-link 
+			color: $White
+			cursor: pointer
+			text-decoration: none
+
 		.home-icon
 			grid-area: home-icon
 			@include display-flex(center, center)
@@ -56,12 +64,15 @@
 
 		.nav
 			@include display-flex(auto, center)
+			
 
 			.main-menu
 				@include display-flex(center, center)
 				@include size(100%, 100%)
 				list-style: none
 				overflow: hidden
+
+				
 
 				.home-icon
 					@include display-flex(center, center)
@@ -74,16 +85,19 @@
 					margin: 0rem 2rem
 					font-weight: 600
 
+					
+
 					img
 						@include size(auto, 5px)
 					
 					a
-						@include display-flex(center, center)
+						@include display-flex(left, center)
 						color: $White
 						text-decoration: none
 						margin: 0rem 0.5rem
+						text-align: left
 						&:hover
-							color: $Black
+							color: #efb810
 					
 						img
 							@include size(auto, 50px)
@@ -101,21 +115,29 @@
 						filter: alpha(opacity=60) 
 						opacity: .9
 
+
+
 						ul
 							list-style: none
 							overflow: hidden
 							padding: 1rem
+							
+							
 
 							.submenu-item
 								float: left
 								margin: 0rem 1rem
-								width: 200px
+								width: 230px
 								font-weight: 400
 
 								ul
 									li
-										margin: .3rem 0rem
-										font-weight: 200 
+										margin: .6rem 0rem
+										font-weight: 200
+										border-bottom: 1px solid white
+
+							
+							
 					
 					&:hover>.submenu-nav
 						@include display-flex(center, auto)
@@ -201,6 +223,7 @@
 
 @media (max-device-width: 573px)
 	.header-main
+		width: 100%
 		.headerUp
 			padding: 0rem 1rem
 
@@ -215,8 +238,12 @@
 				.submenu-nav
 					display: none
 					ul
-						.submenu-item
-							margin: 0rem 0rem
+						.item-menu
+							margin: 1rem 0.5rem
+							a
+								margin: 0rem 1rem
+							img
+								display: none
 
 
 
