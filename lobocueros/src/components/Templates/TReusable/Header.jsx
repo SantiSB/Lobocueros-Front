@@ -112,7 +112,7 @@ const Header = (props) => {
                     </li>
                     <li className="submenu-item"><a href="/productos" onClick={()=>filter("Hombre Accesorios")}>Accesorios</a>
                       <ul>
-                        <li><a href="/productos" onClick={()=>filter("Hombre Accesorios todo")}>VER TODO</a></li>
+                        {/* <li><a href="/productos" onClick={()=>filter("Hombre Accesorios todo")}>VER TODO</a></li> */}
                         <li><a href="/productos" onClick={()=>filter("Hombre Accesorios cosmetiqueras")}>Cosmetiqueras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Hombre Accesorios riñoneras")}>Riñoneras</a></li>
                         <li><a href="/productos" onClick={()=>filter("Hombre Accesorios otros")}>Otros</a></li>
