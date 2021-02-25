@@ -6,9 +6,11 @@ const useStyles = makeStyles((theme) => ({
 	btnGender: {
     borderRadius: "100px",
     fontFamily: "Montserrat",
-    border: "1px solid #ffffff",
+    border: "2px solid #ffffff",
     color: "#ffffff",
-    background: "#000000",
+    background: "#420000",
+    width: "200px",
+    height: "40px"
   },
   btnBuy: {
 		borderRadius: "100px",

@@ -1071,11 +1071,13 @@ div[role=presentation] {
 .banner-home {
   grid-area: banner-home;
   width: 100%;
-  height: 400px;
+  height: 200px;
   background-image: url("../assets/Images/p1.jpg");
   background-size: cover;
 }
 .banner-home .banner-container {
+  width: 100%;
+  height: 200px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1085,8 +1087,8 @@ div[role=presentation] {
 }
 @media (min-device-width: 1000px) {
   .banner-home button {
-    margin: 10rem;
-    top: 5rem;
+    margin: 5rem;
+    top: 1rem;
   }
 }
 @media (max-device-width: 1000px) {
