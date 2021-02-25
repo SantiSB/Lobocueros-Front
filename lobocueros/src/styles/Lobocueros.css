@@ -275,82 +275,6 @@ div[role=presentation] {
   font-size: 8pt;
 }
 
-@media (max-device-width: 573px) {
-  .product-card {
-    max-width: 150px;
-    height: 200px;
-  }
-  .product-card .card-action-area {
-    padding: 0px;
-  }
-  .product-card .card-action-area .card-content {
-    padding: 0px;
-  }
-  .product-card .card-action-area .card-content .image-product-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .product-card .card-action-area .card-content .image-product-card img {
-    width: 100px;
-  }
-  .product-card .card-action-area .card-content .title-product-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .product-card .card-action-area .card-content .title-product-card h2 {
-    font-family: "Pridi";
-    font-size: 8pt;
-    margin: 0px;
-  }
-  .product-card .card-action-area .card-content .price-product-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .product-card .card-action-area .card-content .price-product-card span {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 6pt;
-    margin: 0rem 0.3rem;
-  }
-  .product-card .card-action-area .card-content .price-product-card .old-value {
-    text-decoration: line-through;
-    font-weight: 400;
-    font-size: 5pt;
-  }
-  .product-card .card-actions {
-    padding: 0px;
-  }
-  .product-card .card-actions .product-card-actions {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
-  .product-card .card-actions .product-card-actions .colors-product-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.3rem 0rem;
-  }
-  .product-card .card-actions .product-card-actions .buy-produt-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.3rem;
-  }
-  .product-card .card-actions .product-card-actions .buy-produt-card .btn-buy {
-    border-radius: 100px;
-    background: #F97401;
-    color: #FFFFFF;
-    height: 20px;
-    font-size: 5pt;
-  }
-  .product-card .card-actions .product-card-actions .buy-produt-card:hover {
-    color: #000000;
-  }
-}
 .resume-buy-container {
   display: grid;
   grid-template-areas: "info-resume" "button-resume";
@@ -1147,8 +1071,8 @@ div[role=presentation] {
 .banner-home {
   grid-area: banner-home;
   width: 100%;
-  height: 300px;
-  background-image: url("../assets/Images/prueba11.jpeg");
+  height: 400px;
+  background-image: url("../assets/Images/p1.jpg");
   background-size: cover;
 }
 .banner-home .banner-container {

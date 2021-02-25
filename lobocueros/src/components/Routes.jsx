@@ -24,6 +24,7 @@ const Routes = (props) => {
       .then((response) => {
         props.setAllData(response.data)
         props.setProductsData(response.data.results)
+        props.setProductsDataHome(response.data.results)
       })
       .catch((e) => {
       });

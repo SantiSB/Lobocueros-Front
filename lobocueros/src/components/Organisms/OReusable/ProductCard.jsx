@@ -8,6 +8,7 @@ import Buttons from '../../Atoms/AReusable/Buttons';
 import Lobocueros from '../../../assets/Icons/Grupo 25.svg' 
  
 const ProductCard = (props) => { 
+	console.log("zxc", props.item)
 	
 	const buildMainPicture = (images) => {
 		if(images.length > 0){

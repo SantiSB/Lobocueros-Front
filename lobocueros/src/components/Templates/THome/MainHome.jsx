@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect} from "react";
+import { connect} from "react-redux";
+import { setAllData, setProductsData, setProductsDataHome } from "../../../redux/actionsCreators";
+import axios from "axios";
 import InstagramSection from '../TReusable/InstagramSection'
 import CarouselHome from '../../Organisms/OHome/CarouselHome'
 import InfoBuySection from '../TReusable/InfoBuySection';
 import BannerHome from '../../Organisms/OHome/BannerHome';
 import PromoHome from '../../Organisms/OHome/PromoHome';
 
-const MainHome = () => {
+
+const MainHome = (props) => {
+
+	
 	
     return(
 		<div className="mainHome-main">
@@ -30,4 +36,15 @@ const MainHome = () => {
 		</div>
     )
 }
-export default MainHome;
+const mapStateToProps = (state) => ({
+	allData: state.allData,
+	productsData: state.productsData,
+	pageActual: state.pageActual
+  });
+  const mapDispatchToProps = {
+	setAllData,
+	setProductsData,
+	setProductsDataHome,
+  };
+  
+export default connect(mapStateToProps, mapDispatchToProps)(MainHome);
