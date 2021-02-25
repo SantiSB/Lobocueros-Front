@@ -58,7 +58,7 @@ const Buttons = (props) => {
     const classes = useStyles();
     if(props.type === "Gender"){
       return(
-        <Button className={`btn-gender ${classes.btnGender}`} variant="outlined">{props.text}</Button>
+        <Button id="btnGender" className={`btn-gender ${classes.btnGender}`} variant="outlined">{props.text}</Button>
       )
     }
     else if(props.type === "Buy"){
