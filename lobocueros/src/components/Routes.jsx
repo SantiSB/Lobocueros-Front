@@ -14,7 +14,6 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
 const Routes = (props) => {
-  console.log("qwe", props.pageActual)
   useEffect(() => {
     axios
       .get(

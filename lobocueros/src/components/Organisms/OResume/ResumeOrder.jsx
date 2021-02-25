@@ -85,7 +85,6 @@ const ResumeOrder = (props) => {
 		minimumFractionDigits: 0
   })
 
-  console.log("qwe", JSON.parse(localStorage.getItem('carrito')))
 
   var extra1 = ""
   var extra2 = ""
@@ -93,7 +92,6 @@ const ResumeOrder = (props) => {
   var count = 0
 
   JSON.parse(localStorage.getItem('carrito')).map(function(item){
-    console.log("qaz111", item)
     var itemData = {
       'p': item.id,
       'v': item.price,
@@ -135,9 +133,6 @@ const ResumeOrder = (props) => {
   var textExtra2 = "[" + extra2 +"]"
 
   
-
-  console.log("qwe1", textExtra1)
-  console.log("qwe2", textExtra2)
 
 
   return (

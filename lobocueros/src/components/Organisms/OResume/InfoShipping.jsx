@@ -142,7 +142,7 @@ const InfoShipping = (props) => {
       document.getElementById("calertEmail").style.display = "none"
     }
 
-    if(validate() == true){
+    if(validate() === true){
       // emailjs.sendForm('2110', 'template_f3bwk5l', e.target, 'user_gJtoKirse4ethYFDESQFa')
       // .then((result) => {
          

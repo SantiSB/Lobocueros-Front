@@ -82,10 +82,8 @@ const InfoContact = () => {
     else{
       emailjs.sendForm('LOBO2020', 'template_lobo2020', e.target, 'user_YMPSNHEVKIj9rsmTSKzYB')
       .then((result) => {
-        console.log(result.text);
         
       }, (error) => {
-        console.log(error.text);
         
       });
       e.target.reset()

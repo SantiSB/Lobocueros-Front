@@ -35,7 +35,6 @@ const PrincipalImage = (props) => {
 		else {return Lobocueros}
 	}
 
-	console.log("zxc", props.principalImageDetail)
     return( 	
 		<>
 			{

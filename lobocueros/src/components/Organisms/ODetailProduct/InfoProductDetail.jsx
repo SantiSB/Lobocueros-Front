@@ -54,7 +54,6 @@ const InfoProductDetail = (props) => {
 		}
 	}
 
-	console.log("asd", JSON.parse(localStorage.getItem('carrito')).length)
 	const buyEvents = (item) => {
 		if(colorSelected === ""){
 			document.getElementById("select-color").style.display = "block"
