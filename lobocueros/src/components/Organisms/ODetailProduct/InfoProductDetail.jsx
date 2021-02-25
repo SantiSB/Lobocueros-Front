@@ -81,7 +81,7 @@ const InfoProductDetail = (props) => {
 
 	const buildBtn = () =>{
 		if(colorSelected === ""){
-			return <a onClick={()=>buyEventsBuy(props.productDetail)}><Buttons type="Buy" text="Comprar"></Buttons></a> 			 
+			return <a onClick={()=>buyEventsBuy(props.productDetail)} ><Buttons type="Buy" text="Comprar"></Buttons></a> 			 
 		}
 		else{
 			return <a onClick={()=>buyEventsBuy(props.productDetail)} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>
