@@ -24,12 +24,12 @@ const InfoProductDetail = (props) => {
 	const changeColorSelected = (color) =>{
 		setColorSelected(color)
 	}
-
+	var carritoActual = []
 	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
+		carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
-		var carritoActual = []
+		carritoActual = []
 	}
 
 	const buyEventsBuy = (item) => {
