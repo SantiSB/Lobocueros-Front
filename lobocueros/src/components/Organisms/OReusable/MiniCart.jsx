@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: "100px",
 	}, 
   }));
-
+  var arrayItems = []
 	const MiniCart = (props) => { 
 		if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-			var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+			arrayItems = JSON.parse(localStorage.getItem('carrito'))
 		}
 		else{
-			var arrayItems = []
+			arrayItems = []
 		}
 
 
