@@ -9,7 +9,6 @@ import ProductDetail from "./Pages/ProductDetail";
 import Cart from "./Pages/Cart";
 import Resume from "./Pages/Resume";
 import SuccessfulPurchase from "./Pages/SuccessfulPurchase";
-import FailedPurchase from "./Pages/FailedPurchase";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
@@ -17,7 +16,7 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-        props.pageActual == 0
+        props.pageActual === 0
           ? `https://lobocuerosapi.com/products/?limit=0`
           : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
       )

@@ -4,12 +4,12 @@ import Trash from '../../../assets/Icons/Trash.svg'
 
 const BtnTrash = (props) => {
     
-
+    var carritoActual = []
     if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
+		carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
-		var carritoActual = []
+		carritoActual = []
     }  
 
     const deleteItem = (index) =>{
