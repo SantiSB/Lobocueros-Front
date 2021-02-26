@@ -14,7 +14,7 @@ const ProductCard = (props) => {
 
 		
 		function isMain(image){
-			return image.mainPicture == true
+			return image.mainPicture === true
 		}
 		if(images){
 			return images.find(isMain).image

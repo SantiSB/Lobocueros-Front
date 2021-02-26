@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setListFilter, setPageActual } from "../../../redux/actionsCreators";
 import { makeStyles } from '@material-ui/core/styles';

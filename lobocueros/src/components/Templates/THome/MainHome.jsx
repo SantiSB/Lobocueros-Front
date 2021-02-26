@@ -1,7 +1,6 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setProductsDataHome } from "../../../redux/actionsCreators";
-import axios from "axios";
 import InstagramSection from '../TReusable/InstagramSection'
 import CarouselHome from '../../Organisms/OHome/CarouselHome'
 import InfoBuySection from '../TReusable/InfoBuySection';

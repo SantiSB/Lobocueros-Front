@@ -13,11 +13,11 @@ const MainDetailProduct = (props) => {
 	const idRoute = window.location.pathname.substr(11)
 
 	function isId(product){
-		return product.id == idRoute
+		return product.id === idRoute
 	} 
 
 	var productDetail = {}
-	if(props.productsDataHome.find(isId) != undefined && props.productsDataHome.find(isId) != null){
+	if(props.productsDataHome.find(isId) !== undefined && props.productsDataHome.find(isId) !== null){
 		productDetail = props.productsDataHome.find(isId)
 	}
     return(
