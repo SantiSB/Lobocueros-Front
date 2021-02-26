@@ -24,12 +24,12 @@ const InfoProductDetail = (props) => {
 	const changeColorSelected = (color) =>{
 		setColorSelected(color)
 	}
-	var carritoActual = []
+
 	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		carritoActual = JSON.parse(localStorage.getItem('carrito'))
+		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
-		carritoActual = []
+		var carritoActual = []
 	}
 
 	const buyEventsBuy = (item) => {
@@ -81,7 +81,7 @@ const InfoProductDetail = (props) => {
 
 	const buildBtn = () =>{
 		if(colorSelected === ""){
-			return <a onClick={()=>buyEventsBuy(props.productDetail)} ><Buttons type="Buy" text="Comprar"></Buttons></a> 			 
+			return <a onClick={()=>buyEventsBuy(props.productDetail)}><Buttons type="Buy" text="Comprar"></Buttons></a> 			 
 		}
 		else{
 			return <a onClick={()=>buyEventsBuy(props.productDetail)} href="/carrito"><Buttons type="Buy" text="Comprar"></Buttons></a>

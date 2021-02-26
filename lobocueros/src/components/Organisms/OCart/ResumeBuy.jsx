@@ -4,16 +4,18 @@ import { sendBuy } from "../../../redux/actionsCreators";
 import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeBuy = (props) => {
-  var arrayItems = []
+
   if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    arrayItems = JSON.parse(localStorage.getItem('carrito'))
+    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
   }
   else{
-    arrayItems = []
+    var arrayItems = []
   } 
 
   var valores = []
-  
+  const getValores = arrayItems.map(function(item) {
+    valores.push(item.totalPrice)
+  })
 
   let total = valores.reduce((a, b) => a + b, 0);
 

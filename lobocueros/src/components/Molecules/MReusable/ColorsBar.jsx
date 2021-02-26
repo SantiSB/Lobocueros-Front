@@ -7,7 +7,9 @@ const ColorsBar = (props) => {
 	const picturesColor = productDetail.images != null ? productDetail.images : []
 	
 	var arrayPictures = []
-	
+	const pictureColor = picturesColor.map(function(e){
+		arrayPictures.push(e)
+	})
 	const changeColor = props.changeColor
 	
 	function removeDuplicates() {
