@@ -5,12 +5,12 @@ import Counter from '../../Atoms/AReusable/Counter';
 import BtnTrash from '../../Atoms/AReusable/BtnTrash';
 
 const ItemCart = (props) => { 
-    
+    var carritoActual = [] 
     if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
+		carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}
 	else{
-		var carritoActual = [] 
+		carritoActual = [] 
     } 
     var item = props.item
 

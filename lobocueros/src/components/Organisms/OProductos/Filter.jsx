@@ -11,66 +11,66 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const Filter = (props) => {
 
-	const filterMenuGender = () =>{
-		if(localStorage.getItem('filtro') === "Mujer" 
-			|| localStorage.getItem('filtro') === "Mujer Bolsos"
-			|| localStorage.getItem('filtro') === "Mujer Billeteras"
-			|| localStorage.getItem('filtro') === "Mujer Accesorios"
-			|| localStorage.getItem('filtro') === "Mujer Viaje"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos todo"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos carteras"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos mochilas"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos manos libres"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos manos libres pelo"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos morrales"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos carrieles"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos bolsos mola"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos bolsos pelo"
-			|| localStorage.getItem('filtro') === "Mujer Bolsos portafolios"
-			|| localStorage.getItem('filtro') === "Mujer Billeteras todo"
-			|| localStorage.getItem('filtro') === "Mujer Billeteras billeteras"
-			|| localStorage.getItem('filtro') === "Mujer Billeteras portadocumentos"
-			|| localStorage.getItem('filtro') === "Mujer Billeteras pasaporteras"
-			|| localStorage.getItem('filtro') === "Mujer Accesorios todo"
-			|| localStorage.getItem('filtro') === "Mujer Accesorios cosmetiqueras"
-			|| localStorage.getItem('filtro') === "Mujer Accesorios riñoneras"
-			|| localStorage.getItem('filtro') === "Mujer Accesorios otros"
-		){
-			localStorage.setItem('filtro', "");
-			return 10
-		}
-		else if(localStorage.getItem('filtro') === "Hombre"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos"
-			|| localStorage.getItem('filtro') === "Hombre Billeteras"
-			|| localStorage.getItem('filtro') === "Hombre Accesorios"
-			|| localStorage.getItem('filtro') === "Hombre Viaje"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos todo"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos carteras"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos mochilas"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos manos libres"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos manos libres pelo"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos morrales"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos carrieles"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos bolsos mola"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos bolsos pelo"
-			|| localStorage.getItem('filtro') === "Hombre Bolsos portafolios"
-			|| localStorage.getItem('filtro') === "Hombre Billeteras todo"
-			|| localStorage.getItem('filtro') === "Hombre Billeteras billeteras"
-			|| localStorage.getItem('filtro') === "Hombre Billeteras portadocumentos"
-			|| localStorage.getItem('filtro') === "Hombre Billeteras pasaporteras"
-			|| localStorage.getItem('filtro') === "Hombre Accesorios todo"
-			|| localStorage.getItem('filtro') === "Hombre Accesorios cosmetiqueras"
-			|| localStorage.getItem('filtro') === "Hombre Accesorios riñoneras"
-			|| localStorage.getItem('filtro') === "Hombre Accesorios otros"
-		){
-			localStorage.setItem('filtro', "");
-			return 20
-		}
-		else{
-			return ""
-		}
+	// const filterMenuGender = () =>{
+	// 	if(localStorage.getItem('filtro') === "Mujer" 
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos"
+	// 		|| localStorage.getItem('filtro') === "Mujer Billeteras"
+	// 		|| localStorage.getItem('filtro') === "Mujer Accesorios"
+	// 		|| localStorage.getItem('filtro') === "Mujer Viaje"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos todo"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos carteras"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos mochilas"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos manos libres"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos manos libres pelo"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos morrales"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos carrieles"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos bolsos mola"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos bolsos pelo"
+	// 		|| localStorage.getItem('filtro') === "Mujer Bolsos portafolios"
+	// 		|| localStorage.getItem('filtro') === "Mujer Billeteras todo"
+	// 		|| localStorage.getItem('filtro') === "Mujer Billeteras billeteras"
+	// 		|| localStorage.getItem('filtro') === "Mujer Billeteras portadocumentos"
+	// 		|| localStorage.getItem('filtro') === "Mujer Billeteras pasaporteras"
+	// 		|| localStorage.getItem('filtro') === "Mujer Accesorios todo"
+	// 		|| localStorage.getItem('filtro') === "Mujer Accesorios cosmetiqueras"
+	// 		|| localStorage.getItem('filtro') === "Mujer Accesorios riñoneras"
+	// 		|| localStorage.getItem('filtro') === "Mujer Accesorios otros"
+	// 	){
+	// 		localStorage.setItem('filtro', "");
+	// 		return 10
+	// 	}
+	// 	else if(localStorage.getItem('filtro') === "Hombre"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos"
+	// 		|| localStorage.getItem('filtro') === "Hombre Billeteras"
+	// 		|| localStorage.getItem('filtro') === "Hombre Accesorios"
+	// 		|| localStorage.getItem('filtro') === "Hombre Viaje"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos todo"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos carteras"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos mochilas"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos manos libres"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos manos libres pelo"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos morrales"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos carrieles"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos bolsos mola"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos bolsos pelo"
+	// 		|| localStorage.getItem('filtro') === "Hombre Bolsos portafolios"
+	// 		|| localStorage.getItem('filtro') === "Hombre Billeteras todo"
+	// 		|| localStorage.getItem('filtro') === "Hombre Billeteras billeteras"
+	// 		|| localStorage.getItem('filtro') === "Hombre Billeteras portadocumentos"
+	// 		|| localStorage.getItem('filtro') === "Hombre Billeteras pasaporteras"
+	// 		|| localStorage.getItem('filtro') === "Hombre Accesorios todo"
+	// 		|| localStorage.getItem('filtro') === "Hombre Accesorios cosmetiqueras"
+	// 		|| localStorage.getItem('filtro') === "Hombre Accesorios riñoneras"
+	// 		|| localStorage.getItem('filtro') === "Hombre Accesorios otros"
+	// 	){
+	// 		localStorage.setItem('filtro', "");
+	// 		return 20
+	// 	}
+	// 	else{
+	// 		return ""
+	// 	}
 		
-	}
+	// }
 
 	//Estados
 	const [gender, setGender] = React.useState("");
