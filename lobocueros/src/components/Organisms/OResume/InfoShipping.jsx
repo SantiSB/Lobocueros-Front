@@ -164,7 +164,7 @@ const InfoShipping = (props) => {
   const classes = useStyles();
   return (
     <div  className="container-InfoShipping" >
-      <p className="title-steep">Paso 1 de 2</p>
+      <p className="title-steep">Paso 1 de 3</p>
       <p className="subtitle-steep">Diligenciar información de envío</p>
       <Alert id="calert" severity="error" style={{display: "none"}}>POR FAVOR LLENA TODOS LOS CAMPOS</Alert>
       <Alert id="calertCedula" severity="error" style={{display: "none"}}>LA CEDULA SOLO PUEDE TENER NUMEROS</Alert>

@@ -13,7 +13,7 @@ const DetailOrder = () => {
   return (
     <>
       <div className="items-order">
-        <p className="title-steep">Paso 2 de 2</p>
+        <p className="title-steep">Paso 2 de 3</p>
         <p className="subtitle-steep">Verificar detalles del pedido</p>
         <p>Tiempo de entrega: 3 a 5 dias</p>
         {

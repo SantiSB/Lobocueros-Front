@@ -142,6 +142,8 @@ const ResumeOrder = (props) => {
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
+        <p className="title-steep">Paso 3 de 3</p>
+
         <p className="title-info-resume">Resumen del pedido</p>
         <div>
           <p>Subtotal: <span>{formatter.format(total)}</span></p>
