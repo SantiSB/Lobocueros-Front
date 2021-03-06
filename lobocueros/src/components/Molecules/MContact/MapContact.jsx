@@ -14,7 +14,8 @@ const MapContact = () => {
     return(
       <div style={{ height: '100%', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyBBKxFzrRo-dgmGwtFpURfVlJzwwwGlPFk" }}
+        // AIzaSyBBKxFzrRo-dgmGwtFpURfVlJzwwwGlPFk
+          bootstrapURLKeys={{ key: "AIzaSyCKhKld_7uwKoIyvMuREsjlscvQrXDiAbw" }}
           defaultCenter={defaultProps.center}
           defaultZoom={defaultProps.zoom}
         >
