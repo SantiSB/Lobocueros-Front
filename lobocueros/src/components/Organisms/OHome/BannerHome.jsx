@@ -5,10 +5,7 @@ const BannerHome = () => {
     return(
 			<div className="banner-container">
 				<a href="/productos">
-					<Buttons type="Gender" text="Mujer"></Buttons>
-				</a>
-				<a href="/productos">
-					<Buttons type="Gender" text="Hombre"></Buttons>	
+					<Buttons type="Gender" text="VER TODO"></Buttons>
 				</a>			
 			</div>
     )
