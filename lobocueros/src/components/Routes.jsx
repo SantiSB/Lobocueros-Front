@@ -11,6 +11,7 @@ import Resume from "./Pages/Resume";
 import SuccessfulPurchase from "./Pages/SuccessfulPurchase";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import NotFound from "./Pages/NotFound";
 
 const Routes = (props) => {
   useEffect(() => {
@@ -65,6 +66,7 @@ const Routes = (props) => {
         {/* <Route path="/comprafallida" component={FailedPurchase} /> */}
         <Route path="/sobrenosotros" component={About} />
         <Route path="/contacto" component={Contact} />
+        <Route component={NotFound} />
       </Switch>
     </Router>
   )
