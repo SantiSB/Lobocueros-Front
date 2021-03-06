@@ -37,12 +37,12 @@ const useStyles = makeStyles((theme) => ({
 				<hr></hr>
 				<div className="list-products-mini-cart">
 					{
-						arrayItems ? arrayItems.map(function(item, index){
+						arrayItems.length>0 ? arrayItems.map(function(item, index){
 							return (
 								<ItemMiniCart item={item} index={index} key={index}></ItemMiniCart> 
 							)
 						}) 
-						: []
+						: <h4>EL CARRITO ESTÁ VACIO</h4>
 					}
 				</div>
 				

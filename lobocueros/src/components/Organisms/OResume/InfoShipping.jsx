@@ -158,6 +158,7 @@ const InfoShipping = (props) => {
       localStorage.setItem('telefono', document.getElementById("ctelefono").value)
       props.sendBuy(true)
     }
+
   }
 
   const classes = useStyles();
@@ -180,7 +181,7 @@ const InfoShipping = (props) => {
         <br></br>
         <TextField id="cemail" label="E-Mail" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)} />
         <TextField id="ctelefono" label="Teléfono" variant="outlined" className={classes.field} onChange={(e)=>props.changeTelephone(e.target.value)}/>
-        <Button variant="contained" color="primary" onClick={sendEmail} style={{margin: "1rem 0.5rem"}}>Confirmar datos</Button>
+        <Button className=".ir-arriba" variant="contained" color="primary" onClick={sendEmail} style={{margin: "1rem 0.5rem"}}>Confirmar datos</Button>
       </form>
     </div>
   );
