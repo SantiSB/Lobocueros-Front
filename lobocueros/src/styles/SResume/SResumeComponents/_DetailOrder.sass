@@ -24,3 +24,16 @@
 @media (max-device-width: 900px)
 
 @media (max-device-width: 573px)
+	.items-order
+		background: $White
+		margin: 1rem
+		padding: 1rem
+
+		.item
+			@include display-grid("image-item-order" "info-item-order", auto, 50% 50%)
+			text-align: center
+			img
+				width: 120px
+
+			p
+				font-size: 8pt

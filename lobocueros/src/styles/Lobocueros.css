@@ -2116,6 +2116,26 @@ div[role=presentation] {
     font-size: 8pt;
   }
 }
+@media (max-device-width: 573px) {
+  .items-order {
+    background: #FFFFFF;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .items-order .item {
+    display: grid;
+    grid-template-areas: "image-item-order" "info-item-order";
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+  }
+  .items-order .item img {
+    width: 120px;
+  }
+  .items-order .item p {
+    font-size: 8pt;
+  }
+}
 .login-register-container {
   background: #FFFFFF;
   margin: 1rem;
