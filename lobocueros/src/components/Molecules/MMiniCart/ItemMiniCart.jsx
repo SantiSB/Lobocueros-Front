@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Counter from '../../Atoms/AReusable/Counter'; 
 import BtnTrash from '../../Atoms/AReusable/BtnTrash';
+import ColorBtn from '../../Atoms/AReusable/ColorBtn';
 
 const ItemMiniCart = (props) => { 
 
@@ -43,7 +44,7 @@ const ItemMiniCart = (props) => {
 		minimumFractionDigits: 0
 	})
 
-
+    console.log("qwe", item)
     return (
         <div className="item-mini-cart">
             <div className="image-item-buy">
@@ -53,7 +54,7 @@ const ItemMiniCart = (props) => {
                 <div>
                     <p>{item.title}</p>
                     <p>Precio: <span>{formatter.format(item.price)}</span></p>
-                    <p>Color: <span>{item.colorSelected}</span></p>
+                    <p>Color: <ColorBtn codeColor={item.colorSelected}></ColorBtn></p>
                     <p>Tiempo de entrega 3 a 5 Días</p>
                 </div>
             </div>
