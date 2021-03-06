@@ -173,7 +173,7 @@ const InfoShipping = (props) => {
       <Alert id="calertCiudad" severity="error" style={{display: "none"}}>LA CIUDAD SOLO PUEDE TENER LETRAS</Alert>
       <Alert id="calertEmail" severity="error" style={{display: "none"}}>EL EMAIL ES INCORECTO</Alert>
       <form noValidate autoComplete="off">
-        <TextField id="cnombre" label="Nombre Completo" variant="outlined" className={classes.field} onChange={(e)=>props.changeFullName(e.target.value)} />
+        <TextField id="cnombre" label="Nombre" variant="outlined" className={classes.field} onChange={(e)=>props.changeFullName(e.target.value)} />
         <TextField id="cciudad" label="Ciudad" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingCity(e.target.value)}/>
         <br></br>
         <TextField id="cdireccion" label="Dirección" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingAddress(e.target.value)}/>
