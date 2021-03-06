@@ -135,8 +135,6 @@ const ResumeOrder = (props) => {
 
   
 
-  console.log("qwe1", textExtra1)
-  console.log("qwe2", textExtra2)
 
 
   return (
