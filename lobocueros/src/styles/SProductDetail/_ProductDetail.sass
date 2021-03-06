@@ -1,8 +1,10 @@
 .product-detail
-	@include display-grid("header-product-detail" "main-detail-product" "footer-product-detail", 100%, 100px auto auto)
+	@include display-grid("header-product-detail" "main-detail-product" "footer-product-detail", auto, 100px auto auto)
 
 	.header-product-detail
 		grid-area: header-product-detail
+		margin: 0
+	
 
 	.main-detail-product
 		grid-area: main-detail-product

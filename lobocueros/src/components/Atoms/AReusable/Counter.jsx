@@ -7,9 +7,9 @@ import { setCounter } from "../../../redux/actionsCreators";
 const Counter = (props) => {
     return (
         <>
-            <button onClick={props.countLess}><i><img alt="countless" src={Menos}></img></i></button>
+            <button onClick={props.countLess} style={{"outline": "none"}}><i><img alt="countless" src={Menos}></img></i></button>
                 <span>{props.count}</span>
-            <button onClick={props.countMore}><i><img alt="countmore" src={Mas}></img></i></button>
+            <button onClick={props.countMore} style={{"outline": "none"}}><i><img alt="countmore" src={Mas}></img></i></button>
         </>
     )
 }

@@ -38,8 +38,7 @@
 @media (max-device-width: 1200px)
 		
 @media (max-device-width: 900px)
-    .item-buy
-
+    .item-cart
         .image-item-buy
             img
                 width: 100px
@@ -57,21 +56,51 @@
                 font-size: 20pt
 
 @media (max-device-width: 573px)
-    .item-buy
-        @include display-grid("image-item-buy info-item-buy buttons-item-buy", 30% 40% 30%,  auto)
+    .item-cart
+        // @include display-grid("image-item-buy info-item-buy buttons-item-buy", 30% 50% 20%,  auto)
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-auto-rows: minmax(100px, auto)
+        background: $White
+        margin: 1rem
+        border: 1px solid $Black
+        padding: 1rem
+
+        .checkbox-item-buy
+            @include display-flex(center, center)
+
         .image-item-buy
+            @include display-flex(center, center)
+            grid-column: 1
+            grid-row: 1
             img
-                width: 80px
+                width: 100px
 
         .info-item-buy
-            font-size: 7pt
-            padding: 0rem 1rem
+            @include display-flex(center, center)
+            grid-column: 1 / 3
+            grid-row: 2
+            margin-top: 1rem 
+            p
+                margin: 5px
 
         .buttons-item-buy
+            @include display-grid("trash-btn-container" "counter-btn-container", auto, 50% 50%)
+            grid-column: 2
+            grid-row: 1
+            
+            .trash-btn-container
+                @include display-flex(center, flex-end)
+
+            .counter-btn-container
+                @include display-flex(center, center)
 
             button
+                background: none
+                border: none
                 img
-                    width: 10px
+                    width: 20px
 
             span
-                font-size: 15pt
+                font-size: 25pt
+                margin: 0rem .5rem
