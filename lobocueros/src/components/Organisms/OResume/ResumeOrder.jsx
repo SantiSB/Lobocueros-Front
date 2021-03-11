@@ -161,7 +161,7 @@ const ResumeOrder = (props) => {
           <input name="signature"     type="hidden"  value="7ee7cf808ce6a39b17481c54f2c57acc" ></input>
           <input name="test"          type="hidden"  value="1"></input>
           <input name="buyerEmail"    type="hidden"  value="test@test.com"></input>
-          <input name="responseUrl"    type="hidden"  value="http://localhost:3000/resultado-compra"></input>
+          <input name="responseUrl"    type="hidden"  value="http://lobocueros-s3.s3-website.us-east-2.amazonaws.com/resultado-compra"></input>
           <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation"></input>
           <input name="Submit"        type="submit"  value="Enviar"></input>
         </form> */}
@@ -187,7 +187,7 @@ const ResumeOrder = (props) => {
           <input name="telephone"    type="hidden"  value={props.telephone} ></input>
           <input name="extra1"    type="hidden"  value={textExtra1} ></input>
           <input name="extra2"    type="hidden"  value={textExtra2} ></input>
-          <input name="responseUrl"    type="hidden"  value="http://localhost:3000/resultado-compra" ></input>
+          <input name="responseUrl"    type="hidden"  value="http://lobocueros-s3.s3-website.us-east-2.amazonaws.com/resultado-compra" ></input>
           <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" ></input>
           {
             props.sendBuy == true ? <Button name="Submit" onClick={validacion} value="Enviar" variant="contained" color="secondary" >PAGAR</Button> : <Button variant="contained" disabled >PAGAR</Button>
