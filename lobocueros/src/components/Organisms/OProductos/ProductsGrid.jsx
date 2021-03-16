@@ -33,7 +33,7 @@ const ProductsGrid = (props) => {
 	
 	const count = () =>{
 		var items = props.allData.length
-		var pages = Math.ceil(items / 20)
+		var pages = Math.ceil(items / 5)
 		return pages
 	}
 
