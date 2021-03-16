@@ -19,7 +19,7 @@ const Routes = (props) => {
       .get(
         props.pageActual === 0
           ? `https://lobocuerosapi.com/products/?limit=0`
-          : `https://lobocuerosapi.com/products/?limit=10&offset=${(props.pageActual-1)*10}`
+          : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
       )
       .then((response) => {
         props.setAllData(response.data)
