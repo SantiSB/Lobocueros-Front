@@ -2464,13 +2464,15 @@ div[role=presentation] {
   animation: blinkblink 7s linear infinite;
 }
 
-.moon {
+.moon input {
   color: #fff;
   background-color: #0a1821;
   padding: 5px;
   border: none;
   border-bottom: 2px solid #ccc;
   font-size: 18px;
+}
+.moon input:focus {
   border-bottom: 2px solid #ccc;
 }
 /* mobile test * / */
