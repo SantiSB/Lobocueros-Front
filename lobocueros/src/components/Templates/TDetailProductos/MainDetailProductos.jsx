@@ -10,6 +10,7 @@ import GeneralInfoProduct from '../../Organisms/ODetailProduct/GeneralInfoProduc
 import MiniImages from '../../Organisms/ODetailProduct/MiniImages';
  
 const MainDetailProduct = (props) => { 
+	console.log("zxc", props.productsData)
 	const idRoute = window.location.pathname.substr(11)
 
 	function isId(product){
@@ -17,8 +18,9 @@ const MainDetailProduct = (props) => {
 	} 
 
 	var productDetail = {}
-	if(props.productsDataHome.find(isId) != undefined && props.productsDataHome.find(isId) != null){
-		productDetail = props.productsDataHome.find(isId)
+	if(props.productsData.find(isId) != undefined && props.productsData.find(isId) != null){
+		
+		productDetail = props.productsData.find(isId)
 	}
     return(
 		<div className="detail-product-main">

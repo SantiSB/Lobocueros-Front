@@ -2473,8 +2473,10 @@ div[role=presentation] {
   font-size: 18px;
 }
 .moon input:focus {
+  border-color: none;
   border-bottom: 2px solid #ccc;
 }
+
 /* mobile test * / */
 @media (max-width: 647px) {
   .moon {

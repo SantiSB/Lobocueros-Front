@@ -13,8 +13,8 @@ const ResumeBuy = (props) => {
   } 
 
   var valores = []
-  const getValores = arrayItems.map(function(item) {
-    valores.push(item.totalPrice)
+  arrayItems.map(function(item) {
+    return valores.push(item.totalPrice)
   })
 
   let total = valores.reduce((a, b) => a + b, 0);

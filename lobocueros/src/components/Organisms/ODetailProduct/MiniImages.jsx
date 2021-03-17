@@ -8,7 +8,7 @@ const MiniImages = (props) => {
 	const productItemGrid = (images) => {
 		if(images != null){
 			images.map(function(image){
-				arrayImg.push(image.image)
+				return arrayImg.push(image.image)
 			})
 		}
 		
