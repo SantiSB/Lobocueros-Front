@@ -11,7 +11,7 @@ import MiniImages from '../../Organisms/ODetailProduct/MiniImages';
  
 const MainDetailProduct = (props) => { 
 	console.log("zxc", props.allData)
-	const idRoute = window.location.pathname.substr(11)
+	const idRoute = window.location.pathname.substr(18)
 
 	function isId(product){
 		return product.id == idRoute

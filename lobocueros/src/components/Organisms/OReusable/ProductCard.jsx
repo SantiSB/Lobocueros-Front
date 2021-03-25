@@ -40,7 +40,7 @@ const ProductCard = (props) => {
 					<CardActionArea className="card-action-area" >
 						<CardContent className="card-content" >
 						{
-							itemProduct.id ? <a href={itemProduct.id ? `/productos/${itemProduct.id}` : ""}> 
+							itemProduct.id ? <a href={itemProduct.id ? `/detalle-producto/${itemProduct.id}` : ""}> 
 												<div className="image-product-card" >
 													<img src={buildMainPicture(itemProduct.images)} alt="main-img"></img>
 												</div>

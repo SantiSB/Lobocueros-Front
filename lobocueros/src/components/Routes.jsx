@@ -28,13 +28,15 @@ const Routes = (props) => {
   }, [props.pageActual])
 
   useEffect(() => {
+    console.log("zxc", window.location.href)
     axios
       .get(
         window.location.pathname === "/productos" 
         ? props.pageActual === 0
-            ? `https://lobocuerosapi.com/products/?limit=0`
-            : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
-        : `https://lobocuerosapi.com/products/?limit=500000000000000000`
+          ? `https://lobocuerosapi.com/products/?limit=0`
+          : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
+        : `https://lobocuerosapi.com/products/?limit=50000`
+        
       )
       .then((response) => {
         props.setProductsData(response.data.results)
@@ -62,7 +64,7 @@ const Routes = (props) => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/productos" exact component={Productos} />
-        <Route path="/productos/:id/" component={ProductDetail} />
+        <Route path="/detalle-producto/:id/" component={ProductDetail} />
         <Route path="/carrito" component={Cart} />
         <Route path="/resumen" component={Resume} />
         <Route path="/resultado-compra" component={SuccessfulPurchase} />
