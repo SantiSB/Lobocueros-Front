@@ -14,17 +14,14 @@ import Contact from "./Pages/Contact";
 import NotFound from "./Pages/NotFound";
 
 const Routes = (props) => {
+
   useEffect(() => {
     axios
       .get(
-        props.pageActual === 0
-          ? `https://lobocuerosapi.com/products/?limit=0`
-          : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
+          `https://lobocuerosapi.com/products/?limit=10000000000000000000000000000`
       )
       .then((response) => {
-        props.setAllData(response.data)
-        props.setProductsData(response.data.results)
-        props.setProductsDataHome(response.data.results)
+        props.setAllData(response.data.results)
       })
       .catch((e) => {
       });
@@ -33,14 +30,20 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-          `https://lobocuerosapi.com/products/`
+        window.location.pathname === "/productos" 
+        ? props.pageActual === 0
+            ? `https://lobocuerosapi.com/products/?limit=0`
+            : `https://lobocuerosapi.com/products/?limit=20&offset=${(props.pageActual-1)*20}`
+        : `https://lobocuerosapi.com/products/?limit=500000000000000000`
       )
       .then((response) => {
-        props.setAllData(response.data.results)
+        props.setProductsData(response.data.results)
       })
       .catch((e) => {
       });
   }, [props.pageActual])
+
+  
 
   useEffect(() => {
     axios

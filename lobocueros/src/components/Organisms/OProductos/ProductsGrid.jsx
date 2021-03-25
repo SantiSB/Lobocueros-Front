@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect} from "react-redux";
-import { setAllData, setProductsData, setListFilter, setPageActual } from "../../../redux/actionsCreators";
+import { setAllData, setProductsData, setPageActual } from "../../../redux/actionsCreators";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProductCard from '../../Organisms/OReusable/ProductCard'
@@ -65,7 +65,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
 	setAllData,
 	setProductsData,
-	setListFilter,
 	setPageActual
 };
   

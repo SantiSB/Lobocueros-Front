@@ -11,6 +11,8 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const Filter = (props) => {
 
+
+
 	//Estados
 	const [gender, setGender] = React.useState("");
 	const [category, setCategory] = React.useState("");
@@ -245,7 +247,6 @@ const Filter = (props) => {
 		
 	},[])
 
-
 	React.useEffect(() => {
     	listEventsFilter();
     }, [props.productsData, gender, category, order, search, subCategory]);
@@ -362,7 +363,7 @@ const Filter = (props) => {
 	}
 	
 	const listEventsFilter = () => {
-		let newListEvents = props.productsData
+		var newListEvents = props.productsData
 
 			//SEARCH
 			if(search !== ""){
@@ -500,9 +501,12 @@ const Filter = (props) => {
 			}
 
 		//ACTUALIZAR LISTA	
+	console.log("edc", newListEvents.map(function(item){
+		return item.categoryType.name
+	}))
+
 		props.setListFilter(newListEvents);
 	}
-	
 	const buildSubCategory = () => {
 		
 		if(category === ""){
