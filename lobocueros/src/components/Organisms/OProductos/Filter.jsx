@@ -324,23 +324,23 @@ const Filter = (props) => {
 	//OnChange
 	const handleChangeGender = (event) => {
 		setGender(event.target.value);
-		props.setPageActual("1");
+		props.setPageActual(1);
 	}
 	const handleChangeCategory = (event) => {
 		setSubCategory("")
 		setCategory(event.target.value);
-		props.setPageActual("1");
+		props.setPageActual(1);
 	}
 	const handleChangeOrder = (event) => {
 		setOrder(event.target.value);
 	};
 	const handleChangeSearch = (event) => {
 		setSearch(event.target.value);
-		props.setPageActual("1");
+		props.setPageActual(1);
 	};
 	const handleChangeSubCategory = (event) => {
 		setSubCategory(event.target.value);
-		props.setPageActual("1");
+		props.setPageActual(1);
 	};
 	const resetFilter = (event) =>{
 		setGender("")
@@ -348,7 +348,7 @@ const Filter = (props) => {
 		setOrder("")
 		setSearch("")
 		setSubCategory("")
-		props.setPageActual("1")
+		props.setPageActual(1)
 	}
 
 	//FilterBy GENDER
