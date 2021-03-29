@@ -20,20 +20,18 @@ const useStyles = makeStyles((theme) => ({
   }));
  
 const ProductsGrid = (props) => {
-	
+	console.log("qwe", props.pageActual)
 	const classes = useStyles();
 	const totalItemsFilter = props.listFilter
 
-	const [page, setPage] = React.useState(1);
+	const [page, setPage] = React.useState(props.pageActual);
 	const handleChange = (event, value) => {
 		setPage(value);
 		props.setPageActual(value)
 	};
 
-	
 	const count = () =>{
-		var items = props.productsData.length
-		var pages = Math.ceil(items / 19 )
+		var pages = Math.ceil(totalItemsFilter.length / 19 )
 		return pages
 	}
 

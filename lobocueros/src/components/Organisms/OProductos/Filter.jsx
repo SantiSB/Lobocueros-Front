@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect} from "react-redux";
-import { setAllData, setProductsData, setListFilter } from "../../../redux/actionsCreators";
+import { setAllData, setProductsData, setListFilter, setPageActual } from "../../../redux/actionsCreators";
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -254,19 +254,23 @@ const Filter = (props) => {
 	//OnChange
 	const handleChangeGender = (event) => {
 		setGender(event.target.value);
+		props.setPageActual("1");
 	}
 	const handleChangeCategory = (event) => {
 		setSubCategory("")
 		setCategory(event.target.value);
+		props.setPageActual("1");
 	}
 	const handleChangeOrder = (event) => {
 		setOrder(event.target.value);
 	};
 	const handleChangeSearch = (event) => {
 		setSearch(event.target.value);
+		props.setPageActual("1");
 	};
 	const handleChangeSubCategory = (event) => {
 		setSubCategory(event.target.value);
+		props.setPageActual("1");
 	};
 
 	//FilterBy GENDER
@@ -645,7 +649,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
 	setAllData,
 	setProductsData,
-	setListFilter
+	setListFilter,
+	setPageActual
 };
   
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
