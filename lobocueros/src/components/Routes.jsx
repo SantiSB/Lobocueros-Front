@@ -28,7 +28,6 @@ const Routes = (props) => {
   }, [props.pageActual])
 
   useEffect(() => {
-    console.log("zxc", window.location.href)
     axios
       .get(
         window.location.pathname === "/productos" 

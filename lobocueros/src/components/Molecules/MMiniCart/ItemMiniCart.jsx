@@ -44,7 +44,6 @@ const ItemMiniCart = (props) => {
 		minimumFractionDigits: 0
 	})
 
-    console.log("qwe", item)
     return (
         <div className="item-mini-cart">
             <div className="image-item-buy">

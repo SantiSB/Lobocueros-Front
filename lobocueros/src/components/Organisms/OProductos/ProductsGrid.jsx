@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
   }));
  
 const ProductsGrid = (props) => {
-	console.log("qwe", props.pageActual)
 	const classes = useStyles();
 	const totalItemsFilter = props.listFilter
 
@@ -35,12 +34,13 @@ const ProductsGrid = (props) => {
 		return pages
 	}
 
-	const itemsGridProducts = totalItemsFilter.map(function(item, index){    
+	const itemsGridProducts = totalItemsFilter.map(function(item, index){   
+		console.log("qaz", item.price) 
 		return <Grid item xs={12} sm={6} md={3} className={classes.root} key={index}>
 					<ProductCard item={item}></ProductCard>
 				</Grid>
 	})
- 
+	
     return(
 			<>
 			<Grid container spacing={0} className={classes.root}>

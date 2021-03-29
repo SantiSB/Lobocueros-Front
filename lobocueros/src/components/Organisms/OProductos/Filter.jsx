@@ -395,19 +395,13 @@ const Filter = (props) => {
 			switch (order) { 
 				case 10:
 					newListEvents = newListEvents.filter(filterByPrice);
-					newListEvents = newListEvents.sort((a, b) =>
-						("" + a.price).localeCompare(
-							b.price
-						)
-					);
+					newListEvents = newListEvents.sort((a, b) => a.price - b.price);
+					console.log("asd", newListEvents)
 					break;
 				case 20:
 					newListEvents = newListEvents.filter(filterByPrice);
-					newListEvents = newListEvents.sort((a, b) =>
-						("" + b.price).localeCompare(
-							a.price
-						)
-					);
+					newListEvents = newListEvents.sort((a, b) => b.price - a.price);
+
 					break; 
 				case 30:
 					newListEvents = newListEvents.filter(filterByUpdate);
@@ -504,11 +498,7 @@ const Filter = (props) => {
 					break;
 			}
 
-		//ACTUALIZAR LISTA	
-	console.log("edc", newListEvents.map(function(item){
-		return item.categoryType.name
-	}))
-
+		//ACTUALIZAR LISTA
 		props.setListFilter(newListEvents);
 	}
 	const buildSubCategory = () => {

@@ -92,7 +92,6 @@ const ResumeOrder = (props) => {
   var count = 0
 
   JSON.parse(localStorage.getItem('carrito')).map(function(item){
-    console.log("qaz111", item)
     var itemData = {
       'p': item.id,
       'v': item.price,
