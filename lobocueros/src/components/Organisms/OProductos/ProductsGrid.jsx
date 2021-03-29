@@ -35,7 +35,6 @@ const ProductsGrid = (props) => {
 	}
 
 	const itemsGridProducts = totalItemsFilter.map(function(item, index){   
-		console.log("qaz", item.price) 
 		return <Grid item xs={12} sm={6} md={3} className={classes.root} key={index}>
 					<ProductCard item={item}></ProductCard>
 				</Grid>

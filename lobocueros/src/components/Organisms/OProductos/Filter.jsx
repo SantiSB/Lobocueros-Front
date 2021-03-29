@@ -1,4 +1,6 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setListFilter, setPageActual } from "../../../redux/actionsCreators";
 import InputLabel from '@material-ui/core/InputLabel';
@@ -11,7 +13,15 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const Filter = (props) => {
 
+	const useStyles = makeStyles((theme) => ({
+		root: {
+		  '& > *': {
+			margin: theme.spacing(1),
+		  },
+		},
+	  }));
 
+	  const classes = useStyles();
 
 	//Estados
 	const [gender, setGender] = React.useState("");
@@ -332,6 +342,14 @@ const Filter = (props) => {
 		setSubCategory(event.target.value);
 		props.setPageActual("1");
 	};
+	const resetFilter = (event) =>{
+		setGender("")
+		setCategory("")
+		setOrder("")
+		setSearch("")
+		setSubCategory("")
+		props.setPageActual("1")
+	}
 
 	//FilterBy GENDER
 	const filterByGenderMasculino = (event) => {
@@ -673,6 +691,15 @@ const Filter = (props) => {
 						<MenuItem value={50}>Sin orden</MenuItem>
 					</Select>
 				</FormControl>
+				<FormControl className="form-control">
+					<div className="container-button-form">
+						<Button variant="contained" onClick={resetFilter}>
+							Limpiar Filtro
+						</Button>
+					</div>
+				
+				</FormControl>
+				
 				<FormControl className="form-control" id="search-form-control">
 					<InputLabel htmlFor="standard-adornment-password">Buscar por titulo</InputLabel>
                     <Input
@@ -686,6 +713,7 @@ const Filter = (props) => {
                         }
                     />
 				</FormControl> 
+				
 			</div>
 		</div>
     )

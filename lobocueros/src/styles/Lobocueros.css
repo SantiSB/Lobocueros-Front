@@ -1300,8 +1300,17 @@ div[role=presentation] {
 }
 
 .filter-products .select-filter .form-control {
-  width: 120px;
+  width: 150px;
+  height: 50px;
   margin: 0rem 0.2rem;
+}
+.filter-products .select-filter .form-control .container-button-form {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+.filter-products .select-filter .form-control .container-button-form button {
+  background: #F5D200;
 }
 .filter-products .select-filter #search-form-control {
   width: 100%;
