@@ -71,7 +71,7 @@ const TabsAbout = () => {
 				<Tab label="QUIENES SOMOS" {...a11yProps(0)} />
 				<Tab label="NUESTRAS POLITICAS" {...a11yProps(1)} />
         <Tab label="TERMINOS Y CONDICIONES" {...a11yProps(2)} />
-        <Tab label="¿COMO COMPRAR?" {...a11yProps(3)} />
+        {/* <Tab label="¿COMO COMPRAR?" {...a11yProps(3)} /> */}
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>

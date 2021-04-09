@@ -18,7 +18,7 @@ const Routes = (props) => {
   useEffect(() => {
     axios
       .get(
-          `https://lobocuerosapi.com/products/?limit=10000000000000000000000000000`
+          `https://lobocuerosapi.com/products/?limit=1000`
       )
       .then((response) => {
         props.setAllData(response.data.results)
