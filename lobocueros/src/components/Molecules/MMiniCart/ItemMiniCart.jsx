@@ -6,8 +6,8 @@ import ColorBtn from '../../Atoms/AReusable/ColorBtn';
 const ItemMiniCart = (props) => { 
 
     var carritoActual = [] 
-    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		carritoActual = JSON.parse(localStorage.getItem('carrito'))
+    if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+		carritoActual = JSON.parse(sessionStorage.getItem('carrito'))
 	}
 	else{
 		carritoActual = [] 
@@ -22,7 +22,7 @@ const ItemMiniCart = (props) => {
         item.udsItem = counter+1
         item.totalPrice = item.totalPrice + item.price
         carritoActual.splice(props.index, 1, item);
-        localStorage.setItem('carrito', JSON.stringify(carritoActual))   
+        sessionStorage.setItem('carrito', JSON.stringify(carritoActual))   
         window.location.reload()    
 	}
 
@@ -32,7 +32,7 @@ const ItemMiniCart = (props) => {
             item.udsItem = counter-1
             item.totalPrice = item.totalPrice >= item.price ? item.totalPrice - item.price : item.totalPrice
             carritoActual.splice(props.index, 1, item);
-            localStorage.setItem('carrito', JSON.stringify(carritoActual))   
+            sessionStorage.setItem('carrito', JSON.stringify(carritoActual))   
             window.location.reload()  
         }
   

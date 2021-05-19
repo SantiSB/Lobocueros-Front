@@ -15,12 +15,12 @@ const Header = (props) => {
   })
 
   const filter = (param) => {
-    localStorage.setItem('filtro', param);
+    sessionStorage.setItem('filtro', param);
   }
   var arrayItems = []
 
-  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-     arrayItems = JSON.parse(localStorage.getItem('carrito'))
+  if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+     arrayItems = JSON.parse(sessionStorage.getItem('carrito'))
   }
   else{
      arrayItems = []

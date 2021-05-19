@@ -5,8 +5,8 @@ import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeBuy = (props) => {
 
-  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+  if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+    var arrayItems = JSON.parse(sessionStorage.getItem('carrito'))
   }
   else{
     var arrayItems = []

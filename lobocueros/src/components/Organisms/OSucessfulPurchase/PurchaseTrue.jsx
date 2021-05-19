@@ -8,8 +8,8 @@ import axios from 'axios';
 const PurchaseTrue = () => {
 
   var arrayItems = [] 
-  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    arrayItems = JSON.parse(localStorage.getItem('carrito'))
+  if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+    arrayItems = JSON.parse(sessionStorage.getItem('carrito'))
   }
   else{
     arrayItems = []
@@ -76,9 +76,9 @@ const PurchaseTrue = () => {
   var Vamount = total;
   var Vsignature = getParameterByName('signature');
   var VbuyerEmail = getParameterByName('buyerEmail');
-  var VbuyerFullName = localStorage.getItem('nombre');
-  var VshippingAddress = localStorage.getItem('direccion')
-  var VshippingCity = localStorage.getItem('ciudad')
+  var VbuyerFullName = sessionStorage.getItem('nombre');
+  var VshippingAddress = sessionStorage.getItem('direccion')
+  var VshippingCity = sessionStorage.getItem('ciudad')
   var VpseBank = getParameterByName('pseBank');
   var VshippingCountry = "CO";
   var Vtelephone = getParameterByName('telephone');
@@ -181,7 +181,7 @@ const PurchaseTrue = () => {
       </div>
       <div className="btn-purchase-container">
       {VtransactionState === "4" 
-          ? <a href="/productos" onClick={()=>localStorage.clear()}><Buttons type="PayAgain" text="Seguir Comprando"></Buttons></a>
+          ? <a href="/productos" onClick={()=>sessionStorage.clear()}><Buttons type="PayAgain" text="Seguir Comprando"></Buttons></a>
           : <a href="/carrito" ><Buttons type="PayAgain" text="Volver a Intentar"></Buttons></a>
       }
       

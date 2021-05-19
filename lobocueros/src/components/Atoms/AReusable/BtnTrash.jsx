@@ -5,8 +5,8 @@ import Trash from '../../../assets/Icons/Trash.svg'
 const BtnTrash = (props) => {
     
     var carritoActual = []
-    if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		carritoActual = JSON.parse(localStorage.getItem('carrito'))
+    if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+		carritoActual = JSON.parse(sessionStorage.getItem('carrito'))
 	}
 	else{
 		carritoActual = []
@@ -14,7 +14,7 @@ const BtnTrash = (props) => {
 
     const deleteItem = (index) =>{
         carritoActual.splice(index, 1);
-        localStorage.setItem('carrito', JSON.stringify(carritoActual))   
+        sessionStorage.setItem('carrito', JSON.stringify(carritoActual))   
         window.location.reload()    
     }
 

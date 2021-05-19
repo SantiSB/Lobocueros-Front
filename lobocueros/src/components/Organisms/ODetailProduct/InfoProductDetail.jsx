@@ -24,8 +24,8 @@ const InfoProductDetail = (props) => {
 		document.getElementById("select-color").style.display = "none"
 		
 	}
-	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
+	if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+		var carritoActual = JSON.parse(sessionStorage.getItem('carrito'))
 	}
 	else{
 		var carritoActual = []
@@ -48,7 +48,7 @@ const InfoProductDetail = (props) => {
 				item['udsItem'] = counter;
 				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
-				localStorage.setItem('carrito', JSON.stringify(carritoActual));
+				sessionStorage.setItem('carrito', JSON.stringify(carritoActual));
 			}
 		}
 	}
@@ -64,7 +64,7 @@ const InfoProductDetail = (props) => {
 			if(carritoActual.find(inCart)){
 				document.getElementById("product-exist").style.display = "block"
 			}
-			else if(JSON.parse(localStorage.getItem('carrito')).length >= 10){
+			else if(JSON.parse(sessionStorage.getItem('carrito')).length >= 10){
 				document.getElementById("max-products").style.display = "block"
 			}
 			else{
@@ -72,7 +72,7 @@ const InfoProductDetail = (props) => {
 				item['udsItem'] = counter; 
 				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
-				localStorage.setItem('carrito', JSON.stringify(carritoActual));
+				sessionStorage.setItem('carrito', JSON.stringify(carritoActual));
 				window.location.reload()
 			}
 		}

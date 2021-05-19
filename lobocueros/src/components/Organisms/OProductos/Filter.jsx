@@ -31,287 +31,287 @@ const Filter = (props) => {
 	const [subCategory, setSubCategory] = React.useState("");
 
 	React.useEffect(()=>{
-		console.log("zxc", localStorage.getItem('filtro'))
-		if(localStorage.getItem('filtro') === "Mujer"){
+		console.log("zxc", sessionStorage.getItem('filtro'))
+		if(sessionStorage.getItem('filtro') === "Mujer"){
 			setGender(10);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre"){
+		else if(sessionStorage.getItem('filtro') === "Hombre"){
 			setGender(20);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Nuevo"){
+		else if(sessionStorage.getItem('filtro') === "Nuevo"){
 			setOrder(30);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos"){
 			setGender(10);
 			setCategory(10);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos carteras"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos carteras"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(10)
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos mochilas"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos mochilas"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(20)
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos manos libres"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos manos libres"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(30)
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos manos libres pelo"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos manos libres pelo"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(40)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos morrales"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos morrales"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(50)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos carrieles"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos carrieles"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(60)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos bolsos mola"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos bolsos mola"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(70)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos bolsos pelo"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos bolsos pelo"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(80)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Bolsos portafolios"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Bolsos portafolios"){
 			setGender(10);
 			setCategory(10);
 			setSubCategory(90)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Billeteras"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Billeteras"){
 			setGender(10);
 			setCategory(20);
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Billeteras todo"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Billeteras todo"){
 			setGender(10);
 			setCategory(20);
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Billeteras billeteras"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Billeteras billeteras"){
 			setGender(10);
 			setCategory(20);
 			setSubCategory(100);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Billeteras portadocumentos"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Billeteras portadocumentos"){
 			setGender(10);
 			setCategory(20);
 			setSubCategory(110)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Billeteras pasaporteras"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Billeteras pasaporteras"){
 			setGender(10);
 			setCategory(20);
 			setSubCategory(120)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Accesorios"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Accesorios"){
 			setGender(10);
 			setCategory(30);
 			
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Accesorios todo"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Accesorios todo"){
 			setGender(10);
 			setCategory(30);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Accesorios cosmetiqueras"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Accesorios cosmetiqueras"){
 			setGender(10);
 			setCategory(30);
 			setSubCategory(130)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Accesorios riñoneras"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Accesorios riñoneras"){
 			setGender(10);
 			setCategory(30);
 			setSubCategory(140)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Accesorios otros"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Accesorios otros"){
 			setGender(10);
 			setCategory(30);
 			setSubCategory(150)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Mujer Viaje"){
+		else if(sessionStorage.getItem('filtro') === "Mujer Viaje"){
 			setGender(10);
 			setCategory(40);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos"){
 			setGender(20);
 			setCategory(10);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos carteras"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos carteras"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(10)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos mochilas"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos mochilas"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(20)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos manos libres"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos manos libres"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(30)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos manos libres pelo"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos manos libres pelo"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(40)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos morrales"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos morrales"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(50)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos carrieles"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos carrieles"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(60)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos bolsos mola"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos bolsos mola"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(70)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos bolsos pelo"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos bolsos pelo"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(80)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Bolsos portafolios"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Bolsos portafolios"){
 			setGender(20);
 			setCategory(10);
 			setSubCategory(90)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Billeteras"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Billeteras"){
 			setGender(20);
 			setCategory(20);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Billeteras todo"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Billeteras todo"){
 			setGender(20);
 			setCategory(20);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Billeteras billeteras"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Billeteras billeteras"){
 			setGender(20);
 			setCategory(20);
 			setSubCategory(100)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Billeteras portadocumentos"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Billeteras portadocumentos"){
 			setGender(20);
 			setCategory(20);
 			setSubCategory(110)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Billeteras pasaporteras"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Billeteras pasaporteras"){
 			setGender(20);
 			setCategory(20);
 			setSubCategory(120)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Accesorios"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Accesorios"){
 			setGender(20);
 			setCategory(30);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Accesorios todo"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Accesorios todo"){
 			setGender(20);
 			setCategory(30);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Accesorios cosmetiqueras"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Accesorios cosmetiqueras"){
 			setGender(20);
 			setCategory(30);
 			setSubCategory(130)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Accesorios riñoneras"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Accesorios riñoneras"){
 			setGender(20);
 			setCategory(30);
 			setSubCategory(140)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Accesorios otros"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Accesorios otros"){
 			setGender(20);
 			setCategory(30);
 			setSubCategory(150)
 
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
-		else if(localStorage.getItem('filtro') === "Hombre Viaje"){
+		else if(sessionStorage.getItem('filtro') === "Hombre Viaje"){
 			setGender(20);
 			setCategory(40);
-			localStorage.setItem('filtro', "");
+			sessionStorage.setItem('filtro', "");
 		}
 		
 		

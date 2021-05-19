@@ -7,8 +7,8 @@ import Buttons from "../../Atoms/AReusable/Buttons";
 
 const ResumeOrder = (props) => { 
 
-  if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
-    var arrayItems = JSON.parse(localStorage.getItem('carrito'))
+  if( JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')) !== [] && JSON.parse(sessionStorage.getItem('carrito')) !== undefined){
+    var arrayItems = JSON.parse(sessionStorage.getItem('carrito'))
   }
   else{ 
     var arrayItems = []
@@ -59,7 +59,7 @@ const ResumeOrder = (props) => {
   function validacion(){
     setRandom("LOBO"+(Math.random() * (999999999999999 - 1) + 1).toFixed(0))
     setClick(true)
-    JSON.parse(localStorage.getItem('carrito')).forEach(item => {
+    JSON.parse(sessionStorage.getItem('carrito')).forEach(item => {
       axios
       .get(
         `https://lobocuerosapi.com/products/${item.id}`
@@ -88,10 +88,10 @@ const ResumeOrder = (props) => {
 
   var extra1 = ""
   var extra2 = ""
-  var car = JSON.parse(localStorage.getItem('carrito'))
+  var car = JSON.parse(sessionStorage.getItem('carrito'))
   var count = 0
 
-  JSON.parse(localStorage.getItem('carrito')).map(function(item){
+  JSON.parse(sessionStorage.getItem('carrito')).map(function(item){
     var itemData = {
       'p': item.id,
       'v': item.price,

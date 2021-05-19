@@ -150,12 +150,12 @@ const InfoShipping = (props) => {
         
       // });
       // e.target.reset()
-      localStorage.setItem('nombre', document.getElementById("cnombre").value)
-      localStorage.setItem('ciudad', document.getElementById("cciudad").value)
-      localStorage.setItem('direccion', document.getElementById("cdireccion").value)
-      localStorage.setItem('cedula', document.getElementById("ccedula").value)
-      localStorage.setItem('email', document.getElementById("cemail").value)
-      localStorage.setItem('telefono', document.getElementById("ctelefono").value)
+      sessionStorage.setItem('nombre', document.getElementById("cnombre").value)
+      sessionStorage.setItem('ciudad', document.getElementById("cciudad").value)
+      sessionStorage.setItem('direccion', document.getElementById("cdireccion").value)
+      sessionStorage.setItem('cedula', document.getElementById("ccedula").value)
+      sessionStorage.setItem('email', document.getElementById("cemail").value)
+      sessionStorage.setItem('telefono', document.getElementById("ctelefono").value)
       props.sendBuy(true)
     }
 
