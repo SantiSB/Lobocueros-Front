@@ -19,6 +19,7 @@
 
 			.direction-contact
 				@include display-flex(space-between, center)
+				margin: 0.5rem
 	
 	.network-contact
 		@include display-grid("icons-social-media-contact email-contact", 50% 50%, 100%)
@@ -30,6 +31,7 @@
 
 		.icons-social-media-contact
 			@include display-flex(center, center)
+			margin: 2rem 0rem 0rem 0rem
 			i
 				margin: 0rem .5rem
 
@@ -90,8 +92,8 @@
 		.phones-contact
 			text-align: center
 			display: grid
-			grid-template-columns: 100%
-			grid-template-rows: repeat(4, 1fr)
+			grid-template-columns: 50% 50%
+			grid-template-rows: repeat(2, 1fr)
 			padding: 1rem
 
 			span

@@ -2369,6 +2369,7 @@ div[role=presentation] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.5rem;
 }
 .contact-main-container .network-contact {
   display: grid;
@@ -2385,6 +2386,7 @@ div[role=presentation] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0rem 0rem 0rem;
 }
 .contact-main-container .network-contact .icons-social-media-contact i {
   margin: 0rem 0.5rem;
@@ -2449,8 +2451,8 @@ div[role=presentation] {
   .contact-main-container .phones-contact {
     text-align: center;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
     padding: 1rem;
   }
   .contact-main-container .phones-contact span {

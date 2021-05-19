@@ -38,10 +38,10 @@ const MainContact = () => {
 					</div>
 				</div>
 				<div className="phones-contact">
-					<span>Ventas: (+57)313 871 1212 - (+57)317 755 5029</span>
-					<span>Administración: (+57)321 399 8542</span>
-					<span>Gerencia Comercial: (+57)313 871 1212</span>
-					<span>Atención al cliente: (031)7 356 696</span>
+					<span>Ventas: <br></br>(+57)313 871 1212 <br></br>(+57)317 755 5029</span>
+					<span>Administración: <br></br>(+57)321 399 8542</span>
+					<span>Gerencia Comercial: <br></br>(+57)313 871 1212</span>
+					<span>Atención al cliente: <br></br>(031)7 356 696</span>
 				</div>
 				
 			</div>
