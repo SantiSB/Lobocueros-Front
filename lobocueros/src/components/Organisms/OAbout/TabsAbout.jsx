@@ -79,81 +79,83 @@ const TabsAbout = () => {
 			</TabPanel>
 			<TabPanel value={value} index={1}>
         <b>Tiempo de entrega</b>
-        <p>
-          El tiempo de entrega está estimado entre 2 a 4 días hábiles en envíos nacionales y 2 a 4 semanas en envíos internacionales. 
-          Este tiempo comienza a correr a partir de la confirmación del pago una vez la plataforma apruebe la transacción.
-          Recibirás un correo electrónico con la confirmación de la compra.
-        </p>
-        
-        <p>
-          Queremos ayudarte a tener una excelente experiencia, y por eso gestionamos cualquier problema que puedas presentar 
-          al momento de comprar un producto en nuestra tienda virtual. 
-          Dado el caso de no recibir el producto, o que presente defectos o alteraciones al momento de la entrega puedes 
-          contactarnos a través de nuestros distintos canales dispuestos especialmente para ti:
-        </p>
-        <ul>
-          <li>Servicio al cliente: (031)7 356 696</li>
-          <li>Correo Electrónico: atencionaclientelb@gmail.com </li>
-          <li>A través de nuestra página web, en la sección de contacto.</li>
-          <li>A través de nuestras redes sociales.</li>
-        </ul>
-        <br></br>
-        <b>Tipos de envio y costos</b>
-        <p>
-          Los envios nacionales son gratuitos, para mas información sobre los envios internacionales comunicate con nosotros 
-          a través de nuestros distintos canales dispuestos especialmente para ti:
-        </p>
-        <ul>
-          <li>Servicio al cliente: (031)7 356 696</li>
-          <li>Correo Electrónico: atencionaclientelb@gmail.com </li>
-          <li>A través de nuestra página web, en la sección de contacto.</li>
-          <li>A través de nuestras redes sociales.</li>
-        </ul>
-        <br></br>
-        <b>Cambios o retractos</b>
-        <p>
-          El canal destinado a  cambios o retractos será el mismo a través el cual se haya realizado la compra (canal físico o virtual).
-        </p>
-        <br></br>
-        <b>Cambios en tiendas Lobocueros</b>
-        <p>
-          Todas nuestras tiendas físicas en la ciudad de Bogotá brindan la posibilidad de realizar tus cambios de producto o devoluciones. 
-          Para realizar tu cambio deberás tener en cuenta:
-        </p>
-        <ul>
-          <li>El producto debe estar en óptimas condiciones.</li>
-          <li>El producto no puede tener rastros de haber sido utilizado.</li>
-          <li>El producto no debe estar modificado o alterado.</li>
-          <li>El producto debe estar en buen estado y limpio.</li>
-          <li>El producto debe tener todos sus empaques y etiquetas en perfecto estado.</li>
-          <li>Se debe presentar la factura original de la compra o la cédula del comprador.</li>
-        </ul>
-        <br></br>
-        <b>Cambios a través de www.lobocueros.com.co</b>
-        <p>
-          Si deseas realizar un cambio de una compra online, debes comunicarte dentro de los siguientes 10 días hábiles después de la compra por cualquiera de los siguientes canales:
-        </p>
-        <ul>
-          <li>Servicio al cliente: (031)7 356 696</li>
-          <li>Correo Electrónico: atencionaclientelb@gmail.com </li>
-          <li>A través de nuestra página web, en la sección de contacto.</li>
-          <li>A través de nuestras redes sociales.</li>
-        </ul>
-        <br></br>
-        <b>Condiciones de garantia</b>
-        <ul>
-          <li>La fecha de garantía debe ser vigente. (Cuenta a partir de la fecha de elaboración de la factura)</li>
-          <li>Se debe presentar la factura original de compra o cédula del comprador</li>
-          <li>El daño del producto debe ser por un defecto de fábrica.</li>
-          <li>El producto se debe encontrar en óptimas condiciones higiénicas.</li>
-          <li>La garantía del producto aplica en el país de compra.</li>
-        </ul>
-        <p>
-          Ninguna de estas condiciones aplicará si se evidencia un mal uso del producto por parte del cliente.
-          Aclaramos que nuestros productos que no están diseñados para trabajos pesados o actividades que requieran alta resistencia.
-          Se debe evitar el contacto con productos químicos al momento de usarlos como perfumes o jabones. Lobocueros no se hace responsable del deterioro normal de un producto ni por los daños que esta sufra por motivos de descuido o mal uso.
-        </p>
-			</TabPanel>
+        <div>
+          <p>
+            El tiempo de entrega está estimado entre 2 a 4 días hábiles en envíos nacionales y 2 a 4 semanas en envíos internacionales. 
+            Este tiempo comienza a correr a partir de la confirmación del pago una vez la plataforma apruebe la transacción.
+            Recibirás un correo electrónico con la confirmación de la compra.
+          </p>
+          <p>
+            Queremos ayudarte a tener una excelente experiencia, y por eso gestionamos cualquier problema que puedas presentar 
+            al momento de comprar un producto en nuestra tienda virtual. 
+            Dado el caso de no recibir el producto, o que presente defectos o alteraciones al momento de la entrega puedes 
+            contactarnos a través de nuestros distintos canales dispuestos especialmente para ti:
+          </p>
+          <ul>
+            <li>Servicio al cliente: (031)7 356 696</li>
+            <li>Correo Electrónico: atencionaclientelb@ gmail.com </li>
+            <li>A través de nuestra página web, en la sección de contacto.</li>
+            <li>A través de nuestras redes sociales.</li>
+          </ul>
+          <br></br>
+          <b>Tipos de envio y costos</b>
+          <p>
+            Los envios nacionales son gratuitos, para mas información sobre los envios internacionales comunicate con nosotros 
+            a través de nuestros distintos canales dispuestos especialmente para ti:
+          </p>
+          <ul>
+            <li>Servicio al cliente: (031)7 356 696</li>
+            <li>Correo Electrónico: atencionaclientelb@ gmail.com </li>
+            <li>A través de nuestra página web, en la sección de contacto.</li>
+            <li>A través de nuestras redes sociales.</li>
+          </ul>
+          <br></br>
+          <b>Cambios o retractos</b>
+          <p>
+            El canal destinado a  cambios o retractos será el mismo a través el cual se haya realizado la compra (canal físico o virtual).
+          </p>
+          <br></br>
+          <b>Cambios en tiendas Lobocueros</b>
+          <p>
+            Todas nuestras tiendas físicas en la ciudad de Bogotá brindan la posibilidad de realizar tus cambios de producto o devoluciones. 
+            Para realizar tu cambio deberás tener en cuenta:
+          </p>
+          <ul>
+            <li>El producto debe estar en óptimas condiciones.</li>
+            <li>El producto no puede tener rastros de haber sido utilizado.</li>
+            <li>El producto no debe estar modificado o alterado.</li>
+            <li>El producto debe estar en buen estado y limpio.</li>
+            <li>El producto debe tener todos sus empaques y etiquetas en perfecto estado.</li>
+            <li>Se debe presentar la factura original de la compra o la cédula del comprador.</li>
+          </ul>
+          <br></br>
+          <b>Cambios a través de www.lobocueros.com.co</b>
+          <p>
+            Si deseas realizar un cambio de una compra online, debes comunicarte dentro de los siguientes 10 días hábiles después de la compra por cualquiera de los siguientes canales:
+          </p>
+          <ul>
+            <li>Servicio al cliente: (031)7 356 696</li>
+            <li>Correo Electrónico: atencionaclientelb@ gmail.com </li>
+            <li>A través de nuestra página web, en la sección de contacto.</li>
+            <li>A través de nuestras redes sociales.</li>
+          </ul>
+          <br></br>
+          <b>Condiciones de garantia</b>
+          <ul>
+            <li>La fecha de garantía debe ser vigente. (Cuenta a partir de la fecha de elaboración de la factura)</li>
+            <li>Se debe presentar la factura original de compra o cédula del comprador</li>
+            <li>El daño del producto debe ser por un defecto de fábrica.</li>
+            <li>El producto se debe encontrar en óptimas condiciones higiénicas.</li>
+            <li>La garantía del producto aplica en el país de compra.</li>
+          </ul>
+          <p>
+            Ninguna de estas condiciones aplicará si se evidencia un mal uso del producto por parte del cliente.
+            Aclaramos que nuestros productos que no están diseñados para trabajos pesados o actividades que requieran alta resistencia.
+            Se debe evitar el contacto con productos químicos al momento de usarlos como perfumes o jabones. Lobocueros no se hace responsable del deterioro normal de un producto ni por los daños que esta sufra por motivos de descuido o mal uso.
+          </p>
+          
+        </div>
+      </TabPanel>
       <TabPanel value={value} index={2}>
         
         <h3>BIENVENIDO AL SITIO WWW.LOBOCUEROS.COM.CO</h3>
