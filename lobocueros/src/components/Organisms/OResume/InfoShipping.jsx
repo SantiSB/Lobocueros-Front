@@ -157,6 +157,11 @@ const InfoShipping = (props) => {
       sessionStorage.setItem('email', document.getElementById("cemail").value)
       sessionStorage.setItem('telefono', document.getElementById("ctelefono").value)
       props.sendBuy(true)
+      if(window.screen.width < 570){
+        window.scroll({
+          top: 600,
+      });
+      }
     }
 
   }
