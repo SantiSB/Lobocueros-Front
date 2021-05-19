@@ -13,13 +13,10 @@
 		padding: 1rem
 
 		.item
-			@include display-grid("image-item-order info-item-order", 35% 65%, auto)
+			@include display-grid("image-item-order info-item-order", 50% 50%, auto)
 			text-align: center
 			img
-				width: 120px
-
-			p
-				font-size: 8pt
+				width: 100%
 		
 @media (max-device-width: 900px)
 
@@ -30,7 +27,7 @@
 		padding: 1rem
 
 		.item
-			@include display-grid("image-item-order" "info-item-order", auto, 50% 50%)
+			@include display-grid("image-item-order" "info-item-order", auto, 40% 60%)
 			text-align: center
 			img
 				width: 120px

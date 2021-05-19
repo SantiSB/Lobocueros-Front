@@ -1,11 +1,18 @@
 .item
-	@include display-grid("image-item-order info-item-order", auto auto, auto)
+	@include display-grid("image-item-order info-item-order", 50% 50%, auto)
 	text-align: center
 	border: 1px solid $Black
 	margin: 1rem
 	padding: 1rem
-	img
-		width: 150px
+	.image-item-order
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			width: 90%
+	.info-item-order
+		#item-title
+			font-weight: bold
 	
 @media (max-device-width: 1200px)
 		
