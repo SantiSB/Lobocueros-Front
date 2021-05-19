@@ -4,14 +4,22 @@ import { setAllData, setProductsData, setPrincipalImageDetail, setColorSelected}
 
 const ColorBtn = (props) => {
 
-	const sets = (picture, color) => {
+	const sets = (picture, color, e) => {
 		props.setColorSelected(color)
 		props.setPrincipalImageDetail(picture)
 		props.changeColor(props.codeColor)
+		
+		var testElements = document.getElementsByClassName('color-btn');
+		Array.prototype.filter.call(testElements, function(testElement){
+			testElement.style.border = "1px solid white";
+		});
+		e.target.style.border = "3px solid black"
+
 	}
+
 	
     return(
-		<button className="color-btn" style={{background: props.codeColor}} onClick={()=>sets(props.picture, props.color)}></button>
+		<button id="color-btn" className="color-btn" style={{background: props.codeColor}} onClick={(e)=>sets(props.picture, props.color, e)}></button>
     )
 }
 

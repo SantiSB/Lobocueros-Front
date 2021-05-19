@@ -6,7 +6,6 @@ import { connect} from "react-redux";
 import { setCounter } from "../../../redux/actionsCreators";
 
 const InfoProductDetail = (props) => {
-
 	const [colorSelected, setColorSelected] = useState("");
 	const [counter, setCounter] = useState(1);
 	
@@ -20,11 +19,11 @@ const InfoProductDetail = (props) => {
 		}
 
 	}
-	
 	const changeColorSelected = (color) =>{
 		setColorSelected(color)
+		document.getElementById("select-color").style.display = "none"
+		
 	}
-
 	if( JSON.parse(localStorage.getItem('carrito')) && JSON.parse(localStorage.getItem('carrito')) !== [] && JSON.parse(localStorage.getItem('carrito')) !== undefined){
 		var carritoActual = JSON.parse(localStorage.getItem('carrito'))
 	}

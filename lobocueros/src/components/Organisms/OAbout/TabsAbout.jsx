@@ -10,7 +10,7 @@ import ControlledAccordions from '../../Molecules/MAbout/AccordionAbout';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  return (
+  return ( 
     <div
       role="tabpanel"
       hidden={value !== index}

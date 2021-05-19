@@ -11,21 +11,14 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 2px solid #000000;
+  border: 1px solid #FFFFFF;
   margin: 0rem 0.3rem;
 }
 .color-btn:hover {
   cursor: pointer;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #000000;
 }
 
-@media (max-device-width: 573px) {
-  .color-btn {
-    width: 15px;
-    height: 18px;
-    margin: 0rem 0.1rem;
-  }
-}
 .form-login-register {
   text-align: center;
 }
@@ -275,6 +268,26 @@ div[role=presentation] {
   font-size: 7pt;
 }
 
+@media (max-device-width: 573px) {
+  .product-card .card-action-area .card-content a .image-product-card {
+    height: 160px;
+  }
+  .product-card .card-action-area .card-content a .image-product-card img {
+    width: 95%;
+  }
+  .product-card .card-action-area .card-content a .price-product-card {
+    margin-top: 1rem;
+  }
+  .product-card .card-action-area .card-content a .price-product-card .old-value {
+    font-size: 6pt;
+  }
+  .product-card .card-action-area .card-content a .price-product-card span {
+    font-size: 8pt;
+  }
+  .product-card .card-actions .product-card-actions .buy-produt-card button {
+    font-size: 5pt;
+  }
+}
 .resume-buy-container {
   display: grid;
   grid-template-areas: "info-resume" "button-resume";
@@ -1184,6 +1197,9 @@ div[role=presentation] {
 .carousel-home-movil-extra-small .item-carousel a {
   text-decoration: none;
 }
+.carousel-home-movil-extra-small .item-carousel a img {
+  width: 80%;
+}
 
 @media (max-device-width: 1500px) {
   .carousel-home {
@@ -1404,6 +1420,7 @@ div[role=presentation] {
   grid-template-rows: 50% 50%;
 }
 .detail-product-main .details-product .info-product .info-product-detail {
+  font-size: 10pt;
   text-align: center;
   width: auto;
   height: 70%;
@@ -1528,6 +1545,7 @@ div[role=presentation] {
   width: 100%;
   height: auto;
   padding: 1rem;
+  font-size: 10pt;
 }
 
 @media (max-device-width: 1200px) {
@@ -1535,6 +1553,7 @@ div[role=presentation] {
     width: auto;
     height: auto;
     padding: 1rem;
+    font-size: 8pt;
   }
 }
 @media (max-device-width: 412px) {
@@ -1642,7 +1661,7 @@ div[role=presentation] {
 
 .title-product {
   font-weight: 600;
-  font-size: 15pt;
+  font-size: 12pt;
 }
 
 .price-product span {
@@ -1673,7 +1692,6 @@ div[role=presentation] {
 .actions-product-detail .select-color {
   color: #420000;
   font-weight: bold;
-  display: none;
 }
 
 .buttons-product-detail {
