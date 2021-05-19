@@ -58,7 +58,7 @@ const ProductCard = (props) => {
 					</CardActionArea>
 					<CardActions className="card-actions">
 						{
-							itemProduct.id ? <a href={`/productos/${itemProduct.id}`}>
+							itemProduct.id ? <a href={`/detalle-producto/${itemProduct.id}`}>
 											<div className="product-card-actions">
 												<div className="colors-product-card">
 													<ColorsBar productDetail={itemProduct}></ColorsBar>

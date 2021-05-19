@@ -12,7 +12,7 @@ const InfoItemBuy = (props) => {
     
     return (
         <div> 
-            <p>{item.title}</p>
+            <p id="item-title">{item.title}</p>
             <p>Precio: <span>{formatter.format(item.price)}</span></p>
             <p>Color: <span> <ColorBtn codeColor={item.colorSelected}></ColorBtn> </span></p>
             <p>Unidades: <span>{item.udsItem}</span></p>

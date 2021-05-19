@@ -1,5 +1,5 @@
 .item-cart
-    @include display-grid("image-item-buy info-item-buy buttons-item-buy", 20% 60% 20%,  auto)
+    @include display-grid("image-item-buy info-item-buy buttons-item-buy", 30% 50% 20%,  auto)
     background: $White
     margin: 1rem
     border: 1px solid $Black
@@ -9,21 +9,36 @@
         @include display-flex(center, center)
 
     .image-item-buy
+        border: 1px solid black
         @include display-flex(center, center)
         img
             width: 180px
 
     .info-item-buy
+        border-top: 1px solid black
+        border-bottom: 1px solid black
+
         @include display-flex(center, center)
+        div
+            text-align: center
+            #item-title
+                font-size: 15pt
+                font-weight: 600
 
     .buttons-item-buy
+        border: 1px solid black
+
         @include display-grid("trash-btn-container" "counter-btn-container", auto, 50% 50%)
         
         .trash-btn-container
             @include display-flex(center, flex-end)
 
         .counter-btn-container
-            @include display-flex(center, center)
+            @include display-flex(center, flex-start)
+            margin-top: 1rem
+            span
+                font-size: 12pt
+                font-weight: bold
 
         button
             background: none
@@ -36,12 +51,11 @@
             margin: 0rem .5rem
 
 @media (max-device-width: 1200px)
+    .item-cart
+        grid-template-columns: 40% 40% 20%
 		
 @media (max-device-width: 900px)
     .item-cart
-        .image-item-buy
-            img
-                width: 100px
 
         .info-item-buy
             font-size: 10pt
@@ -52,8 +66,7 @@
                 img
                     width: 15px
 
-            span
-                font-size: 20pt
+
 
 @media (max-device-width: 573px)
     .item-cart
@@ -83,11 +96,14 @@
             margin-top: 1rem 
             p
                 margin: 5px
+            border-left: 1px solid black
+            border-right: 1px solid black
 
         .buttons-item-buy
             @include display-grid("trash-btn-container" "counter-btn-container", auto, 50% 50%)
             grid-column: 2
             grid-row: 1
+            padding: 1rem
             
             .trash-btn-container
                 @include display-flex(center, flex-end)
