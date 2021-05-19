@@ -64,7 +64,7 @@ const InfoProductDetail = (props) => {
 			if(carritoActual.find(inCart)){
 				document.getElementById("product-exist").style.display = "block"
 			}
-			else if(JSON.parse(sessionStorage.getItem('carrito')).length >= 10){
+			else if(JSON.parse(sessionStorage.getItem('carrito')) && JSON.parse(sessionStorage.getItem('carrito')).length >= 10){
 				document.getElementById("max-products").style.display = "block"
 			}
 			else{
