@@ -31,7 +31,6 @@ const Filter = (props) => {
 	const [subCategory, setSubCategory] = React.useState("");
 
 	React.useEffect(()=>{
-		console.log("zxc", sessionStorage.getItem('filtro'))
 		if(sessionStorage.getItem('filtro') === "Mujer"){
 			setGender(10);
 			sessionStorage.setItem('filtro', "");
@@ -474,7 +473,6 @@ const Filter = (props) => {
 				case 10:
 					newListEvents = newListEvents.filter(filterByPrice);
 					newListEvents = newListEvents.sort((a, b) => a.price - b.price);
-					console.log("asd", newListEvents)
 					break;
 				case 20:
 					newListEvents = newListEvents.filter(filterByPrice);
