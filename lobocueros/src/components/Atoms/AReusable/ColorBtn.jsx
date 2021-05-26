@@ -3,11 +3,10 @@ import { connect} from "react-redux";
 import { setAllData, setProductsData, setPrincipalImageDetail, setColorSelected} from "../../../redux/actionsCreators";
 
 const ColorBtn = (props) => {
-
 	const sets = (picture, color, e) => {
 		props.setColorSelected(color)
 		props.setPrincipalImageDetail(picture)
-		props.changeColor(props.codeColor)
+		props.changeColor(props.codeColor, props.color)
 		
 		var testElements = document.getElementsByClassName('color-btn');
 		Array.prototype.filter.call(testElements, function(testElement){

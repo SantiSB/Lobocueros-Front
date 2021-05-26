@@ -7,6 +7,7 @@ import { setCounter } from "../../../redux/actionsCreators";
 
 const InfoProductDetail = (props) => {
 	const [colorSelected, setColorSelected] = useState("");
+	const [colorNameSelected, setColorNameSelected] = useState("");
 	const [counter, setCounter] = useState(1);
 	
 	const countMore = (event) =>{
@@ -19,8 +20,9 @@ const InfoProductDetail = (props) => {
 		}
 
 	}
-	const changeColorSelected = (color) =>{
+	const changeColorSelected = (color, colorName) =>{
 		setColorSelected(color)
+		setColorNameSelected(colorName)
 		document.getElementById("select-color").style.display = "none"
 		
 	}
@@ -45,6 +47,7 @@ const InfoProductDetail = (props) => {
 			}
 			else{
 				item['colorSelected']  = colorSelected;
+				item['colorNameSelected'] = colorNameSelected;
 				item['udsItem'] = counter;
 				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
@@ -69,6 +72,7 @@ const InfoProductDetail = (props) => {
 			}
 			else{
 				item['colorSelected']  = colorSelected;
+				item['colorNameSelected'] = colorNameSelected;
 				item['udsItem'] = counter; 
 				item['totalPrice'] = counter * item.price;
 				carritoActual.push(item)
