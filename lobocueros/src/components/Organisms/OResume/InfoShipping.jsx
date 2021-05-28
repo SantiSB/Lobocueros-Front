@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setVisibleMiniCart, changeEmail, changeFullName, changeShippingAddress, changeShippingCity, changeTelephone, sendBuy } from "../../../redux/actionsCreators";
+import { setVisibleMiniCart, changeEmail, changeFullName, changeShippingAddress, changeShippingCity, changeTelephone, sendBuy, changeDocument } from "../../../redux/actionsCreators";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 // import emailjs from 'emailjs-com';
@@ -182,7 +182,7 @@ const InfoShipping = (props) => {
         <TextField id="cciudad" label="Ciudad" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingCity(e.target.value)}/>
         <br></br>
         <TextField id="cdireccion" label="Dirección" variant="outlined" className={classes.field} onChange={(e)=>props.changeShippingAddress(e.target.value)}/>
-        <TextField id="ccedula" label="Cedula" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)}/>
+        <TextField id="ccedula" label="Cedula" variant="outlined" className={classes.field} onChange={(e)=>props.changeDocument(e.target.value)}/>
         <br></br>
         <TextField id="cemail" label="E-Mail" variant="outlined" className={classes.field} onChange={(e)=>props.changeEmail(e.target.value)} />
         <TextField id="ctelefono" label="Teléfono" variant="outlined" className={classes.field} onChange={(e)=>props.changeTelephone(e.target.value)}/>
@@ -208,6 +208,7 @@ const mapDispatchToProps = {
   changeShippingAddress,
   changeShippingCity,
   changeTelephone,
+  changeDocument,
   sendBuy
 };
   

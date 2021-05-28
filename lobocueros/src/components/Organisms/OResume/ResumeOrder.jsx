@@ -135,7 +135,6 @@ const ResumeOrder = (props) => {
   
 
 
-
   return (
     <div className="resume-buy-container">
       <div className="info-resume">
@@ -175,7 +174,7 @@ const ResumeOrder = (props) => {
           <input name="currency"      type="hidden"  value="COP" ></input>
 
           <input name="test"          type="hidden"  value="0" ></input>
-
+          <input name="buyerDocument" type="hidden"  value={props.valueDocument} ></input>
           <input name="signature"     type="hidden"  value={signature}  ></input>
           <input name="buyerEmail"    type="hidden"  value={props.valueEmail} ></input>
           <input name="amount"        type="hidden"  value={total}   ></input>
@@ -200,6 +199,7 @@ const mapStateToProps = (state) => ({
   visibleMiniCart: state.visibleMiniCart,
   valueEmail: state.valueEmail,
   valueFullName: state.valueFullName,
+  valueDocument: state.valueDocument,
   shippingAddress: state.valueShippingAddress,
   shippingCity: state.valueShippingCity,
   telephone: state.valueTelephone,

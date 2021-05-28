@@ -14,6 +14,7 @@ import {
 	CHANGE_EMAIL,
 	CHANGE_FULL_NAME,
 	CHANGE_SHIPPING_ADDRESS,
+	CHANGE_DOCUMENT,
 	CHANGE_SHIPPING_CITY,
 	CHANGE_TELEPHONE,
 	SEND_BUY,
@@ -80,6 +81,11 @@ const setListFilter = (event) => ({
 	event,
 });
 
+const changeDocument= (event) => ({
+	type: CHANGE_DOCUMENT,
+	event,
+});
+
 const changeEmail = (event) => ({
 	type: CHANGE_EMAIL,
 	event,
@@ -133,6 +139,7 @@ export {
 	changeShippingAddress,
 	changeShippingCity,
 	changeTelephone,
+	changeDocument,
 	sendBuy,
 	setPageActual
 };

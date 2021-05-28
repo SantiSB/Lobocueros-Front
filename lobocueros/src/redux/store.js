@@ -17,6 +17,7 @@ import {
   CHANGE_SHIPPING_ADDRESS,
   CHANGE_SHIPPING_CITY,
   CHANGE_TELEPHONE,
+  CHANGE_DOCUMENT,
   SEND_BUY,
   SET_PAGE_ACTUAL
 
@@ -40,6 +41,7 @@ const initialStore = {
   valueShippingAddress: "",
   valueShippingCity: "",
   valueTelephone: "",
+  valueDocument: "",
   sendBuy: "false",
   pageActual: 1
 };
@@ -106,6 +108,11 @@ const rootReducer = (state = initialStore, action) => {
       return {
         ...state,
         listFilter: action.event
+      };
+    case CHANGE_DOCUMENT:
+      return {
+        ...state,
+        valueDocument: action.event
       };
     case CHANGE_EMAIL:
       return {
