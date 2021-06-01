@@ -171,10 +171,10 @@ const ResumeOrder = (props) => {
 
           <input name="tax"           type="hidden"  value="0"  ></input>
           <input name="taxReturnBase" type="hidden"  value="0" ></input>
-          <input name="currency"      type="hidden"  value="COP" ></input>
+          <input name="currency"      type="hidden"  value="COP" ></input> 
 
           <input name="test"          type="hidden"  value="0" ></input>
-          <input name="buyerDocument" type="hidden"  value={props.valueDocument} ></input>
+          <input name="officeTelephone" type="hidden"  value={props.valueDocument} ></input>
           <input name="signature"     type="hidden"  value={signature}  ></input>
           <input name="buyerEmail"    type="hidden"  value={props.valueEmail} ></input>
           <input name="amount"        type="hidden"  value={total}   ></input>
