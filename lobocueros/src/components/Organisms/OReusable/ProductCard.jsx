@@ -17,7 +17,7 @@ const ProductCard = (props) => {
 			return image.mainPicture === true
 		}
 		if(images){
-			return images.find(isMain).image
+			return images.find(isMain) ? images.find(isMain).image : null
 		}
 		else{
 			return Lobocueros

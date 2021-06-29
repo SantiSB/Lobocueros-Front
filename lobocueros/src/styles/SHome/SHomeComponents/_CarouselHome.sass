@@ -1,89 +1,112 @@
 
 .carousel-home
-	@include display-flex(center, center)
-	@include size(100%, auto)
 	grid-area: carousel-home
-
-	li, button, .makeStyles-carousel-9
-		outline: none
-
+	padding: 1rem 0.5rem
 
 	.item-carousel
 		@include display-flex(center, center)
 		div
 			margin: 0rem .5rem
 
-.carousel-home-movil
-	display: none
-	@include size(100%, auto)
-	grid-area: carousel-home-movil
+	.slick-slider
+		max-width: 100%
+		.slick-list
+			.slick-track
+				width: 100%
+				.slick-slide
+					display: flex
+					justify-content: center
 
-	li, button, .makeStyles-carousel-9
-		outline: none
+	.slick-dots
+		bottom: -35px
 
-	.item-carousel
-		@include display-flex(center, center)
-		div
-			margin: 0rem .5rem
+	.slick-prev
+		left: 5px
+		z-index: 1
+		margin-left: 1rem
+		&:Before
+			color: #420000
+			font-size: 50px
+	.slick-next
+		right: 40px
+		z-index: 1
+		margin-right: 1rem
+		&:Before
+			color: #420000
+			font-size: 50px
+	
 
-.carousel-home-movil-small
-	display: none
-	@include size(100%, auto)
-	grid-area: carousel-home-movil-small
+// .carousel-home-movil
+// 	display: none
+// 	@include size(100%, auto)
+// 	grid-area: carousel-home-movil
 
-	.item-carousel
-		@include display-flex(center, center)
-		div
-			margin: 0rem .5rem
+// 	li, button, .makeStyles-carousel-9
+// 		outline: none
 
-.carousel-home-movil-extra-small
-	display: none
-	@include size(100%, auto)
-	grid-area: carousel-home-movil-extra-small
+// 	.item-carousel
+// 		@include display-flex(center, center)
+// 		div
+// 			margin: 0rem .5rem
 
-	.item-carousel
-		@include size(auto, auto)
-		@include display-flex(center, center)
-		a
-			text-decoration: none
-			img
-				width: 80%
+// .carousel-home-movil-small
+// 	display: none
+// 	@include size(100%, auto)
+// 	grid-area: carousel-home-movil-small
 
-@media (max-device-width: 1500px)
-	.carousel-home
-		display: none
+// 	.item-carousel
+// 		@include display-flex(center, center)
+// 		div
+// 			margin: 0rem .5rem
 
-	.carousel-home-movil
-		@include display-flex(center, center)
+// .carousel-home-movil-extra-small
+// 	display: none
+// 	@include size(100%, auto)
+// 	grid-area: carousel-home-movil-extra-small
 
-	.carousel-home-movil-small
-		display: none
+// 	.item-carousel
+// 		@include size(auto, auto)
+// 		@include display-flex(center, center)
+// 		a
+// 			text-decoration: none
+// 			img
+// 				width: 80%
 
-	.carousel-home-movil-extra-small
-		display: none
+// @media (max-device-width: 1500px)
+// 	.carousel-home
+// 		display: none
 
-@media (max-device-width: 1000px)
-	.carousel-home
-		display: none
+// 	.carousel-home-movil
+// 		@include display-flex(center, center)
 
-	.carousel-home-movil
-		display: none
+// 	.carousel-home-movil-small
+// 		display: none
 
-	.carousel-home-movil-small
-		@include display-flex(center, center)
+// 	.carousel-home-movil-extra-small
+// 		display: none
 
-	.carousel-home-movil-extra-small
-		display: none
+// @media (max-device-width: 1000px)
+// 	.carousel-home
+// 		display: none
 
-@media (max-device-width: 700px)
-	.carousel-home
-		display: none
+// 	.carousel-home-movil
+// 		display: none
 
-	.carousel-home-movil
-		display: none
+// 	.carousel-home-movil-small
+// 		@include display-flex(center, center)
 
-	.carousel-home-movil-small
-		display: none
+// 	.carousel-home-movil-extra-small
+// 		display: none
 
-	.carousel-home-movil-extra-small
-		@include display-flex(center, center)
+// @media (max-device-width: 700px)
+// 	.carousel-home
+// 		display: none
+
+// 	.carousel-home-movil
+// 		display: none
+
+// 	.carousel-home-movil-small
+// 		display: none
+
+// 	.carousel-home-movil-extra-small
+// 		@include display-flex(center, center)

@@ -1063,33 +1063,9 @@ div[role=presentation] {
   display: grid;
   grid-template-areas: "banner-home" "carousel-home" "promo-home" "instagram" "info-buy";
   grid-template-columns: 100%;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto 420px auto auto auto;
 }
 
-@media (max-device-width: 1500px) {
-  .mainHome-main {
-    display: grid;
-    grid-template-areas: "banner-home" "carousel-home-movil" "promo-home" "instagram" "info-buy";
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-  }
-}
-@media (max-device-width: 1000px) {
-  .mainHome-main {
-    display: grid;
-    grid-template-areas: "banner-home" "carousel-home-movil-small" "promo-home" "instagram" "info-buy";
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-  }
-}
-@media (max-device-width: 700px) {
-  .mainHome-main {
-    display: grid;
-    grid-template-areas: "banner-home" "carousel-home-movil-extra-small" "promo-home" "instagram" "info-buy";
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-  }
-}
 .banner-home {
   grid-area: banner-home;
   width: 100%;
@@ -1137,15 +1113,8 @@ div[role=presentation] {
   }
 }
 .carousel-home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
   grid-area: carousel-home;
-}
-.carousel-home li, .carousel-home button, .carousel-home .makeStyles-carousel-9 {
-  outline: none;
+  padding: 1rem 0.5rem;
 }
 .carousel-home .item-carousel {
   display: flex;
@@ -1155,117 +1124,38 @@ div[role=presentation] {
 .carousel-home .item-carousel div {
   margin: 0rem 0.5rem;
 }
-
-.carousel-home-movil {
-  display: none;
+.carousel-home .slick-slider {
+  max-width: 100%;
+}
+.carousel-home .slick-slider .slick-list .slick-track {
   width: 100%;
-  height: auto;
-  grid-area: carousel-home-movil;
 }
-.carousel-home-movil li, .carousel-home-movil button, .carousel-home-movil .makeStyles-carousel-9 {
-  outline: none;
-}
-.carousel-home-movil .item-carousel {
+.carousel-home .slick-slider .slick-list .slick-track .slick-slide {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.carousel-home-movil .item-carousel div {
-  margin: 0rem 0.5rem;
+.carousel-home .slick-dots {
+  bottom: -35px;
 }
-
-.carousel-home-movil-small {
-  display: none;
-  width: 100%;
-  height: auto;
-  grid-area: carousel-home-movil-small;
+.carousel-home .slick-prev {
+  left: 5px;
+  z-index: 1;
+  margin-left: 1rem;
 }
-.carousel-home-movil-small .item-carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.carousel-home .slick-prev:Before {
+  color: #420000;
+  font-size: 50px;
 }
-.carousel-home-movil-small .item-carousel div {
-  margin: 0rem 0.5rem;
+.carousel-home .slick-next {
+  right: 40px;
+  z-index: 1;
+  margin-right: 1rem;
 }
-
-.carousel-home-movil-extra-small {
-  display: none;
-  width: 100%;
-  height: auto;
-  grid-area: carousel-home-movil-extra-small;
-}
-.carousel-home-movil-extra-small .item-carousel {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.carousel-home-movil-extra-small .item-carousel a {
-  text-decoration: none;
-}
-.carousel-home-movil-extra-small .item-carousel a img {
-  width: 80%;
+.carousel-home .slick-next:Before {
+  color: #420000;
+  font-size: 50px;
 }
 
-@media (max-device-width: 1500px) {
-  .carousel-home {
-    display: none;
-  }
-
-  .carousel-home-movil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .carousel-home-movil-small {
-    display: none;
-  }
-
-  .carousel-home-movil-extra-small {
-    display: none;
-  }
-}
-@media (max-device-width: 1000px) {
-  .carousel-home {
-    display: none;
-  }
-
-  .carousel-home-movil {
-    display: none;
-  }
-
-  .carousel-home-movil-small {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .carousel-home-movil-extra-small {
-    display: none;
-  }
-}
-@media (max-device-width: 700px) {
-  .carousel-home {
-    display: none;
-  }
-
-  .carousel-home-movil {
-    display: none;
-  }
-
-  .carousel-home-movil-small {
-    display: none;
-  }
-
-  .carousel-home-movil-extra-small {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .promo-home {
   grid-area: promo-home;
   width: 100%;

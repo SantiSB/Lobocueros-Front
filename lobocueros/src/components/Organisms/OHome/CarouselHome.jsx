@@ -3,7 +3,9 @@ import { connect} from "react-redux";
 import { setAllData, setProductsData } from "../../../redux/actionsCreators";
 import { makeStyles } from '@material-ui/core/styles';
 import ProductCard from '../../Organisms/OReusable/ProductCard';
-import Carousel from 'nuka-carousel';
+// import Carousel from 'nuka-carousel';
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 const useStyles = makeStyles((theme) => ({
 	carousel:{
@@ -17,7 +19,6 @@ const CarouselHome = (props) => {
 	const classes = useStyles();
 
 	const totalItems = props.productsDataHome
-	
     return(
 		<>
 			<div className="carousel-home">

@@ -2,7 +2,7 @@ import React from "react";
 import { connect} from "react-redux";
 import { setAllData, setProductsData, setProductsDataHome } from "../../../redux/actionsCreators";
 import InstagramSection from '../TReusable/InstagramSection'
-import CarouselHome from '../../Organisms/OHome/CarouselHome'
+import CarouselHome from '../../Organisms/OHome/CarouselHome2'
 import InfoBuySection from '../TReusable/InfoBuySection';
 import BannerHome from '../../Organisms/OHome/BannerHome';
 import PromoHome from '../../Organisms/OHome/PromoHome';

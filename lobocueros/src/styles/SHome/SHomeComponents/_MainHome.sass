@@ -1,15 +1,2 @@
 .mainHome-main
-	@include display-grid("banner-home" "carousel-home" "promo-home" "instagram" "info-buy", 100%, auto auto auto auto auto)
-
-@media (max-device-width: 1500px)
-	.mainHome-main
-		@include display-grid("banner-home" "carousel-home-movil" "promo-home" "instagram" "info-buy", 100%, auto auto auto auto auto)
-
-@media (max-device-width: 1000px)
-	.mainHome-main
-		@include display-grid("banner-home" "carousel-home-movil-small" "promo-home" "instagram" "info-buy", 100%, auto auto auto auto auto)
-
-@media (max-device-width: 700px)
-	.mainHome-main
-		@include display-grid("banner-home" "carousel-home-movil-extra-small" "promo-home" "instagram" "info-buy", 100%, auto auto auto auto auto)
-
+	@include display-grid("banner-home" "carousel-home" "promo-home" "instagram" "info-buy", 100%, auto 420px auto auto auto)
